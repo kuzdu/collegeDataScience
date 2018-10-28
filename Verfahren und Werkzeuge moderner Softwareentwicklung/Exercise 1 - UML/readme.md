@@ -1,12 +1,12 @@
 # Aufgabe 1  UML 
 
 ## Deployment Diagram (Verteilungsdiagram)
-Die folgende HTML zeigt, die Verteilung von verschiedenen Mein KochWerk Instanzen
+Die folgende HTML zeigt die Verteilung von verschiedenen Mein KochWerk Instanzen:
 - [Link zum Anzeigen der HTML im Browser](https://stirnraten.de/softwaretechnik/deployment_diagram.html)
 - [Sourcecode](deployment_diagram.html)
 
 ## Klassendiagramm 
-Das originale Klassendiagramm liegt leider nur als gliffy vor.
+Das originale Klassendiagramm liegt leider nur als gliffy vor. Deshalb zur Vereinfachung die folgenden Bilder.
 - [Gliffy File SourceCode](klassendiagramm.gliffy)
 
 ### Klassenstruktur im api_package
