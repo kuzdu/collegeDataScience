@@ -12,3 +12,12 @@ Die folgende HTML-Datei zeigt den Klassenaufbau für Mein KochWerk bezogen auf d
 - [Link zum Anzeigen der Klassendiagramme per HTML direkt im Browser](https://stirnraten.de/softwaretechnik/klassendiagramm.html)
 - [Sourcecode](klassendiagramm.html)
 
+## Sequenzdiagramm 
+Die folgende HTML-Datei zeigt ein Sequenzdiagramm für ein Registrierungsprozess bei Mein KochWerk. 
+- [Link zum Anzeigen der Klassendiagramme per HTML direkt im Browser](https://stirnraten.de/softwaretechnik/sequenzdiagramm.html)
+- [Sourcecode](sequenzdiagramm.html)
+
+## Aktivitätsdiagramm 
+Die folgende HTML-Datei zeigt ein Aktivitätsdiagramm zum Erlangen von Kochfähigkeiten bei Mein KochWerk. 
+- [Link zum Anzeigen der Klassendiagramme per HTML direkt im Browser](https://stirnraten.de/softwaretechnik/aktivitaetsdiagramm.html)
+- [Sourcecode](aktivitaetsdiagramm.html)
