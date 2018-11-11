@@ -169,12 +169,11 @@ Die folgenden Zeilen zeigen Code, welcher nicht verwendet wird und gelöscht wer
 
 ## Swift Linter
 
-Das Projekte hatte vor dem Code Style Check drei Warnungen. Der implentierte [Swift Linter](https://github.com/realm/SwiftLint) hat dafür gesorgt, dass das Projekt nicht mehr kompiliert hat, da es einige grobe Code-Style-Verstöße gab. Zusätzlich wurden > 400 Warnungen geworfen.
+Das Projekte hatte vor dem Code Style Check drei Warnungen. Der implentierte [Swift Linter](https://github.com/realm/SwiftLint) hat dafür gesorgt, dass das Projekt nicht mehr kompiliert hat, da es einige grobe Code-Style-Verstöße gab. Zusätzlich wurden > 400 Warnungen geworfen. Inzwischen sind die Warnungen auf < 100 reduziert.
 
 ![Kurzschreibweiße](images/shorthand.png "Kurzschreibweise")
 ![Fehlende Nachrichten, wenn Tests failen](images/missingFailMessage.png "Fehlende Nachrichten, wenn Tests failen")
 
-Inzwischen sind die Warnungen auf 100 reduziert.
 
 
 
