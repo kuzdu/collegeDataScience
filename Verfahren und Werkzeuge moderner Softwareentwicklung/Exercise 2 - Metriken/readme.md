@@ -1,6 +1,6 @@
 # Metriken 
 
-Im Folgenden wird meine iOS-App [Stirnraten](https://stirnraten.de/softwaretechnik/deployment_diagram.html) untersucht auf
+Im Folgenden wird meine iOS-App [Stirnraten](https://stirnraten.de/) untersucht auf
 - Lines of Code
 - Testabdeckung
 - Unbenutzer Code
@@ -9,27 +9,29 @@ Im Folgenden wird meine iOS-App [Stirnraten](https://stirnraten.de/softwaretechn
 
 ## Testabdeckung
 
-Verwendetes Tool: [XCov](https://github.com/nakiostudio/xcov). Dieses Tool wertet die Logs, die nach einem Projekt-Test erstellt werden aus und stellt die Coverage grafisch dar. Siehe hier. 
+Verwendetes Tool: [XCov](https://github.com/nakiostudio/xcov). Dieses Tool wertet von XCode (Apples IDE) erstellte Test-Logs aus und stellt die Coverage in Form einer .html grafisch dar.
 
 ![Testabdeckung](images/test_coverage.png "Testabdeckung")
-Erläuterung: In dem Screenshots wird ebenfalls die Testabdeckung von den verwendeten Frameworks angezeigt, erkennbar mit `.framework`. Relevant ist eigentlich nur die `Stirnraten.app`. Mit ca. 16 % ist dies natürlich nicht wirklich berauschend. 
 
-Was XCov testet, findet sich in einer detaillierten HTML, siehe [hier](https://stirnraten.de/softwaretechnik/metriken/xcov_output/) [Source](xcov_output)
+In dem Screenshots wird ebenfalls die Testabdeckung von verwendeten Dritt-Frameworks angezeigt (z.B. Lottie), erkennbar durch das `.framework`. Relevant ist eigentlich nur die `Stirnraten.app`. Mit ca. 16 % ist die Testabdeckung natürlich nicht wirklich berauschend. 
+
+Was XCov testet, findet sich in einer detaillierten HTML, siehe [hier](https://stirnraten.de/softwaretechnik/metriken/xcov_output/)
+Originaler [Sourcecode](xcov_output)
 
 ![Testabdeckung](images/xcoverage_example.png "Detaillierte Testabdeckung")
 Was man bei diesen Tests wissen muss: Damit Unittests ausgeführt werden können, muss die App initialisiert werden. Sobald die App läuft werden auch alle Methoden ausgeführt, welche beim regulären Appstart gestartet werden. Obwohl es keinerlei Unittests für gewissen Klassen gibt, können so 100 % Abdeckungen enstehen (siehe grünen Kasten). 
 
-D.h. das Ergebnis ist ein wenig trügerisch. Es wird dementsprechend nur gezeigt, wie viel Prozent Methoden von den jeweiligen Klassen ausgeführt wird. Man kann nicht sehen, wie viel ausgeführter Code tatsächlich durch Unittests abgedeckt ist. Insgesamt ist dies für mich eher enttäuschend. 
+D.h. das Ergebnis ist ein wenig trügerisch. Es wird dementsprechend nur gezeigt, wie viel Methoden von den jeweiligen Klassen ausgeführt wird. Man kann nicht sehen, wie viel ausgeführter Code tatsächlich durch Unittests abgedeckt ist. Insgesamt ist dies für mich eher enttäuschend. 
 
 ## Lines of Code
 
-Lines of Code  `4954`  Wobei es klassischerweise schwierig ist, zu beurteilen, was diese Zahl aussagt. 🤷‍♂️
-Ein Swift-Linter sagt, dass eine *.swift nicht länger als 400 Zeilen sein sollte. Dies trifft auf alle Files zu.
-Ein weiterer Richtwert ist, dass in einem Swift-ViewController nicht mehr als 175 Zeilen haben sollte. 
+Das Projekt hat `4954`  Lines of Code. Wobei es klassischerweise schwierig ist, zu beurteilen, was diese Zahl aussagt. 🤷‍♂️
+Ein Swift-Linter sagt, dass eine `*.swift` nicht länger als 400 Zeilen sein sollte. Dies trifft auf alle Files zu.
+Ein weiterer Richtwert ist, dass ein Swift-ViewController nicht mehr als 175 Zeilen haben sollte. 
 
 Bis auf den RungameViewController sind alle ViewController in diesem Limit. 
 ```288 ./ViewControllers/ViewController/Main/RunGameViewController/RunGameViewController.swift```  
-Bei einer Analyse ergab sich, dass der RungameViewController tatsächlich unsauber entwickelt ist und an einigen Stellen das MVC Pattern verletzt, da zu viel Spiellogik im View liegt. Ich habe mir ein Ticket erstellt.  
+Bei einer Analyse ergab sich, dass der `RungameViewController` tatsächlich unsauber entwickelt ist und an einigen Stellen das MVC Pattern verletzt, da zu viel Spiellogik im View liegt. Ich habe mir ein Ticket erstellt.  
 
 Shell Command for Lines Of Code
 ```find . -path ./Pods -prune -o -name "*.swift" -print0 ! -name "/Pods" | xargs -0 wc -l```
@@ -137,6 +139,8 @@ Result
 
 Da XCode (Apples IDE für Swift/Objectiv C) relativ schwach ist, was Redundanz, unnötige Importe, unsued Code usw. ist, setze ich die [PeripheryApp](https://peripheryapp.com/documentation/getting-started/)  ein.
 
+
+Die folgenden Zeilen zeigen Code, welcher nicht verwendet wird und gelöscht werden sollte. 
 ```
 /Users/michaelrothkegel/StirnratenIOS/Stirnraten/Extensions/BundleExtensions.swift:15:9: warning: Property 'buildVersionNumber' is unused
 /Users/michaelrothkegel/StirnratenIOS/Stirnraten/Extensions/BundleExtensions.swift:18:9: warning: Property 'releaseVersionNumberPretty' is unused
@@ -163,15 +167,12 @@ Da XCode (Apples IDE für Swift/Objectiv C) relativ schwach ist, was Redundanz, 
 /Users/michaelrothkegel/StirnratenIOS/Stirnraten/ViewControllers/ViewController/Settings/PageViewControllers/HelpPageViewController.swift:26:9: warning: Property 'currentIndex' is unused
 ```
 
-Wie man sieht, ist ein wenig Balast angefallen von Methoden, welche nicht mehr verwendet werden.  
-
-
 ## Swift Linter
 
 Das Projekte hatte vor dem Code Style Check drei Warnungen. Der implentierte [Swift Linter](https://github.com/realm/SwiftLint) hat dafür gesorgt, dass das Projekt nicht mehr kompiliert hat, da es einige grobe Code-Style-Verstöße gab. Zusätzlich wurden > 400 Warnungen geworfen.
 
-![Kurzschreibweiße](images/shorthand "Kurzschreibweise")
-![Fehlende Nachrichten, wenn Tests failen](images/missingFailMessage "Fehlende Nachrichten, wenn Tests failen")
+![Kurzschreibweiße](images/shorthand.png "Kurzschreibweise")
+![Fehlende Nachrichten, wenn Tests failen](images/missingFailMessage.png "Fehlende Nachrichten, wenn Tests failen")
 
 Inzwischen sind die Warnungen auf 100 reduziert.
 
