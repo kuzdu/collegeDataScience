@@ -3,14 +3,23 @@
 Im Folgenden wird meine iOS-App [Stirnraten](https://stirnraten.de/softwaretechnik/deployment_diagram.html) untersucht auf
 - Lines of Code
 - Testabdeckung
-- Finden von unbenutzten Code
-- ... 
+- Unbenutzer Code
+- Swift Linter (Code Style Checker)
+
 
 ## Testabdeckung
 
 Verwendetes Tool: [XCov](https://github.com/nakiostudio/xcov). Dieses Tool wertet die Logs, die nach einem Projekt-Test erstellt werden aus und stellt die Coverage grafisch dar. Siehe hier. 
 
+![Testabdeckung](images/test_coverage.png "Testabdeckung")
+Erläuterung: In dem Screenshots wird ebenfalls die Testabdeckung von den verwendeten Frameworks angezeigt, erkennbar mit `.framework`. Relevant ist eigentlich nur die `Stirnraten.app`. Mit ca. 16 % ist dies natürlich nicht wirklich berauschend. 
 
+Was XCov testet, findet sich in einer detaillierten HTML, siehe [hier](https://stirnraten.de/softwaretechnik/metriken/xcov_output/) [Source](xcov_output)
+
+![Testabdeckung](images/xcoverage_example.png "Detaillierte Testabdeckung")
+Was man bei diesen Tests wissen muss: Damit Unittests ausgeführt werden können, muss die App initialisiert werden. Sobald die App läuft werden auch alle Methoden ausgeführt, welche beim regulären Appstart gestartet werden. Obwohl es keinerlei Unittests für gewissen Klassen gibt, können so 100 % Abdeckungen enstehen (siehe grünen Kasten). 
+
+D.h. das Ergebnis ist ein wenig trügerisch. Es wird dementsprechend nur gezeigt, wie viel Prozent Methoden von den jeweiligen Klassen ausgeführt wird. Man kann nicht sehen, wie viel ausgeführter Code tatsächlich durch Unittests abgedeckt ist. Insgesamt ist dies für mich eher enttäuschend. 
 
 ## Lines of Code
 
@@ -124,4 +133,48 @@ Result
 ```
 
 
-## Unbenutzer Code
+## Unbenutzer/Redundanter Code
+
+Da XCode (Apples IDE für Swift/Objectiv C) relativ schwach ist, was Redundanz, unnötige Importe, unsued Code usw. ist, setze ich die [PeripheryApp](https://peripheryapp.com/documentation/getting-started/)  ein.
+
+```
+/Users/michaelrothkegel/StirnratenIOS/Stirnraten/Extensions/BundleExtensions.swift:15:9: warning: Property 'buildVersionNumber' is unused
+/Users/michaelrothkegel/StirnratenIOS/Stirnraten/Extensions/BundleExtensions.swift:18:9: warning: Property 'releaseVersionNumberPretty' is unused
+/Users/michaelrothkegel/StirnratenIOS/Stirnraten/Internal Models/CategoryHolder.swift:15:9: warning: Property 'randomCategories' is unused
+/Users/michaelrothkegel/StirnratenIOS/Stirnraten/Internal Models/GuessedWords.swift:14:9: warning: Property 'lastTimeUsed' is unused
+/Users/michaelrothkegel/StirnratenIOS/Stirnraten/Internal Models/GuessedWords.swift:15:9: warning: Property 'failedToGetANewWord' is unused
+/Users/michaelrothkegel/StirnratenIOS/Stirnraten/Services/Analytics/MixpanelWrapper.swift:14:17: warning: Property 'mixpanelLiveToken' is unused
+/Users/michaelrothkegel/StirnratenIOS/Stirnraten/Services/Notifications/NotificationService.swift:15:10: warning: Function 'sendTag(key:value:)' is unused
+/Users/michaelrothkegel/StirnratenIOS/Stirnraten/Services/Notifications/NotificationService.swift:53:10: warning: Function 'sendTag(key:value:)' is unused
+/Users/michaelrothkegel/StirnratenIOS/Stirnraten/Services/Notifications/OneSignalNotifcationExtension.swift:13:7: warning: Class 'OneSignalPushService' is unused
+/Users/michaelrothkegel/StirnratenIOS/Stirnraten/Services/Notifications/OneSignalService.swift:43:10: warning: Function 'sendTag(key:value:)' is unused
+/Users/michaelrothkegel/StirnratenIOS/Stirnraten/Tools/Alerts.swift:22:17: warning: Function 'showYesNoAlert(vc:title:message:completion:)' is unused
+/Users/michaelrothkegel/StirnratenIOS/Stirnraten/Tools/Alerts/AlertmachinePresenter.swift:53:18: warning: Function 'setSkipPremiumTime()' is unused
+/Users/michaelrothkegel/StirnratenIOS/Stirnraten/Tools/General.swift:15:17: warning: Function 'openMail(email:)' is unused
+/Users/michaelrothkegel/StirnratenIOS/Stirnraten/Tools/General.swift:38:17: warning: Function 'getRandomIcon()' is unused
+/Users/michaelrothkegel/StirnratenIOS/Stirnraten/Tools/HapticTool.swift:28:17: warning: Function 'heavy()' is unused
+/Users/michaelrothkegel/StirnratenIOS/Stirnraten/Tools/HapticTool.swift:37:17: warning: Function 'medium()' is unused
+/Users/michaelrothkegel/StirnratenIOS/Stirnraten/Tools/HapticTool.swift:55:17: warning: Function 'callSelectionHaptic()' is unused
+/Users/michaelrothkegel/StirnratenIOS/Stirnraten/Tools/HapticTool.swift:75:17: warning: Function 'taskWarning()' is unused
+/Users/michaelrothkegel/StirnratenIOS/Stirnraten/Tools/Layouter.swift:122:10: warning: Function 'getTextOnTransparence()' is unused
+/Users/michaelrothkegel/StirnratenIOS/Stirnraten/Tools/Layouter.swift:142:10: warning: Function 'getButtonIcon()' is unused
+/Users/michaelrothkegel/StirnratenIOS/Stirnraten/ViewControllers/BaseViewController/StirnratenBaseViewController.swift:18:9: warning: Property 'categoryHolder' is unused
+/Users/michaelrothkegel/StirnratenIOS/Stirnraten/ViewControllers/ViewController/Main/FinishViewController/FinishViewController.swift:22:9: warning: Property 'rating' is unused
+/Users/michaelrothkegel/StirnratenIOS/Stirnraten/ViewControllers/ViewController/Settings/PageViewControllers/HelpPageViewController.swift:26:9: warning: Property 'currentIndex' is unused
+```
+
+Wie man sieht, ist ein wenig Balast angefallen von Methoden, welche nicht mehr verwendet werden.  
+
+
+## Swift Linter
+
+Das Projekte hatte vor dem Code Style Check drei Warnungen. Der implentierte [Swift Linter](https://github.com/realm/SwiftLint) hat dafür gesorgt, dass das Projekt nicht mehr kompiliert hat, da es einige grobe Code-Style-Verstöße gab. Zusätzlich wurden > 400 Warnungen geworfen.
+
+![Kurzschreibweiße](images/shorthand "Kurzschreibweise")
+![Fehlende Nachrichten, wenn Tests failen](images/missingFailMessage "Fehlende Nachrichten, wenn Tests failen")
+
+Inzwischen sind die Warnungen auf 100 reduziert.
+
+
+
+

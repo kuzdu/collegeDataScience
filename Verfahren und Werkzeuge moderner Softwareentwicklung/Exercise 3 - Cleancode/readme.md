@@ -116,7 +116,7 @@ func isOfAge() {
 
 ## 6. Konstruktoren/Funktionen nicht überparametrisieren, sondern in Objekte aufteilen
 
-Drei Argumente in einer Funktion/Konstruktoren sind okay, vier kritisch und alles ab 5 zu viel.
+Drei Argumente in einer Funktion/Konstruktoren sind okay, vier kritisch und alles ab fünf zu viel.
 
 
 Don't
@@ -152,9 +152,9 @@ var currentLocationLatidude = locationManager.getCurrentLocationLatitude()
 var currentLocationLatidude = locationManager.getCurrentLocationLongitude()
 ```
 
-## 8. Switch vs. if, else 
+## 8. Switch vs. if-else 
 
-Natürlich hängt es ein wenig von der Erfahrung ab, wann man Switch und wann if-else verwendet, allerdings bietet sich switch besonders an, wenn abgeschlossene Zustände erwartet werden, während if-else eher für kürzere Entscheidungsphasen sinnvoll ist. 
+Natürlich hängt es ein wenig von der Erfahrung ab, wann man Switch und wann if-else verwendet, allerdings bietet sich ein switch besonders an, wenn abgeschlossene Zustände erwartet werden, während if-else eher für kürzere Entscheidungsphasen sinnvoll ist. 
 
 Do
 ```
@@ -201,7 +201,7 @@ func getNextCell(profileCell: ProfileCell) -> TableViewCell {
     }
 }
 ```
-So kann zwar immer nur tatsächlich die Zelle zurückgegeben werden, welche angefordert ist, allerdings setzt die Funktion durch `-> TableViewCell`  voraus, dass immer eine intialisierte Zelle zurückgegeben wird.  In diesem Fall durch  `return TableViewCell()`. Das ist unnötig und gleichzeitig fehlerhaft. 
+So kann zwar immer nur tatsächlich die Zelle zurückgegeben werden, welche angefordert ist, allerdings setzt die Funktion durch `-> TableViewCell`  voraus, dass immer eine intialisierte Zelle zurückgegeben wird.  In diesem Fall durch  `return TableViewCell()` eine unnötige/leere Zelle erzeugt. 
 
 
 ## 9. TODOs sind verboten
@@ -220,10 +220,10 @@ func xy() {
 Do
 ```
 /**
-return is always general error
-see Ticket-123: www.trello.de/ticket-123, improving error handling for xy 
+return is always just a general error
+see Ticket-123 on www.trello.de/ticket-123: "improving error handling for xy" 
 */
-func xy(a: A, b: B, c: C, d: D, e: E) {
+func xy() {
 ...
 }
 ```
