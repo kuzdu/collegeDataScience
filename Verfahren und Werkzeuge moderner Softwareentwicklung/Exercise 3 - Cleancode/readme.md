@@ -1,7 +1,7 @@
 # Clean Code
 
-- [Clean Code Style Sheet -  Top 20](Clean Code Style Sheet -  Top 20)
-- Kleines Spiel in Clean Code - [Stirnraten](cleanCodeExample)
+## Spielausschnitt 
+- [Clean Code Ausschnitt aus dem Spiel Stirnraten](cleanCodeExample.md)
 
 ## Clean Code Style Sheet -  Top 20 
 Das folgende Style Sheet zeigt meine Top 20 Regeln für Clean Code. 
