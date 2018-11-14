@@ -280,7 +280,7 @@ Do
 var foundItem = items.first.filter({ 0$.id == 1293 })
 ```
 
-## 11. Löschen von nutzlosem Code und Kommentaren
+## 12. Löschen von nutzlosem Code und Kommentaren
 
 Code, der nicht verwendet wird, sollte gelöscht werden, genau wie unnötige Kommentare. Da Versionsverwaltungen (wie z.B Git) verwendet werden, ist der Code ohnehin nie weg. 
 
