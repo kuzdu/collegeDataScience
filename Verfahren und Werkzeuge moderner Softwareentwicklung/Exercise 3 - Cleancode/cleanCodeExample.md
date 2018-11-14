@@ -1,6 +1,7 @@
+# Clean Code - Spielausschnitt 
 Es handelt sich um ein Ausschnitt des Spieles Stirnraten: In diesem Spiel muss der Spieler möglichst viele Begriffe innerhalb von 30 Sekunden erraten, welche ihm von Mitspielern erklärt werden.
 
-In dem folgenden Gif wurden bereits zahlreiche Begriffe erraten und die Zeit läuft ab. Es werden noch einmal alle Begriffe angezeigt. Diese Logik steckt im `FinishViewController` und wurde nach besten Wissen und Gewissen nach Clean Code Guidelines umgesetzt. 
+In dem folgenden Gif wurden bereits zahlreiche Begriffe erraten und die Zeit läuft ab. Die Logik zum Anzeigen des Endscreens steckt im `FinishViewController` und wurde nach besten Wissen und Gewissen nach Clean Code Guidelines umgesetzt. 
 
 ![Stirnraten Finish Screen](stirnraten.gif)
 
@@ -44,11 +45,12 @@ class FinishViewController: StirnratenBaseViewController {
         goToRunGameViewController()
     }
     
-    // MARK: publics vars
+    // MARK: - public vars
     var usedWords = [UsedWord]()
     var categoryIds = [Int]()
     var rating = Rating(playedGames: PersistenceTool.loadPlayedGames())
     
+    // MARK: - private vars
     private let cheerView = CheerView()
     private var rightWords = [String]()
     private var wrongWords = [String]()
