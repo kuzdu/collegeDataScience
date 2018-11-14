@@ -5,7 +5,7 @@ In dem folgenden Gif wurden bereits zahlreiche Begriffe erraten und die Zeit lä
 
 ![Stirnraten Finish Screen](stirnraten.gif)
 
-```[swift]
+```swift
 //
 //  FinishViewController.swift
 //  Stirnraten
