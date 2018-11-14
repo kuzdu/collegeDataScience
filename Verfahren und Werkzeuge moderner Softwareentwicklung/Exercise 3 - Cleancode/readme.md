@@ -1,5 +1,8 @@
 # Clean Code
 
+- [Clean Code Style Sheet -  Top 20](Clean Code Style Sheet -  Top 20)
+- Kleines Spiel in Clean Code - [Stirnraten](cleanCodeExample)
+
 ## Clean Code Style Sheet -  Top 20 
 Das folgende Style Sheet zeigt meine Top 20 Regeln für Clean Code. 
 
@@ -227,3 +230,58 @@ func xy() {
 ...
 }
 ```
+
+## 10.  Konventionen der Entwicklungssprache nutzen.
+Je nach Programmiersprache  gibt es common ways, best practices und/oder Konventionen. An diese sollte man sich immer halten, und diese einheitlich und durchgängig für das Projekte verwenden. 
+
+Mögliche Stile wären z.B. snake_case, camelCase oder UpperCamelCase. Auch die Klammersetzung sollte einheitlich sein, wie z.B.
+
+```
+if isUserThursty() {
+    //drink a water
+} else {
+    //drink a beeer
+}
+    
+```
+
+```
+if (isUserThursty())
+{
+    //drink water
+} 
+else 
+{
+    //drink a beer
+}
+```
+Beide Varianten sind gleichrichtig. Während die erste klassisch für `Swift` ist, wird die andere für `.net` eingesetzt. Wichtig ist die Einheitlichkeit im Projekt. 
+
+
+## 11. Kurzschreibweisen bevorzugen
+Kurzschreibweisen können gerade für Anfänger schwieriger zu lesen sein, allerdings sparen sie viel Platz und erleichtern  so die Lesequalität.
+
+Einige Beispiele aus `Swift`
+
+Don't
+```
+var foundItem: Item!
+for item in items {
+    if item.id == 1293 {
+        foundItem = item
+        break
+    }
+}
+...
+```
+
+Do
+```
+var foundItem = items.first.filter({ 0$.id == 1293 })
+```
+
+## 11. Löschen von nutzlosem Code und Kommentaren
+
+Code, der nicht verwendet wird, sollte gelöscht werden, genau wie unnötige Kommentare. Da Versionsverwaltungen (wie z.B Git) verwendet werden, ist der Code ohnehin nie weg. 
+
+
