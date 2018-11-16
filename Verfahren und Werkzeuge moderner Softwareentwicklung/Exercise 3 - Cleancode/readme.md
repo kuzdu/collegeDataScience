@@ -285,3 +285,23 @@ var foundItem = items.first.filter({ 0$.id == 1293 })
 Code, der nicht verwendet wird, sollte gelöscht werden, genau wie unnötige Kommentare. Da Versionsverwaltungen (wie z.B Git) verwendet werden, ist der Code ohnehin nie weg. 
 
 
+## 13. Nesting verhindern (Pyramid of Doom)
+
+Don't
+
+```
+if let startLatitude = startCoordinate.latitude {
+    if let startLongitude = startCoordinate.longitude {
+        if let endLatitude = endCoordinate.latitude {
+            if let endLongitude = endCoordinate.longitude {
+            }
+        }
+    )
+)
+```
+
+Do 
+
+```
+    guard öö
+```
