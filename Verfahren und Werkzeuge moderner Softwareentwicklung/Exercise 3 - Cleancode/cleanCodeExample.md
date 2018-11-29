@@ -5,6 +5,17 @@ In dem folgenden Gif wurden bereits zahlreiche Begriffe erraten und die Zeit lä
 
 ![Stirnraten Finish Screen](stirnraten.gif)
 
+
+### Erläuterung: Warum es sich um Clean Code handelt
+
+- Der ViewController wird durch das  `MARK:` klar in unterschiedliche Segmente eingeteilt: UI-Definition, UI-Actions, public Variablen, private Konstanten/Variablen  ... 
+- Logiken von Protokollen (vergleichbar mit Javas Interface) sind in Extensions ausgelagert. Man sieht so ziemlich schnell, welche Methoden durch das Protokoll eingebunden worden sind, z.B. `extension FinishViewController: UITableViewDelegate, UITableViewDataSource`
+- in diesem Fall ist der Lifecycle einer Swift-App, dass zuerst `viewDidLoad` und dann `viewWillAppear` aufgerufen werden. Beide Funktionen enthalten weitere Funktionen mit sprechenden Namen
+- geht man den Code durch, sollte jede Funktion sinnvoll benamt sein und genau das tun, was im Namen steht.
+
+### Kritik/Streitigkeiten:
+- Nicht ganz klar ist vielleicht der  `cheerView`, allerdings kommt diese Bezeichnungs von der Library `Cheers`. Möglicherweise wäre der Name `confettiAnimationView` besser, dann wüsste man, dass der View notwendig für die Konfetti-Animation ist. 
+- `func runWordsAnimation` ist ggf. ein wenig lang geraten. Man könnte diese Funktion auch noch einmal zerlegen. Da aber größtenteils nur einmalige Operationen am View ausgeführt werden, habe ich mich entschieden, es hier länger zu lassen.   
 ```swift
 //
 //  FinishViewController.swift
@@ -20,17 +31,13 @@ import MessageUI
 
 class FinishViewController: StirnratenBaseViewController {
     // MARK: - views
-    // tableviews
     @IBOutlet weak var wrongWordsTableView: UITableView!
     @IBOutlet weak var rightWordsTableView: UITableView!
 
-    //label
     @IBOutlet weak var sumOfPointsLabel: UILabel!
 
-    //view
     @IBOutlet weak var sumOfPointsHolderView: UIView!
     
-    //buttons
     @IBOutlet weak var againButton: IconButton!
     @IBOutlet weak var abortButton: IconButton!
     
@@ -109,21 +116,23 @@ extension FinishViewController {
         }
     }
     
-    private func stopWordsAnimation() {
+    private func allWordsWereShown() {
         PersistenceTool.savePlayedGame()
-        
-        let escapedString = "{ \"played_games\":\(PersistenceTool.loadPlayedGames()), \"has_premium\":\(hasUserFullAccess()) }"
-        analyticsTool.incremet(property: .playedGames, by: 1)
-        analyticsTool.setCusomter(property: .hasPremium, to: hasUserFullAccess())
-        NotificationService.instance.sendTag(withJsonString: escapedString)
-        
+        trackFinalStatistics()
         showCheersAnimation()
         showInternalAdvertisment()
     }
     
+    private func trackFinalStatistics() {
+        let escapedString = "{ \"played_games\":\(PersistenceTool.loadPlayedGames()), \"has_premium\":\(hasUserFullAccess()) }"
+        analyticsTool.incremet(property: .playedGames, by: 1)
+        analyticsTool.setCusomter(property: .hasPremium, to: hasUserFullAccess())
+        NotificationService.instance.sendTag(withJsonString: escapedString)
+    }
+    
     private func runWordsAnimation() {
         if usedWords.count == 0 {
-            stopWordsAnimation()
+            allWordsWereShown() 
             return
         }
         
