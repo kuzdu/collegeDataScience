@@ -9,8 +9,8 @@ In dem folgenden Gif wurden bereits zahlreiche Begriffe erraten und die Zeit lä
 ### Erläuterung: Warum es sich um Clean Code handelt
 
 - Der ViewController wird durch das  `MARK:` klar in unterschiedliche Segmente eingeteilt: UI-Definition, UI-Actions, public Variablen, private Konstanten/Variablen  ... 
-- Logiken von Protokollen (vergleichbar mit Javas Interface) sind in Extensions ausgelagert. Man sieht so ziemlich schnell, welche Methoden durch das Protokoll eingebunden worden sind, z.B. `extension FinishViewController: UITableViewDelegate, UITableViewDataSource`
-- in diesem Fall ist der Lifecycle einer Swift-App, dass zuerst `viewDidLoad` und dann `viewWillAppear` aufgerufen werden. Beide Funktionen enthalten weitere Funktionen mit sprechenden Namen
+- Logiken von Protokollen (vergleichbar mit Java Interfaces) sind in Extensions ausgelagert. Man sieht so ziemlich schnell, welche Methoden durch das Protokoll eingebunden worden sind, z.B. `extension FinishViewController: UITableViewDelegate, UITableViewDataSource`
+- in diesem Fall ist der Lifecycle einer Swift-App, dass zuerst `viewDidLoad` und dann `viewWillAppear` aufgerufen wird. Beide Funktionen enthalten weitere Funktionen mit sprechenden Namen.
 - geht man den Code durch, sollte jede Funktion sinnvoll benamt sein und genau das tun, was im Namen steht.
 
 ### Kritik/Streitigkeiten:

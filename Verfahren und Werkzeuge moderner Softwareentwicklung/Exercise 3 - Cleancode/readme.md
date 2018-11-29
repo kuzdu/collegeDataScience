@@ -3,22 +3,22 @@
 ## Spielausschnitt 
 - [Clean Code Ausschnitt aus dem Spiel Stirnraten](cleanCodeExample.md)
 
-## Clean Code Style Sheet -  Top 20 
-Das folgende Style Sheet zeigt meine Top 20 Regeln für Clean Code. 
+## Clean Code Style Sheet -  Top 15 
+Das folgende Style Sheet zeigt meine Top 15 Regeln für Clean Code. 
 
 ## 1. Sinnvolle Variablennamen 
 
 Variablennamen sollten sprechend und nicht abgekürzt sein. 
 
-Don't
-```
+❌ Don't
+```swift 
 var n = 4000
 var t = 1.19
 var bto = n * t
 ```
 
-Do
-```
+ ✅ Do
+```swift 
 var netto = 4000
 var taxes = 1.19
 var brutto = netto * taxes 
@@ -27,15 +27,15 @@ var brutto = netto * taxes
 
 Abfragen sollten in Funktionen ausgelagert werden, um die Lesbarkeit zu verbessern.
 
-Don't
-```
+❌ Don't
+```swift 
 if user.age >= 20 && user.hasDriverLicense == true && !user.isDrunk && user.hasDriverExperience > 1 {
 driveCar() 
 } 
 ```
 
-Do
-```
+✅ Do
+```swift 
 if user.isAllowedToDrive() {
 driveCar()
 } 
@@ -45,8 +45,8 @@ driveCar()
 ## 3. Sprechende Funktionen
 Funkionen sollten sprechend sein.
 
-Don't
-```
+❌ Don't
+```swift 
 if check() {
     transition(account)
 } else {
@@ -54,8 +54,8 @@ if check() {
 }
 ```
 
-Do
-```
+✅ Do
+```swift 
 if isTransitionValid() {
     startTransistionTo(bankAccount)
 } else {
@@ -65,8 +65,8 @@ if isTransitionValid() {
 
 ## 4. Langen Code in Funktionen aufsplitten
 
-Don't
-```
+❌ Don't
+```swift 
 let user = User()
 user.age = ageTextfield.text
 user.name = nameTextField.text
@@ -82,8 +82,8 @@ user.machine = machine
 } 
 ```
 
-Do
-```
+✅ Do
+```swift 
 let user = createUser()
 if user.isAllowedToDrive() {
     drive("VWGolf")
@@ -95,8 +95,8 @@ if user.isAllowedToDrive() {
 
 Seiteneffekte müssen immer verhindert werden. 
 
-Don't
-```
+❌ Don't
+```swift 
 // self = user-Objekt
 func setAge(age: Int) {
     self.age = age
@@ -106,8 +106,8 @@ func setAge(age: Int) {
 }
 ```
 
-Do
-```
+✅ Do
+```swift 
 func setAge(age: Int) {
     self.age = age
 }
@@ -122,13 +122,13 @@ func isOfAge() {
 Drei Argumente in einer Funktion/Konstruktoren sind okay, vier kritisch und alles ab fünf zu viel.
 
 
-Don't
-```
+❌ Don't
+```swift 
 let user= user("Michael", "Müller", 20, "Maxstraße 4a", "51023", Köln)
 ```
 
-Do
-```
+✅ Do
+```swift 
 let address = Address("Maxstraße 4a", "51023", "Köln")
 let personalInformation = PersonalInformation("Michael","Müller","20")
 let user = User(personalInformation, address)
@@ -143,14 +143,14 @@ Dies verhindert
 - gewährt Übersichtlichkeit, wer, was genau macht und machen darf 
 - verhindert Fehlerhafte Implementierungen durch Direktzugriffe.
 
-Don't 
-``` 
+❌ Don't 
+```swift 
 var currentLocationLatidude = locationManager.currentLocation.position.coordinate.latitude
 var currentLocationLongitude = locationManager.currentLocation.position.coordinate.longitude
 ```
 
-Do
-```
+✅ Do
+```swift 
 var currentLocationLatidude = locationManager.getCurrentLocationLatitude() 
 var currentLocationLatidude = locationManager.getCurrentLocationLongitude()
 ```
@@ -159,8 +159,8 @@ var currentLocationLatidude = locationManager.getCurrentLocationLongitude()
 
 Natürlich hängt es ein wenig von der Erfahrung ab, wann man Switch und wann if-else verwendet, allerdings bietet sich ein switch besonders an, wenn abgeschlossene Zustände erwartet werden, während if-else eher für kürzere Entscheidungsphasen sinnvoll ist. 
 
-Do
-```
+✅ Do
+```swift 
 enum ProfileCells {
     personalData, payment, address, logout
 }
@@ -175,7 +175,7 @@ func getNextCell(profileCell: ProfileCell) -> TableViewCell {
 }
 ```
 Das Äquivalent sähe als if-else wie folgt aus: 
-```
+```swift 
 func getNextCell(profileCell: ProfileCell) -> TableViewCell {
     if profileCell == .personalData {
         return PersonalDataCell()
@@ -194,7 +194,7 @@ Nachtteile bzgl. des `if-else`:
 - wird das Enum erweitert, wird die if-else Strutkur fehlerhaft, was aber nicht zwingend vom Entwickler bemerkt werden muss (je nach Größe des Projektes). 
 
 Alternativ:
-```
+```swift 
 func getNextCell(profileCell: ProfileCell) -> TableViewCell {
     // ...
     } else if == .logout {
@@ -212,16 +212,16 @@ So kann zwar immer nur tatsächlich die Zelle zurückgegeben werden, welche ange
 Code in dem `TODO` steht  darf nicht in ein Branch gepushed werden. Unfertige Implementierungen sind unsauber, schnell fehlerhaft und einfach falsch. 
 Falls eine Funktionalität eingebaut wurde, die funktioniert, allerdings noch einmal überarbeitet werden sollte, dann kann dies durch einen Kommentar gelöst werden.
 
-Don't
-```
+❌ Don't
+```swift 
 //TODO: error handling is a general error at the moment, should improving this
 func xy() {
     ...
 }
 ```
 
-Do
-```
+✅ Do
+```swift 
 /**
 return is always just a general error
 see Ticket-123 on www.trello.de/ticket-123: "improving error handling for xy" 
@@ -236,7 +236,7 @@ Je nach Programmiersprache  gibt es common ways, best practices und/oder Konvent
 
 Mögliche Stile wären z.B. snake_case, camelCase oder UpperCamelCase. Auch die Klammersetzung sollte einheitlich sein, wie z.B.
 
-```
+```swift 
 if isUserThursty() {
     //drink a water
 } else {
@@ -245,7 +245,7 @@ if isUserThursty() {
     
 ```
 
-```
+```swift 
 if (isUserThursty())
 {
     //drink water
@@ -263,8 +263,8 @@ Kurzschreibweisen können gerade für Anfänger schwieriger zu lesen sein, aller
 
 Einige Beispiele aus `Swift`
 
-Don't
-```
+❌ Don't
+```swift 
 var foundItem: Item!
 for item in items {
     if item.id == 1293 {
@@ -275,8 +275,8 @@ for item in items {
 ...
 ```
 
-Do
-```
+✅ Do
+```swift 
 var foundItem = items.first.filter({ 0$.id == 1293 })
 ```
 
@@ -287,9 +287,8 @@ Code, der nicht verwendet wird, sollte gelöscht werden, genau wie unnötige Kom
 
 ## 13. Nesting verhindern (Pyramid of Doom)
 
-Don't
-
-```
+❌ Don't
+```swift 
 if let startLatitude = startCoordinate.latitude {
     if let startLongitude = startCoordinate.longitude {
         if let endLatitude = endCoordinate.latitude {
@@ -300,8 +299,35 @@ if let startLatitude = startCoordinate.latitude {
 )
 ```
 
-Do 
+✅ Do 
+```swift 
+guard let startLatitude = startCoordinate.latitude, let startLongitude = startCoordinate.longitude, let endLatitude = endCoordinate.latitude, let endLongitude = endCoordinate.longitude else {
+print("one value is nil")
+return
+}
+```
 
-```
-    guard öö
-```
+alternativ
+```swift 
+guard let startLatitude = startCoordinate.latitude else {
+    //no latitude
+    return
+}
+
+guard let startLongitude = startCoordinate.longitude else {
+//no ,ongitude
+return
+}
+
+guard let endLatitude = endCoordinate.longitude else {
+//no ,ongitude
+return
+}
+
+
+, let startLongitude = , let endLatitude = endCoordinate.latitude, let endLongitude = endCoordinate.longitude else {
+print("one value is nil")
+return
+}
+```Ende
+
