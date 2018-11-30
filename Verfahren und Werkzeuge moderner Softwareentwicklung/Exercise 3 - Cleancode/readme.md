@@ -124,7 +124,7 @@ Drei Argumente in einer Funktion/Konstruktoren sind okay, vier kritisch und alle
 
 ❌ Don't
 ```swift 
-let user= user("Michael", "Müller", 20, "Maxstraße 4a", "51023", Köln)
+let user = user("Michael", "Müller", 20, "Maxstraße 4a", "51023", Köln)
 ```
 
 ✅ Do
@@ -140,7 +140,7 @@ let user = User(personalInformation, address)
 Klassen sollten so aufgebaut sein, dass nicht jeder jeden kennt, sondern nur seine Nachbarn. 
 Dies verhindert
 - Referenzprobleme
-- gewährt Übersichtlichkeit, wer, was genau macht und machen darf 
+- gewährt Übersichtlichkeit darüber, wer, was genau macht und machen darf 
 - verhindert Fehlerhafte Implementierungen durch Direktzugriffe.
 
 ❌ Don't 
@@ -157,7 +157,7 @@ var currentLocationLatidude = locationManager.getCurrentLocationLongitude()
 
 ## 8. Switch vs. if-else 
 
-Natürlich hängt es ein wenig von der Erfahrung ab, wann man Switch und wann if-else verwendet, allerdings bietet sich ein switch besonders an, wenn abgeschlossene Zustände erwartet werden, während if-else eher für kürzere Entscheidungsphasen sinnvoll ist. 
+Natürlich hängt es ein wenig von der Erfahrung ab, wann man switch und wann if-else verwendet, allerdings bietet sich ein switch besonders an, wenn abgeschlossene Zustände erwartet werden, während if-else eher für kürzere Entscheidungsphasen sinnvoll ist. 
 
 ✅ Do
 ```swift 
@@ -209,7 +209,7 @@ So kann zwar immer nur tatsächlich die Zelle zurückgegeben werden, welche ange
 
 ## 9. TODOs sind verboten
 
-Code in dem `TODO` steht  darf nicht in ein Branch gepushed werden. Unfertige Implementierungen sind unsauber, schnell fehlerhaft und einfach falsch. 
+Code in dem `TODO` steht, darf nicht in ein Branch gepushed werden. Unfertige Implementierungen sind unsauber, schnell fehlerhaft und einfach falsch. 
 Falls eine Funktionalität eingebaut wurde, die funktioniert, allerdings noch einmal überarbeitet werden sollte, dann kann dies durch einen Kommentar gelöst werden.
 
 ❌ Don't
@@ -261,7 +261,7 @@ Beide Varianten sind gleichrichtig. Während die erste klassisch für `Swift` is
 ## 11. Kurzschreibweisen bevorzugen
 Kurzschreibweisen können gerade für Anfänger schwieriger zu lesen sein, allerdings sparen sie viel Platz und erleichtern  so die Lesequalität.
 
-Einige Beispiele aus `Swift`
+Ein Beispiel aus `Swift`
 
 ❌ Don't
 ```swift 
@@ -293,10 +293,13 @@ if let startLatitude = startCoordinate.latitude {
     if let startLongitude = startCoordinate.longitude {
         if let endLatitude = endCoordinate.latitude {
             if let endLongitude = endCoordinate.longitude {
+                // do sthm.
+                return 
             }
         }
     )
 )
+return "Somethin went wrong"
 ```
 
 ✅ Do 
@@ -310,24 +313,39 @@ return
 alternativ
 ```swift 
 guard let startLatitude = startCoordinate.latitude else {
-    //no latitude
+    //no start latitude
     return
 }
 
 guard let startLongitude = startCoordinate.longitude else {
-//no ,ongitude
-return
+    //no strat longitude
+    return
 }
 
 guard let endLatitude = endCoordinate.longitude else {
-//no ,ongitude
-return
+    //no end Longitude
+    return
 }
 
-
-, let startLongitude = , let endLatitude = endCoordinate.latitude, let endLongitude = endCoordinate.longitude else {
-print("one value is nil")
-return
+guard let endLongitude = endCoordinate.longitude else {
+    //no end Longitude
+    return
 }
-```Ende
+```
+
+Alternativ in kürzer
+
+```Swift
+guard let startLatitude = startCoordinate.latitude, let startLongitude = startCoordinate.longitude, let endLatitude = endCoordinate.longitude, let endLongitude = endCoordinate.longitude else {
+    print("one value is nil")
+    return
+}
+```
+
+### 14. 
+
+### 15. 
+
+
+
 
