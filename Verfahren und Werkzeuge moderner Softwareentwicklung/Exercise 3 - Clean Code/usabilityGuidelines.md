@@ -24,7 +24,7 @@ Genauer betrifft das:
 - Plattformspezifische Gesten, Transitionen, UI Elemente
 - Menugestaltung 
 
-![Navigation](images/navigation.png "Navigation")
+![Navigation](images/navi.png "Navigation")
 
 ## 4. Bei Namensgebung an die Konventionen halten
 
