@@ -7,6 +7,6 @@
 - [Meine Clean Code Guidelines](cleanCodeGuidelines.md)
 
 ## Bonus: Top10 Usability Guidelines für Apps
-- [Meine Clean Code Guidelines](usabilityGuidelines.md)
+- [Meine Top 10 Usability Guidelines](usabilityGuidelines.md)
 
 
