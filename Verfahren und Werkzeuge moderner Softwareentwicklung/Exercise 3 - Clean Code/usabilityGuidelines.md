@@ -53,10 +53,11 @@ Präsentiere Aktionen Prominent und fordere den Benutzer indirekt auf, diese Akt
 
 ## 9. Klickbare Elemente markieren
 Markiere klickbare Elemente eindeutig. 
+
 ![Mark Actions](images/markActions.png "Mark Actions")
 
 ## 10. Bilder sagen mehr als 1000 Worte
-Im echten Leben sieht man es häufig, dass Bilder besser kommunzieren, als ein geschriebener Satz. Beispiele dafür wären Verbotsschilder (z.B. ein durchgestrichenes Eis) oder Straßenschilder (Ein Warnschild mit einem Auto und Schlieren).
+Im echten Leben sieht man es häufig, dass über Bilder besser kommunziert wird als über einen geschriebenen Satz. Beispiele dafür wären Verbotsschilder (z.B. ein durchgestrichenes Eis) oder Straßenschilder (Ein Warnschild mit einem Auto und Schlieren).
 
 Dieses Prinzip funktioniert auch für Webseiten und Apps. 
 
