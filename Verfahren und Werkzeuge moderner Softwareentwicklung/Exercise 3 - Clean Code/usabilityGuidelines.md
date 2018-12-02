@@ -13,7 +13,7 @@ Je nach Telefongröße sind Flächen unterschiedlich gut/schlecht erreichbar. St
 Beim progressive disclosure werden immer nur die Inhalte angezeigt, welche für den Benutzer in dem Moment benötigt werden könnten.
 Bild 1 zeigt gängige Funktionen an, wenn man Bilder durchguckt. Auf Bild 2 wurde auf 'Bearbeiten' gedrückt und dementsprechend werden nur Funktionen angezeigt, welche dazu dienen, Bildveränderungen durchzuführen.
 
-![Bild 1](images/progressive_disclosure_1.png "Bild 1")
+![Bild 1](images/progressiveDisclosure1.png "Bild 1")
 ![Bild 2](images/progressive_disclosure_2.png "Bild 2")
 
 ## 3. Plattformspezifisch bleiben
