@@ -3,7 +3,7 @@
 ## Ant Script 
 Ein eher unspektakuläres Ant Script, welches im Endeffekt nur ein HelloWorld.java ausführt. 
 
-![Ant](images/ant.jpg "Ant")
+![Ant](images/ant.png "Ant")
 
 Der dazugehörige Quellcode. 
 ```xml
