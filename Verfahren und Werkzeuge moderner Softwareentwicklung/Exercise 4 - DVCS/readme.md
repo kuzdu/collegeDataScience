@@ -1,4 +1,4 @@
-# Clean Code
+# DVCS
 
 ## Ein paar Git Operationen 
 - [Ein paar Screenshots von Git Operationen](gitOperationen.md)
