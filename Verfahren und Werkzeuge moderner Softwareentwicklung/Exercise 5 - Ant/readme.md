@@ -1,7 +1,7 @@
 # Ant
 
 ## Ant Script 
-Ein eher unspektakuläres Ant Script, welches im Endeffekt nur ein HelloWorld.java ausführt. 
+Ein eher unspektakuläres Ant Script, welches im Endeffekt einige Operationen auf ein Java (Hello World) Projekt ausführt.
 
 ![Ant](images/ant.png "Ant")
 
