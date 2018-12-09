@@ -1,4 +1,4 @@
-# Ant
+# Ant, Gradle & Maven
 
 ## Ant Script 
 Ein eher unspektakuläres Ant Script, welches im Endeffekt einige Operationen auf ein Java (Hello World) Projekt ausführt.
@@ -58,3 +58,40 @@ Description of your project
 </project>
 ```
 
+## Gradle/Maven 
+Eine Gradle, die Abhängigkeiten hat, welche von  `mavenCentral()` bezogen werden. In dem Dokument natürlich nicht korrekt, aber auf _https://mymavenrepo.com_ habe ich ein Maven Repository für bis zu 256 MB umsonst bekommen. Deshalb hat sogar ein Deployment funktioniert. 
+
+![Gradle](images/mavenbuild.png "Gradle")
+![Deployment](images/deployment.png "Deployment")
+
+Der dazugehörige Quellcode. 
+```maven
+group='com.rothkegel.tutorial'
+version='1.0.0' 
+
+apply plugin: 'java'
+apply plugin: 'maven'
+
+//for dependencies
+repositories{ 
+    mavenCentral() 
+} 
+
+dependencies{ 
+    compile 'org.springframework:spring-context:4.3.5.RELEASE'
+} 
+
+task hello { 
+    def version = '1.0.0'
+    println "Hello, you use app version ${version}"
+}
+
+uploadArchives { 
+    repositories { 
+        mavenDeployer { 
+            repository(url: 'www.myPathToMavenRepo.de') {   
+            authentication(userName: 'xxxx', password: 'xxx'); } 
+        } 
+    } 
+}
+```

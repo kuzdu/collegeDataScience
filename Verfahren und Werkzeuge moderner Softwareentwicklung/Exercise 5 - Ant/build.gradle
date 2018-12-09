@@ -1,3 +1,28 @@
+group='com.rothkegel.tutorial'
+version='1.0.0' 
+
+apply plugin: 'java'
+apply plugin: 'maven'
+
+//for dependencies
+repositories{ 
+    mavenCentral() 
+} 
+
+dependencies{ 
+    compile 'org.springframework:spring-context:4.3.5.RELEASE'
+} 
+
 task hello { 
-    println "hello, Gradle!"
+	def version = '1.0.0'
+	println "Hello, you use app version ${version}"
+}
+
+uploadArchives { 
+    repositories { 
+        mavenDeployer { 
+            repository(url: 'www.myPathToMavenRepo.de') {   
+                authentication(userName: 'xxxx', password: 'xxx'); } 
+        } 
+    } 
 }
