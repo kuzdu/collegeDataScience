@@ -59,9 +59,10 @@ Description of your project
 ```
 
 ## Gradle/Maven 
-Eine Gradle, die Abhängigkeiten hat, welche von  `mavenCentral()` bezogen werden. In dem Dokument natürlich nicht korrekt, aber auf _https://mymavenrepo.com_ habe ich ein Maven Repository für bis zu 256 MB umsonst bekommen. Deshalb hat sogar ein Deployment funktioniert. 
+Zu sehen eine `build.gradle`, die Abhängigkeiten hat, welche von  `mavenCentral()` bezogen werden. Zusätzlich nicht korrekt hinterlegte Credentials für ein Deployment. Allerdings habe ich auf _https://mymavenrepo.com_ ein Maven Repository für bis zu 256 MB umsonst bekommen. Mit gültigen Credentials hat deshalb sogar ein Deployment funktioniert. 
 
 ![Gradle](images/mavenbuild.png "Gradle")
+
 ![Deployment](images/deployment.png "Deployment")
 
 Der dazugehörige Quellcode. 
