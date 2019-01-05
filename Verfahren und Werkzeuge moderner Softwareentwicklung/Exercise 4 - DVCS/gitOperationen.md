@@ -27,7 +27,7 @@ Mittles `git commit -m "Meine Message"` wurde alles commitet
 
 ## 6. Pushen
 Mittles `git push` alles pushen 
-![Push](images/5_push.png "Push")
+![Push](images/5_git_push.png "Push")
 
 ## 😱
 Es fehlen zwar einige Befehle, darüber bin ich mir bewusst. Ich kenne diese Befehle bzw. kann sie anwenden, zwar habe ich keine Beweise dafür, aber vielleicht glauben Sie mir ja. ✌️ 
