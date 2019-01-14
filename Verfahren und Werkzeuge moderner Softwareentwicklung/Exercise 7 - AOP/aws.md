@@ -2,7 +2,7 @@
 
 Eine lustige Sache ist es geworden. Ich habe den Messenger Telegram (sowas wie WhatsApp in cool) verwendet, um einen Bot zu registrieren. 
 
-!Telegram(images/telegrambot.png "Telegram")
+![Telegram](images/telegrambot.png "Telegram")
 
 Anschließend befülle ich eine DynamoDB (per Hand) mit Geburtstagsterminen. 
 

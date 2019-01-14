@@ -3,9 +3,9 @@
 Manchmal sagen Bilder mehr als Worte: 
 
 Kong:
-![kong](images/kong "klong")
+![kong](images/kong.png "kong")
 
 Swagger:
 
-![Swagger](images/swagger "Swagger")
+![Swagger](images/swagger.png "Swagger")
 
