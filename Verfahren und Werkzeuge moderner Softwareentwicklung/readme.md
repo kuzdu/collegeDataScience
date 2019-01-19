@@ -12,4 +12,6 @@
 
 [Aufgabe 6: Continous Delivery](Exercise%206%20-%20Continous%20Delivery)
 
+[Aufgabe 7: AOP, Swagger, AWS](Exercise%207%20-%20AOP)
+
 
