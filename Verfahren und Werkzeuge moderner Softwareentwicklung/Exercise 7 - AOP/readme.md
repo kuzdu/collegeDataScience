@@ -1,10 +1,10 @@
 # AOP, Swagger, AWS
 
 ## AOP 
-- [AOP Readme](aop.md)
+- [AOP](aop.md)
 
 ## Swagger 
-- [Swagger Readme](swagger.md)
+- [Swagger](swagger.md)
 
 ## AWS 
 - [Lamdba Funktion](aws.md)
