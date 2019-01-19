@@ -1,11 +1,8 @@
-# DVCS
+# AOP 
 
-## AOP 
-- [AOP aufsetzen](aop.md)
+Ich muss gestehen, ich bin einfach kein Fan von Eclipse, weshalb hier gerade nur mal das Nötigste passiert ist. Die nächsten Aufgabenteile sind cooler zum Anschauen.
 
-## Swagger 
-- [Swagger Screenshots](swagger.md)
+![AOP](images/aop_hello_world.png "AOP Hello World")
 
-## AWS 
-- [Lamdba Funktion](gitOperationen.md)
 
+![AOP](images/aop_visualize.png "AOP Vizualize")
