@@ -18,7 +18,7 @@ class ViewController: UIViewController {
 ```
 
 Der Output ist folgender: 
-```
+```html
 <html>
 <head>
 <script type="text/javascript" src="www.google.de/js/chart.js"></script>
