@@ -14,4 +14,5 @@
 
 [Aufgabe 7: AOP, Swagger, AWS](Exercise%207%20-%20AOP)
 
+[Aufgabe 8: DSL](Exercise%208%20-%20DSL)
 
