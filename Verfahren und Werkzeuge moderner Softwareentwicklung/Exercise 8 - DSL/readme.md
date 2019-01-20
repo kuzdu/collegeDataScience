@@ -1,17 +1,17 @@
 Folgender Code ist ein _wirklich_ rudimentärer HTML Builder. 
 
 
-Durch folgenden Code wird HTML Builder aufgerufen 
-```
+Durch folgenden Code wird der HTML Builder aufgerufen 
+```swift 
 class ViewController: UIViewController {
  override func viewDidLoad() {
     super.viewDidLoad()
 
     let htmlBuilder = HTMLBuilder()
     htmlBuilder.includeLibrary(url: "www.google.de/js/chart.js").
-               .addTitle(input: "Hello".kursiv()
-                                       .bold()
-                                       .uppercased())
+               .addTitle(input: "Hello".uppercased()
+                                       .kursiv()
+                                       .bold())
                .printer()
  }
 }
@@ -24,7 +24,7 @@ Der Output ist folgender:
 <script type="text/javascript" src="www.google.de/js/chart.js"></script>
 </head>
 <body>
-<h1><B><I>HELLO</I>/N</B>/N</h1>
+<h1><b><i>HELLO</i>/n</b>/n</h1>
 </body>
 </html>
 ```
@@ -72,8 +72,8 @@ class HTMLBuilder {
 }
 ```
 
-Die Stringveränderungen können mittels Extensions umgesetzt werden. 
-```
+Die Stringveränderungen können mittels einer Extension umgesetzt werden. (Ich hätte an dieser Stelle auch meine eigene Stringklasse schreiben können, aber warum sollte ich das tun.)
+```swift
 extension String {
     func kursiv() -> String {
         return "<i>\(self)</i>/n"
@@ -85,8 +85,6 @@ extension String {
 }
 ```
 
-Im Endeffekt nicht wirklich praktisch, da sehr unmächtig.
+Im Endeffekt nicht wirklich praktisch, da mein Builder nicht mächtig ist. Es würde noch einiges an Fleißarbeit bedeuten alle HTML Elemente einzubinden und vermutlich würde es auch nicht so einfach weitergehen. Dann müsste man auch nochmal sehr über die DSL-Struktur nachdenken...  
 
-Allerdings rein theoretisch ist auch hier ein kleiner Mehrwert zu erkennen, man kann keinerlei Klammerfehler machen und man muss sich nicht um den  `head` und `body` kümmern. 
-
-Trotzdem möchte ich keine komplizierten HTML Strukturen abbilden müssen können, weil das bestimmt recht frickelig wird, wenn ids, mehr js, classes, divs usw. hinzukommen. 
+Allerdings rein theoretisch ist bereits hier ein kleiner Mehrwert zu erkennen, man kann keinerlei Klammerfehler machen und man muss sich nicht um den  `head` und `body` kümmern. 
