@@ -45,13 +45,12 @@ Planung und Erstellung einer Backend-Microservices-Architektur aus den Anforderu
 
 ---------------------------
 #### offene Fragen
-* Wie formuliert man am besten Anforderungen in einer wissenschaftlichen Arbeit?
-
-*Wünsche*  
+_Wünsche_  
 * Im Git als .md open source schreiben
-* Alle zwei Wochen einen Termin 
+* vllt alle zwei Wochen einen festen Termin? 
 
 #### Was wird nicht berücksichtigt
 *  Frontend Microservice Lösungen, d.h. Webseite mit mehren UI-Modulen, wo jeweils ein anderer Microservice hinter steht,
 *  Deploymentstrategien
 *  Docker und Kubernetes
+* Datenbank (NoSQL vs relationale Datenbank SQL) (ggf. rauslassen?)
