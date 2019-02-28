@@ -1,6 +1,6 @@
 
 # Thema
-Planung und Erstellung einer Backend-Microservices-Architektur aus den Anforderungen durch das Spiel  `Stirnraten` als Software as a Service (Saas) mit Hilfe von Azure. 
+Planung und Erstellung einer Backend-Microservices-Architektur aus den Anforderungen durch das Spiel  `Stirnraten`. 
 
 # Inhaltsverzeichnis
 
