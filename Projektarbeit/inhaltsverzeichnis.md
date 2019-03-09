@@ -9,6 +9,10 @@ Planung und Erstellung einer Backend-Microservices-Architektur aus den Anforderu
 * Herausforderungen
 
 ## Grundlagen
+* Microservices
+* Monolithische Struktur
+* Monolith vs. Microservices 
+
 ### Verständnis Mikro-Makro-Architektur 
 * On Premise 
 * Saas (Software as a Service)
