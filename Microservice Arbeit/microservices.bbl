@@ -1,0 +1,163 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{xxxx}{online}{}
+      \name{author}{3}{}{%
+        {{hash=0871ab710c33e8407ebb1578291f4345}{%
+           family={Daniel},
+           familyi={D\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod}}}%
+        {{hash=51e1fce94b30ac7269f3ee2471fdcd45}{%
+           family={Grundlach},
+           familyi={G\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b8a8f21e5cd7834c8f4ec6e251325bb5}{%
+           family={Schmidt},
+           familyi={S\bibinitperiod},
+           given={Walter},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{1ea14304ce5dea01e6050bca2c62d7ab}
+      \strng{fullhash}{1ea14304ce5dea01e6050bca2c62d7ab}
+      \strng{bibnamehash}{1ea14304ce5dea01e6050bca2c62d7ab}
+      \strng{authorbibnamehash}{1ea14304ce5dea01e6050bca2c62d7ab}
+      \strng{authornamehash}{1ea14304ce5dea01e6050bca2c62d7ab}
+      \strng{authorfullhash}{1ea14304ce5dea01e6050bca2c62d7ab}
+      \field{sortinit}{D}
+      \field{sortinithash}{2ef1bd9a78cc71eb74d7231c635177b8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{\LaTeXe-Kurzbeschreibung (Deutsch)}
+      \field{year}{2015}
+      \verb{urlraw}
+      \verb https://www.ctan.org/tex-archive/info/lshort/german?lang=de
+      \endverb
+      \verb{url}
+      \verb https://www.ctan.org/tex-archive/info/lshort/german?lang=de
+      \endverb
+    \endentry
+    \entry{gerthsen2013physik}{book}{}
+      \name{author}{1}{}{%
+        {{hash=daa04c4618c87e64aab4fe0af0d73bbd}{%
+           family={Gerthsen},
+           familyi={G\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{daa04c4618c87e64aab4fe0af0d73bbd}
+      \strng{fullhash}{daa04c4618c87e64aab4fe0af0d73bbd}
+      \strng{bibnamehash}{daa04c4618c87e64aab4fe0af0d73bbd}
+      \strng{authorbibnamehash}{daa04c4618c87e64aab4fe0af0d73bbd}
+      \strng{authornamehash}{daa04c4618c87e64aab4fe0af0d73bbd}
+      \strng{authorfullhash}{daa04c4618c87e64aab4fe0af0d73bbd}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Gerthsen Physik}
+      \field{year}{2013}
+    \endentry
+    \entry{heymans2006shear}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=547f50bc09e412063e60ef05fa6befd4}{%
+           family={Heymans},
+           familyi={H\bibinitperiod},
+           given={Catherine},
+           giveni={C\bibinitperiod}}}%
+        {{hash=3db01d15be2746f45a31777a9214d95a}{%
+           family={Van\bibnamedelima Waerbeke},
+           familyi={V\bibinitperiod\bibinitdelim W\bibinitperiod},
+           given={Ludovic},
+           giveni={L\bibinitperiod}}}%
+        {{hash=14bc4830d4824da3ac9573b68ac1666c}{%
+           family={Bacon},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=77e4f55964f3d3d11b623aeb7e5ff76b}{%
+           family={Berge},
+           familyi={B\bibinitperiod},
+           given={Joel},
+           giveni={J\bibinitperiod}}}%
+        {{hash=686d68e625b52db7e9f226c4bfcfc988}{%
+           family={Bernstein},
+           familyi={B\bibinitperiod},
+           given={Gary},
+           giveni={G\bibinitperiod}}}%
+        {{hash=b8758cd9a031b0fa74b88ba7fa0f74b5}{%
+           family={Bertin},
+           familyi={B\bibinitperiod},
+           given={Emmanuel},
+           giveni={E\bibinitperiod}}}%
+        {{hash=8f4f0d58f491076dfa2d78d481fbaca1}{%
+           family={Bridle},
+           familyi={B\bibinitperiod},
+           given={Sarah},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0a508f491de9a66e317fd2194ed92187}{%
+           family={Brown},
+           familyi={B\bibinitperiod},
+           given={Michael\bibnamedelima L},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=702a2dad984e6bd2124ee9a14ae51829}{%
+           family={Clowe},
+           familyi={C\bibinitperiod},
+           given={Douglas},
+           giveni={D\bibinitperiod}}}%
+        {{hash=9e504c3949ac0d70c9cfcdd892da98ed}{%
+           family={Dahle},
+           familyi={D\bibinitperiod},
+           given={H{å}kon},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{8d532abcb17646e304ec6afa800d1adb}
+      \strng{fullhash}{4a3c25e38a4a6376f0d600afc67df5cf}
+      \strng{bibnamehash}{8d532abcb17646e304ec6afa800d1adb}
+      \strng{authorbibnamehash}{8d532abcb17646e304ec6afa800d1adb}
+      \strng{authornamehash}{8d532abcb17646e304ec6afa800d1adb}
+      \strng{authorfullhash}{4a3c25e38a4a6376f0d600afc67df5cf}
+      \field{sortinit}{H}
+      \field{sortinithash}{5f15a7bc777ad49ff15aa4d2831b1681}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Monthly Notices of the Royal Astronomical Society}
+      \field{number}{3}
+      \field{title}{The Shear Testing Programme--I. Weak lensing analysis of simulated ground-based observations}
+      \field{volume}{368}
+      \field{year}{2006}
+      \field{pages}{1323\bibrangedash 1339}
+      \range{pages}{17}
+    \endentry
+  \enddatalist
+  \missing{daniel2015l2lurz}
+\endrefsection
+\endinput
+

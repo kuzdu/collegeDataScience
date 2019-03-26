@@ -1,0 +1,32 @@
+\documentclass[12pt,a4paper,bibtotoc]{scrartcl}
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{csquotes}
+
+% Das Paket biblatex ist für Literaturverweise zuständig.
+\usepackage[backend=biber,
+            style=numeric
+           ]{biblatex}
+           
+\title{Planung und Erstellung einer Backend-Microservices-Architektur aus den Anforderungen durch das Spiel Stirnraten.}
+\author{Michael Rothkegel}
+\date{\today}
+
+\addbibresource{literatur.bib}
+
+\begin{document}
+%
+\maketitle
+\tableofcontents
+\newpage
+
+\input{einleitung}
+\input{grundlagen}
+\input{konzept}
+\input{implementierung}
+\input{fazit}
+
+\input{literaturverzeichnis}
+
