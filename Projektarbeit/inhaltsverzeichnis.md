@@ -1,6 +1,6 @@
 
 # Thema
-Planung und Erstellung einer Backend-Microservices-Architektur aus den Anforderungen durch das Spiel  `Stirnraten` als Software as a Service (Saas) mit Hilfe von Azure. 
+Planung und Erstellung einer Backend-Microservices-Architektur aus den Anforderungen durch das Spiel  `Stirnraten`. 
 
 # Inhaltsverzeichnis
 
@@ -9,20 +9,11 @@ Planung und Erstellung einer Backend-Microservices-Architektur aus den Anforderu
 * Herausforderungen
 
 ## Grundlagen
-### Verständnis Mikro-Makro-Architektur 
-* On Premise 
-* Saas (Software as a Service)
-* Paas (Platform as a Service)
-* IaaS (Infrastructe as a Service)
-* ggf. Container ... ?
-
-### Kommunikation zwischen Microservices
-* Domänen und Bounded Context 
-* Synchon vs. Asynchron
-* Messaging
-* Schnittstellen REST, Protobuf und Atom
-* Authentifizierung 
-* Datenbank (NoSQL vs relationale Datenbank SQL) (ggf. rauslassen?)
+* Microservices
+* Monolithische Struktur
+* Monolith vs. Microservices 
+* Makro-Mikro-Architektur 
+* Kommunikation zwischen Microservices
 
 ## Konzept Stirnraten API 
 ### Anforderungen
@@ -41,16 +32,4 @@ Planung und Erstellung einer Backend-Microservices-Architektur aus den Anforderu
 * Container Instanz erstellen und von außen erreichbar machen 
 
 ## Schluss/Fazit 
-
-
----------------------------
-#### offene Fragen
-_Wünsche_  
-* Im Git als .md open source schreiben
-* vllt alle zwei Wochen einen festen Termin? 
-
-#### Was wird nicht berücksichtigt
-*  Frontend Microservice Lösungen, d.h. Webseite mit mehren UI-Modulen, wo jeweils ein anderer Microservice hinter steht,
-*  Deploymentstrategien
-*  Docker und Kubernetes
-* Datenbank (NoSQL vs relationale Datenbank SQL) (ggf. rauslassen?)
+//Ausblick Kubernetes (...) 
