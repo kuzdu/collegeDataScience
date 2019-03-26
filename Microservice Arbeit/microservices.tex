@@ -4,11 +4,14 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{csquotes}
+\usepackage[pdftex]{graphicx}  
 
 % Das Paket biblatex ist für Literaturverweise zuständig.
 \usepackage[backend=biber,
             style=numeric
            ]{biblatex}
+           
+\graphicspath{{bilder/}}
            
 \title{Planung und Erstellung einer Backend-Microservices-Architektur aus den Anforderungen durch das Spiel Stirnraten.}
 \author{Michael Rothkegel}
@@ -17,11 +20,14 @@
 \addbibresource{literatur.bib}
 
 \begin{document}
+
 %
 \maketitle
 \tableofcontents
 \newpage
 
+%es gibt auch include - weiß den Unterschied noch nicht
+%oder include only
 \input{einleitung}
 \input{grundlagen}
 \input{konzept}
