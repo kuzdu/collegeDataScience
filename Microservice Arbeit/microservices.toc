@@ -11,6 +11,4 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5}Fazit}{2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Literaturverzeichnis}{3}
-\defcounter {refsection}{0}\relax 
 \contentsline {section}{\nonumberline Literatur}{3}
