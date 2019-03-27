@@ -1,14 +1,16 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {ngerman}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1}Einleitung}{2}
+\contentsline {section}{\numberline {1}Glossar}{2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Grundlagen}{2}
+\contentsline {section}{\numberline {2}Einleitung}{2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Konzept}{2}
+\contentsline {section}{\numberline {3}Grundlagen}{2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Implementierung}{2}
+\contentsline {section}{\numberline {4}Konzept}{3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Fazit}{2}
+\contentsline {section}{\numberline {5}Implementierung}{3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}Fazit}{3}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\nonumberline Literatur}{3}
