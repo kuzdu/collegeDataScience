@@ -22,9 +22,52 @@ Basierend auf den folgenden Definitionen wird der Microservice Begriff wie folgt
 
 Abschließend handelt es sich um eine Microservice-Architektur, wenn viele Microservices nach Definition verwendet werden. 
 
+\subsection{Monolithische Struktur }
+
+Eine monolithische Struktur ist ein einziges Softwareprogramm (Monolith), welches in sich geschlossen ist. Dies bedeutet im Detail, dass ein Monolith aus mehreren Ebenen besteht auf die über Schnittstellen zugegriffen werden kann. Innerhalb der Ebenen werden Komponenten wie z.B. Frameworks oder selbstgeschriebene Klassen eingebunden und verwendet.\cite{msfussell2017azure} Durch die sich aufeinander aufbauenden Ebenen folgt daraus, dass sämtliche Geschäftslogiken, User Interfaces sowie die Datenbank und Datenbankzugriffe Abhängigkeiten haben. All dies ist in einem Programm vereint.\cite{msfussell2017azure} Natürlich kann die monolithische Struktur innerhalb noch einmal Modular sein. In einem Monolithen existierten also ggf. mehrere Module, welche verschiedene Geschäftslogiken abbilden oder ein Modul, welches nur zum Erstellen einer grafischen Oberfläche verwendet wird. Dennoch können diese Module nicht unabhängig von der gesamten Anwendung deployed werden.\cite{nhiem2017mic_moving}
+
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.9\textwidth]{monolithic_vs_micro}
-	\caption{Sie sehen Unterschiede.\cite{nhiem2017mic_moving}}
-	\label{fig:trigo_funk}
+	\caption{Monolith und Microservice-Architektur.\cite{msfussell2017azure}}
+	\label{fig:mono}
 \end{figure}
+
+Abbildung \ref{fig:mono} zeigt eine vereinfachte Gegenüberstellung der beiden Architekturen. Die App 1 ist in drei klassische Funktionen (Web, Business und Data) unterteilt. Die Skalierung (2) kann durchgeführt werden, in dem App 1 über mehrere Server oder VMs geklont wird. 
+
+Bei der Microservice Architektur werden die Funktionen auf unterschiedliche Dienste aufgeteilt. Konkreter könnte dies bedeuten, dass App 1 bei (3) zuständig für eine Benutzerkontoverwaltung ist und App 2 für ein Abrechnungssystem. Die Microservices (4) werden nicht geklont, sondern können unabhängig voneinander bereitgestellt werden. 
+
+\subsection{Monolith vs. Microservices}
+Aus den vorherigen Abschnitten sind diverse Unterschiede zwischen den Architekturen erkennbar. Nun gilt es festzustellen, für welche Problemstellungen, welche Architektur sinnvoller ist.  
+
+% TODO hier gehört noch Tabelle hin
+% Aus den Quellen \cite{wolff2016mic_architectures} \cite{birk2016mic_soa} verwenden
+% Tabelle ist nicht ganz Inhaltich richtig
+
+\begin{center}
+	\begin{tabular}{p{5cm}p{5cm}p{5cm}}
+		& Monolithische Architektur & Microservice-Architektur \\ \hline
+		Abhängigkeiten & alles in einer Anwendung & entkoppelt, da Prinzip von Modularisierung verwendet wird \\
+		Größe & linear steigend & einzelne Services sind klein \\
+		Geschwindigkeit Zugriffe & schnell, da alles in einer Anwendung & Zugriffe können länger dauern \\ 
+		Deployment & schwieriger, umso größer das Projekt wird, aufgrund von & einfach, da Microservices \\
+		Organisation & leichter, da alles an einem Ort & größer, da mehr Domänenlogik (wer macht was?) beachtet werden muss \\
+		Legacy-Systeme ablösen & ggf. schwierig, da System sehr verzahnt miteinander & leicht, da Microservices durch neue abgelöst werden können \\
+		Technologie & beschränkt & vielfältig \\
+		Nachhaltige Entwicklung & wartbar mit Einschränkungen & leicht wartbar \\
+		Robustheit & weniger, da ganzes System bei schweren Fehlern abstürzt & sehr, da im Zweifel immer nur ein Service abstürzt \\
+		Skalierung & horizontale und vertikale Skalierung, Umsetzung kann sehr komplex werden &  horizontale und vertikale Skalierung \\
+		Betrieb & nur ein System & komplex, da mehr Services verwaltet werden müssen
+	\end{tabular}
+\end{center} 
+
+Aus der Tabelle ergeben sich verschiedene Punkte: Der Monolith eignet sich besonders dann sehr gut, wenn die Projekt- sowie Teamgrößen absehbar sind und auch die Technologie entschieden ist. Zusätzlich kann es beim Projektanfang ein Vorteil sein, da die Abhängigkeiten innerhalb des Projektes liegen und so Entwicklungsgeschwindigkeit nicht durch komplizierte Infrastrukturen blockiert wird. 
+Ist die Projektgröße allerdings nicht absehbar, treten früher oder später mehrere Schwierigkeiten auf: Zum einen bindet der am Anfang des Projektes festgelegte Technologiestack und die Nutzung oder der Austausch neuer Technologien sind in der Regel mit sehr viel Arbeit verbunden. Des Weiteren führen die anfangs eingegangen Abhängigkeiten zu problemenen im Deployment (A kann erst updaten, wenn B soweit ist) und einem erhöhten Aufwand in der Kommunikation zwischen den Teams (A kann erst beginnen, wenn B xy erledigt hat). \\
+
+Zusätzlich ist die Skalierung von Microservices unabhängiger. Es können sich feingranular Services gesucht werden, welche skaliert werden sollen. Diese benötigen nicht zwingend mehr Hardware (vertikale Skalierung), sondern könnten z.B. auch auf verschiedene Server verteilt werden (horizontale Skalierung). Dies ist bei einem Monolithen natürlich auch möglich, dennoch muss immer der ganze Monolith skaliert werden, welcher zum einen immer mehr Hardware als einzelne Microservices benötigt und zum anderen auch durch die Komplexität in der Regel auch schwerer zu skalieren ist.   
+Als abschließender Punkt ist die Robustheit zu erwähnen: Wenn ein Microservice einen Fehler enthält, stürzt dieser im schlechtesten Fall ab. Im besten Fall übernimmt dieser Service eine weniger wichtige Funktion und der Nutzer bemerkt den Ausfall noch nicht einmal. Beim Monolithen dagegen stürzt die gesamte Anwendungen ab. In der Regel startet so eine Anwendung automatisch neu, jedoch ist betrifft die Downtime alle Nutzer. \\
+
+Aus den genannten Punkten lässt sich schließen, dass eine generelle Aussage, ob eine monolithische oder Microservice-Architektur besser oder schlechter ist, sich nicht treffen lässt. Es kommt immer drauf an, welche Zielsetzung und wie viele Ressourcen für das Projekt festgelegt sind. REWE Digital beispielsweise hat ihr Produkt zuerst als Monolithen gestartet und ist erst später auf eine Microservice-Architektur umgeschwenkt. Zwei mögliche Gründe könnten dafür sein, dass zum einen ein lauffähiges Produkt schneller mit einer monolithischer Struktur zu erreichen ist, zum anderen ist nicht gegeben, ob ein entwickeltes Projekt überhaupt die Nachfrage erzeugt, so dass eine Microservice-Architektur notwendig ist. Dementsprechend muss abgewogen werden, welche Architektur für welchen Anwendungsfall besser geeignet ist. 
+
+
+

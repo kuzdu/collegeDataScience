@@ -19,6 +19,57 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{msfussell2017azure}{online}{}
+      \name{author}{1}{}{%
+        {{hash=3916434e41eef606135d6ff291b92653}{%
+           family={(msfussell)},
+           familyi={(\bibinitperiod},
+           given={Mark\bibnamedelima Fussel},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{3916434e41eef606135d6ff291b92653}
+      \strng{fullhash}{3916434e41eef606135d6ff291b92653}
+      \strng{bibnamehash}{3916434e41eef606135d6ff291b92653}
+      \strng{authorbibnamehash}{3916434e41eef606135d6ff291b92653}
+      \strng{authornamehash}{3916434e41eef606135d6ff291b92653}
+      \strng{authorfullhash}{3916434e41eef606135d6ff291b92653}
+      \field{sortinit}{m}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Einf{ü}hrung in Microservices in Azure - Microsoft-Dokumentation}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://docs.microsoft.com/de-de/azure/service-fabric/service-fabric-overview-microservices
+      \endverb
+      \verb{url}
+      \verb https://docs.microsoft.com/de-de/azure/service-fabric/service-fabric-overview-microservices
+      \endverb
+    \endentry
+    \entry{birk2016mic_soa}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=b699d542d4a455319a045f9fb7d44988}{%
+           family={Birk},
+           familyi={B\bibinitperiod},
+           given={Ferdinand},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Universität Ulm}%
+      }
+      \strng{namehash}{b699d542d4a455319a045f9fb7d44988}
+      \strng{fullhash}{b699d542d4a455319a045f9fb7d44988}
+      \strng{bibnamehash}{b699d542d4a455319a045f9fb7d44988}
+      \strng{authorbibnamehash}{b699d542d4a455319a045f9fb7d44988}
+      \strng{authornamehash}{b699d542d4a455319a045f9fb7d44988}
+      \strng{authorfullhash}{b699d542d4a455319a045f9fb7d44988}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Microservices - Eine State-of-the-Art Bestandsaufnahme und Abgrenzung zu SOA}
+      \field{year}{2016}
+    \endentry
     \entry{irakli2016mic_arc}{book}{}
       \name{author}{2}{}{%
         {{hash=df013aac785bd35736a64a1f3ee80ee9}{%
