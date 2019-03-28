@@ -1,0 +1,52 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{nhiem2017mic_moving}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=ff41c668b97cf58a66f820c0526c074a}{%
+           family={Nhiem\bibnamedelima Lu},
+           familyi={N\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Dennis\bibnamedelima Peuser},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod},
+           suffix={Gert\bibnamedelima Glatz},
+           suffixi={G\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{organization}{2}{%
+        {University of Applied Science}%
+        {Arts, Dortmund, Germany, adesso AG, Dortmund, Germany}%
+      }
+      \strng{namehash}{ff41c668b97cf58a66f820c0526c074a}
+      \strng{fullhash}{ff41c668b97cf58a66f820c0526c074a}
+      \strng{bibnamehash}{ff41c668b97cf58a66f820c0526c074a}
+      \strng{authorbibnamehash}{ff41c668b97cf58a66f820c0526c074a}
+      \strng{authornamehash}{ff41c668b97cf58a66f820c0526c074a}
+      \strng{authorfullhash}{ff41c668b97cf58a66f820c0526c074a}
+      \field{sortinit}{N}
+      \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Moving mountains – practical approaches for moving monolithic applications to Microservices}
+      \field{year}{2017}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

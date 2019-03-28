@@ -1974,8 +1974,8 @@
     <bcf:datasource type="file" datatype="bibtex">literatur.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">irakli2016mic_arc</bcf:citekey>
-    <bcf:citekey order="2">irakli2016mic_arc</bcf:citekey>
+    <bcf:citekey order="1">nhiem2017mic_moving</bcf:citekey>
+    <bcf:citekey order="2">nhiem2017mic_moving</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

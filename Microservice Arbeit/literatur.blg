@@ -1,5 +1,5 @@
 [0] Config.pm:302> INFO - This is Biber 2.11
 [0] Config.pm:305> INFO - Logfile is 'literatur.blg'
-[34] biber-darwin:313> INFO - === Tue Mar 26, 2019, 07:28:13
-[177] Utils.pm:209> ERROR - Cannot find control file 'literatur.bcf'! - Did latex run successfully on your .tex file before you ran biber?
-[177] Biber.pm:114> INFO - ERRORS: 1
+[40] biber-darwin:313> INFO - === Do Mär 28, 2019, 22:34:54
+[203] Utils.pm:209> ERROR - Cannot find control file 'literatur.bcf'! - Did latex run successfully on your .tex file before you ran biber?
+[203] Biber.pm:114> INFO - ERRORS: 1
