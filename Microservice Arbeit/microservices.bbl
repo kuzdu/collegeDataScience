@@ -19,6 +19,37 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{irakli2016mic_arc}{book}{}
+      \name{author}{2}{}{%
+        {{hash=df013aac785bd35736a64a1f3ee80ee9}{%
+           family={Irakli\bibnamedelima Nadareishvili},
+           familyi={I\bibinitperiod\bibinitdelim N\bibinitperiod},
+           given={Matt\bibnamedelima McLarty},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           suffix={Ronnie\bibnamedelima Mitra},
+           suffixi={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=d1ff4cc9d5727a5f76ad7bf041390a1b}{%
+           family={Amundsen},
+           familyi={A\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {O Reilly}%
+      }
+      \strng{namehash}{57eafadfc12ee916e225fcbf7403b855}
+      \strng{fullhash}{57eafadfc12ee916e225fcbf7403b855}
+      \strng{bibnamehash}{57eafadfc12ee916e225fcbf7403b855}
+      \strng{authorbibnamehash}{57eafadfc12ee916e225fcbf7403b855}
+      \strng{authornamehash}{57eafadfc12ee916e225fcbf7403b855}
+      \strng{authorfullhash}{57eafadfc12ee916e225fcbf7403b855}
+      \field{sortinit}{I}
+      \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Microservice Architecture - Aligning Principels, Practices, and Culture}
+      \field{year}{2016}
+    \endentry
     \entry{nhiem2017mic_moving}{manual}{}
       \name{author}{1}{}{%
         {{hash=ff41c668b97cf58a66f820c0526c074a}{%
@@ -45,6 +76,54 @@
       \field{labeltitlesource}{title}
       \field{title}{Moving mountains – practical approaches for moving monolithic applications to Microservices}
       \field{year}{2017}
+    \endentry
+    \entry{wolff2018mic_praxis}{book}{}
+      \name{author}{1}{}{%
+        {{hash=42b48b91ec04dc8b258db592d08ee9e9}{%
+           family={Wolff},
+           familyi={W\bibinitperiod},
+           given={Eberhard},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {dpunkt.verlag}%
+      }
+      \strng{namehash}{42b48b91ec04dc8b258db592d08ee9e9}
+      \strng{fullhash}{42b48b91ec04dc8b258db592d08ee9e9}
+      \strng{bibnamehash}{42b48b91ec04dc8b258db592d08ee9e9}
+      \strng{authorbibnamehash}{42b48b91ec04dc8b258db592d08ee9e9}
+      \strng{authornamehash}{42b48b91ec04dc8b258db592d08ee9e9}
+      \strng{authorfullhash}{42b48b91ec04dc8b258db592d08ee9e9}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Das Microservice Praxisbuch - Grundlagen, Konzepte und Rezepte}
+      \field{year}{2018}
+    \endentry
+    \entry{wolff2016mic_architectures}{book}{}
+      \name{author}{1}{}{%
+        {{hash=42b48b91ec04dc8b258db592d08ee9e9}{%
+           family={Wolff},
+           familyi={W\bibinitperiod},
+           given={Eberhard},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Leanpub}%
+      }
+      \strng{namehash}{42b48b91ec04dc8b258db592d08ee9e9}
+      \strng{fullhash}{42b48b91ec04dc8b258db592d08ee9e9}
+      \strng{bibnamehash}{42b48b91ec04dc8b258db592d08ee9e9}
+      \strng{authorbibnamehash}{42b48b91ec04dc8b258db592d08ee9e9}
+      \strng{authornamehash}{42b48b91ec04dc8b258db592d08ee9e9}
+      \strng{authorfullhash}{42b48b91ec04dc8b258db592d08ee9e9}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Flexible Software Architectures}
+      \field{year}{2016}
     \endentry
   \enddatalist
 \endrefsection
