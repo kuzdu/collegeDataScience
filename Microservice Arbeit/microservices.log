@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  27 MAR 2019 07:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  28 MAR 2019 21:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -555,7 +555,12 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 26.
 
-(./microservices.toc)
+(./microservices.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 10.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 10.
+)
 \tf@toc=\write5
 \openout5 = `microservices.toc'.
 
@@ -564,25 +569,33 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./begr
 ifflichkeiten.tex
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 3.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 3.
+Underfull \hbox (badness 1057) in paragraph at lines 7--8
+\T1/cmr/m/n/12 zu be-glei-ten. Dies soll-te au-to-ma-tisch funk-tio-nie-ren,
+ []
 
-Overfull \hbox (1062.765pt too wide) in paragraph at lines 3--20
+
+Overfull \hbox (12.83574pt too wide) in paragraph at lines 3--19
  [] 
  []
 
 ) (./einleitung.tex) (./grundlagen.tex
-<bilder/monolithic_vs_micro.png, id=11, 903.375pt x 508.14844pt>
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+<bilder/monolithic_vs_micro.png, id=15, 903.375pt x 508.14844pt>
 File: bilder/monolithic_vs_micro.png Graphic file (type png)
 <use bilder/monolithic_vs_micro.png>
-Package pdftex.def Info: bilder/monolithic_vs_micro.png  used on input line 18.
+Package pdftex.def Info: bilder/monolithic_vs_micro.png  used on input line 27.
 
 (pdftex.def)             Requested size: 403.31511pt x 226.86581pt.
- [2 <./bilder/monolithic_vs_micro.png>])
-(./konzept.tex) (./implementierung.tex) (./fazit.tex)
-(./literaturverzeichnis.tex
+) (./konzept.tex) (./implementierung.tex) (./fazit.tex [3 <./bilder/monolithic_
+vs_micro.png>]) (./literaturverzeichnis.tex
 ! Misplaced alignment tab character &.
 \namepartgiven ...medelimb McLarty\bibnamedelimb &
                                                   \bibnamedelimb Mike\bibnam...
@@ -595,30 +608,31 @@ up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
-[3] (./microservices.aux)
+[4] (./microservices.aux)
 Package logreq Info: Writing requests to 'microservices.run.xml'.
 \openout1 = `microservices.run.xml'.
 
  ) ) 
 Here is how much of TeX's memory you used:
- 11555 strings out of 492649
- 207067 string characters out of 6129622
- 748670 words of memory out of 5000000
- 15292 multiletter control sequences out of 15000+600000
- 12581 words of font info for 33 fonts, out of 8000000 for 9000
+ 11559 strings out of 492649
+ 207147 string characters out of 6129622
+ 748682 words of memory out of 5000000
+ 15295 multiletter control sequences out of 15000+600000
+ 13353 words of font info for 34 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 44i,6n,56p,9092b,2180s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,8n,56p,9092b,2180s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.en
 c}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></
 usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></us
-r/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/
-local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></usr/lo
-cal/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on microservices.pdf (3 pages, 187524 bytes).
+r/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/
+local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/lo
+cal/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></usr/loca
+l/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on microservices.pdf (4 pages, 207036 bytes).
 PDF statistics:
- 40 PDF objects out of 1000 (max. 8388607)
- 27 compressed objects within 1 object stream
+ 47 PDF objects out of 1000 (max. 8388607)
+ 32 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
