@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  28 MAR 2019 21:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  28 MAR 2019 21:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -574,7 +574,7 @@ Underfull \hbox (badness 1057) in paragraph at lines 7--8
  []
 
 
-Overfull \hbox (12.83574pt too wide) in paragraph at lines 3--19
+Overfull \hbox (17.40407pt too wide) in paragraph at lines 3--19
  [] 
  []
 
@@ -594,45 +594,53 @@ File: bilder/monolithic_vs_micro.png Graphic file (type png)
 Package pdftex.def Info: bilder/monolithic_vs_micro.png  used on input line 27.
 
 (pdftex.def)             Requested size: 403.31511pt x 226.86581pt.
+
+LaTeX Warning: Citation 'irakli2016mic_arc' on page 3 undefined on input line 2
+8.
+
+
+LaTeX Warning: Citation 'irakli2016mic_arc' on page 3 undefined on input line 2
+8.
+
 ) (./konzept.tex) (./implementierung.tex) (./fazit.tex [3 <./bilder/monolithic_
 vs_micro.png>]) (./literaturverzeichnis.tex
-! Misplaced alignment tab character &.
-\namepartgiven ...medelimb McLarty\bibnamedelimb &
-                                                  \bibnamedelimb Mike\bibnam...
-l.2 \end
-        {document}
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
+
+LaTeX Warning: Empty bibliography on input line 1.
 
 [4] (./microservices.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                microservices
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'microservices.run.xml'.
 \openout1 = `microservices.run.xml'.
 
  ) ) 
 Here is how much of TeX's memory you used:
- 11559 strings out of 492649
- 207147 string characters out of 6129622
- 748682 words of memory out of 5000000
- 15295 multiletter control sequences out of 15000+600000
- 13353 words of font info for 34 fonts, out of 8000000 for 9000
+ 11543 strings out of 492649
+ 206691 string characters out of 6129622
+ 748655 words of memory out of 5000000
+ 15278 multiletter control sequences out of 15000+600000
+ 14129 words of font info for 35 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  44i,8n,56p,9092b,2180s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.en
-c}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></
-usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></us
-r/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/
-local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/lo
-cal/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></usr/loca
-l/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on microservices.pdf (4 pages, 207036 bytes).
+c}</usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb>
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></
+usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></us
+r/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/
+local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/lo
+cal/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/loca
+l/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></usr/local/
+texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on microservices.pdf (4 pages, 216165 bytes).
 PDF statistics:
- 47 PDF objects out of 1000 (max. 8388607)
- 32 compressed objects within 1 object stream
+ 51 PDF objects out of 1000 (max. 8388607)
+ 35 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
