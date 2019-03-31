@@ -13,10 +13,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.3}Monolith vs. Microservices}{4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Konzept}{6}
+\contentsline {subsection}{\numberline {3.4}Monolith vs. Microservices}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Implementierung}{6}
+\contentsline {section}{\numberline {4}Konzept}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Fazit}{6}
+\contentsline {section}{\numberline {5}Implementierung}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\nonumberline Literatur}{6}
+\contentsline {section}{\numberline {6}Fazit}{8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline Literatur}{8}

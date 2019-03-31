@@ -70,6 +70,27 @@
       \field{title}{Microservices - Eine State-of-the-Art Bestandsaufnahme und Abgrenzung zu SOA}
       \field{year}{2016}
     \endentry
+    \entry{rewe2019mic_ppp}{unpublished}{}
+      \name{author}{1}{}{%
+        {{hash=acda88e2bd6d6f880c345a5083cfabbc}{%
+           family={Gauder},
+           familyi={G\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{acda88e2bd6d6f880c345a5083cfabbc}
+      \strng{fullhash}{acda88e2bd6d6f880c345a5083cfabbc}
+      \strng{bibnamehash}{acda88e2bd6d6f880c345a5083cfabbc}
+      \strng{authorbibnamehash}{acda88e2bd6d6f880c345a5083cfabbc}
+      \strng{authornamehash}{acda88e2bd6d6f880c345a5083cfabbc}
+      \strng{authorfullhash}{acda88e2bd6d6f880c345a5083cfabbc}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A competitive food retail architecture with microservices}
+      \field{year}{2019}
+    \endentry
     \entry{irakli2016mic_arc}{book}{}
       \name{author}{2}{}{%
         {{hash=df013aac785bd35736a64a1f3ee80ee9}{%

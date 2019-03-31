@@ -1983,6 +1983,13 @@
     <bcf:citekey order="7">nhiem2017mic_moving</bcf:citekey>
     <bcf:citekey order="8">msfussell2017azure</bcf:citekey>
     <bcf:citekey order="9">msfussell2017azure</bcf:citekey>
+    <bcf:citekey order="10">wolff2016mic_architectures</bcf:citekey>
+    <bcf:citekey order="11">birk2016mic_soa</bcf:citekey>
+    <bcf:citekey order="12">wolff2018mic_praxis</bcf:citekey>
+    <bcf:citekey order="13">rewe2019mic_ppp</bcf:citekey>
+    <bcf:citekey order="14">wolff2018mic_praxis</bcf:citekey>
+    <bcf:citekey order="15">rewe2019mic_ppp</bcf:citekey>
+    <bcf:citekey order="16">rewe2019mic_ppp</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
