@@ -37,6 +37,7 @@ Abbildung \ref{fig:mono} zeigt eine vereinfachte Gegenüberstellung der beiden A
 
 Bei der Microservice Architektur werden die Funktionen auf unterschiedliche Dienste aufgeteilt. Konkreter könnte dies bedeuten, dass App 1 bei (3) zuständig für eine Benutzerkontoverwaltung ist und App 2 für ein Abrechnungssystem. Die Microservices (4) werden nicht geklont, sondern können unabhängig voneinander bereitgestellt werden. 
 
+%TODO: ggf. kommt das in die Konzept-Sektion
 \subsection{Monolith vs. Microservices}
 Aus den vorherigen Abschnitten sind diverse Unterschiede zwischen den Architekturen erkennbar. Nun gilt es festzustellen, für welche Problemstellungen, welche Architektur sinnvoller ist. \cite{wolff2016mic_architectures} \cite{birk2016mic_soa}  
 
@@ -48,14 +49,14 @@ Aus den vorherigen Abschnitten sind diverse Unterschiede zwischen den Architektu
 		Abhängigkeiten & alles in einer Anwendung & entkoppelt, da Prinzip von Modularisierung verwendet wird \\
 		Größe & linear steigend & einzelne Services sind klein \\
 		Geschwindigkeit Zugriffe & schnell, da alles in einer Anwendung & Zugriffe können länger dauern \\ 
-		Deployment & schwieriger, umso größer das Projekt wird, aufgrund von
+		Deployment & schwieriger desto größer das Projekt, aufgrund von
 		\begin{itemize}
-			\item Abhängigkeiten und 
-			\item Größe sind \end{itemize}
+			\item Abhängigkeiten  
+			\item Größe \end{itemize}
 		 & einfach, da Microservices \begin{itemize}
 			\item klein und 
 		    \item modular sind \end{itemize} \\
-		Organisation & leichter, da alles an einem Ort & größer, da mehr Domänenlogik (wer macht was?) beachtet werden muss \\
+		Organisation & leichter, da alles an einem Ort & schwerer, da mehr Domänenlogik (wer macht was?) beachtet werden muss \\
 		Legacy-Systeme ablösen & ggf. schwierig, da System sehr verzahnt miteinander & leicht, da Microservices durch neue abgelöst werden können \\
 		Technologie & beschränkt & vielfältig \\
 		Nachhaltige Entwicklung & wartbar mit Einschränkungen & leicht wartbar \\
@@ -74,13 +75,26 @@ Als abschließender Punkt ist die Robustheit zu erwähnen: Wenn ein Microservice
 
 Aus den genannten Punkten lässt sich schließen, dass eine generelle Aussage, ob eine monolithische oder Microservice-Architektur besser oder schlechter ist, sich nicht treffen lässt. Es kommt immer drauf an, welche Zielsetzung und wie viele Ressourcen für das Projekt festgelegt sind. REWE Digital beispielsweise hat ihr Produkt zuerst als Monolithen gestartet und ist erst später auf eine Microservice-Architektur umgeschwenkt.\cite{rewe2019mic_ppp} Zwei mögliche Gründe könnten dafür sein, dass zum einen ein lauffähiges Produkt schneller mit einer monolithischer Struktur zu erreichen ist, zum anderen ist nicht gegeben, ob ein entwickeltes Projekt überhaupt die Nachfrage erzeugt, so dass eine Microservice-Architektur notwendig ist. Dementsprechend muss abgewogen werden, welche Architektur für welchen Anwendungsfall besser geeignet ist.\cite{wolff2018mic_praxis} 
 
-\subsection{Monolith vs. Microservices}
+\subsection{Macro und Mikroarchitektur}
 
-Wie bereits erwähnt, ist die Entkopplung von Microservices ein großer Vorteil gegenüber dem Monolithen. Dennoch ist es sinnvoll Richtlinien, Regeln und/oder Festlegungen zu schaffen, damit die Microservices nicht blockierend oder technologisch unnötig gegensätzlich arbeiten. Die Entscheidungsebene kann global (Makroarchitektur) oder nur für einen einzelnen Service (Mikroarchitektur) gelten.Welche Festlegungen und mit welcher strenge eingehalten werden müssen, hängt von verschiedenen Faktoren wie z.B. Technologie, Organisation oder Wirtschaftlichkeit ab.\\ 
+Wie bereits erwähnt, ist die Entkopplung von Microservices ein großer Vorteil gegenüber dem Monolithen. Dennoch ist es sinnvoll Richtlinien, Regeln und/oder Festlegungen zu schaffen, damit die Microservices nicht blockierend oder technologisch unnötig gegensätzlich arbeiten. Die Entscheidungsebene kann global (Makroarchitektur) oder nur für einen einzelnen Services (Mikroarchitektur) gelten.\cite{wolff2016mic_architectures} Welche Festlegungen und mit welcher Strenge diese eingehalten werden müssen, hängt von verschiedenen beispielsweise technologischen, organisatorischen oder wirtschaftlichen Faktoren ab.\\ 
 
 In dem folgenden Abschnitt werden Grundprinzipien der Software-Modellierungs-Methodik Domain Driven Design erläutert und im Zusammenhang mit den Begriffen Bounded Context, Makro- und Mikroarchitektur gesetzt sowie gängige Bereiche daraufhin untersucht, ob sie makro- oder microarchitektonisch einzuordnen sind.\\
 
-Domain Driven Design (DDD) enthält zahlreiche Pattern mit denen ein Softwaresystem modelliert werden kann. Für Microservices bieten sich die sogenannten Bounded Contexts an, d.h. jeder Microservice ist vereinfacht ausgedrückt für einen bestimmten Bereich der Software zuständig. In Abbildung \ref{fig:rewe_microservice_ui} skizziert REWE Digital, wie viele unterschiedliche Services bei dem Anzeigen einer Produktdetailseite bereits involviert sind.\\ 
+
+
+
+%Ziel: "DDD als sinnvolles Werkezeug, um Microservices fachlich einzuteilen."
+
+Domain Driven Design (DDD) ist ein Vorgehen mit dem ein Softwaresystem modelliert werden kann. \cite{heise2016ddd} Beim sogenannten \textit{Strategic Design} wird dafür das Softwaressytem in verschiedene \textit{Bounded Contexts} eingeilt, welche an ein \textit{Domänenmodell} gebunden sind. Ein Domänenmodell bildet die Geschäftslogik ab, d.h. inwiefern einzelne Objekte innerhalb des Kontexts in Relation zueinander stehen, welche Datenbestand sie haben und sich verhalten. Dabei kann ein Domänenmodell - je nach Entwurfsmuster - von einem oder mehreren Bounded Contexts genutzt werden wie in Abbildung XXX zu sehen ist.\cite{wolff2018mic_praxis}  
+
+%TODO: drei Bilder einfügen S. 20
+%Könnte zu abstrakt sein. Ggf. den Begriff Domänenmodell weiter ausbauen oder einfach ein Beispiel nennen
+
+
+%%% nicht sicher was mit REWE Digital hier gemacht wird 
+
+In Abbildung \ref{fig:rewe_microservice_ui} skizziert REWE Digital, wie viele unterschiedliche Microservices bei dem Anzeigen einer Produktdetailseite bereits involviert sind. \\ 
 
 \begin{figure}[ht]
 	\centering
@@ -89,7 +103,15 @@ Domain Driven Design (DDD) enthält zahlreiche Pattern mit denen ein Softwaresys
 	\label{fig:rewe_microservice_ui}
 \end{figure}
 
-Anhand der Abbildung \ref{fig:rewe_microservice_ui} sind die Kontexte gut zu erkennen: Jeder Service hat verschiedene Verantwortungsbereiche, wie z.B. die Produktsuche (hellblau), die Warenkorbverwaltung (rot) oder Navigation (orange). Es wäre zwar auch denkbar, einen Bounded Context zu entwerfen, der direkt mehrere Aufgaben (z.B. Suche und Produktdetails) zusammenfasst, allerdings birgt das die Gefahren von einer monolithischen Struktur und würde sich entsprechend negativ auswirken.\\
+Natürlich lässt sich aus der Abbildung \ref{fig:rewe_microservice_ui} nicht schließen, wie das/die Domänenmodell/e aufgebaut ist/sind, aber die zahlreichen Services lassen darauf schließen, dass jeder Service andere Informationen benötigt und das Domänenmodell anders aufbereitet sein wird. 
 
-Im DDD existieren unterschiedliche Strategien, um Bounded Contexts in ein System zu integrieren. Häufig sind die Bounded Contexts an ein Domänenmodell gebunden und kommunizieren über sogenannte up- und downstreams mit anderen Kontexten.\\
+Anhand der Abbildung \ref{fig:rewe_microservice_ui} ist gut zu erkennen, dass jeder Service verschiedene Verantwortungsbereiche hat, z.B. die Produktsuche (hellblau), die Warenkorbverwaltung (rot) oder Navigation (orange). Es wäre zwar auch denkbar, einen Bounded Context zu entwerfen, der direkt mehrere Aufgaben (z.B. Suche und Produktdetails) zusammenfasst, allerdings birgt das die Gefahren von einer monolithischen Struktur und würde sich entsprechend negativ auswirken.\cite{wolff2018mic_praxis} \\
 
+%%% nicht sicher was mit REWE Digital hier gemacht wird 
+
+Wie die Kontexte untereinander kommunizieren, ist abhängig von dem gewählten Pattern. Allerdings wird grundsätzlich vom \textit{up-stream} (vorgeschaltet) und dem \textit{down-stream} (nachgeschaltet) gesprochen. 
+
+%%% TODO: Upstream und Downstream erklären, andere Entwurfsmuster anreißen, aber nicht besonders ausführen
+
+%% Ziel: Bounded Context = Microservice
+%% Es stellt sich die Frage, wie die Microservices aufgebaut sind, allgemein: Wie kommunzieren usw. Dann die 

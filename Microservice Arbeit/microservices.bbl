@@ -149,6 +149,33 @@
       \field{title}{Moving mountains – practical approaches for moving monolithic applications to Microservices}
       \field{year}{2017}
     \endentry
+    \entry{heise2016ddd}{online}{}
+      \name{author}{1}{}{%
+        {{hash=0ce819893ecd6363352bf81a5daba92e}{%
+           family={Roden},
+           familyi={R\bibinitperiod},
+           given={Golo},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{0ce819893ecd6363352bf81a5daba92e}
+      \strng{fullhash}{0ce819893ecd6363352bf81a5daba92e}
+      \strng{bibnamehash}{0ce819893ecd6363352bf81a5daba92e}
+      \strng{authorbibnamehash}{0ce819893ecd6363352bf81a5daba92e}
+      \strng{authornamehash}{0ce819893ecd6363352bf81a5daba92e}
+      \strng{authorfullhash}{0ce819893ecd6363352bf81a5daba92e}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Domain-driven Design erkl{ä}rt}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://www.heise.de/developer/artikel/Domain-driven-Design-erklaert-3130720.html?seite=all
+      \endverb
+      \verb{url}
+      \verb https://www.heise.de/developer/artikel/Domain-driven-Design-erklaert-3130720.html?seite=all
+      \endverb
+    \endentry
     \entry{wolff2018mic_praxis}{book}{}
       \name{author}{1}{}{%
         {{hash=42b48b91ec04dc8b258db592d08ee9e9}{%

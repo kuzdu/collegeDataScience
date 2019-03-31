@@ -7,17 +7,17 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3}Grundlagen}{2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Microservices}{2}
+\contentsline {subsection}{\numberline {3.1}Microservices}{3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Monolithische Struktur}{3}
+\contentsline {subsection}{\numberline {3.2}Monolithische Struktur}{4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Monolith vs. Microservices}{4}
+\contentsline {subsection}{\numberline {3.3}Monolith vs. Microservices}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4}Monolith vs. Microservices}{6}
+\contentsline {subsection}{\numberline {3.4}Macro und Mikroarchitektur}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Konzept}{7}
+\contentsline {section}{\numberline {4}Konzept}{8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Implementierung}{7}
+\contentsline {section}{\numberline {5}Implementierung}{8}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6}Fazit}{8}
 \defcounter {refsection}{0}\relax 
