@@ -38,8 +38,8 @@ Planung und Erstellung einer Backend-Microservices-Architektur aus den Anforderu
 * Container Instanz erstellen und von außen erreichbar machen 🔜
 
 ## Schluss/Fazit 
-//Ausblick Kubernetes (...) 🔜
-//(Microservice) Frontend 🔜
+* Ausblick Kubernetes (...) 🔜
+* (Microservice) Frontend 🔜
 
 ------
 (Ggf.) offene Fragen:
