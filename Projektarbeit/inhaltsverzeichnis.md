@@ -9,6 +9,8 @@ Planung und Erstellung einer Backend-Microservices-Architektur aus den Anforderu
 
 # Inhaltsverzeichnis
 
+## Glossar 🔨
+
 ## Einleitung
 * Gründe und Notwendigkeit 🔜
 * Herausforderungen 🔜
