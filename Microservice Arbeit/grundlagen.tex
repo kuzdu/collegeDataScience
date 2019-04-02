@@ -77,41 +77,43 @@ Aus den genannten Punkten lässt sich schließen, dass eine generelle Aussage, o
 
 \subsection{Macro und Mikroarchitektur}
 
-Wie bereits erwähnt, ist die Entkopplung von Microservices ein großer Vorteil gegenüber dem Monolithen. Dennoch ist es sinnvoll Richtlinien, Regeln und/oder Festlegungen zu schaffen, damit die Microservices nicht blockierend oder technologisch unnötig gegensätzlich arbeiten. Die Entscheidungsebene kann global (Makroarchitektur) oder nur für einen einzelnen Services (Mikroarchitektur) gelten.\cite{wolff2016mic_architectures} Welche Festlegungen und mit welcher Strenge diese eingehalten werden müssen, hängt von verschiedenen beispielsweise technologischen, organisatorischen oder wirtschaftlichen Faktoren ab.\\ 
+Wie bereits erwähnt, ist die Entkopplung von Microservices ein großer Vorteil gegenüber dem Monolithen. Dennoch ist es sinnvoll Richtlinien, Regeln und/oder Festlegungen zu schaffen, damit die Microservices nicht blockierend oder technologisch unnötig gegensätzlich arbeiten. Die Entscheidungsebene kann global (Makroarchitektur) oder nur für einen einzelnen Services (Mikroarchitektur) gelten.\cite{wolff2016mic_architectures} Welche Festlegungen und mit welcher Strenge diese eingehalten werden müssen, hängt von verschiedenen Faktoren ab, welche technologisch, organisatorisch oder wirtschaftlich motiviert sein können.\\ 
 
 In dem folgenden Abschnitt werden Grundprinzipien der Software-Modellierungs-Methodik Domain Driven Design erläutert und im Zusammenhang mit den Begriffen Bounded Context, Makro- und Mikroarchitektur gesetzt sowie gängige Bereiche daraufhin untersucht, ob sie makro- oder microarchitektonisch einzuordnen sind.\\
 
-
-
-
-%Ziel: "DDD als sinnvolles Werkezeug, um Microservices fachlich einzuteilen."
-
-Domain Driven Design (DDD) ist ein Vorgehen mit dem ein Softwaresystem modelliert werden kann. \cite{heise2016ddd} Beim sogenannten \textit{Strategic Design} wird dafür das Softwaressytem in verschiedene \textit{Bounded Contexts} eingeilt, welche an ein \textit{Domänenmodell} gebunden sind. Ein Domänenmodell bildet die Geschäftslogik ab, d.h. inwiefern einzelne Objekte innerhalb des Kontexts in Relation zueinander stehen, welche Datenbestand sie haben und sich verhalten. Dabei kann ein Domänenmodell - je nach Entwurfsmuster - von einem oder mehreren Bounded Contexts genutzt werden wie in Abbildung XXX zu sehen ist.\cite{wolff2018mic_praxis}  
+Domain Driven Design (DDD) ist ein Vorgehen mit dem ein Softwaresystem modelliert werden kann. Im Sinne einer Microservice-Architektur kann dies als Werkzeug genutzt werden, um Microservices fachlich einzuteilen.\cite{heise2016ddd} Beim sogenannten \textit{Strategic Design} wird dafür das Softwaressytem in verschiedene \textit{Bounded Contexts} eingeilt, welche an ein \textit{Domänenmodell} gebunden sind. Ein Domänenmodell bildet die Geschäftslogik ab, d.h. inwiefern einzelne Objekte innerhalb des Kontexts in Relation zueinander stehen, welche Eigenschaften sie haben und wie sich verhalten. Dabei kann ein Domänenmodell - je nach Entwurfsmuster - von einem oder mehreren Bounded Contexts genutzt werden wie in Abbildung XXX zu sehen ist.\cite{wolff2018mic_praxis}  \\
 
 %TODO: drei Bilder einfügen S. 20
 %Könnte zu abstrakt sein. Ggf. den Begriff Domänenmodell weiter ausbauen oder einfach ein Beispiel nennen
 
+Wolff verdeutlicht das Prinzip von Bounded Contexts mit Hilfe von vier Microservices, welche einen Onlineshop repräsentieren: \textit{Suche}, \textit{Check Out}, \textit{Inkasso} und \textit{Lieferung}. Während das Datenmodell der Suche detaillierte Informationen über die Produkte enthält, reicht es im Warenkorb (hier Check Out), wenn ggf. nur der Produktname gespeichert wird. Bei Inkasso ist es ähnlich: An dieser Stelle sind Zahlungsdaten des Benutzers relevant, während bei Lieferung die ggf, nur Adresse notwendig ist.\cite{wolff2018mic_praxis} An diesem Beispiel wird deutlich, dass zwar von selben Begrifflichkeiten wie Benutzer, Produkt usw. gesprochen wird, allerdings jeder Service sein eigenes Domänenmodell hat. Durch diese Technik, was dabei hilft, eine saubere Microservice-Architecktur zu erstellen.\cite{wolff2018mic_praxis} \cite{heise2016ddd} \\
 
-%%% nicht sicher was mit REWE Digital hier gemacht wird 
+Neben der fachlichen Trennung bildet DDD auch die Kommunikation zwischen Kontexten ab. Dabei wird grundsätzlich vom \textit{up-stream} (vorgeschaltet) und dem \textit{down-stream} (nachgeschaltet) gesprochen.\cite{wolff2018mic_praxis} \\
 
-In Abbildung \ref{fig:rewe_microservice_ui} skizziert REWE Digital, wie viele unterschiedliche Microservices bei dem Anzeigen einer Produktdetailseite bereits involviert sind. \\ 
-
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=0.9\textwidth]{rewe_digital_front_page}
-	\caption{Aufteilung, welche Microservices, welchen Part in der UI übernehmen.\cite{rewe2019mic_ppp}}
-	\label{fig:rewe_microservice_ui}
-\end{figure}
-
-Natürlich lässt sich aus der Abbildung \ref{fig:rewe_microservice_ui} nicht schließen, wie das/die Domänenmodell/e aufgebaut ist/sind, aber die zahlreichen Services lassen darauf schließen, dass jeder Service andere Informationen benötigt und das Domänenmodell anders aufbereitet sein wird. 
-
-Anhand der Abbildung \ref{fig:rewe_microservice_ui} ist gut zu erkennen, dass jeder Service verschiedene Verantwortungsbereiche hat, z.B. die Produktsuche (hellblau), die Warenkorbverwaltung (rot) oder Navigation (orange). Es wäre zwar auch denkbar, einen Bounded Context zu entwerfen, der direkt mehrere Aufgaben (z.B. Suche und Produktdetails) zusammenfasst, allerdings birgt das die Gefahren von einer monolithischen Struktur und würde sich entsprechend negativ auswirken.\cite{wolff2018mic_praxis} \\
-
-%%% nicht sicher was mit REWE Digital hier gemacht wird 
-
-Wie die Kontexte untereinander kommunizieren, ist abhängig von dem gewählten Pattern. Allerdings wird grundsätzlich vom \textit{up-stream} (vorgeschaltet) und dem \textit{down-stream} (nachgeschaltet) gesprochen. 
-
+%Hier noch kurz erläutern%
+%Auf die unterschieldichen Pattern gehe ich jetzt nicht mehr ein% 
 %%% TODO: Upstream und Downstream erklären, andere Entwurfsmuster anreißen, aber nicht besonders ausführen
 
-%% Ziel: Bounded Context = Microservice
-%% Es stellt sich die Frage, wie die Microservices aufgebaut sind, allgemein: Wie kommunzieren usw. Dann die 
+%das ist Ziel/Abschließender Satz zu DDD %
+Nach dem Anwenden von DDD sollte man eine Übersicht haben, welche Microservices benötigt werden und welche Abhängigkeiten sie zu anderne haben.  
+
+%%  Taktisches Design wird nicht erwähnt, whrs. auch viele andere Sachen nicht, das muss ich in der Einleitung für DDD noch erwähnen. 
+
+%% Ggf. noch als Beispiel, aber hier vllt ein wenig unpassend.
+I%n Abbildung \ref{fig:rewe_microservice_ui} skizziert REWE Digital, wie viele unterschiedliche Microservices bei dem Anzeigen einer Produktdetailseite bereits involviert sind. \\ 
+
+%\begin{figure}[ht]
+%	\centering
+%	\includegraphics[width=0.9\textwidth]{rewe_digital_front_page}
+%	\caption{Aufteilung, welche Microservices, welchen Part in der UI übernehmen.\cite{rewe2019mic_ppp}}
+%	\label{fig:rewe_microservice_ui}
+%\end{figure}
+
+%Natürlich lässt sich aus der Abbildung \ref{fig:rewe_microservice_ui} nicht schließen, wie das/die Domänenmodell/e aufgebaut ist/sind, aber die zahlreichen Services lassen darauf schließen, dass jeder Service andere Informationen benötigt und das Domänenmodell anders aufbereitet sein wird. 
+
+%Anhand der Abbildung \ref{fig:rewe_microservice_ui} ist gut zu erkennen, dass jeder Service verschiedene Verantwortungsbereiche hat, z.B. die Produktsuche (hellblau), die Warenkorbverwaltung (rot) oder Navigation (orange). Es wäre zwar auch denkbar, einen Bounded Context zu entwerfen, der direkt mehrere Aufgaben (z.B. Suche und Produktdetails) zusammenfasst, allerdings birgt das die Gefahren von einer monolithischen Struktur und würde sich entsprechend negativ auswirken.\cite{wolff2018mic_praxis} \\
+
+
+
+
+%% Auf API Gateway eingehen
