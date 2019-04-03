@@ -19,9 +19,9 @@ Planung und Erstellung einer Backend-Microservices-Architektur aus den Anforderu
 * Microservices ✅
 * Monolithische Struktur ✅
 * Monolith vs. Microservices  ✅ 
-* Makro-Mikro-Architektur 🔨
-* Kommunikation (REST, welche Ebene?, Protobuf, Atom) zwischen Microservices (mit API-Gateway, (Synchron, Asynchon, wo ist was nötig und warum?)) 🔜
-* Authentifizierung und Authorisierung (Vor- und Nachteile von verschiedenen Verfahren) 🔜
+* Architektur von Micrsoservices 🔨
+* Kommunikation 🔜
+* Authentifizierung 🔜
 
 ## Konzept Stirnraten API 
 ### Anforderungen
