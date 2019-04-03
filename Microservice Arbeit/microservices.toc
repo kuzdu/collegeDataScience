@@ -13,12 +13,20 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.3}Monolith vs. Microservices}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4}Macro und Mikroarchitektur}{6}
+\contentsline {subsection}{\numberline {3.4}Architektur von Micrsoservices}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Konzept}{7}
+\contentsline {subsubsection}{\numberline {3.4.1}Domain Driven Design}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Implementierung}{7}
+\contentsline {subsubsection}{\numberline {3.4.2}Macro und Mikroarchitektur}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Fazit}{7}
+\contentsline {subsection}{\numberline {3.5}Kommunikation}{8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\nonumberline Literatur}{8}
+\contentsline {subsection}{\numberline {3.6}Authentifizierung und Authorisierung}{8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Konzept}{8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5}Implementierung}{8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}Fazit}{8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline Literatur}{9}

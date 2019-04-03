@@ -1989,12 +1989,20 @@
     <bcf:citekey order="13">rewe2019mic_ppp</bcf:citekey>
     <bcf:citekey order="14">wolff2018mic_praxis</bcf:citekey>
     <bcf:citekey order="15">wolff2016mic_architectures</bcf:citekey>
-    <bcf:citekey order="16">heise2016ddd</bcf:citekey>
-    <bcf:citekey order="17">wolff2018mic_praxis</bcf:citekey>
+    <bcf:citekey order="16">rewe2019mic_ppp</bcf:citekey>
+    <bcf:citekey order="17">heise2016ddd</bcf:citekey>
     <bcf:citekey order="18">wolff2018mic_praxis</bcf:citekey>
     <bcf:citekey order="19">wolff2018mic_praxis</bcf:citekey>
-    <bcf:citekey order="20">heise2016ddd</bcf:citekey>
-    <bcf:citekey order="21">wolff2018mic_praxis</bcf:citekey>
+    <bcf:citekey order="20">wolff2018mic_praxis</bcf:citekey>
+    <bcf:citekey order="21">heise2016ddd</bcf:citekey>
+    <bcf:citekey order="22">wolff2018mic_praxis</bcf:citekey>
+    <bcf:citekey order="23">rewe2019mic_ppp</bcf:citekey>
+    <bcf:citekey order="24">wolff2018mic_praxis</bcf:citekey>
+    <bcf:citekey order="25">irakli2016mic_arc</bcf:citekey>
+    <bcf:citekey order="26">wolff2018mic_praxis</bcf:citekey>
+    <bcf:citekey order="27">wolff2018mic_praxis</bcf:citekey>
+    <bcf:citekey order="28">wolff2018mic_praxis</bcf:citekey>
+    <bcf:citekey order="29">irakli2016mic_arc</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

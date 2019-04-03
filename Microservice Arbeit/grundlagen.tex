@@ -75,11 +75,15 @@ Als abschließender Punkt ist die Robustheit zu erwähnen: Wenn ein Microservice
 
 Aus den genannten Punkten lässt sich schließen, dass eine generelle Aussage, ob eine monolithische oder Microservice-Architektur besser oder schlechter ist, sich nicht treffen lässt. Es kommt immer drauf an, welche Zielsetzung und wie viele Ressourcen für das Projekt festgelegt sind. REWE Digital beispielsweise hat ihr Produkt zuerst als Monolithen gestartet und ist erst später auf eine Microservice-Architektur umgeschwenkt.\cite{rewe2019mic_ppp} Zwei mögliche Gründe könnten dafür sein, dass zum einen ein lauffähiges Produkt schneller mit einer monolithischer Struktur zu erreichen ist, zum anderen ist nicht gegeben, ob ein entwickeltes Projekt überhaupt die Nachfrage erzeugt, so dass eine Microservice-Architektur notwendig ist. Dementsprechend muss abgewogen werden, welche Architektur für welchen Anwendungsfall besser geeignet ist.\cite{wolff2018mic_praxis} 
 
-\subsection{Macro und Mikroarchitektur}
+\subsection{Architektur von Micrsoservices}
 
-Wie bereits erwähnt, ist die Entkopplung von Microservices ein großer Vorteil gegenüber dem Monolithen. Dennoch ist es sinnvoll Richtlinien, Regeln und/oder Festlegungen zu schaffen, damit die Microservices nicht blockierend oder technologisch unnötig gegensätzlich arbeiten. Die Entscheidungsebene kann global (Makroarchitektur) oder nur für einen einzelnen Services (Mikroarchitektur) gelten.\cite{wolff2016mic_architectures} Welche Festlegungen und mit welcher Strenge diese eingehalten werden müssen, hängt von verschiedenen Faktoren ab, welche technologisch, organisatorisch oder wirtschaftlich motiviert sein können.\\ 
+%%  Taktisches Design wird nicht erwähnt, whrs. auch viele andere Sachen nicht, das muss ich in der Einleitung für DDD noch erwähnen. 
 
-In dem folgenden Abschnitt werden Grundprinzipien der Software-Modellierungs-Methodik Domain Driven Design erläutert und im Zusammenhang mit den Begriffen Bounded Context, Makro- und Mikroarchitektur gesetzt sowie gängige Bereiche daraufhin untersucht, ob sie makro- oder microarchitektonisch einzuordnen sind.\\
+Wie bereits erwähnt, ist die Entkopplung von Microservices ein großer Vorteil gegenüber dem Monolithen. Dennoch ist es sinnvoll Richtlinien, Regeln und/oder Festlegungen zu schaffen, damit die Microservices nicht blockierend oder technologisch unnötig gegensätzlich arbeiten. Die Entscheidungsebene kann global (Makroarchitektur) oder nur für einen einzelnen Services (Mikroarchitektur) gelten.\cite{wolff2016mic_architectures} Welche Festlegungen und mit welcher Strenge diese eingehalten werden müssen, hängt von verschiedenen Faktoren ab, welche technologisch, organisatorisch oder wirtschaftlich motiviert sein können.\cite{rewe2019mic_ppp} \\ 
+
+In dem folgenden Abschnitt wird das Grundprinzip der Software-Modellierungs-Methodik Domain Driven Design untersucht. Zusätzlich wird erläutert, welche Fälle makro- oder microarchitektonisch einzuordnen sind. \\
+
+\subsubsection{Domain Driven Design}
 
 Domain Driven Design (DDD) ist ein Vorgehen mit dem ein Softwaresystem modelliert werden kann. Im Sinne einer Microservice-Architektur kann dies als Werkzeug genutzt werden, um Microservices fachlich einzuteilen.\cite{heise2016ddd} Beim sogenannten \textit{Strategic Design} wird dafür das Softwaressytem in verschiedene \textit{Bounded Contexts} eingeilt, welche an ein \textit{Domänenmodell} gebunden sind. Ein Domänenmodell bildet die Geschäftslogik ab, d.h. inwiefern einzelne Objekte innerhalb des Kontexts in Relation zueinander stehen, welche Eigenschaften sie haben und wie sich verhalten. Dabei kann ein Domänenmodell - je nach Entwurfsmuster - von einem oder mehreren Bounded Contexts genutzt werden wie in Abbildung XXX zu sehen ist.\cite{wolff2018mic_praxis}  \\
 
@@ -88,16 +92,39 @@ Domain Driven Design (DDD) ist ein Vorgehen mit dem ein Softwaresystem modellier
 
 Wolff verdeutlicht das Prinzip von Bounded Contexts mit Hilfe von vier Microservices, welche einen Onlineshop repräsentieren: \textit{Suche}, \textit{Check Out}, \textit{Inkasso} und \textit{Lieferung}. Während das Datenmodell der Suche detaillierte Informationen über die Produkte enthält, reicht es im Warenkorb (hier Check Out), wenn ggf. nur der Produktname gespeichert wird. Bei Inkasso ist es ähnlich: An dieser Stelle sind Zahlungsdaten des Benutzers relevant, während bei Lieferung die ggf, nur Adresse notwendig ist.\cite{wolff2018mic_praxis} An diesem Beispiel wird deutlich, dass zwar von selben Begrifflichkeiten wie Benutzer, Produkt usw. gesprochen wird, allerdings jeder Service sein eigenes Domänenmodell hat. Durch diese Technik, was dabei hilft, eine saubere Microservice-Architecktur zu erstellen.\cite{wolff2018mic_praxis} \cite{heise2016ddd} \\
 
-Neben der fachlichen Trennung bildet DDD auch die Kommunikation zwischen Kontexten ab. Dabei wird grundsätzlich vom \textit{up-stream} (vorgeschaltet) und dem \textit{down-stream} (nachgeschaltet) gesprochen.\cite{wolff2018mic_praxis} \\
+Neben der fachlichen Trennung bildet DDD auch die Kommunikation zwischen Kontexten ab. Dabei wird grundsätzlich vom \textit{up-stream} (vorgeschaltet) und dem \textit{down-stream} (nachgeschaltet) gesprochen.\cite{wolff2018mic_praxis}. Der up-stream stellt dem down-stream Informationen bereit. Wie dies technisch umgesetzt ist, also ob der down-stream nachfragt oder der up-stream aktiv Daten schickt, ist frei wählbar. \\
 
-%Hier noch kurz erläutern%
-%Auf die unterschieldichen Pattern gehe ich jetzt nicht mehr ein% 
-%%% TODO: Upstream und Downstream erklären, andere Entwurfsmuster anreißen, aber nicht besonders ausführen
+Nach dem Anwenden von DDD sollte die Struktur der Software erkennbar sein: D.h. welche Art Microservices werden benötigt und iwiefern sie mit anderen in Abhängigkeiten bzw. Kommunikation stehen.   
 
-%das ist Ziel/Abschließender Satz zu DDD %
-Nach dem Anwenden von DDD sollte man eine Übersicht haben, welche Microservices benötigt werden und welche Abhängigkeiten sie zu anderne haben.  
+\subsubsection{Macro und Mikroarchitektur}
 
-%%  Taktisches Design wird nicht erwähnt, whrs. auch viele andere Sachen nicht, das muss ich in der Einleitung für DDD noch erwähnen. 
+Wenn durch das DDD entworfen wird, welche Microservices voraussichtlich benötigt werden, ist es sinnvoll einen Art Bauplan zu verfassen, welcher impliziert, an welche Regeln sich ein Microservice halten muss. Diese Regeln können wie bereits erwähnt auf globaler Ebene getroffen werden, d.h. sie gelten für alle Services (Makroarchitektur) oder sie gelten nur im Microservice selber (Microarchitektur). REWE Digital unterscheidet dabei zwischen \textit{Must}, \textit{Should}, \textit{Could}. D.h. es gibt Regeln, die Microservices erfüllen müssen wie z.B. das Kommunzieren über REST oder das Implementieren eine einheitlicher Authorisierung.\cite{rewe2019mic_ppp} Andere Regeln dagegen sind viel mehr Richtlinien (should) oder komplett optional (could). Das Ziel ist stets, dass durch die makroarchitektonischen Entscheidungen nicht die Vorteile von Microservices beschnitten werden.\cite{wolff2018mic_praxis}\cite{irakli2016mic_arc}. \\
+
+Es gibt verschiedene Einflussfaktoren wie sich die Makroarchitektur für ein Unternehmen definiert: Zum einen empfiehlt es sich ein Gremium zu gründen, welches sich stetig mit den Regeln der Makroarchitektur auseinandersetzt, sie entsprechend erweitert, überarbeitet und die getroffenen Entscheidungen auch immer begründen kann.\cite{wolff2018mic_praxis} Zum anderen besteht immer ein technischer Einfluss\cite{wolff2018mic_praxis}:
+\begin{itemize}
+	\item Gewählte Technologien müssen in die Infrastruktur des Unternehmens passen: Angenommen die Auslastung eines Microservices muss überwacht werden und dies wird firmenweit mit Tool A erledigt, dann wäre es sehr aufwendig, wenn der besagte Service nur eine Schnittstelle für Tool B anbietet und der nächste Service nur für Tool C. Dies würde einerseits sehr unübersichtlich werden und andererseits viel Aufwand bedeuten. 
+	\item Technologien sind immer von dem Personal abhängig: Gerade wenn Unternehmen klein bis mittelständig sind, emphielt es sich Technologien zu nutzen, die mehrere Entwickler beherrschen, um Inselwissen zu reduizieren. 
+	\item Ebenfalls können gezielt strategische Entscheidungen getroffen werden, z.B. wenn ein Unternehmen die Dateninfrastruktur zu einem Cloudanbieter auslagern möchte, hat dies entsprechende makroarchitekonisches Auswirkungen.
+\end{itemize}
+
+Basierend auf Wolff und Nadareishvili ist folgende Tabelle entstanden, welche einen Überblick darüber gibt, wie gängige Entscheidungspunkte einzuordnen sind. \cite{wolff2018mic_praxis}\cite{irakli2016mic_arc}
+
+%hier Tabelle hinmachen
+%Tabelle erläutern
+
+Ergänzend ein Auszug aus der konkreten Architektur von REWE Digital: Es wurden 9 Gesetze entworfen, an die sich jeder Microservices halten muss. Dies betrifft XXX
+
+%% als nächstes: 
+%% zwischen WAS und WIE unterscheiden. WAS (Grafana), WIE ich da reinlogge, entscheidet der Microservice 
+%% Conways Law und Microservices desingen ggf. erwähnen
+
+%% Abschließend Vorteile vs Nachteile aufzeigen, wenn viel in der Makro bzw. Mikroarchitektur liegt
+
+\subsection{Kommunikation}
+%A/Synchone
+%% Auf API Gateway eingehen
+
+\subsection{Authentifizierung und Authorisierung}
 
 %% Ggf. noch als Beispiel, aber hier vllt ein wenig unpassend.
 I%n Abbildung \ref{fig:rewe_microservice_ui} skizziert REWE Digital, wie viele unterschiedliche Microservices bei dem Anzeigen einer Produktdetailseite bereits involviert sind. \\ 
@@ -113,7 +140,3 @@ I%n Abbildung \ref{fig:rewe_microservice_ui} skizziert REWE Digital, wie viele u
 
 %Anhand der Abbildung \ref{fig:rewe_microservice_ui} ist gut zu erkennen, dass jeder Service verschiedene Verantwortungsbereiche hat, z.B. die Produktsuche (hellblau), die Warenkorbverwaltung (rot) oder Navigation (orange). Es wäre zwar auch denkbar, einen Bounded Context zu entwerfen, der direkt mehrere Aufgaben (z.B. Suche und Produktdetails) zusammenfasst, allerdings birgt das die Gefahren von einer monolithischen Struktur und würde sich entsprechend negativ auswirken.\cite{wolff2018mic_praxis} \\
 
-
-
-
-%% Auf API Gateway eingehen
