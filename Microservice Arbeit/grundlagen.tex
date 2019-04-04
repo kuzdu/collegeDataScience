@@ -107,18 +107,45 @@ Es gibt verschiedene Einflussfaktoren wie sich die Makroarchitektur für ein Unt
 	\item Ebenfalls können gezielt strategische Entscheidungen getroffen werden, z.B. wenn ein Unternehmen die Dateninfrastruktur zu einem Cloudanbieter auslagern möchte, hat dies entsprechende makroarchitekonisches Auswirkungen.
 \end{itemize}
 
-Basierend auf Wolff und Nadareishvili ist folgende Tabelle entstanden, welche einen Überblick darüber gibt, wie gängige Entscheidungspunkte einzuordnen sind. \cite{wolff2018mic_praxis}\cite{irakli2016mic_arc}
+Basierend auf Wolff und Nadareishvili ist folgende Tabelle entstanden, welche einen Überblick darüber gibt, wie gängige Entscheidungspunkte einzuordnen sind. \cite{wolff2018mic_praxis}\cite{irakli2016mic_arc}\cite{rewe2019mic_ppp}
 
-%hier Tabelle hinmachen
-%Tabelle erläutern
+\begin{center}
+	\begin{tabular}{p{5cm}p{5cm}p{5cm}}
+		& Mikroarchitektur & Makroarchitektur \\ \hline
+		Programmiersprache &  x & x  \\
+		Datenbank & x & x \\
+		Look and Feel (UI) & x  & x  \\
+		Dokumentation & x & x  \\
+		Datenformat &   & x \\
+		Kommunikationsprotokoll &   & x \\
+		Authentifizierung &  & x \\
+		Integrationtests &  &  x \\
+		Autorisierung & x  &  \\
+		Unittests & x  &  \\
+		Continuous-Delivery-Pipeline & x &  \\
+	\end{tabular}
+\end{center}
 
-Ergänzend ein Auszug aus der konkreten Architektur von REWE Digital: Es wurden 9 Gesetze entworfen, an die sich jeder Microservices halten muss. Dies betrifft XXX
+In der Tabelle sieht man, dass gerade die ersten Punkten sehr von der Unternehmenskultur und den technischen sowie personellen Freiheiten abhängt. In der Theorie sollte die Programmiersprache sinnvoll für jeden Microservices gewählt werden, dennoch ergibt es auch Sinn einen Pool an Programmiersprachen auf Makroebene zu definieren, um Inselwissen zu reduzieren und nachhaltige Codequalität zu gewährleisten. Ähnliches gilt beispielsweise für die Wahl der Datenbank: Ist bereits eine globale Infrastruktur für Datenbank X geschaffen, sollte diese nicht ohne weiteres aufgebrochen werden, nur weil es technisch möglich ist. \\
 
-%% als nächstes: 
-%% zwischen WAS und WIE unterscheiden. WAS (Grafana), WIE ich da reinlogge, entscheidet der Microservice 
-%% Conways Law und Microservices desingen ggf. erwähnen
+Bei der Dokumentation sowie beim Look \& Feel ist es sinnvoll, globale Richtlinien zu definieren, damit klar ist, wo bei jedem Microservices die Dokumentation zu finden ist oder wie ein User Interface grundsätzlich angeordnet und gestaltet werden soll. Dennoch können diese Punkte im Detail je nach Microservice abweichen. \\
+
+Ein Kommunikationsprotokoll (z.B. REST) sowie Datenformate (z.B. JSON) sollten festgeschrieben werden.\cite{rewe2019mic_ppp} \cite{wolff2018mic_praxis} Als Grund wird zum einen das Vermeiden von technischen Mehraufwand angegeben, zum anderen sind Microservices zwar eigenständig deploybare Einheiten, dennoch sollten sie technisch zum Gesamtsystem passen und nicht dagegen arbeiten. \\
+
+Während die Authentifzierung (um wen handelt es sich) einmalig festgelegt werden sollte, liegt die Überprüfung der Autorisierung (was darf der Benutzer) in jedem Microservice selbst. Die Alternative wäre, dass jede eingehende Anfrage noch einmal geprüft wird, was zu unnötig hohem Traffic und Verzögerungen führen würde.  \\
+
+%% Theoretisch fehlen hier noch 3 Punkte
+
+Die hier erarbeitete Tabelle ist an dieser Stelle nicht als feststehendes Manfifest für alle Unternehmen zu verstehen, sondern als neutral betrachtete, sinnvolle Einordnung. Natürlich können architektonische Entscheidungen stark vom jeweiligen Anwendungszweck abhängen. \\
+
+Ebenfalls ist die Tabelle nicht vollständig: Nicht aufgeführt ist beispielsweise der Umgang mit Konfigurationsdateien, Monitoring oder Logging. Dies liegt unter anderem daran, weil es vom Einzelfall abhängt: Beim Monitoring kann zum Beispiel global entschieden werden, \textit{wo} Metriken abgelegt werden, aber jeder Service entscheidet selbst, \textit{was} dort abgelegt wird. 
+
+%%% Hier noch die weiteren drei Punkte erwähnen. S. 28 
 
 %% Abschließend Vorteile vs Nachteile aufzeigen, wenn viel in der Makro bzw. Mikroarchitektur liegt
+
+%% Tabellenverzeichnis erstellen
+
 
 \subsection{Kommunikation}
 %A/Synchone
