@@ -43,28 +43,32 @@ Aus den vorherigen Abschnitten sind diverse Unterschiede zwischen den Architektu
 
 % Tabelle ist nicht ganz Inhaltich richtig
 
-\begin{center}
-	\begin{tabular}{p{5cm}p{5cm}p{5cm}}
-		& Monolithische Architektur & Microservice-Architektur \\ \hline
-		Abhängigkeiten & alles in einer Anwendung & entkoppelt, da Prinzip von Modularisierung verwendet wird \\
-		Größe & linear steigend & einzelne Services sind klein \\
-		Geschwindigkeit Zugriffe & schnell, da alles in einer Anwendung & Zugriffe können länger dauern \\ 
-		Deployment & schwieriger desto größer das Projekt, aufgrund von
-		\begin{itemize}
-			\item Abhängigkeiten  
-			\item Größe \end{itemize}
-		 & einfach, da Microservices \begin{itemize}
-			\item klein und 
-		    \item modular sind \end{itemize} \\
-		Organisation & leichter, da alles an einem Ort & schwerer, da mehr Domänenlogik (wer macht was?) beachtet werden muss \\
-		Legacy-Systeme ablösen & ggf. schwierig, da System sehr verzahnt miteinander & leicht, da Microservices durch neue abgelöst werden können \\
-		Technologie & beschränkt & vielfältig \\
-		Nachhaltige Entwicklung & wartbar mit Einschränkungen & leicht wartbar \\
-		Robustheit & weniger, da ganzes System bei schweren Fehlern abstürzt & sehr, da im Zweifel immer nur ein Service abstürzt \\
-		Skalierung & horizontale und vertikale Skalierung, Umsetzung kann sehr komplex werden &  horizontale und vertikale Skalierung \\
-		Betrieb & nur ein System & komplex, da mehr Services verwaltet werden müssen
-	\end{tabular}
-\end{center}
+\begin{table}
+	\begin{center}
+		\begin{tabular}{p{4cm}p{5cm}p{5cm}}
+			& Monolithische Architektur & Microservice-Architektur \\ \hline
+			Abhängigkeiten & alles in einer Anwendung & entkoppelt, da Prinzip von Modularisierung verwendet wird \\
+			Größe & linear steigend & einzelne Services sind klein \\
+			Geschwindigkeit Zugriffe & schnell, da alles in einer Anwendung & Zugriffe können länger dauern \\ 
+			Deployment & schwieriger desto größer das Projekt, aufgrund von
+			\begin{itemize}
+				\item Abhängigkeiten  
+				\item Größe \end{itemize}
+			 & einfach, da Microservices \begin{itemize}
+				\item klein und 
+			    \item modular sind \end{itemize} \\
+			Organisation & leichter, da alles an einem Ort & schwerer, da mehr Domänenlogik (wer macht was?) beachtet werden muss \\
+			Legacy-Systeme ablösen & ggf. schwierig, da System sehr verzahnt miteinander & leicht, da Microservices durch neue abgelöst werden können \\
+			Technologie & beschränkt & vielfältig \\
+			Nachhaltige Entwicklung & wartbar mit Einschränkungen & leicht wartbar \\
+			Robustheit & weniger, da ganzes System bei schweren Fehlern abstürzt & sehr, da im Zweifel immer nur ein Service abstürzt \\
+			Skalierung & horizontale und vertikale Skalierung, Umsetzung kann sehr komplex werden &  horizontale und vertikale Skalierung \\
+			Betrieb & nur ein System & komplex, da mehr Services verwaltet werden müssen
+		\end{tabular}
+	\end{center}
+	\caption[Monolitih vs. Mircoservice-Architektur]{Monolitih vs. Mircoservice-Architektur}
+\end{table}
+
 
 
 Aus der Tabelle ergeben sich verschiedene Punkte: Der Monolith eignet sich besonders dann sehr gut, wenn die Projekt- sowie Teamgrößen absehbar sind und auch die Technologie entschieden ist. Zusätzlich kann es beim Projektanfang ein Vorteil sein, da die Abhängigkeiten innerhalb des Projektes liegen und so Entwicklungsgeschwindigkeit nicht durch komplizierte Infrastrukturen blockiert wird. 
@@ -109,22 +113,25 @@ Es gibt verschiedene Einflussfaktoren wie sich die Makroarchitektur für ein Unt
 
 Basierend auf Wolff und Nadareishvili ist folgende Tabelle entstanden, welche einen Überblick darüber gibt, wie gängige Entscheidungspunkte einzuordnen sind. \cite{wolff2018mic_praxis}\cite{irakli2016mic_arc}\cite{rewe2019mic_ppp}
 
-\begin{center}
-	\begin{tabular}{p{5cm}p{5cm}p{5cm}}
-		& Mikroarchitektur & Makroarchitektur \\ \hline
-		Programmiersprache &  x & x  \\
-		Datenbank & x & x \\
-		Look and Feel (UI) & x  & x  \\
-		Dokumentation & x & x  \\
-		Datenformat &   & x \\
-		Kommunikationsprotokoll &   & x \\
-		Authentifizierung &  & x \\
-		Integrationtests &  &  x \\
-		Autorisierung & x  &  \\
-		Unittests & x  &  \\
-		Continuous-Delivery-Pipeline & x &  \\
-	\end{tabular}
-\end{center}
+\begin{table}
+	\begin{center}
+		\begin{tabular}{p{5cm}p{5cm}p{5cm}}
+			& Mikroarchitektur & Makroarchitektur \\ \hline
+			Programmiersprache &  x & x  \\
+			Datenbank & x & x \\
+			Look and Feel (UI) & x  & x  \\
+			Dokumentation & x & x  \\
+			Datenformat &   & x \\
+			Kommunikationsprotokoll &   & x \\
+			Authentifizierung &  & x \\
+			Integrationtests &  &  x \\
+			Autorisierung & x  &  \\
+			Unittests & x  &  \\
+			Continuous-Delivery-Pipeline & x &  \\
+		\end{tabular}
+	\end{center}
+	\caption[Entscheidungen Micro- und Macroarchitektur]{Entscheidungen Micro- und Macroarchitektur}
+\end{table}
 
 In der Tabelle sieht man, dass gerade die ersten Punkten sehr von der Unternehmenskultur und den technischen sowie personellen Freiheiten abhängt. In der Theorie sollte die Programmiersprache sinnvoll für jeden Microservices gewählt werden, dennoch ergibt es auch Sinn einen Pool an Programmiersprachen auf Makroebene zu definieren, um Inselwissen zu reduzieren und nachhaltige Codequalität zu gewährleisten. Ähnliches gilt beispielsweise für die Wahl der Datenbank: Ist bereits eine globale Infrastruktur für Datenbank X geschaffen, sollte diese nicht ohne weiteres aufgebrochen werden, nur weil es technisch möglich ist. \\
 

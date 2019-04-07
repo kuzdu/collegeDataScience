@@ -3,21 +3,21 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}Glossar}{2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Einleitung}{3}
+\contentsline {section}{\numberline {2}Einleitung}{2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Grundlagen}{3}
+\contentsline {section}{\numberline {3}Grundlagen}{2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Microservices}{3}
+\contentsline {subsection}{\numberline {3.1}Microservices}{2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2}Monolithische Struktur}{4}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.3}Monolith vs. Microservices}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4}Architektur von Micrsoservices}{6}
+\contentsline {subsection}{\numberline {3.4}Architektur von Micrsoservices}{7}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {3.4.1}Domain Driven Design}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.2}Macro und Mikroarchitektur}{7}
+\contentsline {subsubsection}{\numberline {3.4.2}Macro und Mikroarchitektur}{8}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.5}Kommunikation}{10}
 \defcounter {refsection}{0}\relax 
@@ -27,6 +27,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5}Implementierung}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Fazit}{10}
+\contentsline {section}{\numberline {6}Fazit}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\nonumberline Literatur}{10}
+\contentsline {section}{\nonumberline Literatur}{11}
