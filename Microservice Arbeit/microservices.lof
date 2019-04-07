@@ -1,10 +1,10 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {ngerman}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Monolith und Microservice-Architektur}}{4}
+\contentsline {figure}{\numberline {1}{\ignorespaces Monolith und Microservice-Architektur}}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2}{\ignorespaces Bounded Contexts mit eigenst\IeC {\"a}ndigem Dom\IeC {\"a}nenmodel}}{7}
+\contentsline {figure}{\numberline {2}{\ignorespaces Bounded Contexts mit eigenst\IeC {\"a}ndigem Dom\IeC {\"a}nenmodel}}{8}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3}{\ignorespaces Bounded Context 2 adaptiert das Dom\IeC {\"a}nenmodel von Bounded Context 1}}{8}
+\contentsline {figure}{\numberline {3}{\ignorespaces Bounded Context 2 adaptiert das Dom\IeC {\"a}nenmodel von Bounded Context 1}}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4}{\ignorespaces Bounded Context 2 erh\IeC {\"a}lt ein auf ihn zugeschnittenes Dom\IeC {\"a}nenmodel von Bounded Context 1}}{8}
+\contentsline {figure}{\numberline {4}{\ignorespaces Bounded Context 2 erh\IeC {\"a}lt ein auf ihn zugeschnittenes Dom\IeC {\"a}nenmodel von Bounded Context 1}}{9}

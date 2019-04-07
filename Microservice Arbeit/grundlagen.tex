@@ -80,7 +80,7 @@ Aus den genannten Punkten lässt sich schließen, dass eine generelle Aussage, o
 
 \subsection{Architektur von Micrsoservices}
 
-%%  Taktisches Design wird nicht erwähnt, whrs. auch viele andere Sachen nicht, das muss ich in der Einleitung für DDD noch erwähnen. 
+% TODO  Taktisches Design wird nicht erwähnt, whrs. auch viele andere Sachen nicht, das muss ich in der Einleitung für DDD noch erwähnen. 
 
 Wie bereits erwähnt, ist die Entkopplung von Microservices ein großer Vorteil gegenüber dem Monolithen. Dennoch ist es sinnvoll Richtlinien, Regeln und/oder Festlegungen zu schaffen, damit die Microservices nicht blockierend oder technologisch unnötig gegensätzlich arbeiten. Die Entscheidungsebene kann global (Makroarchitektur) oder nur für einen einzelnen Services (Mikroarchitektur) gelten.\cite{wolff2016mic_architectures} Welche Festlegungen und mit welcher Strenge diese eingehalten werden müssen, hängt von verschiedenen Faktoren ab, welche technologisch, organisatorisch oder wirtschaftlich motiviert sein können.\cite{rewe2019mic_ppp} \\ 
 
@@ -89,6 +89,8 @@ In dem folgenden Abschnitt wird das Grundprinzip der Software-Modellierungs-Meth
 \subsubsection{Domain Driven Design}
 
 Domain Driven Design (DDD) ist ein Vorgehen mit dem ein Softwaresystem modelliert werden kann. Im Sinne einer Microservice-Architektur kann dies als Werkzeug genutzt werden, um Microservices fachlich einzuteilen.\cite{heise2016ddd} Beim sogenannten \textit{Strategic Design} wird dafür das Softwaressytem in verschiedene \textit{Bounded Contexts} eingeteilt, welche an ein \textit{Domänenmodell} gebunden sind. Ein Domänenmodell bildet die Geschäftslogik ab, d.h. inwiefern einzelne Objekte innerhalb des Kontexts in Relation zueinander stehen, welche Eigenschaften sie haben und wie sich verhalten. Dabei kann ein Domänenmodell - je nach Entwurfsmuster - von einem oder mehreren Bounded Contexts genutzt werden.\cite{wolff2018mic_praxis}  \\
+
+% TODO   ggf. ein paar mehr Worte über die Grafiken verlieren
 
 \begin{figure}[ht]
 	\centering
@@ -117,7 +119,7 @@ Neben der fachlichen Trennung bildet DDD auch die Kommunikation zwischen Kontext
 
 Nach dem Anwenden von DDD sollte die Struktur der Software erkennbar sein: D.h. welche Art Microservices werden benötigt und iwiefern sie mit anderen in Abhängigkeiten bzw. Kommunikation stehen.   
 
-\subsubsection{Macro und Mikroarchitektur}
+\subsubsection{Macro- und Mikroarchitektur}
 
 Wenn durch das DDD entworfen wird, welche Microservices voraussichtlich benötigt werden, ist es sinnvoll einen Art Bauplan zu verfassen, welcher impliziert, an welche Regeln sich ein Microservice halten muss. Diese Regeln können wie bereits erwähnt auf globaler Ebene getroffen werden, d.h. sie gelten für alle Services (Makroarchitektur) oder sie gelten nur im Microservice selber (Microarchitektur). REWE Digital unterscheidet dabei zwischen \textit{Must}, \textit{Should}, \textit{Could}. D.h. es gibt Regeln, die Microservices erfüllen müssen wie z.B. das Kommunzieren über REST oder das Implementieren eine einheitlicher Authorisierung.\cite{rewe2019mic_ppp} Andere Regeln dagegen sind viel mehr Richtlinien (should) oder komplett optional (could). Das Ziel ist stets, dass durch die makroarchitektonischen Entscheidungen nicht die Vorteile von Microservices beschnitten werden.\cite{wolff2018mic_praxis}\cite{irakli2016mic_arc}. \\
 
@@ -169,24 +171,18 @@ Aus den erarbeitenten Punkten lassen sich Vor- und Nachteile ableiten, zwischen 
 Macroarchitektonische Entscheidungen haben zum Vorteil, dass es Regeln gibt, welche die Entwicklung vereinfachen sollen und gegebenfalls die Nachteile der Microarchitektur kompensieren können. Auf der anderen Seite schränken macroarchitekonische Entscheidungen ein. Zusätzlich müssen sie organisch, z.B durch ein extra dafür geschaffenes Gremium, durchgesetzt und werden.\cite{wolff2018mic_praxis} Im Gesamten lässt sich daraus schließen, dass sehr genau abgewogen werden muss, welche Entscheidungen global oder individuell entschieden werden. Grundsätzlich gilt, dass jede Entscheidung begründbar sein muss.    
 
 \subsection{Kommunikation}
-%A/Synchone
-%% Auf API Gateway eingehen
+
+\subsubsection{Synchrone Kommunikation}
+
+\subsubsection{Asynchrone Kommunikation}
+
+\subsubsection{API-Gateway}
+
+\subsubsection{Sichtbarkeit zwischen Microservices}
 
 \subsection{Authentifizierung und Authorisierung}
 
+%JWT, OAtuh, Basic Auth
+
 %  Was gibt es für Standards. Ggf. nur Authentifizierung beachten, da Authorisierung mit der Authentifizierung kommt
-
-%% Ggf. noch als Beispiel, aber hier vllt ein wenig unpassend.
-I%n Abbildung \ref{fig:rewe_microservice_ui} skizziert REWE Digital, wie viele unterschiedliche Microservices bei dem Anzeigen einer Produktdetailseite bereits involviert sind. \\ 
-
-%\begin{figure}[ht]
-%	\centering
-%	\includegraphics[width=0.9\textwidth]{rewe_digital_front_page}
-%	\caption{Aufteilung, welche Microservices, welchen Part in der UI übernehmen.\cite{rewe2019mic_ppp}}
-%	\label{fig:rewe_microservice_ui}
-%\end{figure}
-
-%Natürlich lässt sich aus der Abbildung \ref{fig:rewe_microservice_ui} nicht schließen, wie das/die Domänenmodell/e aufgebaut ist/sind, aber die zahlreichen Services lassen darauf schließen, dass jeder Service andere Informationen benötigt und das Domänenmodell anders aufbereitet sein wird. 
-
-%Anhand der Abbildung \ref{fig:rewe_microservice_ui} ist gut zu erkennen, dass jeder Service verschiedene Verantwortungsbereiche hat, z.B. die Produktsuche (hellblau), die Warenkorbverwaltung (rot) oder Navigation (orange). Es wäre zwar auch denkbar, einen Bounded Context zu entwerfen, der direkt mehrere Aufgaben (z.B. Suche und Produktdetails) zusammenfasst, allerdings birgt das die Gefahren von einer monolithischen Struktur und würde sich entsprechend negativ auswirken.\cite{wolff2018mic_praxis} \\
 
