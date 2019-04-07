@@ -138,11 +138,13 @@ Während die Authentifzierung (um wen handelt es sich) einmalig festgelegt werde
 
 Die hier erarbeitete Tabelle ist an dieser Stelle nicht als feststehendes Manfifest für alle Unternehmen zu verstehen, sondern als neutral betrachtete, sinnvolle Einordnung. Natürlich können architektonische Entscheidungen stark vom jeweiligen Anwendungszweck abhängen. \\
 
-Ebenfalls ist die Tabelle nicht vollständig: Nicht aufgeführt ist beispielsweise der Umgang mit Konfigurationsdateien, Monitoring oder Logging. Dies liegt unter anderem daran, weil es vom Einzelfall abhängt: Beim Monitoring kann zum Beispiel global entschieden werden, \textit{wo} Metriken abgelegt werden, aber jeder Service entscheidet selbst, \textit{was} dort abgelegt wird. 
+Die Tabelle zeigt lediglich allgemeine Beispiele und ist nicht als vollständig zu betrachten. Nicht aufgeführt ist beispielsweise der Umgang mit Konfigurationsdateien, Monitoring oder Logging. Dies liegt unter anderem daran, weil es auf Projekte oder von dem Microservice abhängt: Beim Monitoring könnte zum Beispiel global entschieden werden, \textit{wo} Metriken abgelegt werden bzw. mit \textit{welcher} Technologie gearbeitet wird. Aus microarchitektonischer Sicht könnten die Services selbst entscheiden, \textit{was} gemessen wird.  \\
 
-%%% Hier noch die weiteren drei Punkte erwähnen. S. 28 
+Ebenso beim Deployment: Es gibt zahlreiche Methoden, um neue Updates bereitzustellen wie z.B. mittels Docker, Kubernetes oder indivudelle Installationsskripte.\cite{wolff2018mic_praxis} Welche Technologie sich durchsetzt, muss anhand der Anforderung entschieden werden. \\
 
-%% Abschließend Vorteile vs Nachteile aufzeigen, wenn viel in der Makro bzw. Mikroarchitektur liegt
+Aus den erarbeitenten Punkten lassen sich Vor- und Nachteile ableiten, zwischen denen abgewogen werden muss. Vorteile für microarchitektonische Entscheidungen sind ein sehr hohes Maß an Flexibilität und eine hohe Unabhängigkeit im Gesamtsystem, was grundsätzlich das Ziel von Microservices ist. Dies wiederum kann dazu führen, dass Entwicklungsoverhead oder Inselwissen entsteht. Ebenfalls könnten Punkte wie z.B. das \textit{Look \& Feel} oder die \textit{Dokumentation} darunter leiden.  \\
+
+Macroarchitektonische Entscheidungen haben zum Vorteil, dass es Regeln gibt, welche die Entwicklung vereinfachen sollen und gegebenfalls die Nachteile der Microarchitektur kompensieren können. Auf der anderen Seite schränken macroarchitekonische Entscheidungen ein. Zusätzlich müssen sie organisch, z.B durch ein extra dafür geschaffenes Gremium, durchgesetzt und werden.\cite{wolff2018mic_praxis} Im Gesamten lässt sich daraus schließen, dass sehr genau abgewogen werden muss, welche Entscheidungen global oder individuell entschieden werden. Grundsätzlich gilt, dass jede Entscheidung begründbar sein muss.    
 
 %% Tabellenverzeichnis erstellen
 
