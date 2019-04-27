@@ -37,7 +37,7 @@ Abbildung \ref{fig:mono} zeigt eine vereinfachte Gegenüberstellung der beiden A
 
 Bei der Microservice Architektur werden die Funktionen auf unterschiedliche Dienste aufgeteilt. Konkreter könnte dies bedeuten, dass App 1 bei (3) zuständig für eine Benutzerkontoverwaltung ist und App 2 für ein Abrechnungssystem. Die Microservices (4) werden nicht geklont, sondern können unabhängig voneinander bereitgestellt werden. 
 
-\subsection{Monolith vs. Microservices}
+\subsection{Monolith vs. Microservices}\label{sec:monolith_vs_microservices}
 Aus den vorherigen Abschnitten sind diverse Unterschiede zwischen den Architekturen erkennbar. Nun gilt es festzustellen, für welche Problemstellungen, welche Architektur sinnvoller ist. \cite{wolff2016mic_architectures} \cite{birk2016mic_soa}  
 
 % Tabelle ist nicht ganz Inhaltich richtig
@@ -172,13 +172,53 @@ Macroarchitektonische Entscheidungen haben zum Vorteil, dass es Regeln gibt, wel
 
 \subsection{Kommunikation}
 
+Bei einem Monolithen wird eine Abfrage über eine Route gestellt, woraufhin die Anwendung entsprechend mit der Bearbeitung beginnt. Da die gesamte Datenhaltung an einer Stelle ist, sind alle Daten bekannt und abrufbar. Wichtiger noch: Die Daten sind konsitent. \\
+
+Microservices sind diesbezüglich herausfordernder. Es müssen verschiedene architektonische Entscheidungen getroffen werden, wie z.B. ob es einen zentralen Service gibt, welcher alle Anfragen weiterleitet (\textbf{API Gateway}) oder ob jeder Service einzeln erreichbar ist. Ebenfalls sollte auch begründbar entschieden werden, ob eine synchrone,  asynchrone oder möglicherweise eine hybride Kommunikation verwendet wird. 
+
+In den folgende Unterkapiteln werden Vor- und Nachteile der verschiedenen Kommunikationsarten für Microservices mit einem Schwerpunkt auf Unabhängigkeit (Entkopplung) und Datenkonsitenz untersucht.
+
+% Problem beschreiben, warum kann man nicht einfach alles über REST klären
+% Beispiel aus Microservice in Action: Zwei Aufrufe gehen gut, der dritte nicht, ungewollten State.
+% ggf. das 2PC Protokoll bemerken, dass das eine Lösung ist, aber auch nicht funktioniert: Gegengründe aufführen
+%was ist die Lösung: Event Based
+
 \subsubsection{Synchrone Kommunikation}
+
+Wenn ein Microservice bei der Bearbeitung einer Anfrage selbst eine weitere Anfrage an einen anderen Microservice stellen muss und auf das Ergebnis wartet, spricht man von synchroner Kommunikation.\cite{wolff2018mic_praxis} 
+
+Anhand dieser Definition lässt sich folgendes Szenario darstellen (siehe Abbildung \ref{fig:synchrone_kommunikation_microservices}). 
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.5\textwidth]{synchrone_kommunikation_microservices}
+	\caption[Synchrone Kommunikation] { Synchrone Kommunikation}
+	\label{fig:synchrone_kommunikation_microservices}
+\end{figure}
+
+Der Actor fragt bei Microservice A an, welcher diese Anfrage bearbeitet und schließlich an B weiterleitet. B verarbeitet die Anfrage und antwortet, schließlich kann auch A antworten. Aus diesem Ablauf lässt sich festhalten, dass die übertragenden Daten aktuell sind. D.h. der Actor erhält definitiv konsistente Daten, was positiv zu vermerken ist. Problematischer dagegen ist die Abhängigkeit, welche entsteht. Sollte B nicht erreichbar sein, läuft A in einen Timeout und ist blockiert. Einerseits ließe sich argumentieren, dass genau dies passieren soll, schließlich scheint es einen Fehler zu geben. Aber angenommen A wäre ein Service zum Erstellen von Rechnungen und B ein Service zum Sammeln von Daten. A möchte B infomieren, dass eine Rechnung erstellt wurde, ist aber blockiert. Nach den aufgestellen Definitionen aus \ref{sec:monolith_vs_microservices} für Microservices wird die Entkopplung, Modularität und Robustheit des Systems verletzt.\cite{wolff2018mic_praxis} \cite{bruce2019mic_in_action}  
+
+Bläht man das Beispiel auf, so dass weitere Services statistische Daten erfassen wollen, würde zahlreiche Microservices ausfallen (siehe Abbildung \ref{fig:snyn_com_dependencies}). \\
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.5\textwidth]{snyn_com_dependencies}
+	\caption[Abhängigkeiten in synchroner Kommunikation] { Abhängigkeiten in synchroner Kommunikation}
+	\label{fig:snyn_com_dependencies}
+\end{figure}
+
+
+Wenn nun Microservice E ausfällt, sind alle anderen Services davon betroffen. Einerseits ließe sich nun argumentieren, dass genau dies passieren soll, 
+
+Die hier beschrieben Problematik ziwschen Annahme und Konsitenz greift das CAD Therom auf.  
+
 
 \subsubsection{Asynchrone Kommunikation}
 
 \subsubsection{API-Gateway}
 
 \subsubsection{Sichtbarkeit zwischen Microservices}
+ - noch nicht klar ob ich das bearbeite
 
 \subsection{Authentifizierung und Authorisierung}
 

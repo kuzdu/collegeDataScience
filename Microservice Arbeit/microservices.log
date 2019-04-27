@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  7 APR 2019 20:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  27 APR 2019 18:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -206,6 +206,26 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
 )
+(/usr/local/texlive/2018/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip57
+\LTright=\skip58
+\LTpre=\skip59
+\LTpost=\skip60
+\LTchunksize=\count98
+\LTcapwidth=\dimen106
+\LT@head=\box28
+\LT@firsthead=\box29
+\LT@foot=\box30
+\LT@lastfoot=\box31
+\LT@cols=\count99
+\LT@rows=\count100
+\c@LT@tables=\count101
+\c@LT@chunks=\count102
+\LT@p@ftn=\toks18
+)
+Class scrartcl Info: longtable captions redefined on input line 9.
+
 (/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2018/03/04 v3.11 programmable bibliographies (PK/MW)
 
@@ -246,7 +266,7 @@ Package etexcmds Info: Could not find \expanded.
 )))
 (/usr/local/texlive/2018/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count98
+\lrq@indent=\count103
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -261,62 +281,62 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 (/usr/local/texlive/2018/texmf-dist/tex/generic/xstring/xstring.sty
 (/usr/local/texlive/2018/texmf-dist/tex/generic/xstring/xstring.tex
 \@xs@message=\write3
-\integerpart=\count99
-\decimalpart=\count100
+\integerpart=\count104
+\decimalpart=\count105
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
-\c@tabx@nest=\count101
-\c@listtotal=\count102
-\c@listcount=\count103
-\c@liststart=\count104
-\c@liststop=\count105
-\c@citecount=\count106
-\c@citetotal=\count107
-\c@multicitecount=\count108
-\c@multicitetotal=\count109
-\c@instcount=\count110
-\c@maxnames=\count111
-\c@minnames=\count112
-\c@maxitems=\count113
-\c@minitems=\count114
-\c@citecounter=\count115
-\c@savedcitecounter=\count116
-\c@uniquelist=\count117
-\c@uniquename=\count118
-\c@refsection=\count119
-\c@refsegment=\count120
-\c@maxextratitle=\count121
-\c@maxextratitleyear=\count122
-\c@maxextradate=\count123
-\c@maxextraalpha=\count124
-\c@abbrvpenalty=\count125
-\c@highnamepenalty=\count126
-\c@lownamepenalty=\count127
-\c@maxparens=\count128
-\c@parenlevel=\count129
-\blx@tempcnta=\count130
-\blx@tempcntb=\count131
-\blx@tempcntc=\count132
-\blx@maxsection=\count133
-\blx@maxsegment@0=\count134
-\blx@notetype=\count135
-\blx@parenlevel@text=\count136
-\blx@parenlevel@foot=\count137
-\blx@sectionciteorder@0=\count138
-\labelnumberwidth=\skip57
-\labelalphawidth=\skip58
-\biblabelsep=\skip59
-\bibitemsep=\skip60
-\bibnamesep=\skip61
-\bibinitsep=\skip62
-\bibparsep=\skip63
-\bibhang=\skip64
+\c@tabx@nest=\count106
+\c@listtotal=\count107
+\c@listcount=\count108
+\c@liststart=\count109
+\c@liststop=\count110
+\c@citecount=\count111
+\c@citetotal=\count112
+\c@multicitecount=\count113
+\c@multicitetotal=\count114
+\c@instcount=\count115
+\c@maxnames=\count116
+\c@minnames=\count117
+\c@maxitems=\count118
+\c@minitems=\count119
+\c@citecounter=\count120
+\c@savedcitecounter=\count121
+\c@uniquelist=\count122
+\c@uniquename=\count123
+\c@refsection=\count124
+\c@refsegment=\count125
+\c@maxextratitle=\count126
+\c@maxextratitleyear=\count127
+\c@maxextradate=\count128
+\c@maxextraalpha=\count129
+\c@abbrvpenalty=\count130
+\c@highnamepenalty=\count131
+\c@lownamepenalty=\count132
+\c@maxparens=\count133
+\c@parenlevel=\count134
+\blx@tempcnta=\count135
+\blx@tempcntb=\count136
+\blx@tempcntc=\count137
+\blx@maxsection=\count138
+\blx@maxsegment@0=\count139
+\blx@notetype=\count140
+\blx@parenlevel@text=\count141
+\blx@parenlevel@foot=\count142
+\blx@sectionciteorder@0=\count143
+\labelnumberwidth=\skip61
+\labelalphawidth=\skip62
+\biblabelsep=\skip63
+\bibitemsep=\skip64
+\bibnamesep=\skip65
+\bibinitsep=\skip66
+\bibparsep=\skip67
+\bibhang=\skip68
 \blx@bcfin=\read1
 \blx@bcfout=\write4
-\c@mincomprange=\count139
-\c@maxcomprange=\count140
-\c@mincompwidth=\count141
+\c@mincomprange=\count144
+\c@maxcomprange=\count145
+\c@mincompwidth=\count146
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -327,88 +347,88 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'numeric.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count142
-\c@savedafterword=\count143
-\c@annotator=\count144
-\c@savedannotator=\count145
-\c@author=\count146
-\c@savedauthor=\count147
-\c@bookauthor=\count148
-\c@savedbookauthor=\count149
-\c@commentator=\count150
-\c@savedcommentator=\count151
-\c@editor=\count152
-\c@savededitor=\count153
-\c@editora=\count154
-\c@savededitora=\count155
-\c@editorb=\count156
-\c@savededitorb=\count157
-\c@editorc=\count158
-\c@savededitorc=\count159
-\c@foreword=\count160
-\c@savedforeword=\count161
-\c@holder=\count162
-\c@savedholder=\count163
-\c@introduction=\count164
-\c@savedintroduction=\count165
-\c@namea=\count166
-\c@savednamea=\count167
-\c@nameb=\count168
-\c@savednameb=\count169
-\c@namec=\count170
-\c@savednamec=\count171
-\c@translator=\count172
-\c@savedtranslator=\count173
-\c@shortauthor=\count174
-\c@savedshortauthor=\count175
-\c@shorteditor=\count176
-\c@savedshorteditor=\count177
-\c@labelname=\count178
-\c@savedlabelname=\count179
-\c@institution=\count180
-\c@savedinstitution=\count181
-\c@lista=\count182
-\c@savedlista=\count183
-\c@listb=\count184
-\c@savedlistb=\count185
-\c@listc=\count186
-\c@savedlistc=\count187
-\c@listd=\count188
-\c@savedlistd=\count189
-\c@liste=\count190
-\c@savedliste=\count191
-\c@listf=\count192
-\c@savedlistf=\count193
-\c@location=\count194
-\c@savedlocation=\count195
-\c@organization=\count196
-\c@savedorganization=\count197
-\c@origlocation=\count198
-\c@savedoriglocation=\count199
-\c@origpublisher=\count266
-\c@savedorigpublisher=\count267
-\c@publisher=\count268
-\c@savedpublisher=\count269
-\c@language=\count270
-\c@savedlanguage=\count271
-\c@origlanguage=\count272
-\c@savedoriglanguage=\count273
-\c@pageref=\count274
-\c@savedpageref=\count275
-\shorthandwidth=\skip65
-\shortjournalwidth=\skip66
-\shortserieswidth=\skip67
-\shorttitlewidth=\skip68
-\shortauthorwidth=\skip69
-\shorteditorwidth=\skip70
-\locallabelnumberwidth=\skip71
-\locallabelalphawidth=\skip72
-\localshorthandwidth=\skip73
-\localshortjournalwidth=\skip74
-\localshortserieswidth=\skip75
-\localshorttitlewidth=\skip76
-\localshortauthorwidth=\skip77
-\localshorteditorwidth=\skip78
+\c@afterword=\count147
+\c@savedafterword=\count148
+\c@annotator=\count149
+\c@savedannotator=\count150
+\c@author=\count151
+\c@savedauthor=\count152
+\c@bookauthor=\count153
+\c@savedbookauthor=\count154
+\c@commentator=\count155
+\c@savedcommentator=\count156
+\c@editor=\count157
+\c@savededitor=\count158
+\c@editora=\count159
+\c@savededitora=\count160
+\c@editorb=\count161
+\c@savededitorb=\count162
+\c@editorc=\count163
+\c@savededitorc=\count164
+\c@foreword=\count165
+\c@savedforeword=\count166
+\c@holder=\count167
+\c@savedholder=\count168
+\c@introduction=\count169
+\c@savedintroduction=\count170
+\c@namea=\count171
+\c@savednamea=\count172
+\c@nameb=\count173
+\c@savednameb=\count174
+\c@namec=\count175
+\c@savednamec=\count176
+\c@translator=\count177
+\c@savedtranslator=\count178
+\c@shortauthor=\count179
+\c@savedshortauthor=\count180
+\c@shorteditor=\count181
+\c@savedshorteditor=\count182
+\c@labelname=\count183
+\c@savedlabelname=\count184
+\c@institution=\count185
+\c@savedinstitution=\count186
+\c@lista=\count187
+\c@savedlista=\count188
+\c@listb=\count189
+\c@savedlistb=\count190
+\c@listc=\count191
+\c@savedlistc=\count192
+\c@listd=\count193
+\c@savedlistd=\count194
+\c@liste=\count195
+\c@savedliste=\count196
+\c@listf=\count197
+\c@savedlistf=\count198
+\c@location=\count199
+\c@savedlocation=\count266
+\c@organization=\count267
+\c@savedorganization=\count268
+\c@origlocation=\count269
+\c@savedoriglocation=\count270
+\c@origpublisher=\count271
+\c@savedorigpublisher=\count272
+\c@publisher=\count273
+\c@savedpublisher=\count274
+\c@language=\count275
+\c@savedlanguage=\count276
+\c@origlanguage=\count277
+\c@savedoriglanguage=\count278
+\c@pageref=\count279
+\c@savedpageref=\count280
+\shorthandwidth=\skip69
+\shortjournalwidth=\skip70
+\shortserieswidth=\skip71
+\shorttitlewidth=\skip72
+\shortauthorwidth=\skip73
+\shorteditorwidth=\skip74
+\locallabelnumberwidth=\skip75
+\locallabelalphawidth=\skip76
+\localshorthandwidth=\skip77
+\localshortjournalwidth=\skip78
+\localshortserieswidth=\skip79
+\localshorttitlewidth=\skip80
+\localshortauthorwidth=\skip81
+\localshorteditorwidth=\skip82
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
@@ -420,13 +440,13 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2018/03/04 v3.11 biblatex compatibility (PK/MW)
-\c@textcitecount=\count276
-\c@textcitetotal=\count277
-\c@textcitemaxnames=\count278
-\c@biburlnumpenalty=\count279
-\c@biburlucpenalty=\count280
-\c@biburllcpenalty=\count281
-\c@smartand=\count282
+\c@textcitecount=\count281
+\c@textcitetotal=\count282
+\c@textcitemaxnames=\count283
+\c@biburlnumpenalty=\count284
+\c@biburlucpenalty=\count285
+\c@biburllcpenalty=\count286
+\c@smartand=\count287
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -438,8 +458,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2018/03/04 v3.11 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count283
-\c@bbx:relatedtotal=\count284
+\c@bbx:relatedcount=\count288
+\c@bbx:relatedtotal=\count289
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -488,32 +508,32 @@ File: german.lbx 2018/03/04 v3.11 biblatex localization (PK/MW)
 (./microservices.aux)
 \openout1 = `microservices.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
 
 (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count285
-\scratchdimen=\dimen106
-\scratchbox=\box28
-\nofMPsegments=\count286
-\nofMParguments=\count287
-\everyMPshowfont=\toks18
-\MPscratchCnt=\count288
-\MPscratchDim=\dimen107
-\MPnumerator=\count289
-\makeMPintoPDFobject=\count290
-\everyMPtoPDFconversion=\toks19
+\scratchcounter=\count290
+\scratchdimen=\dimen107
+\scratchbox=\box32
+\nofMPsegments=\count291
+\nofMParguments=\count292
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count293
+\MPscratchDim=\dimen108
+\MPnumerator=\count294
+\makeMPintoPDFobject=\count295
+\everyMPtoPDFconversion=\toks20
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -543,17 +563,17 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'microservices.bbl' found.
 
 (./microservices.bbl)
-Package biblatex Info: Reference section=0 on input line 21.
-Package biblatex Info: Reference segment=0 on input line 21.
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 25.
+Package biblatex Info: Reference section=0 on input line 22.
+Package biblatex Info: Reference segment=0 on input line 22.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 26.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <17.28> on input line 25.
+(Font)              <17.28> on input line 26.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 25.
+(Font)              <12> on input line 26.
 
 (./microservices.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -569,16 +589,21 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] (./
 begrifflichkeiten.tex
-Underfull \hbox (badness 1057) in paragraph at lines 8--9
+Underfull \hbox (badness 1057) in paragraph at lines 9--10
 \T1/cmr/m/n/12 zu be-glei-ten. Dies soll-te au-to-ma-tisch funk-tio-nie-ren,
  []
 
 
-Overfull \hbox (17.40407pt too wide) in paragraph at lines 4--29
- [] 
+Overfull \hbox (17.40407pt too wide) in alignment at lines 5--26
+ [] [] 
  []
 
-) (./einleitung.tex) (./grundlagen.tex
+
+Overfull \hbox (17.40407pt too wide) in alignment at lines 26--31
+ [] [] 
+ []
+
+) (./einleitung.tex) (./grundlagen.tex [3]
 Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
@@ -599,7 +624,7 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 16.
- [3] [4]
+ [4]
 <bilder/monolithic_vs_micro.png, id=23, 903.375pt x 508.14844pt>
 File: bilder/monolithic_vs_micro.png Graphic file (type png)
 <use bilder/monolithic_vs_micro.png>
@@ -752,53 +777,77 @@ Underfull \hbox (badness 10000) in paragraph at lines 169--170
 
  []
 
-[11]) (./konzept.tex) (./implementierung.tex) (./fazit.tex)
-(./microservices.lot)
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 175--176
+
+ []
+
+<bilder/synchrone_kommunikation_microservices.png, id=49, 234.8775pt x 111.4162
+4pt>
+File: bilder/synchrone_kommunikation_microservices.png Graphic file (type png)
+<use bilder/synchrone_kommunikation_microservices.png>
+Package pdftex.def Info: bilder/synchrone_kommunikation_microservices.png  used
+ on input line 194.
+(pdftex.def)             Requested size: 224.06548pt x 106.28685pt.
+[12 <./bilder/synchrone_kommunikation_microservices.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 201--202
+
+ []
+
+<bilder/snyn_com_dependencies.png, id=56, 357.335pt x 162.6075pt>
+File: bilder/snyn_com_dependencies.png Graphic file (type png)
+<use bilder/snyn_com_dependencies.png>
+Package pdftex.def Info: bilder/snyn_com_dependencies.png  used on input line 2
+05.
+(pdftex.def)             Requested size: 224.06548pt x 101.96191pt.
+) (./konzept.tex) (./implementierung.tex) (./fazit.tex) [13 <./bilder/snyn_com_
+dependencies.png>] (./microservices.lot)
 \tf@lot=\write6
 \openout6 = `microservices.lot'.
 
- (./microservices.lof [12])
+ (./microservices.lof)
 \tf@lof=\write7
 \openout7 = `microservices.lof'.
 
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 38.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 39.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (32.40234pt too wide) in paragraph at lines 39--39
+Overfull \hbox (32.40234pt too wide) in paragraph at lines 40--40
 []\T1/cmr/m/n/12 Mark Fus-sel (ms-fus-sell). \T1/cmr/m/it/12 Ein-füh-rung in Mi
 -cro-ser-vices in Azu-re - Microsoft-Dokumentation\T1/cmr/m/n/12 .
  []
 
-[13] (./microservices.aux)
+[14] (./microservices.aux)
 Package logreq Info: Writing requests to 'microservices.run.xml'.
 \openout1 = `microservices.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 11659 strings out of 492649
- 209879 string characters out of 6129622
- 755797 words of memory out of 5000000
- 15380 multiletter control sequences out of 15000+600000
- 14341 words of font info for 36 fonts, out of 8000000 for 9000
+ 11765 strings out of 492649
+ 211629 string characters out of 6129622
+ 757509 words of memory out of 5000000
+ 15479 multiletter control sequences out of 15000+600000
+ 15117 words of font info for 37 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  44i,10n,56p,9092b,2180s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
-/usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></u
-sr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr
-/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/l
-ocal/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/loc
-al/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local
-/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/t
-exlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></usr/local/tex
-live/2018/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texli
-ve/2018/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on microservices.pdf (13 pages, 360303 bytes).
+/usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></u
+sr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr
+/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/l
+ocal/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/loc
+al/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local
+/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/t
+exlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/tex
+live/2018/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></usr/local/texli
+ve/2018/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive
+/2018/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on microservices.pdf (14 pages, 383328 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
- 62 compressed objects within 1 object stream
+ 104 PDF objects out of 1000 (max. 8388607)
+ 68 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

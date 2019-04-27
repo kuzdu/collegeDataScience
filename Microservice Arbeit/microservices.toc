@@ -3,11 +3,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}Glossar}{3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Einleitung}{3}
+\contentsline {section}{\numberline {2}Einleitung}{4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Grundlagen}{3}
+\contentsline {section}{\numberline {3}Grundlagen}{4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Microservices}{3}
+\contentsline {subsection}{\numberline {3.1}Microservices}{4}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2}Monolithische Struktur}{5}
 \defcounter {refsection}{0}\relax 
@@ -23,18 +23,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {3.5.1}Synchrone Kommunikation}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.2}Asynchrone Kommunikation}{12}
+\contentsline {subsubsection}{\numberline {3.5.2}Asynchrone Kommunikation}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.3}API-Gateway}{12}
+\contentsline {subsubsection}{\numberline {3.5.3}API-Gateway}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.4}Sichtbarkeit zwischen Microservices}{12}
+\contentsline {subsubsection}{\numberline {3.5.4}Sichtbarkeit zwischen Microservices}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6}Authentifizierung und Authorisierung}{12}
+\contentsline {subsection}{\numberline {3.6}Authentifizierung und Authorisierung}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Konzept}{12}
+\contentsline {section}{\numberline {4}Konzept}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Implementierung}{12}
+\contentsline {section}{\numberline {5}Implementierung}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Fazit}{12}
+\contentsline {section}{\numberline {6}Fazit}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\nonumberline Literatur}{13}
+\contentsline {section}{\nonumberline Literatur}{14}

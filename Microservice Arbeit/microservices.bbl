@@ -122,6 +122,30 @@
       \field{title}{Microservice Architecture - Aligning Principels, Practices, and Culture}
       \field{year}{2016}
     \endentry
+    \entry{bruce2019mic_in_action}{book}{}
+      \name{author}{1}{}{%
+        {{hash=84432021bda80cf8ff69cfee0ff1eba8}{%
+           family={Morgan\bibnamedelima Bruce},
+           familyi={M\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Paulo\bibnamedelimb A.\bibnamedelimi Pereira},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Manning}%
+      }
+      \strng{namehash}{84432021bda80cf8ff69cfee0ff1eba8}
+      \strng{fullhash}{84432021bda80cf8ff69cfee0ff1eba8}
+      \strng{bibnamehash}{84432021bda80cf8ff69cfee0ff1eba8}
+      \strng{authorbibnamehash}{84432021bda80cf8ff69cfee0ff1eba8}
+      \strng{authornamehash}{84432021bda80cf8ff69cfee0ff1eba8}
+      \strng{authorfullhash}{84432021bda80cf8ff69cfee0ff1eba8}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Microservices in Action}
+      \field{year}{2019}
+    \endentry
     \entry{nhiem2017mic_moving}{manual}{}
       \name{author}{1}{}{%
         {{hash=ff41c668b97cf58a66f820c0526c074a}{%
