@@ -196,9 +196,9 @@ Anhand dieser Definition lässt sich folgendes Szenario darstellen (siehe Abbild
 	\label{fig:synchrone_kommunikation_microservices}
 \end{figure}
 
-Der Actor fragt bei Microservice A an, welcher diese Anfrage bearbeitet und schließlich an B weiterleitet. B verarbeitet die Anfrage und antwortet, schließlich kann auch A antworten. Aus diesem Ablauf lässt sich festhalten, dass die übertragenden Daten aktuell sind. D.h. der Actor erhält definitiv konsistente Daten, was positiv zu vermerken ist. Problematischer dagegen ist die Abhängigkeit, welche entsteht. Sollte B nicht erreichbar sein, läuft A in einen Timeout und ist blockiert. Einerseits ließe sich argumentieren, dass genau dies passieren soll, schließlich scheint es einen Fehler zu geben. Aber angenommen A wäre ein Service zum Erstellen von Rechnungen und B ein Service zum Sammeln von Daten. A möchte B infomieren, dass eine Rechnung erstellt wurde, ist aber blockiert. Nach den aufgestellen Definitionen aus \ref{sec:monolith_vs_microservices} für Microservices wird die Entkopplung, Modularität und Robustheit des Systems verletzt.\cite{wolff2018mic_praxis} \cite{bruce2019mic_in_action}  
+Der Actor fragt bei Microservice A an, welcher diese Anfrage bearbeitet und schließlich an B weiterleitet. B verarbeitet die Anfrage und antwortet, schließlich kann auch A antworten. Aus diesem Ablauf lässt sich festhalten, dass die übertragenden Daten aktuell sind. D.h. der Actor erhält definitiv konsistente Daten, was positiv zu vermerken ist. Problematischer dagegen ist die Abhängigkeit, welche entsteht. Sollte B nicht erreichbar sein, läuft A in einen Timeout und ist blockiert. Einerseits ließe sich argumentieren, dass genau dies passieren soll, schließlich scheint es einen Fehler zu geben. Aber angenommen A wäre ein Service zum Erstellen von Rechnungen und B ein Service zum Sammeln von Daten. A möchte B infomieren, dass eine Rechnung erstellt wurde, ist aber blockiert. Die Operation eine Rechnung zu erstellen hätte höhere Priorität als es statisch zu erfassen. Nach den aufgestellen Definitionen aus \ref{sec:monolith_vs_microservices} für Microservices wird die Entkopplung, Modularität und Robustheit des Systems verletzt, da A nicht weiterarbeiten kann.\cite{wolff2018mic_praxis} \cite{bruce2019mic_in_action}  
 
-Bläht man das Beispiel auf, so dass weitere Services statistische Daten erfassen wollen, würde zahlreiche Microservices ausfallen (siehe Abbildung \ref{fig:snyn_com_dependencies}). \\
+Bläht man das Beispiel auf, so dass weitere Services statistische Daten erfassen wollen, würden zahlreiche Microservices ausfallen (siehe Abbildung \ref{fig:snyn_com_dependencies}). \\
 
 \begin{figure}[ht]
 	\centering
@@ -207,18 +207,31 @@ Bläht man das Beispiel auf, so dass weitere Services statistische Daten erfasse
 	\label{fig:snyn_com_dependencies}
 \end{figure}
 
+Die Microservices können auch nicht auf eine Notfallstrategie (\textbf{Fallback}) zurückgreifen. Angenommen wenn Serivce B nach x Sekunden nicht erreichbar ist, wird die ursprüngliche Abfrage durch A weiter abgearbeitet, um nicht zu blockieren. Nun müsste eine andere Logik dafür sorgen, dass die Daten, die nicht übertragen werden konnten, zu einem anderen Zeitpunkt übertragen werden. In diesem Moment herrscht keine Konsistenz mehr vor, was aber ein großer Vorteil an synchroner Kommunikation ist. \\
 
-Wenn nun Microservice E ausfällt, sind alle anderen Services davon betroffen. Einerseits ließe sich nun argumentieren, dass genau dies passieren soll, 
+Betrachtet man das Beispiel andersherum und nimmt an, dass jeder Service seine Datenhaltung soweit aufspreizt, dass jeder Service die Statistiken führt, ist es nur eine Frage der Zeit, bis weitere Felder gespeichert werden müssen. Überspitzt formuliert, würde jeder Service alles speichern, was gegen die Absicht von Bounded Contexts arbeiten würde.\cite{wolff2018mic_praxis} \\
 
-Die hier beschrieben Problematik ziwschen Annahme und Konsitenz greift das CAD Therom auf.  
+Auch nicht zu vernachlässigen, ist die Geschwindigkeit mit der die Abfragen abgearbeitet werden können. Möglicherweise muss B in einem anderen Szenario noch mit C kommunizieren. Die Anfrage würde sich über drei Services erstrecken, was zusätzliche Latenzzeiten mit sich bringt.\cite{wolff2018mic_praxis} \\   
 
+Ebenfalls entsteht durch jede Schnittstelle eine fachliche Abhängigkeit geschaffen.\cite{bruce2019mic_in_action} Die Anfragen von den Microservices A, C, D, E müssen der Schnittstellendefinition von B entsprechen. Änderungen führen gegebenenfalls zu Fehlern und weiteren Abhängigkeiten. Wie diese Problematik gelöst werden könnte, wird \ref{sec:asynchrone_kommunikation} beschrieben. \\
 
-\subsubsection{Asynchrone Kommunikation}
+\subsubsection{Asynchrone Kommunikation}\label{sec:asynchrone_kommunikation}
+
+Die hier beschrieben Problematik ziwschen Annahme und Konsistenz greift das CAD Therom auf.  
+
+% fire and forget
+% eventing 
+
+% Fazit hier rein 
+% Wolf empfhielt die sync com nur für ausgewählte Szenarien
 
 \subsubsection{API-Gateway}
 
 \subsubsection{Sichtbarkeit zwischen Microservices}
  - noch nicht klar ob ich das bearbeite
+
+
+
 
 \subsection{Authentifizierung und Authorisierung}
 
