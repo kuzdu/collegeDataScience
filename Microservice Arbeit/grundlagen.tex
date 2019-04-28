@@ -183,7 +183,7 @@ In den folgende Unterkapiteln werden Vor- und Nachteile der verschiedenen Kommun
 % ggf. das 2PC Protokoll bemerken, dass das eine Lösung ist, aber auch nicht funktioniert: Gegengründe aufführen
 %was ist die Lösung: Event Based
 
-\subsubsection{Synchrone Kommunikation}
+\subsubsection{Synchrone Kommunikation}\label{sec:synchrone_kommunikation}
 
 Wenn ein Microservice bei der Bearbeitung einer Anfrage selbst eine weitere Anfrage an einen anderen Microservice stellen muss und auf das Ergebnis wartet, spricht man von synchroner Kommunikation.\cite{wolff2018mic_praxis} 
 
@@ -217,21 +217,80 @@ Ebenfalls entsteht durch jede Schnittstelle eine fachliche Abhängigkeit geschaf
 
 \subsubsection{Asynchrone Kommunikation}\label{sec:asynchrone_kommunikation}
 
-Die hier beschrieben Problematik ziwschen Annahme und Konsistenz greift das CAD Therom auf.  
+Wie bereits beschrieben, wird bei der synchronen Kommunikation auf weiterführende Abfragen gewartet. Die asynchrone Kommunikation wartet nicht auf Antworten von weiteren Services, sondern trifft Annahmen über etwaige Systemzustände.\cite{wolff2018mic_praxis} Um Annahmen zu treffen, existieren je nach Anwendungsfall verschiedene Strategien:
 
-% fire and forget
-% eventing 
+% TODO: Einrückung richtig machen
+1) Ein Microservice kann replizierte Daten vorhalten. Angenommen ein Artikel soll rausgeschickt werden: Der dafür verantwortliche Service benötigt die Anschrift des Kundens, aber nicht weitere Daten wie Geburtsdatum, Zahlungsmethode oder ähnliches. Dementsprechend werden nur relevante Daten repliziert vorgehalten. Eine Herausforderung ist es, dass diese replizierten Daten stets mit den Originaldaten übereinstimmen. Schließlich kann sich eine Anschrift ändern.\cite{wolff2018mic_praxis}
+2) Ggf. muss nur ein weiterer Service informiert werden wie der Service B aus Abschnitt \ref{sec:synchrone_kommunikation}, welcher Statistiken erfasst. In dem Szenario der asynchronen Kommunikation würde die Abfrage gestellt werden ohne das Ergebnis abzuwarten, da es schlichtweg nicht relevant ist. Die Herausforderung hier ist, zu gewährleisten, dass die Abfrage auch in Fehlerfehlen früher oder später zugestellt wird. \\
 
-% Fazit hier rein 
-% Wolf empfhielt die sync com nur für ausgewählte Szenarien
+Aus den Strategien ergeben sich Anforderungen an die Kommunikationsstruktur: Es muss gewährleisten sein, dass fehlerhafte Abfragen erneut übermittelt werden und ebenfalls wird eine Struktur benötigt, die dafür sorgt, dass replizierte Datensätze stets mit aktuellen Daten befüllt sind. Dies lässt sich durch sogenannte Events erreichen.\cite{bruce2019mic_in_action}.\cite{wolff2018mic_praxis}  \\
+
+Die folgende Abbildung \ref{fig:microservices_bus} verdeutlich das Prinzip von Events und deren Infrastruktur: 
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.5\textwidth]{microservices_bus}
+	\caption[Eventbus mit Events] { Eventbus mit Events\cite{cesardelatorre2018azure}}
+	\label{fig:microservices_bus}
+\end{figure}
+
+%TODO: Das Wort Message Broker einführen
+In dieser Abbildung haben Microservice B und C das Event x beim Ergeinisbus (Event Bus) abonniert (subscribed). D.h. Microservice A veröffentlicht (published) eine Änderung, woraufhin B und C informiert werden. B und C können nun ihren Datenbestand aktualisieren und halten die aktuelle Daten vor. Parallel kann der Microservice A seine Abfrage ganz normal weiterführen. Der Eventbus ist dementsprechend ein Vermittler, welcher garantiert, dass die Nachrichten früher oder später übertragen werden.\cite{cesardelatorre2018azure}\cite{wolff2018mic_praxis} \\
+
+Aus diesem Modell ergibt sich ein weiterer Vorteil, nämlich dass die Microservices entkoppelt sind. Es wird keine REST-Schnittstelle definiert, welche eine gewissen Fachlogik vorgibt. Ebenfalls können mehrere Services auf ein Event hören. Wolff warnt allerdings davor Events unnötig aufgebläht zu gestalten: Zum einen werden schnell Daten übermittelt, die nicht für alle Abonnenten (Subscriber) relevant sind und zum anderen entspräche dies nicht dem Prinzip vom DDD. \\
+
+Drauf eingehen, noch keine Lösung. 
+!!! -> wie wird garantiert, dass MessageQueue erreicht wird !!! \\
+//was wenn RabbitMQ nicht erreichbar ist? 
+// % TODO Robins Antwort abwarten
+
+Zusätzlich sollte beachtet werden, dass Microservices so gestaltet werden, dass sie idempotent sind. In diesem Zusammenhang bedeutet dies, dass falls ein selbes Event zweimal übertragen wird, der Microservice die Aktion nicht zweimal ausführt. D.h. eine Mehrfachausführung führt zu dem selben Ergebnis wie eine einzige Ausführung. Wenn z.B. eine Rechnung versendet werden soll, ist garantiert, dass diese nur ein einziges Mal versendet wird.\cite{wolff2018mic_praxis} \\
+
+\subsubsection{Abwägung asynchrone vs. synchrone Kommunikation}
+
+Aus den zwei vorherigen Abschnitten ergibt sich folgende Aufstellung.
+
+%TODO: Longtable draus machen
+\begin{table}
+	\begin{center}
+		\begin{tabular}{p{1,5cm}p{5cm}p{5cm}}
+			& synchrone Kommunikation & asynchrone Kommunikation \\ \hline
+			 Vorteile
+			&
+				\begin{itemize}
+					\item Jederzeit Konsitent
+					\item Paradigma ist Entwicklern bekannt\cite{wolff2018mic_praxis}
+				\end{itemize} 
+			& 
+				\begin{itemize}
+					\item Entkoppelt durch Events 
+					\item Flexibilität, da Mehrfach-Empfang
+					\item Nachrichtenempfang garantiert (ggf. mit Verzögerung)
+					\item Absicherung gegen Ausfall
+				\end{itemize} 
+  			\\
+			Nachteile
+		  &
+ 			  	\begin{itemize}
+				 	\item Anfälligkeit durch Abhängigkeiten 
+				 	\item Erweiterbarkeit ist schwerer, da fachliche Abhängigkeiten
+				 	\item Ggf. lange Netzwerkzeiten
+				 \end{itemize}
+		  & 
+		 	\begin{itemize}
+		 		\item nicht jederzeit garantiert konsistent
+		 		\item Idempotenz muss beachtet werden
+	 		\end{itemize}  \\
+		\end{tabular}
+	\end{center}
+	\caption[synchrone vs. asynchrone Kommunikation]{synchrone vs. asynchrone Kommunikation}
+\end{table}
+
+% TODO Problematik mit der Konistenz auffassen: CAD Theorem
+% Empfehlung von microservice in aciton und Wollf, dass man asynch wählen soll
+% Hinweis, dass es auch Fälle gibt, wo sync ggf. notwendig ist
 
 \subsubsection{API-Gateway}
-
-\subsubsection{Sichtbarkeit zwischen Microservices}
- - noch nicht klar ob ich das bearbeite
-
-
-
 
 \subsection{Authentifizierung und Authorisierung}
 

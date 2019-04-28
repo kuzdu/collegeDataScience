@@ -200,6 +200,35 @@
       \verb https://www.heise.de/developer/artikel/Domain-driven-Design-erklaert-3130720.html?seite=all
       \endverb
     \endentry
+    \entry{cesardelatorre2018azure}{online}{}
+      \name{author}{1}{}{%
+        {{hash=a6a5e581f6c53e57e21b4995d61190ef}{%
+           family={Torre\bibnamedelima (cesardelatorre)},
+           familyi={T\bibinitperiod\bibinitdelim (\bibinitperiod},
+           given={Cesar},
+           giveni={C\bibinitperiod},
+           prefix={de\bibnamedelima la},
+           prefixi={d\bibinitperiod\bibinitdelim l\bibinitperiod}}}%
+      }
+      \strng{namehash}{a6a5e581f6c53e57e21b4995d61190ef}
+      \strng{fullhash}{a6a5e581f6c53e57e21b4995d61190ef}
+      \strng{bibnamehash}{a6a5e581f6c53e57e21b4995d61190ef}
+      \strng{authorbibnamehash}{a6a5e581f6c53e57e21b4995d61190ef}
+      \strng{authornamehash}{a6a5e581f6c53e57e21b4995d61190ef}
+      \strng{authorfullhash}{a6a5e581f6c53e57e21b4995d61190ef}
+      \field{sortinit}{T}
+      \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Implementieren ereignisbasierter Kommunikation zwischen Microservices}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://docs.microsoft.com/de-de/dotnet/standard/microservices-architecture/multi-container-microservice-net-applications/integration-event-based-microservice-communications
+      \endverb
+      \verb{url}
+      \verb https://docs.microsoft.com/de-de/dotnet/standard/microservices-architecture/multi-container-microservice-net-applications/integration-event-based-microservice-communications
+      \endverb
+    \endentry
     \entry{wolff2018mic_praxis}{book}{}
       \name{author}{1}{}{%
         {{hash=42b48b91ec04dc8b258db592d08ee9e9}{%

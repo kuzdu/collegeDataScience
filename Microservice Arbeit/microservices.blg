@@ -1,15 +1,15 @@
 [0] Config.pm:302> INFO - This is Biber 2.11
 [0] Config.pm:305> INFO - Logfile is 'microservices.blg'
-[37] biber-darwin:313> INFO - === Sat Apr 27, 2019, 18:18:31
-[59] Biber.pm:371> INFO - Reading 'microservices.bcf'
-[147] Biber.pm:857> INFO - Found 9 citekeys in bib section 0
-[161] Biber.pm:3976> INFO - Processing section 0
-[173] Biber.pm:4136> INFO - Looking for bibtex format file 'literatur.bib' for section 0
-[174] bibtex.pm:1500> INFO - LaTeX decoding ...
-[183] bibtex.pm:1316> INFO - Found BibTeX data source 'literatur.bib'
-[224] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[224] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[224] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
-[224] Biber.pm:3810> INFO - No sort tailoring available for locale 'de-DE'
-[236] bbl.pm:617> INFO - Writing 'microservices.bbl' with encoding 'UTF-8'
-[239] bbl.pm:720> INFO - Output to microservices.bbl
+[44] biber-darwin:313> INFO - === Sun Apr 28, 2019, 17:48:52
+[75] Biber.pm:371> INFO - Reading 'microservices.bcf'
+[158] Biber.pm:857> INFO - Found 10 citekeys in bib section 0
+[178] Biber.pm:3976> INFO - Processing section 0
+[190] Biber.pm:4136> INFO - Looking for bibtex format file 'literatur.bib' for section 0
+[192] bibtex.pm:1500> INFO - LaTeX decoding ...
+[201] bibtex.pm:1316> INFO - Found BibTeX data source 'literatur.bib'
+[247] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[247] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[247] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[247] Biber.pm:3810> INFO - No sort tailoring available for locale 'de-DE'
+[265] bbl.pm:617> INFO - Writing 'microservices.bbl' with encoding 'UTF-8'
+[268] bbl.pm:720> INFO - Output to microservices.bbl
