@@ -33,17 +33,17 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4}Konzept}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Anforderungen definieren}{15}
+\contentsline {subsection}{\numberline {4.1}Anforderungen definieren}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Macroarchitektonische Festlegungen}{15}
+\contentsline {subsection}{\numberline {4.2}Macroarchitektonische Festlegungen}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}Wahl des API-Gateway}{15}
+\contentsline {subsection}{\numberline {4.3}Wahl des API-Gateway}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4}Wahl der Kommunikation}{15}
+\contentsline {subsection}{\numberline {4.4}Wahl der Kommunikation}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5}Wahl der Authenfizierung/Authorisierung}{15}
+\contentsline {subsection}{\numberline {4.5}Wahl der Authenfizierung/Authorisierung}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Implementierung}{15}
+\contentsline {section}{\numberline {5}Implementierung}{17}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.1}Service Architektur}{17}
 \defcounter {refsection}{0}\relax 

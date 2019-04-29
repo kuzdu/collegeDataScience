@@ -219,9 +219,11 @@ Ebenfalls entsteht durch jede Schnittstelle eine fachliche Abhängigkeit geschaf
 
 Wie bereits beschrieben, wird bei der synchronen Kommunikation auf weiterführende Abfragen gewartet. Die asynchrone Kommunikation wartet nicht auf Antworten von weiteren Services, sondern trifft Annahmen über etwaige Systemzustände.\cite{wolff2018mic_praxis} Um Annahmen zu treffen, existieren je nach Anwendungsfall verschiedene Strategien:
 
-% TODO: Einrückung richtig machen
-1) Ein Microservice kann replizierte Daten vorhalten. Angenommen ein Artikel soll rausgeschickt werden: Der dafür verantwortliche Service benötigt die Anschrift des Kundens, aber nicht weitere Daten wie Geburtsdatum, Zahlungsmethode oder ähnliches. Dementsprechend werden nur relevante Daten repliziert vorgehalten. Eine Herausforderung ist es, dass diese replizierten Daten stets mit den Originaldaten übereinstimmen. Schließlich kann sich eine Anschrift ändern.\cite{wolff2018mic_praxis}
-2) Ggf. muss nur ein weiterer Service informiert werden wie der Service B aus Abschnitt \ref{sec:synchrone_kommunikation}, welcher Statistiken erfasst. In dem Szenario der asynchronen Kommunikation würde die Abfrage gestellt werden ohne das Ergebnis abzuwarten, da es schlichtweg nicht relevant ist. Die Herausforderung hier ist, zu gewährleisten, dass die Abfrage auch in Fehlerfehlen früher oder später zugestellt wird. \\
+\begin{enumerate}
+\item{ Ein Microservice kann replizierte Daten vorhalten. Angenommen ein Artikel soll rausgeschickt werden: Der dafür verantwortliche Service benötigt die Anschrift des Kundens, aber nicht weitere Daten wie Geburtsdatum, Zahlungsmethode oder ähnliches. Dementsprechend werden nur relevante Daten repliziert vorgehalten. Eine Herausforderung ist es, dass diese replizierten Daten stets mit den Originaldaten übereinstimmen. Schließlich kann sich eine Anschrift ändern.\cite{wolff2018mic_praxis}}
+
+\item{Ggf. muss nur ein weiterer Service informiert werden wie der Service B aus Abschnitt \ref{sec:synchrone_kommunikation}, welcher Statistiken erfasst. In dem Szenario der asynchronen Kommunikation würde die Abfrage gestellt werden ohne das Ergebnis abzuwarten, da es schlichtweg nicht relevant ist. Die Herausforderung hier ist, zu gewährleisten, dass die Abfrage auch in Fehlerfehlen früher oder später zugestellt wird.}
+\end{enumerate}
 
 Aus den Strategien ergeben sich Anforderungen an die Kommunikationsstruktur: Es muss gewährleisten sein, dass fehlerhafte Abfragen erneut übermittelt werden und ebenfalls wird eine Struktur benötigt, die dafür sorgt, dass replizierte Datensätze stets mit aktuellen Daten befüllt sind. Dies lässt sich durch sogenannte Events erreichen.\cite{bruce2019mic_in_action}.\cite{wolff2018mic_praxis}  \\
 
@@ -234,15 +236,15 @@ Die folgende Abbildung \ref{fig:microservices_bus} verdeutlich das Prinzip von E
 	\label{fig:microservices_bus}
 \end{figure}
 
-%TODO: Das Wort Message Broker einführen
-In dieser Abbildung haben Microservice B und C das Event x beim Ergeinisbus (Event Bus) abonniert (subscribed). D.h. Microservice A veröffentlicht (published) eine Änderung, woraufhin B und C informiert werden. B und C können nun ihren Datenbestand aktualisieren und halten die aktuelle Daten vor. Parallel kann der Microservice A seine Abfrage ganz normal weiterführen. Der Eventbus ist dementsprechend ein Vermittler, welcher garantiert, dass die Nachrichten früher oder später übertragen werden.\cite{cesardelatorre2018azure}\cite{wolff2018mic_praxis} \\
+In dieser Abbildung haben Microservice B und C das Event x beim Ergeinisbus (\textbf{Event Bus}) abonniert (\textbf{subscribed}). D.h. Microservice A veröffentlicht (\textbf{published}) eine Änderung, woraufhin B und C informiert werden. B und C können nun ihren Datenbestand aktualisieren und halten so die aktuellen Daten vor. Parallel kann der Microservice A seine Abfrage ganz normal weiterführen. Der Eventbus ist dementsprechend ein Vermittler (\textbf{Message Broker}), welcher garantiert, dass die Nachrichten übertragen werden. Dieser sollte mit etwaigen Fehlerfällen (z.B. C ist nicht erreichbar) umgehen können und eine spätere Übertragung garantieren. \cite{cesardelatorre2018azure}\cite{wolff2018mic_praxis} \\
 
-Aus diesem Modell ergibt sich ein weiterer Vorteil, nämlich dass die Microservices entkoppelt sind. Es wird keine REST-Schnittstelle definiert, welche eine gewissen Fachlogik vorgibt. Ebenfalls können mehrere Services auf ein Event hören. Wolff warnt allerdings davor Events unnötig aufgebläht zu gestalten: Zum einen werden schnell Daten übermittelt, die nicht für alle Abonnenten (Subscriber) relevant sind und zum anderen entspräche dies nicht dem Prinzip vom DDD. \\
+Aus diesem Modell ergibt sich ein weiterer Vorteil, nämlich dass die Microservices entkoppelt sind. Es wird keine REST-Schnittstelle definiert, welche eine gewissen Fachlogik vorgibt. Ebenfalls können mehrere Services auf ein Event hören. Wolff warnt allerdings davor Events unnötig aufgebläht zu gestalten: Zum einen werden schnell Daten übermittelt, die nicht für alle Abonnenten (\textbf{Subscriber}) relevant sind und zum anderen entspräche dies nicht dem Prinzip vom DDD. \\
 
-Drauf eingehen, noch keine Lösung. 
-!!! -> wie wird garantiert, dass MessageQueue erreicht wird !!! \\
-//was wenn RabbitMQ nicht erreichbar ist? 
-// % TODO Robins Antwort abwarten
+% Verhindern, dass Message Broker nicht erreichbar ist, durch
+% - Der Message Broker sollte redundant laufen, wodurch schonmal eine hohe Wahrscheinlichkeit existiert, dass er erreichbar ist
+% - Häufig ist es bei den Systemen so, dass man bspw. Innerhalb einer DB Transaktion in eine Tabelle schreibt, welche Events an den Broker dispatcht werden sollen. Und dann gibt es einen Background Task, der regelmäßig schaut, welche Events noch nicht an den Broker geliefert wurden und sendet die dahin
+%- Wenn das fehlschlägt, dann versucht er es später wieder
+%- Und das mit der Transaktion hat den Vorteil, dass eventuelle Änderungen in der DB garantiert  klappt oder beides (auch Speichern d. Events in einer Dispatcher Tabelle) fehlschlägt. Aber keine Inkonsistenzen
 
 Zusätzlich sollte beachtet werden, dass Microservices so gestaltet werden, dass sie idempotent sind. In diesem Zusammenhang bedeutet dies, dass falls ein selbes Event zweimal übertragen wird, der Microservice die Aktion nicht zweimal ausführt. D.h. eine Mehrfachausführung führt zu dem selben Ergebnis wie eine einzige Ausführung. Wenn z.B. eine Rechnung versendet werden soll, ist garantiert, dass diese nur ein einziges Mal versendet wird.\cite{wolff2018mic_praxis} \\
 
