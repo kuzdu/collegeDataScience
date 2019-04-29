@@ -1,7 +1,7 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {ngerman}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Monolith und Microservice-Architektur}}{5}
+\contentsline {figure}{\numberline {1}{\ignorespaces Monolith und Microservice-Architektur}}{7}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2}{\ignorespaces Bounded Contexts mit eigenst\IeC {\"a}ndigem Dom\IeC {\"a}nenmodel}}{8}
 \defcounter {refsection}{0}\relax 
@@ -9,8 +9,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {4}{\ignorespaces Bounded Context 2 erh\IeC {\"a}lt ein auf ihn zugeschnittenes Dom\IeC {\"a}nenmodel von Bounded Context 1}}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5}{\ignorespaces Synchrone Kommunikation}}{12}
+\contentsline {figure}{\numberline {5}{\ignorespaces Synchrone Kommunikation}}{13}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {6}{\ignorespaces Abh\IeC {\"a}ngigkeiten in synchroner Kommunikation}}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7}{\ignorespaces Eventbus mit Events}}{14}
+\contentsline {figure}{\numberline {7}{\ignorespaces Eventbus mit Events}}{15}

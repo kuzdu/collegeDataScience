@@ -11,7 +11,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2}Monolithische Struktur}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Monolith vs. Microservices}{6}
+\contentsline {subsection}{\numberline {3.3}Monolith vs. Microservices}{5}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.4}Architektur von Micrsoservices}{8}
 \defcounter {refsection}{0}\relax 
@@ -27,11 +27,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {3.5.3}Abw\IeC {\"a}gung asynchrone vs. synchrone Kommunikation}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.4}API-Gateway}{15}
+\contentsline {subsubsection}{\numberline {3.5.4}API-Gateway}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6}Authentifizierung und Authorisierung}{15}
+\contentsline {subsection}{\numberline {3.6}Authentifizierung und Authorisierung}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Konzept}{15}
+\contentsline {section}{\numberline {4}Konzept}{17}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.1}Anforderungen definieren}{17}
 \defcounter {refsection}{0}\relax 
@@ -51,10 +51,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.3}Authentifizierung und Authorisierung}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4}Asynchrone Kommunikation}{17}
+\contentsline {subsection}{\numberline {5.4}Asynchrone Kommunikation}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Fazit}{17}
+\contentsline {section}{\numberline {6}Fazit}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1}Ausblick}{17}
+\contentsline {subsection}{\numberline {6.1}Ausblick}{18}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\nonumberline Literatur}{18}

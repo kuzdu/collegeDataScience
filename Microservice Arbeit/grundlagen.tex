@@ -250,10 +250,9 @@ Zusätzlich sollte beachtet werden, dass Microservices so gestaltet werden, dass
 
 \subsubsection{Abwägung asynchrone vs. synchrone Kommunikation}
 
-Aus den zwei vorherigen Abschnitten ergibt sich folgende Aufstellung.
+Aus den zwei vorherigen Abschnitten ergibt sich folgende Aufstellung (siehe Tabelle \ref{tab:sync_vs_async_table}).
 
-%TODO: Longtable draus machen
-\begin{table}
+\begin{table}[H]
 	\begin{center}
 		\begin{tabular}{p{1,5cm}p{5cm}p{5cm}}
 			& synchrone Kommunikation & asynchrone Kommunikation \\ \hline
@@ -266,7 +265,7 @@ Aus den zwei vorherigen Abschnitten ergibt sich folgende Aufstellung.
 			& 
 				\begin{itemize}
 					\item Entkoppelt durch Events 
-					\item Flexibilität, da Mehrfach-Empfang
+					\item Flexibilität, da ein Event mehre Services erreichen kann
 					\item Nachrichtenempfang garantiert (ggf. mit Verzögerung)
 					\item Absicherung gegen Ausfall
 				\end{itemize} 
@@ -286,13 +285,27 @@ Aus den zwei vorherigen Abschnitten ergibt sich folgende Aufstellung.
 		\end{tabular}
 	\end{center}
 	\caption[synchrone vs. asynchrone Kommunikation]{synchrone vs. asynchrone Kommunikation}
+	\label{tab:sync_vs_async_table} 
 \end{table}
 
-% TODO Problematik mit der Konistenz auffassen: CAD Theorem
-% Empfehlung von microservice in aciton und Wollf, dass man asynch wählen soll
-% Hinweis, dass es auch Fälle gibt, wo sync ggf. notwendig ist
+Es lässt sich feststellen, dass die Vorteile einer asynchrone Kommunikation für Microservices überwiegen und auch diese wird empfohlen.\cite{wolff2018mic_praxis}\cite{bruce2019mic_in_action} Allerdings ist die Kommunikation nicht dogamtisch zu betrachten, sondern sollte je nach Projekt und Anwendungsfall entschieden werden. Synchrone Kommunikation bietet sich nämlich gerade dann an, wenn der Datenbestand definitiv konsistent sein sollen. \\
+
+Das sogenannte CAP-Theoreom beschreibt die Abwägung, welche man in verteilten Systemen bei der Auswahl der Kommunikation treffen muss. CAP bedeutet:
+	\begin{itemize}
+		\item Consistency (Konsistenz): Die Daten in einem verteilten System sind konsistent.
+		\item Availability (Verfügbarkeit): Die Verfügbarkeit für alle Systeme ist gegeben. 
+		\item Partition Tolerance (Partitionstoleranz): Das Gesamtsystem arbeitet auch weiter, wenn Teile davon ausfallen. 
+	\end{itemize}  
+
+In einem verteilten System können immer nur zwei von den drei Bedinungen erfüllt sein.\cite{wolff2018mic_praxis}. Sofern Konsistenz gewährleistet soll, müssen alle dienste stets verfügbar sein. Damit kann der Punkt Partitionstoleranz nicht erfüllt sein. Umgekehrt: Wenn die Partitionstoleranz garantiert ist, z.B. dadurch dass Services ihre eigene Datenhaltung besitzen, ist zwar prinzipiell auch die Verfügbarkeit gegeben, aber nicht die Konsistenz. \\
+
+Dementsprechend ist sinnvoll sich die Anforderungen, welches man an sein System hat zu überlegen und sich aufgrund dieser Grundlage zu entscheiden, welche Kommunikationsart implementiert werden soll. 
 
 \subsubsection{API-Gateway}
+
+% beschreiben was ein API-Gateway macht
+% Vorteile 
+
 
 \subsection{Authentifizierung und Authorisierung}
 
