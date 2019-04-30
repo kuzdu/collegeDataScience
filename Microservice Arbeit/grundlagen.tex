@@ -299,13 +299,18 @@ Das sogenannte CAP-Theoreom beschreibt die Abwägung, welche man in verteilten S
 
 In einem verteilten System können immer nur zwei von den drei Bedinungen erfüllt sein.\cite{wolff2018mic_praxis}. Sofern Konsistenz gewährleistet soll, müssen alle dienste stets verfügbar sein. Damit kann der Punkt Partitionstoleranz nicht erfüllt sein. Umgekehrt: Wenn die Partitionstoleranz garantiert ist, z.B. dadurch dass Services ihre eigene Datenhaltung besitzen, ist zwar prinzipiell auch die Verfügbarkeit gegeben, aber nicht die Konsistenz. \\
 
-Dementsprechend ist sinnvoll sich die Anforderungen, welches man an sein System hat zu überlegen und sich aufgrund dieser Grundlage zu entscheiden, welche Kommunikationsart implementiert werden soll. 
+Dementsprechend ist es sinnvoll sich die Anforderungen, welches man an sein System hat zu überlegen und sich aufgrund dieser Grundlage zu entscheiden, welche Kommunikationsart implementiert werden soll. 
 
 \subsubsection{API-Gateway}
 
-% beschreiben was ein API-Gateway macht (Eintrittspunkt)
-% auf Microsoft Bild verweisen
-% Vorteile aufzählen aus Artikel fertig (max halbe Seite)
+Umso mehr Services aufgesetzt werden, desto komplexer ist es, die Übersicht über alle zu behalten. Eine Abhilfe im Routing bietet ein sogeanntes API-Gateway. Ein API-Gateway ist der einzige Einstiegspunkt für den Nutzer (\textbf{Client}). Von dort wird er weitergeleitet, ohne die Routen von einzelnen Services zu kennen. 
+
+% TODO: Bild einfügen API Gateway 
+% Weitere Features erwähnen siehe Google Docs
+% Ggf. noch Nachteile erwähnen
+
+%TODO: Kurzdefinition Service Mesh 
+Die nächste Steigerung von ein API-Gateway wäre ein sogenannter Service Mesh. Ein Service Mesh ist... .... Da Service Meshes den Umfang dieser Arbeit übersteigen würden, wird darauf nicht weiter eingegangen (siehe Ausblick im Fazit). 
 
 \subsection{Authentifizierung und Authorisierung}
 

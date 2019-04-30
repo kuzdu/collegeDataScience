@@ -47,9 +47,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.1}Service Architektur}{17}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2}Umsetzung API-Gateway}{17}
+\contentsline {subsection}{\numberline {5.2}Umsetzung API-Gateway}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3}Authentifizierung und Authorisierung}{17}
+\contentsline {subsection}{\numberline {5.3}Authentifizierung und Authorisierung}{18}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.4}Asynchrone Kommunikation}{18}
 \defcounter {refsection}{0}\relax 
@@ -57,4 +57,4 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.1}Ausblick}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\nonumberline Literatur}{18}
+\contentsline {section}{\nonumberline Literatur}{19}
