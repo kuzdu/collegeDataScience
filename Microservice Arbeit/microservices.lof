@@ -3,14 +3,16 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {1}{\ignorespaces Monolith und Microservice-Architektur}}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2}{\ignorespaces Bounded Contexts mit eigenst\IeC {\"a}ndigem Dom\IeC {\"a}nenmodel}}{8}
+\contentsline {figure}{\numberline {2}{\ignorespaces Bounded Contexts mit eigenst\IeC {\"a}ndigem Dom\IeC {\"a}nenmodel}}{9}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {3}{\ignorespaces Bounded Context 2 adaptiert das Dom\IeC {\"a}nenmodel von Bounded Context 1}}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4}{\ignorespaces Bounded Context 2 erh\IeC {\"a}lt ein auf ihn zugeschnittenes Dom\IeC {\"a}nenmodel von Bounded Context 1}}{9}
+\contentsline {figure}{\numberline {4}{\ignorespaces Bounded Context 2 erh\IeC {\"a}lt ein auf ihn zugeschnittenes Dom\IeC {\"a}nenmodel von Bounded Context 1}}{10}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {5}{\ignorespaces Synchrone Kommunikation}}{13}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {6}{\ignorespaces Abh\IeC {\"a}ngigkeiten in synchroner Kommunikation}}{13}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {7}{\ignorespaces Eventbus mit Events}}{15}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {8}{\ignorespaces Prinzip API-Gateway}}{17}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  30 APR 2019 07:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  1 MAY 2019 17:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -606,7 +606,7 @@ Overfull \hbox (17.40407pt too wide) in alignment at lines 5--26
  []
 
 
-Overfull \hbox (17.40407pt too wide) in alignment at lines 26--37
+Overfull \hbox (17.40407pt too wide) in alignment at lines 26--38
  [] [] 
  []
 
@@ -724,7 +724,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 116--117
 
  []
 
-[8 <./bilder/bounded_context_1.jpg>]
+[8]
 Underfull \hbox (badness 10000) in paragraph at lines 118--119
 
  []
@@ -734,7 +734,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 124--125
 
  []
 
-[9 <./bilder/bounded_context_2.jpg> <./bilder/bounded_context_3.png>]
+[9 <./bilder/bounded_context_1.jpg> <./bilder/bounded_context_2.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 149--149
 []\T1/cmr/m/n/12 Continuous-Delivery-
  []
@@ -759,7 +759,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 159--160
 
  []
 
-[10]
+[10 <./bilder/bounded_context_3.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 161--162
 
  []
@@ -817,13 +817,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 212--213
 
  []
 
-
+[13 <./bilder/synchrone_kommunikation_microservices.png> <./bilder/snyn_com_dep
+endencies.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 214--215
 
  []
 
-[13 <./bilder/synchrone_kommunikation_microservices.png> <./bilder/snyn_com_dep
-endencies.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 228--229
 
  []
@@ -903,7 +903,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 300--301
 
  []
 
-[16]) (./konzept.tex) (./implementierung.tex [17]) (./fazit.tex)
+[16]
+<bilder/api_gateway.png, id=72, 602.25pt x 390.45876pt>
+File: bilder/api_gateway.png Graphic file (type png)
+<use bilder/api_gateway.png>
+Package pdftex.def Info: bilder/api_gateway.png  used on input line 310.
+(pdftex.def)             Requested size: 268.8813pt x 174.32854pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 315--316
+
+ []
+
+[17 <./bilder/api_gateway.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 324--325
+
+ []
+
+) (./konzept.tex) (./implementierung.tex) (./fazit.tex [18])
 (./microservices.lot)
 \tf@lot=\write6
 \openout6 = `microservices.lot'.
@@ -922,16 +938,16 @@ Overfull \hbox (38.27591pt too wide) in paragraph at lines 41--41
 -cro-ser-vices in Azu-re - Microsoft-Dokumentation\T1/cmr/m/n/12 .
  []
 
-[18] [19] (./microservices.aux)
+[19] [20] (./microservices.aux)
 Package logreq Info: Writing requests to 'microservices.run.xml'.
 \openout1 = `microservices.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 11831 strings out of 492649
- 212759 string characters out of 6129622
- 760266 words of memory out of 5000000
- 15540 multiletter control sequences out of 15000+600000
+ 11839 strings out of 492649
+ 212973 string characters out of 6129622
+ 760317 words of memory out of 5000000
+ 15547 multiletter control sequences out of 15000+600000
  15117 words of font info for 37 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  44i,10n,56p,9092b,2180s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -947,10 +963,10 @@ exlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/tex
 live/2018/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></usr/local/texli
 ve/2018/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive
 /2018/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on microservices.pdf (19 pages, 434445 bytes).
+Output written on microservices.pdf (20 pages, 451852 bytes).
 PDF statistics:
- 121 PDF objects out of 1000 (max. 8388607)
- 79 compressed objects within 1 object stream
+ 126 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

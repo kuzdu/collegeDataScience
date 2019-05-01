@@ -19,7 +19,7 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
-    \entry{msfussell2017azure}{online}{}
+    \entry{msfussell2017azure}{misc}{}
       \name{author}{1}{}{%
         {{hash=3916434e41eef606135d6ff291b92653}{%
            family={(msfussell)},
@@ -37,6 +37,7 @@
       \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{note}{abgerufen am 9.4.2019}
       \field{title}{Einf{ü}hrung in Microservices in Azure - Microsoft-Dokumentation}
       \field{year}{2017}
       \verb{urlraw}
@@ -173,7 +174,7 @@
       \field{title}{Moving mountains – practical approaches for moving monolithic applications to Microservices}
       \field{year}{2017}
     \endentry
-    \entry{heise2016ddd}{online}{}
+    \entry{heise2016ddd}{misc}{}
       \name{author}{1}{}{%
         {{hash=0ce819893ecd6363352bf81a5daba92e}{%
            family={Roden},
@@ -191,6 +192,7 @@
       \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{note}{abgerufen am 15.3.2019}
       \field{title}{Domain-driven Design erkl{ä}rt}
       \field{year}{2016}
       \verb{urlraw}
@@ -200,7 +202,7 @@
       \verb https://www.heise.de/developer/artikel/Domain-driven-Design-erklaert-3130720.html?seite=all
       \endverb
     \endentry
-    \entry{cesardelatorre2018azure}{online}{}
+    \entry{cesardelatorre2018azure}{misc}{}
       \name{author}{1}{}{%
         {{hash=a6a5e581f6c53e57e21b4995d61190ef}{%
            family={Torre\bibnamedelima (cesardelatorre)},
@@ -220,6 +222,7 @@
       \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{note}{abgerufen am 16.4.2019}
       \field{title}{Implementieren ereignisbasierter Kommunikation zwischen Microservices}
       \field{year}{2018}
       \verb{urlraw}
@@ -227,6 +230,34 @@
       \endverb
       \verb{url}
       \verb https://docs.microsoft.com/de-de/dotnet/standard/microservices-architecture/multi-container-microservice-net-applications/integration-event-based-microservice-communications
+      \endverb
+    \endentry
+    \entry{oracle}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b9f5099961fbeaf9e85cced4f177f9d4}{%
+           family={V.},
+           familyi={V\bibinitperiod},
+           prefix={o.},
+           prefixi={o\bibinitperiod}}}%
+      }
+      \strng{namehash}{b9f5099961fbeaf9e85cced4f177f9d4}
+      \strng{fullhash}{b9f5099961fbeaf9e85cced4f177f9d4}
+      \strng{bibnamehash}{b9f5099961fbeaf9e85cced4f177f9d4}
+      \strng{authorbibnamehash}{b9f5099961fbeaf9e85cced4f177f9d4}
+      \strng{authornamehash}{b9f5099961fbeaf9e85cced4f177f9d4}
+      \strng{authorfullhash}{b9f5099961fbeaf9e85cced4f177f9d4}
+      \field{sortinit}{V}
+      \field{sortinithash}{75dd7385c90b2252c3ae853a80ca853b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{abgerufen am 1.5.2019}
+      \field{title}{Plan an API Gateway system}
+      \field{year}{o. J.}
+      \verb{urlraw}
+      \verb https://docs.oracle.com/cd/E55956_01/doc.11123/administrator_guide/content/admin_planning.html
+      \endverb
+      \verb{url}
+      \verb https://docs.oracle.com/cd/E55956_01/doc.11123/administrator_guide/content/admin_planning.html
       \endverb
     \endentry
     \entry{wolff2018mic_praxis}{book}{}

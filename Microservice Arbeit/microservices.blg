@@ -1,15 +1,17 @@
 [0] Config.pm:302> INFO - This is Biber 2.11
 [0] Config.pm:305> INFO - Logfile is 'microservices.blg'
-[44] biber-darwin:313> INFO - === Sun Apr 28, 2019, 17:48:52
-[75] Biber.pm:371> INFO - Reading 'microservices.bcf'
-[158] Biber.pm:857> INFO - Found 10 citekeys in bib section 0
-[178] Biber.pm:3976> INFO - Processing section 0
-[190] Biber.pm:4136> INFO - Looking for bibtex format file 'literatur.bib' for section 0
-[192] bibtex.pm:1500> INFO - LaTeX decoding ...
-[201] bibtex.pm:1316> INFO - Found BibTeX data source 'literatur.bib'
-[247] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[247] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[247] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
-[247] Biber.pm:3810> INFO - No sort tailoring available for locale 'de-DE'
-[265] bbl.pm:617> INFO - Writing 'microservices.bbl' with encoding 'UTF-8'
-[268] bbl.pm:720> INFO - Output to microservices.bbl
+[39] biber-darwin:313> INFO - === Wed May  1, 2019, 16:59:42
+[61] Biber.pm:371> INFO - Reading 'microservices.bcf'
+[151] Biber.pm:857> INFO - Found 11 citekeys in bib section 0
+[165] Biber.pm:3976> INFO - Processing section 0
+[175] Biber.pm:4136> INFO - Looking for bibtex format file 'literatur.bib' for section 0
+[176] bibtex.pm:1500> INFO - LaTeX decoding ...
+[190] bibtex.pm:1316> INFO - Found BibTeX data source 'literatur.bib'
+[222] Utils.pm:193> WARN - year field 'o. J.' in entry 'oracle' is not an integer - this will probably not sort properly.
+[239] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[239] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[239] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[239] Biber.pm:3810> INFO - No sort tailoring available for locale 'de-DE'
+[254] bbl.pm:617> INFO - Writing 'microservices.bbl' with encoding 'UTF-8'
+[257] bbl.pm:720> INFO - Output to microservices.bbl
+[257] Biber.pm:110> INFO - WARNINGS: 1

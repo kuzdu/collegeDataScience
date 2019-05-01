@@ -305,12 +305,23 @@ Dementsprechend ist es sinnvoll sich die Anforderungen, welches man an sein Syst
 
 Umso mehr Services aufgesetzt werden, desto komplexer ist es, die Übersicht über alle zu behalten. Eine Abhilfe im Routing bietet ein sogeanntes API-Gateway. Ein API-Gateway ist der einzige Einstiegspunkt für den Nutzer (\textbf{Client}). Von dort wird er weitergeleitet, ohne die Routen von einzelnen Services zu kennen. 
 
-% TODO: Bild einfügen API Gateway 
-% Weitere Features erwähnen siehe Google Docs
-% Ggf. noch Nachteile erwähnen
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.6\textwidth]{api_gateway}
+	\caption[Prinzip API-Gateway] { Prinzip API-Gateway }
+	\label{fig:api_gateway}
+\end{figure}
 
-%TODO: Kurzdefinition Service Mesh 
-Die nächste Steigerung von ein API-Gateway wäre ein sogenannter Service Mesh. Ein Service Mesh ist... .... Da Service Meshes den Umfang dieser Arbeit übersteigen würden, wird darauf nicht weiter eingegangen (siehe Ausblick im Fazit). 
+Abbildung \ref{fig:api_gateway} zeigt deutlich wie die Clients über das Gateway kommunizieren, welches anschließend an die entsprechenden Services weiterleitet. Wenn APIs eine hohe Auslastung haben, würde man mehrere Instanzen von einem API-Gateway erstellen. Ein sogenannter Load Balancer wäre der Einstiegspunkt für die Clients. Dieser würde die Anfragen sinnvoll an die API-Gateway-Instanzen verteilen, so dass keine Überlastung entsteht.\cite{oracle} \\
+
+API-Gateways haben neben dem einzelnen Einstiegspunkt noch weitere Vorteile: 
+	\begin{itemize}
+	\item Höhere Sicherheit, das einzelne Services nicht sichtbar und nur über das Gateway zu erreichen\cite{bruce2019mic_in_action}
+	\item Authentifizierung kann bereits im Gateway ausgeführt werden, dies führt zu weniger Last für einzelne Microservices.\cite{wolff2018mic_praxis}
+	\item Zentralisiertes Logging, Caching, Monitoring, Mocking sowie eine zentralisierte Dokumentation ist möglich.\cite{wolff2018mic_praxis}
+\end{itemize}  
+
+Ein Nachtteil in der Struktur des API-Gateways ist, dass die Abfragen länger sind, da sie immer erst über das Gateway gehen.\\
 
 \subsection{Authentifizierung und Authorisierung}
 
