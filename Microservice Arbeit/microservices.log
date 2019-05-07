@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  1 MAY 2019 17:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  7 MAY 2019 07:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -606,7 +606,7 @@ Overfull \hbox (17.40407pt too wide) in alignment at lines 5--26
  []
 
 
-Overfull \hbox (17.40407pt too wide) in alignment at lines 26--38
+Overfull \hbox (17.40407pt too wide) in alignment at lines 26--40
  [] [] 
  []
 
@@ -632,7 +632,7 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 16.
  [4]
-<bilder/monolithic_vs_micro.png, id=23, 903.375pt x 508.14844pt>
+<bilder/monolithic_vs_micro.png, id=22, 903.375pt x 508.14844pt>
 File: bilder/monolithic_vs_micro.png Graphic file (type png)
 <use bilder/monolithic_vs_micro.png>
 Package pdftex.def Info: bilder/monolithic_vs_micro.png  used on input line 31.
@@ -754,12 +754,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 157--158
 
  []
 
-
+[10 <./bilder/bounded_context_3.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 159--160
 
  []
 
-[10 <./bilder/bounded_context_3.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 161--162
 
  []
@@ -838,12 +838,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 239--240
 
  []
 
-
+[14]
 Underfull \hbox (badness 10000) in paragraph at lines 241--242
 
  []
 
-[14]
+
 Underfull \hbox (badness 10000) in paragraph at lines 249--250
 
  []
@@ -919,12 +919,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 324--325
 
  []
 
-) (./konzept.tex) (./implementierung.tex) (./fazit.tex [18])
+
+Underfull \hbox (badness 10000) in paragraph at lines 328--329
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 345--346
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 349--350
+
+ []
+
+[18]) (./konzept.tex) (./implementierung.tex [19]) (./fazit.tex)
 (./microservices.lot)
 \tf@lot=\write6
 \openout6 = `microservices.lot'.
 
- (./microservices.lof)
+ (./microservices.lof [20])
 \tf@lof=\write7
 \openout7 = `microservices.lof'.
 
@@ -938,16 +953,16 @@ Overfull \hbox (38.27591pt too wide) in paragraph at lines 41--41
 -cro-ser-vices in Azu-re - Microsoft-Dokumentation\T1/cmr/m/n/12 .
  []
 
-[19] [20] (./microservices.aux)
+[21] [22] (./microservices.aux)
 Package logreq Info: Writing requests to 'microservices.run.xml'.
 \openout1 = `microservices.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 11839 strings out of 492649
- 212973 string characters out of 6129622
- 760317 words of memory out of 5000000
- 15547 multiletter control sequences out of 15000+600000
+ 11842 strings out of 492649
+ 213108 string characters out of 6129622
+ 760553 words of memory out of 5000000
+ 15550 multiletter control sequences out of 15000+600000
  15117 words of font info for 37 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  44i,10n,56p,9092b,2180s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -963,10 +978,10 @@ exlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/tex
 live/2018/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></usr/local/texli
 ve/2018/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive
 /2018/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on microservices.pdf (20 pages, 451852 bytes).
+Output written on microservices.pdf (22 pages, 456257 bytes).
 PDF statistics:
- 126 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
+ 132 PDF objects out of 1000 (max. 8388607)
+ 85 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -121,7 +121,7 @@ Nach dem Anwenden von DDD sollte die Struktur der Software erkennbar sein: D.h. 
 
 \subsubsection{Macro- und Mikroarchitektur}
 
-Wenn durch das DDD entworfen wird, welche Microservices voraussichtlich benötigt werden, ist es sinnvoll einen Art Bauplan zu verfassen, welcher impliziert, an welche Regeln sich ein Microservice halten muss. Diese Regeln können wie bereits erwähnt auf globaler Ebene getroffen werden, d.h. sie gelten für alle Services (Makroarchitektur) oder sie gelten nur im Microservice selber (Microarchitektur). REWE Digital unterscheidet dabei zwischen \textit{Must}, \textit{Should}, \textit{Could}. D.h. es gibt Regeln, die Microservices erfüllen müssen wie z.B. das Kommunzieren über REST oder das Implementieren eine einheitlicher Authorisierung.\cite{rewe2019mic_ppp} Andere Regeln dagegen sind viel mehr Richtlinien (should) oder komplett optional (could). Das Ziel ist stets, dass durch die makroarchitektonischen Entscheidungen nicht die Vorteile von Microservices beschnitten werden.\cite{wolff2018mic_praxis}\cite{irakli2016mic_arc}. \\
+Wenn durch das DDD entworfen wird, welche Microservices voraussichtlich benötigt werden, ist es sinnvoll einen Art Bauplan zu verfassen, welcher impliziert, an welche Regeln sich ein Microservice halten muss. Diese Regeln können wie bereits erwähnt auf globaler Ebene getroffen werden, d.h. sie gelten für alle Services (Makroarchitektur) oder sie gelten nur im Microservice selber (Microarchitektur). REWE Digital unterscheidet dabei zwischen \textit{Must}, \textit{Should}, \textit{Could}. D.h. es gibt Regeln, die Microservices erfüllen müssen wie z.B. das Kommunzieren über REST oder das Implementieren eine einheitlicher Autorisierung.\cite{rewe2019mic_ppp} Andere Regeln dagegen sind viel mehr Richtlinien (should) oder komplett optional (could). Das Ziel ist stets, dass durch die makroarchitektonischen Entscheidungen nicht die Vorteile von Microservices beschnitten werden.\cite{wolff2018mic_praxis}\cite{irakli2016mic_arc}. \\
 
 Es gibt verschiedene Einflussfaktoren wie sich die Makroarchitektur für ein Unternehmen definiert: Zum einen empfiehlt es sich ein Gremium zu gründen, welches sich stetig mit den Regeln der Makroarchitektur auseinandersetzt, sie entsprechend erweitert, überarbeitet und die getroffenen Entscheidungen auch immer begründen kann.\cite{wolff2018mic_praxis} Zum anderen besteht immer ein technischer Einfluss\cite{wolff2018mic_praxis}:
 \begin{itemize}
@@ -323,7 +323,83 @@ API-Gateways haben neben dem einzelnen Einstiegspunkt noch weitere Vorteile:
 
 Ein Nachtteil in der Struktur des API-Gateways ist, dass die Abfragen länger sind, da sie immer erst über das Gateway gehen.\\
 
-\subsection{Authentifizierung und Authorisierung}
+\subsection{Authentifizierung und Autorisierung}
+
+Beim Monolithen ist architektonisch klar, dass die Authentifizierung und Autorisierung innerhalb des Monolithen stattfindet. Im Bereich der Microservice Architektur existieren verschiedene Szenarien, wie man eine Authentifizierung sowie Autorisierung gestalten kann.\cite{bruce2019mic_in_action} \\
+
+\textbf{Authentifizierung}: Identifiziert, wer jemand ist. Z.B. Nutzer A, der sich durch Benutzername und Passwort registriert hat.\cite{bruce2019mic_in_action}
+\textbf{Autorisierung}: Bestimmt, wie viel ein Nutzer darf. Nutzer A hat eine Rolle, welche ihn berechtigt gewisse Aktionen durchzuführen.\cite{bruce2019mic_in_action}
+
+Es emphielt sich die Autorisierung in den Microservices zu überprüfen, da diese den entsprechenden Datenbestand haben. Um unnötige Last zu verhindern, kann die Validität - ob es sich überhaupt um einen gültigen Request handelt - bereits im API-Gateway überprüft werden. Die Authentifizierung sollte in einen eigenen Service oder ins API-Gateway verlagert werden.\cite{rewe2019mic_ppp}\cite{richardson2019mic_pattern} Wichtig ist, dass die Authentifizierung an einer Stelle durchgeführt wird, um fehlerhafte Implementierungen zu verhindern. 
+
+% Vermutlich rausschmeißen und durch Figure 11.5 ersetzen
+%\begin{figure}[ht]
+%	\centering
+%	\includegraphics[width=0.7\textwidth]{authentication}
+%	\caption[authentication] { Authentifizierung über ein API-Gateway }
+%	\label{fig:authentication}
+%\end{figure}
+%Die Abbildung beschreibt zwei unterschiedliche Szenarien: A) Der API-Client (beispielsweise eine %Verwaltungsseite für die API) sendet Zugangsdaten (Credentials) mit, welche im API-Gateway zu %einem Token umgewandelt werden. In diesem Ablauf müssen die Zugangsdaten immer mitgeschickt %werden. B) Durch ein Login wird ein Security-Token erzeugt, welches fortwährend verwendet wird, %um weitere Anfragen zu verifizieren.\\
+%
+
+Die Idee ist, dass der Benutzer mittels Login ein Security-Token erhält, welches verwendet wird, um sensible Anfragen zu verifizieren. \\
+
+%HIER die Tokenbeschaffenheit erklären JWT vs. opaque
+
+Für Microservices empfiehlt sich eine sogenannte OAuth2 Implementierung, welche der Variante B) angelehnt ist.\cite{richardson2019mic_pattern} OAuth2 ist ein Sicherheitsstandard, welches Autorisierungen zwischen verschiedene Anwendungen erlaubt. Ursprünglich wurde das Authentifizierungsprotokoll so desigend, dass Drittanwendungen Zugang zu Informationen erhalten, ohne dass Passwörter weitergeleitet werden müssen.\cite{richardson2019mic_pattern}  Beispielsweise wird OAuth2 verwendet, wenn Benutzer sich über ihren Facebook-Account bei Drittplattformen anmelden. Die Drittplattformen können natürlich nicht das Facebook-Passwort einsehen, erhalten aber je Anwendungsfall Zugriff auf verschiedene Ressourcen (z.B. Lesezugriff auf E-Mail-Adresse und/oder Konakte, Schreibzugriffe zum Teilen von Nachrichten usw.). \\
+
+Da OAuth2 ein sehr komplexes und umfangreiches Thema ist, wird im Folgenden nur ein häufig verwendetes Grundprinzip erklärt. 
+
+% Figure 11.5 zeigen und einen Passwort Grant erklären. 
+
+
+%TODO: Ab Seite 356 gehts weiter
+%TODO: Bild einbinden auth_request, verlinken auf richardson und kurz erläutern
+%Worauf achten bei der Authorisierung: Benutzerdetails, man darf nur seine eigenen abrufen und ein Agent darf alle abrufen
+%TODO: Wie kann man das regeln: Durch JWT Token 
+
+
+
+Im Gegensatz zum Monolithen muss jeder Microservice die Autorisierung abfragen. 
+
+Um bei den Anforderungen aus 3.1 zu bleiben, sollte ein Microservices zustandslos sein, damit er repliziert, skaliert usw. werden kann. 
+
+1. Distributed Session Management
+Welche Methodiken gibt es: 
+- Sticky Sessions: alles geht über einen Knoten (Load Balancer, der es kontrolliert) (wenn umziehen gehen die iwie verloren)
+- Session Replication: Jede Instanz speichert die Session, welche sich synchronisieren (kostet immer mehr Bandbreite)
+- Zentralisierter Session Speicher 
+
+2. Token 
+Speicher ist anders: Token wird beim User gehalten, Sessions auf dem Server
+Token müssen fälschungssicher sein
+
+Im folgenden Abschnitt werden gängige Authentifizierungsmöglichkeiten vorgestellt. 
+Authenfizierungsmöglichkeiten können 
+JWT Token: JWT (Json Web Token) is an open standard (RFC 7519) 
+
+3. Single Sign On 
+
+4. API Gateway + Client Token 
+
+5. Third Party Application 
+1. Api Token generieren z.B. in Git
+2. OAuth (Facebook, Google)
+3. 
+
+Token basierte Authentifizierung
+JWT
+Rollen, Scopes
+
+Tieferes Verständnis von Pattern -> siehe Chris Richardson Microservice Pattern
+
+OAuth2
+OpenID Connect 
+Bearer
+?SingleSignOn
+
+% Authentication und Authorization 
+% https://www.youtube.com/watch?v=g52hubmhUP4
 
 % Unterscheidung Authentifizierung (wer ist man) und Authorisierung (was darf man)
 
