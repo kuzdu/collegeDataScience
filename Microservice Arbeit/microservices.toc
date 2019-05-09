@@ -11,7 +11,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2}Monolithische Struktur}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Monolith vs. Microservices}{5}
+\contentsline {subsection}{\numberline {3.3}Monolith vs. Microservices}{6}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.4}Architektur von Micrsoservices}{8}
 \defcounter {refsection}{0}\relax 
@@ -37,11 +37,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2}Macroarchitektonische Festlegungen}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}Wahl des API-Gateway}{19}
+\contentsline {subsection}{\numberline {4.3}Wahl des API-Gateway}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4}Wahl der Kommunikation}{19}
+\contentsline {subsection}{\numberline {4.4}Wahl der Kommunikation}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5}Wahl der Authenfizierung/Authorisierung}{19}
+\contentsline {subsection}{\numberline {4.5}Wahl der Authenfizierung/Authorisierung}{20}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5}Implementierung}{20}
 \defcounter {refsection}{0}\relax 
@@ -55,6 +55,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6}Fazit}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1}Ausblick}{20}
+\contentsline {subsection}{\numberline {6.1}Ausblick}{21}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\nonumberline Literatur}{21}

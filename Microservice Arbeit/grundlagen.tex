@@ -330,7 +330,7 @@ Beim Monolithen ist architektonisch klar, dass die Authentifizierung und Autoris
 \textbf{Authentifizierung}: Identifiziert, wer jemand ist. Z.B. Nutzer A, der sich durch Benutzername und Passwort registriert hat.\cite{bruce2019mic_in_action}
 \textbf{Autorisierung}: Bestimmt, wie viel ein Nutzer darf. Nutzer A hat eine Rolle, welche ihn berechtigt gewisse Aktionen durchzuführen.\cite{bruce2019mic_in_action}
 
-Es emphielt sich die Autorisierung in den Microservices zu überprüfen, da diese den entsprechenden Datenbestand haben. Um unnötige Last zu verhindern, kann die Validität - ob es sich überhaupt um einen gültigen Request handelt - bereits im API-Gateway überprüft werden. Die Authentifizierung sollte in einen eigenen Service oder ins API-Gateway verlagert werden.\cite{rewe2019mic_ppp}\cite{richardson2019mic_pattern} Wichtig ist, dass die Authentifizierung an einer Stelle durchgeführt wird, um fehlerhafte Implementierungen zu verhindern. 
+Es emphielt sich die Autorisierung in den Microservices ansich zu überprüfen, da diese den entsprechenden Datenbestand haben. Um unnötige Last zu verhindern, kann die Validität - ob es sich überhaupt um einen gültigen Request handelt - bereits im API-Gateway überprüft werden. Die Authentifizierung dagegen sollte in einem eigenen Service oder ins API-Gateway verlagert werden.\cite{rewe2019mic_ppp}\cite{richardson2019mic_pattern} Zu empfehlen ist, dass die Authentifizierung an einer zentralen Stelle durchgeführt wird, um Redundanz und fehlerhafte Implementierungen zu verhindern. \\
 
 % Vermutlich rausschmeißen und durch Figure 11.5 ersetzen
 %\begin{figure}[ht]
@@ -342,71 +342,29 @@ Es emphielt sich die Autorisierung in den Microservices zu überprüfen, da dies
 %Die Abbildung beschreibt zwei unterschiedliche Szenarien: A) Der API-Client (beispielsweise eine %Verwaltungsseite für die API) sendet Zugangsdaten (Credentials) mit, welche im API-Gateway zu %einem Token umgewandelt werden. In diesem Ablauf müssen die Zugangsdaten immer mitgeschickt %werden. B) Durch ein Login wird ein Security-Token erzeugt, welches fortwährend verwendet wird, %um weitere Anfragen zu verifizieren.\\
 %
 
-Die Idee ist, dass der Benutzer mittels Login ein Security-Token erhält, welches verwendet wird, um sensible Anfragen zu verifizieren. \\
+Die Idee ist, dass der Benutzer nach dem Anmelden ein Security-Token erhält, welches verwendet wird, um sensible Anfragen zu verifizieren. Zum einen gibt es die Möglichkeit ein Token auszustellen, welches beim Auslesen verschlüsselt ist (opaque Token) und zum anderen auf ein offenen Standard namens Json Web Token (JWT, transparent Token) zu setzen. Das opaque Token hat den großen Nachteil, dass es zusätzliche Performance sowie Latenz verursacht und nur synchron entschlüsselt werden kann.\cite{richardson2019mic_pattern} \\
 
-%HIER die Tokenbeschaffenheit erklären JWT vs. opaque
+Das JWT wird beim Ausstellen signiert, um die Echtheit zu gewährleisten. Während die Nachteile des opaque Token hier nicht auftreten, ist ein anderes Problem, dass ein JWT nach Ausstellung nicht widerrufen werden kann. Theoretisch wäre es dauerhaft gültig, weshalb Ablauflaufzeiten gesetzt werden. Dies wiederum impliziert, dass der Client dafür sorgen muss, immer rechtzeitig ein neues Token anzuforden. Für solche und weitere Logiken exisitiert bereits ein Sicherheitsstandard namens OAuth2, welcher empfohlen wird zu verwenden.\cite{richardson2019mic_pattern} \\
 
-Für Microservices empfiehlt sich eine sogenannte OAuth2 Implementierung, welche der Variante B) angelehnt ist.\cite{richardson2019mic_pattern} OAuth2 ist ein Sicherheitsstandard, welches Autorisierungen zwischen verschiedene Anwendungen erlaubt. Ursprünglich wurde das Authentifizierungsprotokoll so desigend, dass Drittanwendungen Zugang zu Informationen erhalten, ohne dass Passwörter weitergeleitet werden müssen.\cite{richardson2019mic_pattern}  Beispielsweise wird OAuth2 verwendet, wenn Benutzer sich über ihren Facebook-Account bei Drittplattformen anmelden. Die Drittplattformen können natürlich nicht das Facebook-Passwort einsehen, erhalten aber je Anwendungsfall Zugriff auf verschiedene Ressourcen (z.B. Lesezugriff auf E-Mail-Adresse und/oder Konakte, Schreibzugriffe zum Teilen von Nachrichten usw.). \\
+Ziel bei OAuth2 ist unter anderem Autorisierungen zwischen verschiedene Anwendungen zu erlauben. Ursprünglich wurde das Authentifizierungsprotokoll so entworfen, dass Drittanwendungen Zugang zu Informationen erhalten, ohne dass Passwörter weitergeleitet werden müssen.\cite{richardson2019mic_pattern}  Beispielsweise wird OAuth2 verwendet, wenn Benutzer sich über ihren Facebook-Account bei Drittplattformen anmelden. Die Drittplattformen können natürlich nicht das Facebook-Passwort einsehen, erhalten aber je nach Anwendungsfall Zugriff auf verschiedene Ressourcen (z.B. Lesezugriff auf die E-Mail-Adresse und/oder Konakte, Schreibzugriffe zum Teilen von Nachrichten usw.). \\
 
-Da OAuth2 ein sehr komplexes und umfangreiches Thema ist, wird im Folgenden nur ein häufig verwendetes Grundprinzip erklärt. 
+Da OAuth2 ein sehr komplexes und umfangreiches Thema ist, wird im Folgenden nur ein häufig verwendetes Grundprinzip erklärt. \\
+
+Um das Schaubild FIGURE? besser zu verstehen, sind folgende Definitionen hilfreich:\cite{richardson2019mic_pattern}\\
+
+\textbf{Authorization Server}: Authentifiziert den Benutzer und gibt ein Access sowie Refresh Token raus.\\
+
+\textbf{Access Token}: Durch ein Access Token erhält man Zugriff auf den Resource Server. Das Format ist Abhängig von der jeweiligen Implementierung, eine bereits genannte Möglichkeit wäre JWT. Der Access Token ist zeitlich begrenzt gültig. \\
+
+\textbf{Refresh Token}: Ein Token welches langlebig ist, also eine lange Gültigkeit besitzt. Dieses kann allerdings im Gegensatz zum Access Token widerrufen werden. Ebenfalls wird es verwendet, um ein neues Access Token vom Authorization Server anzufordern. Dafür ist keine Übergabe der Benutzerdaten nötig.\\ 
+
+\textbf{Resource Server}: Eine Resource auf die nur zugegriffen werden kann, wenn ein valides Access Token vorliegt, dies könnte z.B. ein Micoservice sein.\\ 
+
+\textbf{Client}: Ein Client möchte Zugriff auf den Resource Server. Clients können beispielsweise Drittanwendungen, Webanwendungen oder mobile Applikationen sein.  \\ 
 
 % Figure 11.5 zeigen und einen Passwort Grant erklären. 
-
-
-%TODO: Ab Seite 356 gehts weiter
-%TODO: Bild einbinden auth_request, verlinken auf richardson und kurz erläutern
-%Worauf achten bei der Authorisierung: Benutzerdetails, man darf nur seine eigenen abrufen und ein Agent darf alle abrufen
-%TODO: Wie kann man das regeln: Durch JWT Token 
-
-
-
-Im Gegensatz zum Monolithen muss jeder Microservice die Autorisierung abfragen. 
-
-Um bei den Anforderungen aus 3.1 zu bleiben, sollte ein Microservices zustandslos sein, damit er repliziert, skaliert usw. werden kann. 
-
-1. Distributed Session Management
-Welche Methodiken gibt es: 
-- Sticky Sessions: alles geht über einen Knoten (Load Balancer, der es kontrolliert) (wenn umziehen gehen die iwie verloren)
-- Session Replication: Jede Instanz speichert die Session, welche sich synchronisieren (kostet immer mehr Bandbreite)
-- Zentralisierter Session Speicher 
-
-2. Token 
-Speicher ist anders: Token wird beim User gehalten, Sessions auf dem Server
-Token müssen fälschungssicher sein
-
-Im folgenden Abschnitt werden gängige Authentifizierungsmöglichkeiten vorgestellt. 
-Authenfizierungsmöglichkeiten können 
-JWT Token: JWT (Json Web Token) is an open standard (RFC 7519) 
-
-3. Single Sign On 
-
-4. API Gateway + Client Token 
-
-5. Third Party Application 
-1. Api Token generieren z.B. in Git
-2. OAuth (Facebook, Google)
-3. 
-
-Token basierte Authentifizierung
-JWT
-Rollen, Scopes
-
-Tieferes Verständnis von Pattern -> siehe Chris Richardson Microservice Pattern
-
-OAuth2
-OpenID Connect 
-Bearer
-?SingleSignOn
-
-% Authentication und Authorization 
-% https://www.youtube.com/watch?v=g52hubmhUP4
-
-% Unterscheidung Authentifizierung (wer ist man) und Authorisierung (was darf man)
+% Erklären, Fazit ziehen und gut ist. 
 
 % Artikel lesen und Grundlagen rausarbeiten: https://docs.microsoft.com/de-de/dotnet/standard/microservices-architecture/secure-net-microservices-web-applications/
-% https://medium.com/tech-tajawal/microservice-authentication-and-authorization-solutions-e0e5e74b248a
 
-%JWT, OAtuh, Basic Auth
-
-%  Was gibt es für Standards. Ggf. nur Authentifizierung beachten, da Authorisierung mit der Authentifizierung kommt
-
+% Guter Artikel bzgl. OAuth2: https://medium.com/google-cloud/understanding-oauth2-and-building-a-basic-authorization-server-of-your-own-a-beginners-guide-cf7451a16f66
