@@ -369,10 +369,12 @@ Aufgrund dieser Grundlage wird im Konzept VERLINKUNG-EINFÜGEN herausgearbeitet,
 
 \subsection{Docker}
 
-Über Docker können Anwendungen innerhalb eines Containers laufen. Ein Container ist vergleichbar mit einer sehr leichtgewichtigen, modularen virtuellen Maschine.\cite{RedHat} Docker in der Tiefe aufzuarbeiten, würde den Umfang dieser Arbeit überschreiten. Dennoch wird im Folgenden erläutert, warum speziell Docker sich sehr gut für Microservices eignet und wie das grundsätzliche Wirkungsprinzip von Docker ist. \\
+Über Docker können Anwendungen innerhalb eines Containers laufen. Ein Container ist vergleichbar mit einer sehr leichtgewichtigen, modularen virtuellen Maschine.\cite{RedHat} Docker in der Tiefe aufzuarbeiten, würde den Umfang dieser Arbeit überschreiten. Dennoch wird im Folgenden erläutert, warum speziell Docker sich sehr gut für Microservices eignet und wie das grundsätzliche Wirkungsprinzip von Docker funktioniert. \\
 
+Anfangs wurden Microservices so definiert, dass sie als möglichst eigenständige, deploybare Einheiten zu betrachten sind. Beim Hosten - also dem Bereitstellen des Services - sollte dies ebenfalls berücksichtigt werden. Nimmt man an, man hostet alle Services auf einer Maschine, läuft man Gefahr, dass die Microservices sich z. B. durch Portkonfigurationen oder dem Zugriff auf selbe Ressourcen behindern.\cite{wolff2016mic_architectures} \\
 
-Löst Schwierigkeiten: Portkonfiguration, Ressourcentrennung (wenn alle Projekte sich ein Betriebssystem teilen, wer gewährleistet, dass Prozesse sich nicht behindern)
+Bisherige Lösungen - und je nach Anwendungsfall auch sinnvoll - bieten sich an dieser Stelle virtuelle Maschinen (\textbf{VM}) an. D.h. auf einem Host könnten mehrere Betriebssysteme laufen, die sich die Hardwareressourcen vom Host teilen. Die angestrebte Isolation zwischen den Microservices wäre erreicht und individuelle Konfigurationsmöglichkeiten wie z.B. Portfreigeben könnten sich gegensetitig nicht mehr stören. Durch die VMs entstehen allerdings eine Performanceeinbußen, welche nicht im Verhältnis zum Nutzen stehen. \cite{wolff2016mic_architectures} Gesucht ist dementsprechend eine Technologie, die es schafft Services isoliert und gleichzeitig leichtgewichtig zu hosten: Docker. \\
+
 
 Vorteile zur VM (Microservice hat eigenes Betriebssystem, was auf der selben Hardware läuft): Performance schlechter, weil VM dem Betriebssystem die Illusion gibt, dirket auf echter Hardware zu laufen.
 Jeder Microservice eigene Instanz = Viel RAM + viel Speicherplatz, da gesamtes Betriebssystem
