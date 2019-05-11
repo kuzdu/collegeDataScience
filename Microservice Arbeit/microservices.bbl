@@ -1,0 +1,394 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{msfussell2017azure}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=3916434e41eef606135d6ff291b92653}{%
+           family={(msfussell)},
+           familyi={(\bibinitperiod},
+           given={Mark\bibnamedelima Fussel},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{3916434e41eef606135d6ff291b92653}
+      \strng{fullhash}{3916434e41eef606135d6ff291b92653}
+      \strng{bibnamehash}{3916434e41eef606135d6ff291b92653}
+      \strng{authorbibnamehash}{3916434e41eef606135d6ff291b92653}
+      \strng{authornamehash}{3916434e41eef606135d6ff291b92653}
+      \strng{authorfullhash}{3916434e41eef606135d6ff291b92653}
+      \field{sortinit}{m}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{abgerufen am 9.4.2019}
+      \field{title}{Einf{ü}hrung in Microservices in Azure - Microsoft-Dokumentation}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://docs.microsoft.com/de-de/azure/service-fabric/service-fabric-overview-microservices
+      \endverb
+      \verb{url}
+      \verb https://docs.microsoft.com/de-de/azure/service-fabric/service-fabric-overview-microservices
+      \endverb
+    \endentry
+    \entry{birk2016mic_soa}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=b699d542d4a455319a045f9fb7d44988}{%
+           family={Birk},
+           familyi={B\bibinitperiod},
+           given={Ferdinand},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Universität Ulm}%
+      }
+      \strng{namehash}{b699d542d4a455319a045f9fb7d44988}
+      \strng{fullhash}{b699d542d4a455319a045f9fb7d44988}
+      \strng{bibnamehash}{b699d542d4a455319a045f9fb7d44988}
+      \strng{authorbibnamehash}{b699d542d4a455319a045f9fb7d44988}
+      \strng{authornamehash}{b699d542d4a455319a045f9fb7d44988}
+      \strng{authorfullhash}{b699d542d4a455319a045f9fb7d44988}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Microservices - Eine State-of-the-Art Bestandsaufnahme und Abgrenzung zu SOA}
+      \field{year}{2016}
+    \endentry
+    \entry{rewe2019mic_ppp}{unpublished}{}
+      \name{author}{1}{}{%
+        {{hash=acda88e2bd6d6f880c345a5083cfabbc}{%
+           family={Gauder},
+           familyi={G\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{acda88e2bd6d6f880c345a5083cfabbc}
+      \strng{fullhash}{acda88e2bd6d6f880c345a5083cfabbc}
+      \strng{bibnamehash}{acda88e2bd6d6f880c345a5083cfabbc}
+      \strng{authorbibnamehash}{acda88e2bd6d6f880c345a5083cfabbc}
+      \strng{authornamehash}{acda88e2bd6d6f880c345a5083cfabbc}
+      \strng{authorfullhash}{acda88e2bd6d6f880c345a5083cfabbc}
+      \field{sortinit}{G}
+      \field{sortinithash}{5e8d2bf9d38de41b1528bd307546008f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A competitive food retail architecture with microservices}
+      \field{year}{2019}
+    \endentry
+    \entry{irakli2016mic_arc}{book}{}
+      \name{author}{2}{}{%
+        {{hash=df013aac785bd35736a64a1f3ee80ee9}{%
+           family={Irakli\bibnamedelima Nadareishvili},
+           familyi={I\bibinitperiod\bibinitdelim N\bibinitperiod},
+           given={Matt\bibnamedelima McLarty},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           suffix={Ronnie\bibnamedelima Mitra},
+           suffixi={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=d1ff4cc9d5727a5f76ad7bf041390a1b}{%
+           family={Amundsen},
+           familyi={A\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {O Reilly}%
+      }
+      \strng{namehash}{57eafadfc12ee916e225fcbf7403b855}
+      \strng{fullhash}{57eafadfc12ee916e225fcbf7403b855}
+      \strng{bibnamehash}{57eafadfc12ee916e225fcbf7403b855}
+      \strng{authorbibnamehash}{57eafadfc12ee916e225fcbf7403b855}
+      \strng{authornamehash}{57eafadfc12ee916e225fcbf7403b855}
+      \strng{authorfullhash}{57eafadfc12ee916e225fcbf7403b855}
+      \field{sortinit}{I}
+      \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Microservice Architecture - Aligning Principels, Practices, and Culture}
+      \field{year}{2016}
+    \endentry
+    \entry{bruce2019mic_in_action}{book}{}
+      \name{author}{1}{}{%
+        {{hash=84432021bda80cf8ff69cfee0ff1eba8}{%
+           family={Morgan\bibnamedelima Bruce},
+           familyi={M\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Paulo\bibnamedelimb A.\bibnamedelimi Pereira},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Manning}%
+      }
+      \strng{namehash}{84432021bda80cf8ff69cfee0ff1eba8}
+      \strng{fullhash}{84432021bda80cf8ff69cfee0ff1eba8}
+      \strng{bibnamehash}{84432021bda80cf8ff69cfee0ff1eba8}
+      \strng{authorbibnamehash}{84432021bda80cf8ff69cfee0ff1eba8}
+      \strng{authornamehash}{84432021bda80cf8ff69cfee0ff1eba8}
+      \strng{authorfullhash}{84432021bda80cf8ff69cfee0ff1eba8}
+      \field{sortinit}{M}
+      \field{sortinithash}{cfd219b90152c06204fab207bc6c7cab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Microservices in Action}
+      \field{year}{2019}
+    \endentry
+    \entry{nhiem2017mic_moving}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=ff41c668b97cf58a66f820c0526c074a}{%
+           family={Nhiem\bibnamedelima Lu},
+           familyi={N\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Dennis\bibnamedelima Peuser},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod},
+           suffix={Gert\bibnamedelima Glatz},
+           suffixi={G\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{organization}{2}{%
+        {University of Applied Science}%
+        {Arts, Dortmund, Germany, adesso AG, Dortmund, Germany}%
+      }
+      \strng{namehash}{ff41c668b97cf58a66f820c0526c074a}
+      \strng{fullhash}{ff41c668b97cf58a66f820c0526c074a}
+      \strng{bibnamehash}{ff41c668b97cf58a66f820c0526c074a}
+      \strng{authorbibnamehash}{ff41c668b97cf58a66f820c0526c074a}
+      \strng{authornamehash}{ff41c668b97cf58a66f820c0526c074a}
+      \strng{authorfullhash}{ff41c668b97cf58a66f820c0526c074a}
+      \field{sortinit}{N}
+      \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Moving mountains – practical approaches for moving monolithic applications to Microservices}
+      \field{year}{2017}
+    \endentry
+    \entry{oauth2}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a0d750ea4c4bd6e7beeb53741ae4b101}{%
+           family={Parecki},
+           familyi={P\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{a0d750ea4c4bd6e7beeb53741ae4b101}
+      \strng{fullhash}{a0d750ea4c4bd6e7beeb53741ae4b101}
+      \strng{bibnamehash}{a0d750ea4c4bd6e7beeb53741ae4b101}
+      \strng{authorbibnamehash}{a0d750ea4c4bd6e7beeb53741ae4b101}
+      \strng{authornamehash}{a0d750ea4c4bd6e7beeb53741ae4b101}
+      \strng{authorfullhash}{a0d750ea4c4bd6e7beeb53741ae4b101}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{abgerufen am 11.5.2019}
+      \field{title}{OAuth 2.0 Client Credentials Grant}
+      \field{year}{o. J.}
+      \verb{urlraw}
+      \verb https://oauth.net/2/grant-types/client-credentials/
+      \endverb
+      \verb{url}
+      \verb https://oauth.net/2/grant-types/client-credentials/
+      \endverb
+    \endentry
+    \entry{richardson2019mic_pattern}{book}{}
+      \name{author}{1}{}{%
+        {{hash=d0740bcf48754b8fa2cd3549a1d73461}{%
+           family={Richardson},
+           familyi={R\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Manning}%
+      }
+      \strng{namehash}{d0740bcf48754b8fa2cd3549a1d73461}
+      \strng{fullhash}{d0740bcf48754b8fa2cd3549a1d73461}
+      \strng{bibnamehash}{d0740bcf48754b8fa2cd3549a1d73461}
+      \strng{authorbibnamehash}{d0740bcf48754b8fa2cd3549a1d73461}
+      \strng{authornamehash}{d0740bcf48754b8fa2cd3549a1d73461}
+      \strng{authorfullhash}{d0740bcf48754b8fa2cd3549a1d73461}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Microservice Pattern}
+      \field{year}{2019}
+    \endentry
+    \entry{heise2016ddd}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=0ce819893ecd6363352bf81a5daba92e}{%
+           family={Roden},
+           familyi={R\bibinitperiod},
+           given={Golo},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{0ce819893ecd6363352bf81a5daba92e}
+      \strng{fullhash}{0ce819893ecd6363352bf81a5daba92e}
+      \strng{bibnamehash}{0ce819893ecd6363352bf81a5daba92e}
+      \strng{authorbibnamehash}{0ce819893ecd6363352bf81a5daba92e}
+      \strng{authornamehash}{0ce819893ecd6363352bf81a5daba92e}
+      \strng{authorfullhash}{0ce819893ecd6363352bf81a5daba92e}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{abgerufen am 15.3.2019}
+      \field{title}{Domain-driven Design erkl{ä}rt}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://www.heise.de/developer/artikel/Domain-driven-Design-erklaert-3130720.html?seite=all
+      \endverb
+      \verb{url}
+      \verb https://www.heise.de/developer/artikel/Domain-driven-Design-erklaert-3130720.html?seite=all
+      \endverb
+    \endentry
+    \entry{cesardelatorre2018azure}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=a6a5e581f6c53e57e21b4995d61190ef}{%
+           family={Torre\bibnamedelima (cesardelatorre)},
+           familyi={T\bibinitperiod\bibinitdelim (\bibinitperiod},
+           given={Cesar},
+           giveni={C\bibinitperiod},
+           prefix={de\bibnamedelima la},
+           prefixi={d\bibinitperiod\bibinitdelim l\bibinitperiod}}}%
+      }
+      \strng{namehash}{a6a5e581f6c53e57e21b4995d61190ef}
+      \strng{fullhash}{a6a5e581f6c53e57e21b4995d61190ef}
+      \strng{bibnamehash}{a6a5e581f6c53e57e21b4995d61190ef}
+      \strng{authorbibnamehash}{a6a5e581f6c53e57e21b4995d61190ef}
+      \strng{authornamehash}{a6a5e581f6c53e57e21b4995d61190ef}
+      \strng{authorfullhash}{a6a5e581f6c53e57e21b4995d61190ef}
+      \field{sortinit}{T}
+      \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{abgerufen am 16.4.2019}
+      \field{title}{Implementieren ereignisbasierter Kommunikation zwischen Microservices}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://docs.microsoft.com/de-de/dotnet/standard/microservices-architecture/multi-container-microservice-net-applications/integration-event-based-microservice-communications
+      \endverb
+      \verb{url}
+      \verb https://docs.microsoft.com/de-de/dotnet/standard/microservices-architecture/multi-container-microservice-net-applications/integration-event-based-microservice-communications
+      \endverb
+    \endentry
+    \entry{oracle}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b9f5099961fbeaf9e85cced4f177f9d4}{%
+           family={V.},
+           familyi={V\bibinitperiod},
+           prefix={o.},
+           prefixi={o\bibinitperiod}}}%
+      }
+      \strng{namehash}{b9f5099961fbeaf9e85cced4f177f9d4}
+      \strng{fullhash}{b9f5099961fbeaf9e85cced4f177f9d4}
+      \strng{bibnamehash}{b9f5099961fbeaf9e85cced4f177f9d4}
+      \strng{authorbibnamehash}{b9f5099961fbeaf9e85cced4f177f9d4}
+      \strng{authornamehash}{b9f5099961fbeaf9e85cced4f177f9d4}
+      \strng{authorfullhash}{b9f5099961fbeaf9e85cced4f177f9d4}
+      \field{sortinit}{V}
+      \field{sortinithash}{75dd7385c90b2252c3ae853a80ca853b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{abgerufen am 1.5.2019}
+      \field{title}{Plan an API Gateway system}
+      \field{year}{o. J.}
+      \verb{urlraw}
+      \verb https://docs.oracle.com/cd/E55956_01/doc.11123/administrator_guide/content/admin_planning.html
+      \endverb
+      \verb{url}
+      \verb https://docs.oracle.com/cd/E55956_01/doc.11123/administrator_guide/content/admin_planning.html
+      \endverb
+    \endentry
+    \entry{RedHat}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b9f5099961fbeaf9e85cced4f177f9d4}{%
+           family={V.},
+           familyi={V\bibinitperiod},
+           prefix={o.},
+           prefixi={o\bibinitperiod}}}%
+      }
+      \strng{namehash}{b9f5099961fbeaf9e85cced4f177f9d4}
+      \strng{fullhash}{b9f5099961fbeaf9e85cced4f177f9d4}
+      \strng{bibnamehash}{b9f5099961fbeaf9e85cced4f177f9d4}
+      \strng{authorbibnamehash}{b9f5099961fbeaf9e85cced4f177f9d4}
+      \strng{authornamehash}{b9f5099961fbeaf9e85cced4f177f9d4}
+      \strng{authorfullhash}{b9f5099961fbeaf9e85cced4f177f9d4}
+      \field{sortinit}{V}
+      \field{sortinithash}{75dd7385c90b2252c3ae853a80ca853b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{abgerufen am 11.5.2019}
+      \field{title}{Was ist Docker?}
+      \field{year}{o. J.}
+      \verb{urlraw}
+      \verb https://www.redhat.com/de/topics/containers/what-is-docker
+      \endverb
+      \verb{url}
+      \verb https://www.redhat.com/de/topics/containers/what-is-docker
+      \endverb
+    \endentry
+    \entry{wolff2018mic_praxis}{book}{}
+      \name{author}{1}{}{%
+        {{hash=42b48b91ec04dc8b258db592d08ee9e9}{%
+           family={Wolff},
+           familyi={W\bibinitperiod},
+           given={Eberhard},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {dpunkt.verlag}%
+      }
+      \strng{namehash}{42b48b91ec04dc8b258db592d08ee9e9}
+      \strng{fullhash}{42b48b91ec04dc8b258db592d08ee9e9}
+      \strng{bibnamehash}{42b48b91ec04dc8b258db592d08ee9e9}
+      \strng{authorbibnamehash}{42b48b91ec04dc8b258db592d08ee9e9}
+      \strng{authornamehash}{42b48b91ec04dc8b258db592d08ee9e9}
+      \strng{authorfullhash}{42b48b91ec04dc8b258db592d08ee9e9}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Das Microservice Praxisbuch - Grundlagen, Konzepte und Rezepte}
+      \field{year}{2018}
+    \endentry
+    \entry{wolff2016mic_architectures}{book}{}
+      \name{author}{1}{}{%
+        {{hash=42b48b91ec04dc8b258db592d08ee9e9}{%
+           family={Wolff},
+           familyi={W\bibinitperiod},
+           given={Eberhard},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Leanpub}%
+      }
+      \strng{namehash}{42b48b91ec04dc8b258db592d08ee9e9}
+      \strng{fullhash}{42b48b91ec04dc8b258db592d08ee9e9}
+      \strng{bibnamehash}{42b48b91ec04dc8b258db592d08ee9e9}
+      \strng{authorbibnamehash}{42b48b91ec04dc8b258db592d08ee9e9}
+      \strng{authornamehash}{42b48b91ec04dc8b258db592d08ee9e9}
+      \strng{authorfullhash}{42b48b91ec04dc8b258db592d08ee9e9}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Flexible Software Architectures}
+      \field{year}{2016}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
