@@ -1,17 +1,18 @@
 [0] Config.pm:302> INFO - This is Biber 2.11
 [0] Config.pm:305> INFO - Logfile is 'microservices.blg'
-[34] biber-darwin:313> INFO - === Thu May  2, 2019, 06:48:55
-[53] Biber.pm:371> INFO - Reading 'microservices.bcf'
-[134] Biber.pm:857> INFO - Found 12 citekeys in bib section 0
+[32] biber-darwin:313> INFO - === Sat May 11, 2019, 13:56:38
+[51] Biber.pm:371> INFO - Reading 'microservices.bcf'
+[133] Biber.pm:857> INFO - Found 13 citekeys in bib section 0
 [145] Biber.pm:3976> INFO - Processing section 0
-[155] Biber.pm:4136> INFO - Looking for bibtex format file 'literatur.bib' for section 0
-[157] bibtex.pm:1500> INFO - LaTeX decoding ...
-[169] bibtex.pm:1316> INFO - Found BibTeX data source 'literatur.bib'
-[201] Utils.pm:193> WARN - year field 'o. J.' in entry 'oracle' is not an integer - this will probably not sort properly.
-[222] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[222] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[223] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
-[223] Biber.pm:3810> INFO - No sort tailoring available for locale 'de-DE'
-[236] bbl.pm:617> INFO - Writing 'microservices.bbl' with encoding 'UTF-8'
-[240] bbl.pm:720> INFO - Output to microservices.bbl
-[240] Biber.pm:110> INFO - WARNINGS: 1
+[154] Biber.pm:4136> INFO - Looking for bibtex format file 'literatur.bib' for section 0
+[155] bibtex.pm:1500> INFO - LaTeX decoding ...
+[167] bibtex.pm:1316> INFO - Found BibTeX data source 'literatur.bib'
+[196] Utils.pm:193> WARN - year field 'o. J.' in entry 'oracle' is not an integer - this will probably not sort properly.
+[201] Utils.pm:193> WARN - year field 'o. J.' in entry 'oauth2' is not an integer - this will probably not sort properly.
+[217] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[217] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[217] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[217] Biber.pm:3810> INFO - No sort tailoring available for locale 'de-DE'
+[232] bbl.pm:617> INFO - Writing 'microservices.bbl' with encoding 'UTF-8'
+[236] bbl.pm:720> INFO - Output to microservices.bbl
+[236] Biber.pm:110> INFO - WARNINGS: 2

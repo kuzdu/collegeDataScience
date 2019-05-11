@@ -315,7 +315,7 @@ Umso mehr Services aufgesetzt werden, desto komplexer ist es, die Übersicht üb
 Abbildung \ref{fig:api_gateway} zeigt deutlich wie die Clients über das Gateway kommunizieren, welches anschließend an die entsprechenden Services weiterleitet. Wenn APIs eine hohe Auslastung haben, würde man mehrere Instanzen von einem API-Gateway erstellen. Ein sogenannter Load Balancer wäre der Einstiegspunkt für die Clients. Dieser würde die Anfragen sinnvoll an die API-Gateway-Instanzen verteilen, so dass keine Überlastung entsteht.\cite{oracle} \\
 
 API-Gateways haben neben dem einzelnen Einstiegspunkt noch weitere Vorteile: 
-	\begin{itemize}
+\begin{itemize}
 	\item Höhere Sicherheit, das einzelne Services nicht sichtbar und nur über das Gateway zu erreichen\cite{bruce2019mic_in_action}
 	\item Authentifizierung kann bereits im Gateway ausgeführt werden, dies führt zu weniger Last für einzelne Microservices.\cite{wolff2018mic_praxis}
 	\item Zentralisiertes Logging, Caching, Monitoring, Mocking sowie eine zentralisierte Dokumentation ist möglich.\cite{wolff2018mic_praxis}
@@ -332,16 +332,6 @@ Beim Monolithen ist architektonisch klar, dass die Authentifizierung und Autoris
 
 Es emphielt sich die Autorisierung in den Microservices ansich zu überprüfen, da diese den entsprechenden Datenbestand haben. Um unnötige Last zu verhindern, kann die Validität - ob es sich überhaupt um einen gültigen Request handelt - bereits im API-Gateway überprüft werden. Die Authentifizierung dagegen sollte in einem eigenen Service oder ins API-Gateway verlagert werden.\cite{rewe2019mic_ppp}\cite{richardson2019mic_pattern} Zu empfehlen ist, dass die Authentifizierung an einer zentralen Stelle durchgeführt wird, um Redundanz und fehlerhafte Implementierungen zu verhindern. \\
 
-% Vermutlich rausschmeißen und durch Figure 11.5 ersetzen
-%\begin{figure}[ht]
-%	\centering
-%	\includegraphics[width=0.7\textwidth]{authentication}
-%	\caption[authentication] { Authentifizierung über ein API-Gateway }
-%	\label{fig:authentication}
-%\end{figure}
-%Die Abbildung beschreibt zwei unterschiedliche Szenarien: A) Der API-Client (beispielsweise eine %Verwaltungsseite für die API) sendet Zugangsdaten (Credentials) mit, welche im API-Gateway zu %einem Token umgewandelt werden. In diesem Ablauf müssen die Zugangsdaten immer mitgeschickt %werden. B) Durch ein Login wird ein Security-Token erzeugt, welches fortwährend verwendet wird, %um weitere Anfragen zu verifizieren.\\
-%
-
 Die Idee ist, dass der Benutzer nach dem Anmelden ein Security-Token erhält, welches verwendet wird, um sensible Anfragen zu verifizieren. Zum einen gibt es die Möglichkeit ein Token auszustellen, welches beim Auslesen verschlüsselt ist (opaque Token) und zum anderen auf ein offenen Standard namens Json Web Token (JWT, transparent Token) zu setzen. Das opaque Token hat den großen Nachteil, dass es zusätzliche Performance sowie Latenz verursacht und nur synchron entschlüsselt werden kann.\cite{richardson2019mic_pattern} \\
 
 Das JWT wird beim Ausstellen signiert, um die Echtheit zu gewährleisten. Während die Nachteile des opaque Token hier nicht auftreten, ist ein anderes Problem, dass ein JWT nach Ausstellung nicht widerrufen werden kann. Theoretisch wäre es dauerhaft gültig, weshalb Ablauflaufzeiten gesetzt werden. Dies wiederum impliziert, dass der Client dafür sorgen muss, immer rechtzeitig ein neues Token anzuforden. Für solche und weitere Logiken exisitiert bereits ein Sicherheitsstandard namens OAuth2, welcher empfohlen wird zu verwenden.\cite{richardson2019mic_pattern} \\
@@ -350,7 +340,7 @@ Ziel bei OAuth2 ist unter anderem Autorisierungen zwischen verschiedene Anwendun
 
 Da OAuth2 ein sehr komplexes und umfangreiches Thema ist, wird im Folgenden nur ein häufig verwendetes Grundprinzip erklärt. \\
 
-Um das Schaubild FIGURE? besser zu verstehen, sind folgende Definitionen hilfreich:\cite{richardson2019mic_pattern}\\
+Um die Abbildung \ref{fig:password_grant} besser zu verstehen, sind folgende Definitionen hilfreich:\cite{richardson2019mic_pattern}\\
 
 \textbf{Authorization Server}: Authentifiziert den Benutzer und gibt ein Access sowie Refresh Token raus.\\
 
@@ -362,9 +352,22 @@ Um das Schaubild FIGURE? besser zu verstehen, sind folgende Definitionen hilfrei
 
 \textbf{Client}: Ein Client möchte Zugriff auf den Resource Server. Clients können beispielsweise Drittanwendungen, Webanwendungen oder mobile Applikationen sein.  \\ 
 
-% Figure 11.5 zeigen und einen Passwort Grant erklären. 
-% Erklären, Fazit ziehen und gut ist. 
+\textbf{Client}: Ein Client möchte Zugriff auf den Resource Server. Clients können beispielsweise Drittanwendungen, Webanwendungen oder mobile Applikationen sein. Sie werden auch Resource Owner genannt. 
 
-% Artikel lesen und Grundlagen rausarbeiten: https://docs.microsoft.com/de-de/dotnet/standard/microservices-architecture/secure-net-microservices-web-applications/
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{password_grant}
+	\caption[Ablauf eines password grants] { Ablauf eines sogenannten `password grant`\cite{richardson2019mic_pattern} }
+	\label{fig:password_grant}
+\end{figure}
 
-% Guter Artikel bzgl. OAuth2: https://medium.com/google-cloud/understanding-oauth2-and-building-a-basic-authorization-server-of-your-own-a-beginners-guide-cf7451a16f66
+Die Abbildung \ref{fig:password_grant} zeigt einen Ablauf, bei dem ein Client sein Usernamen und Passwort übermittelt (1). Diese Anfrage wird von dem API-Gateway weitergeleitet an einen Authorization Server (2). Wurde der Nutzer gefunden, wird ein Access und Refresh Token über das API-Gateway (3) an den Nutzer übermittelt (4). Mit der entsprechenden Authorisierung ruft der Client seine Bestellungen (5) ab. Dieser Request wird entsprechend von dem API-Gateway weitergeleitet (6). \\
+
+Neben dem \textit{password grant Flow} existiert auch der sogenannte \textit{client credentials grant Flow}. Dieser funktioniert ähnlich, nur dass nicht Username und Passwort übertragen werden, sondern der Anwendungen durch gemeinsam bekannte Daten zwischen Anwendungen und Authorization Server vertraut wird. Den \textit{client credentials grant Flow} sollte man verwenden, wenn eine Applikation Ressourcen aufrufen möchte, die außerhalb eines User-Kontextes liegen, d.h. es handelt sich in der Regel um recht allgemeine Daten.\cite{oauth2}\cite{richardson2019mic_pattern} \\
+
+Aufgrund dieser Grundlage wird im Konzept VERLINKUNG-EINFÜGEN herausgearbeitet, welche Möglichkeiten zur technischen Umsetzung dieser Flows bereitstehen. 
+
+\subsection{Docker}
+
+Test
+\\

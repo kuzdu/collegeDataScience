@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  9 MAY 2019 06:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  11 MAY 2019 13:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -930,6 +930,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 333--334
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 335--336
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 337--338
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--340
+
+ []
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 341--342
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 343--344
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 345--346
 
  []
@@ -944,7 +969,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 349--350
 
  []
 
-[18]
+
 Underfull \hbox (badness 10000) in paragraph at lines 351--352
 
  []
@@ -954,33 +979,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 353--354
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 355--356
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 357--358
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 359--360
+<bilder/password_grant.png, id=80, 658.46pt x 392.46625pt>
+File: bilder/password_grant.png Graphic file (type png)
+<use bilder/password_grant.png>
+Package pdftex.def Info: bilder/password_grant.png  used on input line 359.
+(pdftex.def)             Requested size: 313.69029pt x 186.97433pt.
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 364--365
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 361--362
+Underfull \hbox (badness 10000) in paragraph at lines 366--367
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 363--364
+) (./konzept.tex
+Underfull \hbox (badness 10000) in paragraph at lines 372--1
 
  []
 
-) (./konzept.tex [19]) (./implementierung.tex) (./fazit.tex) [20]
-(./microservices.lot)
+[20 <./bilder/password_grant.png>]) (./implementierung.tex) (./fazit.tex
+[21]) (./microservices.lot)
 \tf@lot=\write6
 \openout6 = `microservices.lot'.
 
@@ -998,16 +1018,16 @@ Overfull \hbox (38.27591pt too wide) in paragraph at lines 41--41
 -cro-ser-vices in Azu-re - Microsoft-Dokumentation\T1/cmr/m/n/12 .
  []
 
-[21] [22] (./microservices.aux)
+[22] [23] (./microservices.aux)
 Package logreq Info: Writing requests to 'microservices.run.xml'.
 \openout1 = `microservices.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 11841 strings out of 492649
- 213088 string characters out of 6129622
- 759648 words of memory out of 5000000
- 15549 multiletter control sequences out of 15000+600000
+ 11850 strings out of 492649
+ 213332 string characters out of 6129622
+ 759776 words of memory out of 5000000
+ 15557 multiletter control sequences out of 15000+600000
  15117 words of font info for 37 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  44i,10n,56p,9092b,2180s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1023,10 +1043,10 @@ exlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/tex
 live/2018/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></usr/local/texli
 ve/2018/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive
 /2018/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on microservices.pdf (22 pages, 457145 bytes).
+Output written on microservices.pdf (23 pages, 581195 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
+ 137 PDF objects out of 1000 (max. 8388607)
+ 87 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
