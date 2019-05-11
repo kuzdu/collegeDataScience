@@ -1,19 +1,20 @@
 [0] Config.pm:302> INFO - This is Biber 2.11
 [0] Config.pm:305> INFO - Logfile is 'microservices.blg'
-[43] biber-darwin:313> INFO - === Sat May 11, 2019, 15:26:32
-[69] Biber.pm:371> INFO - Reading 'microservices.bcf'
-[155] Biber.pm:857> INFO - Found 14 citekeys in bib section 0
-[171] Biber.pm:3976> INFO - Processing section 0
-[181] Biber.pm:4136> INFO - Looking for bibtex format file 'literatur.bib' for section 0
-[182] bibtex.pm:1500> INFO - LaTeX decoding ...
-[196] bibtex.pm:1316> INFO - Found BibTeX data source 'literatur.bib'
-[232] Utils.pm:193> WARN - year field 'o. J.' in entry 'oracle' is not an integer - this will probably not sort properly.
-[238] Utils.pm:193> WARN - year field 'o. J.' in entry 'oauth2' is not an integer - this will probably not sort properly.
-[241] Utils.pm:193> WARN - year field 'o. J.' in entry 'RedHat' is not an integer - this will probably not sort properly.
-[260] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[260] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[260] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
-[260] Biber.pm:3810> INFO - No sort tailoring available for locale 'de-DE'
-[285] bbl.pm:617> INFO - Writing 'microservices.bbl' with encoding 'UTF-8'
-[289] bbl.pm:720> INFO - Output to microservices.bbl
-[289] Biber.pm:110> INFO - WARNINGS: 3
+[35] biber-darwin:313> INFO - === Sat May 11, 2019, 17:37:13
+[57] Biber.pm:371> INFO - Reading 'microservices.bcf'
+[145] Biber.pm:857> INFO - Found 15 citekeys in bib section 0
+[157] Biber.pm:3976> INFO - Processing section 0
+[167] Biber.pm:4136> INFO - Looking for bibtex format file 'literatur.bib' for section 0
+[168] bibtex.pm:1500> INFO - LaTeX decoding ...
+[180] bibtex.pm:1316> INFO - Found BibTeX data source 'literatur.bib'
+[209] Utils.pm:193> WARN - year field 'o. J.' in entry 'oracle' is not an integer - this will probably not sort properly.
+[213] Utils.pm:193> WARN - year field 'o. J.' in entry 'oauth2' is not an integer - this will probably not sort properly.
+[215] Utils.pm:193> WARN - year field 'o. J.' in entry 'RedHat' is not an integer - this will probably not sort properly.
+[216] Utils.pm:193> WARN - I didn't find a database entry for 'wolff2016' (section 0)
+[232] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[233] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[233] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[233] Biber.pm:3810> INFO - No sort tailoring available for locale 'de-DE'
+[247] bbl.pm:617> INFO - Writing 'microservices.bbl' with encoding 'UTF-8'
+[251] bbl.pm:720> INFO - Output to microservices.bbl
+[251] Biber.pm:110> INFO - WARNINGS: 4

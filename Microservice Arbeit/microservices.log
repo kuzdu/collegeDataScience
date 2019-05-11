@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  11 MAY 2019 15:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  11 MAY 2019 17:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -570,12 +570,19 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'microservices.bbl' found.
 
-(./microservices.bbl)
+(./microservices.bbl
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                wolff2016
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+)
 Package biblatex Info: Reference section=0 on input line 23.
 Package biblatex Info: Reference segment=0 on input line 23.
 LaTeX Font Info:    Try loading font information for T1+cmss on input line 27.
-
-(/usr/local/texlive/2018/texmf-dist/tex/latex/base/t1cmss.fd
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -999,12 +1006,78 @@ Underfull \hbox (badness 10000) in paragraph at lines 372--373
 
  []
 
-[20 <./bilder/password_grant.png>]) (./konzept.tex) (./implementierung.tex
-[21]) (./fazit.tex) (./microservices.lot)
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--375
+
+ []
+
+[20 <./bilder/password_grant.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 376--377
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 378--379
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 380--381
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--383
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 384--385
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 386--387
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 388--389
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 390--391
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 392--393
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 394--395
+
+ []
+
+<bilder/docker_architektur_edited.png, id=89, 727.96968pt x 356.83313pt>
+File: bilder/docker_architektur_edited.png Graphic file (type png)
+<use bilder/docker_architektur_edited.png>
+Package pdftex.def Info: bilder/docker_architektur_edited.png  used on input li
+ne 398.
+(pdftex.def)             Requested size: 313.69029pt x 153.76738pt.
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 403--404
+
+ []
+
+) (./konzept.tex) (./implementierung.tex [22 <./bilder/docker_architektur_edite
+d.png>]) (./fazit.tex) (./microservices.lot)
 \tf@lot=\write6
 \openout6 = `microservices.lot'.
 
- (./microservices.lof [22])
+ (./microservices.lof [23])
 \tf@lof=\write7
 \openout7 = `microservices.lof'.
 
@@ -1018,16 +1091,24 @@ Overfull \hbox (38.27591pt too wide) in paragraph at lines 41--41
 -cro-ser-vices in Azu-re - Microsoft-Dokumentation\T1/cmr/m/n/12 .
  []
 
-[23] [24] (./microservices.aux)
+[24] [25] (./microservices.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                microservices
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'microservices.run.xml'.
 \openout1 = `microservices.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 11852 strings out of 492649
- 213409 string characters out of 6129622
- 759817 words of memory out of 5000000
- 15559 multiletter control sequences out of 15000+600000
+ 11859 strings out of 492649
+ 213642 string characters out of 6129622
+ 759971 words of memory out of 5000000
+ 15565 multiletter control sequences out of 15000+600000
  15117 words of font info for 37 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  44i,10n,56p,9092b,2180s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1043,10 +1124,10 @@ exlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/tex
 live/2018/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></usr/local/texli
 ve/2018/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive
 /2018/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on microservices.pdf (24 pages, 583903 bytes).
+Output written on microservices.pdf (25 pages, 1059211 bytes).
 PDF statistics:
- 140 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
+ 146 PDF objects out of 1000 (max. 8388607)
+ 92 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

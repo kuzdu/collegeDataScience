@@ -373,22 +373,32 @@ Aufgrund dieser Grundlage wird im Konzept VERLINKUNG-EINFÜGEN herausgearbeitet,
 
 Anfangs wurden Microservices so definiert, dass sie als möglichst eigenständige, deploybare Einheiten zu betrachten sind. Beim Hosten - also dem Bereitstellen des Services - sollte dies ebenfalls berücksichtigt werden. Nimmt man an, man hostet alle Services auf einer Maschine, läuft man Gefahr, dass die Microservices sich z. B. durch Portkonfigurationen oder dem Zugriff auf selbe Ressourcen behindern.\cite{wolff2016mic_architectures} \\
 
-Bisherige Lösungen - und je nach Anwendungsfall auch sinnvoll - bieten sich an dieser Stelle virtuelle Maschinen (\textbf{VM}) an. D.h. auf einem Host könnten mehrere Betriebssysteme laufen, die sich die Hardwareressourcen vom Host teilen. Die angestrebte Isolation zwischen den Microservices wäre erreicht und individuelle Konfigurationsmöglichkeiten wie z.B. Portfreigeben könnten sich gegensetitig nicht mehr stören. Durch die VMs entstehen allerdings eine Performanceeinbußen, welche nicht im Verhältnis zum Nutzen stehen. \cite{wolff2016mic_architectures} Gesucht ist dementsprechend eine Technologie, die es schafft Services isoliert und gleichzeitig leichtgewichtig zu hosten: Docker. \\
+Bisherige Lösungen - und je nach Anwendungsfall auch sinnvoll - bieten sich an dieser Stelle virtuelle Maschinen (\textbf{VM}) an. D.h. auf einem Host könnten mehrere Betriebssysteme laufen, die sich die Hardwareressourcen vom Host teilen. Die angestrebte Isolation zwischen den Microservices wäre erreicht und individuelle Konfigurationsmöglichkeiten wie z.B. Portfreigeben könnten sich gegensetitig nicht mehr stören. Durch die VMs entstehen allerdings eine Performanceeinbußen, welche nicht im Verhältnis zum Nutzen stehen und zusätzlich ein höherer Verbrauch der Hardwareressourcen.\cite{wolff2016mic_architectures} Gesucht ist dementsprechend eine Technologie, die es schafft Services zu isolieren und dabei gleichzeitig leichtgewichtig zu sein: Docker. \\
 
+Startet man einen Microservice über Docker ist dies damit gleichzusetzen, als würde im Betriebssystem der Service als Prozess gestartet werden. Es entsteht kein deutlich sichtbarer Overhead in Bezug auf Ressourcenverbrauch.\cite{wolff2016mic_architectures} \\
 
-Vorteile zur VM (Microservice hat eigenes Betriebssystem, was auf der selben Hardware läuft): Performance schlechter, weil VM dem Betriebssystem die Illusion gibt, dirket auf echter Hardware zu laufen.
-Jeder Microservice eigene Instanz = Viel RAM + viel Speicherplatz, da gesamtes Betriebssystem
+Um den Docker-Aufbau (siehe Abbildung \ref{fig:docker_architektur_edited}) besser zu verstehen, ist folgendes Vokabular nützlich:\cite{wolff2016mic_architectures} \\
 
-=> Docker ist leichtgewichtige Variante, zwar kein ganz so starke Isoloation, aber ähnlich wie ein Prozess (kein signifikanter Overhead): 
+\textbf{Docker-Image}: Aus einer Anwendung kann man ein Image erzeugen, so dass es im Docker-Container gestartet werden kann.  \\
 
-teilen sich Kernel, nutzen eigenes Netzwerkinterface => flexible Portfreigaben
-ist durch eine Schichtenarchitektur speicherplatz schonend, da Ressourcen wiederverwendet werden können, gleicht einem Prozess von der Leistung her. Deshalb kann man ohne Probleme 100 Container auf einem Laptop laufen lassen im Gegensatz zu 100 virtuellen Maschinen. 
+\textbf{Docker-Container}: Wenn ein Image ausgeführt wird, läuft es in einem Container, welcher verschiedene Eigenschaften hat, wie z.B. ein eigenes Netzwerk-Interface und ein Dateisystem.\\
 
-Ablauf erklären
-Dockerfile beschreibt Image
-Container (aktive Instanz vom Image)
-Image (Speicherabbild von Container) 
-Image wird in Repository gespeichert
-Docker-Host: 
+\textbf{Dockerfile}: Ein Dockerfile ist ähnlich einem Bauplan. Er beschreibt, wie das Image gebaut werden muss, damit es in einem Docker-Container laufen kann. \\
 
-Bild zeigen, erklären, alternative erwähnen WAR Images, auf mehr wird nicht eingegangen. 
+\textbf{Repository}: Ein Repository speichert Images. In der Regel hält ein Repository mehrere Images von derselben Anwendung mit verschiedenen Versionen bereit.\cite{RedHat} \\
+
+\textbf{Docker-Registry}: Eine Docker-Registry verwaltet mehrere Repositories. \\
+
+\textbf{Docker-Host}: Ein Docker-Host unterstützt die Docker-Technologie, d.h. es können entsprechend Images ausgeführt werden. Zusätzlich ist es möglich, Images von einem Repository auszuführen. D.h. man muss die Images nicht extra auf den Host laden, um sie auszuführen. \\
+
+Bei genauerer Betrachtung der Abbildung \ref{fig:docker_architektur_edited} fällt auf, dass Container in einem Netzwerk sind und sich denselben Kernel teilen. Dateisysteme, Netzwerk-Interface und containereigene Prozesse sind voneinander isoliert. D.h. Portfreigaben oder ähnliches behindern sich nicht. \\
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{docker_architektur_edited}
+	\caption[Docker Architektur] { Docker Architektur\cite{wolff2016mic_architectures} }
+	\label{fig:docker_architektur_edited}
+\end{figure}
+
+Zusammenfassend lässt sich sagen, dass durch das Nutzen von Docker eine isolierte und ressourcenvertretbare Trennung von Microservices auf einem Host erreichen lässt. \\
+

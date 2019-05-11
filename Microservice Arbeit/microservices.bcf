@@ -2051,6 +2051,13 @@
     <bcf:citekey order="75">oauth2</bcf:citekey>
     <bcf:citekey order="76">richardson2019mic_pattern</bcf:citekey>
     <bcf:citekey order="77">RedHat</bcf:citekey>
+    <bcf:citekey order="78">wolff2016mic_architectures</bcf:citekey>
+    <bcf:citekey order="79">wolff2016mic_architectures</bcf:citekey>
+    <bcf:citekey order="80">wolff2016mic_architectures</bcf:citekey>
+    <bcf:citekey order="81">wolff2016mic_architectures</bcf:citekey>
+    <bcf:citekey order="82">RedHat</bcf:citekey>
+    <bcf:citekey order="83">wolff2016mic_architectures</bcf:citekey>
+    <bcf:citekey order="84">wolff2016mic_architectures</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
