@@ -369,5 +369,24 @@ Aufgrund dieser Grundlage wird im Konzept VERLINKUNG-EINFÜGEN herausgearbeitet,
 
 \subsection{Docker}
 
-Test
-\\
+Über Docker können Anwendungen innerhalb eines Containers laufen. Ein Container ist vergleichbar mit einer sehr leichtgewichtigen, modularen virtuellen Maschine.\cite{RedHat} Docker in der Tiefe aufzuarbeiten, würde den Umfang dieser Arbeit überschreiten. Dennoch wird im Folgenden erläutert, warum speziell Docker sich sehr gut für Microservices eignet und wie das Wirkungsprinzop von Docker ist. \\
+
+
+Löst Schwierigkeiten: Portkonfiguration, Ressourcentrennung (wenn alle Projekte sich ein Betriebssystem teilen, wer gewährleistet, dass Prozesse sich nicht behindern)
+
+Vorteile zur VM (Microservice hat eigenes Betriebssystem, was auf der selben Hardware läuft): Performance schlechter, weil VM dem Betriebssystem die Illusion gibt, dirket auf echter Hardware zu laufen.
+Jeder Microservice eigene Instanz = Viel RAM + viel Speicherplatz, da gesamtes Betriebssystem
+
+=> Docker ist leichtgewichtige Variante, zwar kein ganz so starke Isoloation, aber ähnlich wie ein Prozess (kein signifikanter Overhead): 
+
+teilen sich Kernel, nutzen eigenes Netzwerkinterface => flexible Portfreigaben
+ist durch eine Schichtenarchitektur speicherplatz schonend, da Ressourcen wiederverwendet werden können, gleicht einem Prozess von der Leistung her. Deshalb kann man ohne Probleme 100 Container auf einem Laptop laufen lassen im Gegensatz zu 100 virtuellen Maschinen. 
+
+Ablauf erklären
+Dockerfile beschreibt Image
+Container (aktive Instanz vom Image)
+Image (Speicherabbild von Container) 
+Image wird in Repository gespeichert
+Docker-Host: 
+
+Bild zeigen, erklären, alternative erwähnen WAR Images, auf mehr wird nicht eingegangen. 

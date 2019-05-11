@@ -17,11 +17,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {3.4.1}Domain Driven Design}{8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.2}Macro- und Mikroarchitektur}{9}
+\contentsline {subsubsection}{\numberline {3.4.2}Macro- und Mikroarchitektur}{10}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.5}Kommunikation}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.1}Synchrone Kommunikation}{12}
+\contentsline {subsubsection}{\numberline {3.5.1}Synchrone Kommunikation}{13}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {3.5.2}Asynchrone Kommunikation}{14}
 \defcounter {refsection}{0}\relax 
@@ -33,7 +33,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.7}Docker}{20}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Konzept}{20}
+\contentsline {section}{\numberline {4}Konzept}{21}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.1}Anforderungen definieren}{21}
 \defcounter {refsection}{0}\relax 
@@ -45,18 +45,16 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.5}Wahl der Authenfizierung/Authorisierung}{21}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Implementierung}{21}
+\contentsline {section}{\numberline {5}Implementierung}{22}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1}Service Architektur}{21}
+\contentsline {subsection}{\numberline {5.1}Service Architektur}{22}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2}Umsetzung API-Gateway}{21}
+\contentsline {subsection}{\numberline {5.2}Umsetzung API-Gateway}{22}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3}Authentifizierung und Authorisierung}{21}
+\contentsline {subsection}{\numberline {5.3}Authentifizierung und Authorisierung}{22}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4}Asynchrone Kommunikation}{21}
+\contentsline {subsection}{\numberline {5.4}Asynchrone Kommunikation}{22}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6}Fazit}{22}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.1}Ausblick}{22}
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\nonumberline Literatur}{22}

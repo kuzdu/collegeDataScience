@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  11 MAY 2019 13:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  11 MAY 2019 15:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -611,14 +611,37 @@ Overfull \hbox (17.40407pt too wide) in alignment at lines 26--42
  []
 
 [3]) (./einleitung.tex) (./grundlagen.tex
+
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 4 undefined on input line
+ 8.
+
+
+LaTeX Warning: Citation 'irakli2016mic_arc' on page 4 undefined on input line 8
+.
+
+
+Overfull \hbox (19.61028pt too wide) in paragraph at lines 8--9
+\T1/cmr/m/n/12 Wolff un-ter Mi-cro-ser-vices un-ab-hän-gig, de-ploy-ba-re Mo-du
+-le versteht[[]],
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
 
 
+LaTeX Warning: Citation 'irakli2016mic_arc' on page 4 undefined on input line 1
+0.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
+
+
+LaTeX Warning: Citation 'wolff2016mic_architectures' on page 4 undefined on inp
+ut line 12.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 12--13
@@ -632,13 +655,42 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 16.
-<bilder/monolithic_vs_micro.png, id=22, 903.375pt x 508.14844pt>
+
+
+LaTeX Warning: Citation 'msfussell2017azure' on page 5 undefined on input line 
+27.
+
+
+LaTeX Warning: Citation 'msfussell2017azure' on page 5 undefined on input line 
+27.
+
+
+LaTeX Warning: Citation 'nhiem2017mic_moving' on page 5 undefined on input line
+ 27.
+
+<bilder/monolithic_vs_micro.png, id=23, 903.375pt x 508.14844pt>
 File: bilder/monolithic_vs_micro.png Graphic file (type png)
 <use bilder/monolithic_vs_micro.png>
 Package pdftex.def Info: bilder/monolithic_vs_micro.png  used on input line 31.
 
 (pdftex.def)             Requested size: 403.31511pt x 226.86581pt.
 
+LaTeX Warning: Citation 'msfussell2017azure' on page 5 undefined on input line 
+32.
+
+
+LaTeX Warning: Citation 'msfussell2017azure' on page 5 undefined on input line 
+32.
+
+
+LaTeX Warning: Citation 'wolff2016mic_architectures' on page 5 undefined on inp
+ut line 41.
+
+
+LaTeX Warning: Citation 'birk2016mic_soa' on page 5 undefined on input line 41.
+
+
+[5]
 Underfull \hbox (badness 10000) in paragraph at lines 51--51
 []\T1/cmr/m/n/12 Geschwindigkeit
  []
@@ -673,9 +725,19 @@ Underfull \hbox (badness 5607) in paragraph at lines 64--65
 []\T1/cmr/m/n/12 horizontale und ver-ti-ka-le
  []
 
-[5]
+
 Underfull \hbox (badness 10000) in paragraph at lines 73--75
 
+ []
+
+
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 6 undefined on input line
+ 76.
+
+
+Overfull \hbox (7.70627pt too wide) in paragraph at lines 76--78
+\T1/cmr/m/n/12 durch die Kom-ple-xi-tät in der Re-gel auch schwe-rer zu ska-lie
+-ren ist.[[]]
  []
 
 
@@ -684,6 +746,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--78
  []
 
 [6 <./bilder/monolithic_vs_micro.png>] [7]
+
+LaTeX Warning: Citation 'rewe2019mic_ppp' on page 8 undefined on input line 79.
+
+
+
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 8 undefined on input line
+ 79.
+
+
+Overfull \hbox (55.92088pt too wide) in paragraph at lines 79--80
+\T1/cmr/m/n/12 ge-st-ar-tet und ist erst spä-ter auf ei-ne Microservice-Archite
+ktur umgeschwenkt.[[]]
+ []
+
+
+LaTeX Warning: Citation 'wolff2016mic_architectures' on page 8 undefined on inp
+ut line 85.
+
+
+LaTeX Warning: Citation 'rewe2019mic_ppp' on page 8 undefined on input line 85.
+
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
@@ -700,41 +785,140 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--88
  []
 
 
+LaTeX Warning: Citation 'heise2016ddd' on page 8 undefined on input line 91.
+
+
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 8 undefined on input line
+ 91.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
-<bilder/bounded_context_1.jpg, id=34, 390.45876pt x 118.4425pt>
+<bilder/bounded_context_1.jpg, id=35, 390.45876pt x 118.4425pt>
 File: bilder/bounded_context_1.jpg Graphic file (type jpg)
 <use bilder/bounded_context_1.jpg>
 Package pdftex.def Info: bilder/bounded_context_1.jpg  used on input line 97.
 (pdftex.def)             Requested size: 224.06548pt x 67.96835pt.
-<bilder/bounded_context_2.jpg, id=35, 417.56pt x 125.46875pt>
+
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 8 undefined on input line
+ 98.
+
+
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 8 undefined on input line
+ 98.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--98
+[]\T1/cmr/m/n/12 Bounded Con-texts mit ei-gen-stän-di-gem
+ []
+
+[8]
+<bilder/bounded_context_2.jpg, id=39, 417.56pt x 125.46875pt>
 File: bilder/bounded_context_2.jpg Graphic file (type jpg)
 <use bilder/bounded_context_2.jpg>
 Package pdftex.def Info: bilder/bounded_context_2.jpg  used on input line 104.
 (pdftex.def)             Requested size: 224.06548pt x 67.329pt.
-<bilder/bounded_context_3.png, id=36, 360.34625pt x 141.52875pt>
+
+
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 9 undefined on input line
+ 105.
+
+
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 9 undefined on input line
+ 105.
+
+<bilder/bounded_context_3.png, id=40, 360.34625pt x 141.52875pt>
 File: bilder/bounded_context_3.png Graphic file (type png)
 <use bilder/bounded_context_3.png>
 Package pdftex.def Info: bilder/bounded_context_3.png  used on input line 111.
 (pdftex.def)             Requested size: 224.06548pt x 88.00174pt.
 
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 9 undefined on input line
+ 112.
+
+
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 9 undefined on input line
+ 112.
+
+
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 9 undefined on input line
+ 116.
+
+
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 9 undefined on input line
+ 116.
+
+
+LaTeX Warning: Citation 'heise2016ddd' on page 9 undefined on input line 116.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 116--117
 
  []
 
-[8]
+
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 9 undefined on input line
+ 118.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 118--119
 
  []
+
+[9 <./bilder/bounded_context_1.jpg> <./bilder/bounded_context_2.jpg> <./bilder/
+bounded_context_3.png>]
+
+LaTeX Warning: Citation 'rewe2019mic_ppp' on page 10 undefined on input line 12
+4.
+
+
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 10 undefined on input lin
+e 124.
+
+
+LaTeX Warning: Citation 'irakli2016mic_arc' on page 10 undefined on input line 
+124.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 124--125
 
  []
 
-[9 <./bilder/bounded_context_1.jpg> <./bilder/bounded_context_2.jpg>]
+
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 10 undefined on input lin
+e 126.
+
+
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 10 undefined on input lin
+e 126.
+
+
+Overfull \hbox (50.97917pt too wide) in paragraph at lines 126--127
+\T1/cmr/m/n/12 ar-bei-tet und die ge-trof-fe-nen Ent-schei-dun-gen auch im-mer 
+be-grün-den kann.[[]]
+ []
+
+
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 10 undefined on input lin
+e 133.
+
+
+LaTeX Warning: Citation 'irakli2016mic_arc' on page 10 undefined on input line 
+133.
+
+
+LaTeX Warning: Citation 'rewe2019mic_ppp' on page 10 undefined on input line 13
+3.
+
+
+Overfull \hbox (293.37245pt too wide) in paragraph at lines 133--134
+\T1/cmr/m/n/12 Über-blick dar-über gibt, wie gän-gi-ge Ent-schei-dungs-punk-te 
+ein-zu-ord-nen sind. [[]][[]][[]] 
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 149--149
 []\T1/cmr/m/n/12 Continuous-Delivery-
  []
@@ -749,10 +933,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 155--156
 
  []
 
-[10 <./bilder/bounded_context_3.png>]
+[10]
 Underfull \hbox (badness 10000) in paragraph at lines 157--158
 
  []
+
+
+LaTeX Warning: Citation 'rewe2019mic_ppp' on page 11 undefined on input line 15
+9.
+
+
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 11 undefined on input lin
+e 159.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 159--160
@@ -769,12 +961,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 163--164
 
  []
 
-
+[11]
 Underfull \hbox (badness 10000) in paragraph at lines 165--166
 
  []
 
-[11]
+
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 12 undefined on input lin
+e 167.
+
+
+Overfull \hbox (83.43622pt too wide) in paragraph at lines 167--168
+\T1/cmr/m/n/12 stel-len wie z.B. mit-tels Do-cker, Ku-ber-ne-tes oder in-di-vu-
+del-le Installationsskripte.[[]]
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 167--168
 
  []
@@ -785,18 +987,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 169--170
  []
 
 
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 12 undefined on input lin
+e 171.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 175--176
 
  []
 
-<bilder/synchrone_kommunikation_microservices.png, id=49, 234.8775pt x 111.4162
+
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 12 undefined on input lin
+e 188.
+
+[12]
+<bilder/synchrone_kommunikation_microservices.png, id=53, 234.8775pt x 111.4162
 4pt>
 File: bilder/synchrone_kommunikation_microservices.png Graphic file (type png)
 <use bilder/synchrone_kommunikation_microservices.png>
 Package pdftex.def Info: bilder/synchrone_kommunikation_microservices.png  used
  on input line 194.
 (pdftex.def)             Requested size: 224.06548pt x 106.28685pt.
-[12]
+
+
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 13 undefined on input lin
+e 199.
+
+
+LaTeX Warning: Citation 'bruce2019mic_in_action' on page 13 undefined on input 
+line 199.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 201--202
 
  []
@@ -814,9 +1034,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 210--211
 
 [13 <./bilder/synchrone_kommunikation_microservices.png> <./bilder/snyn_com_dep
 endencies.png>]
+
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 14 undefined on input lin
+e 212.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 212--213
 
  []
+
+
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 14 undefined on input lin
+e 214.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 214--215
@@ -824,24 +1053,90 @@ Underfull \hbox (badness 10000) in paragraph at lines 214--215
  []
 
 
+LaTeX Warning: Citation 'bruce2019mic_in_action' on page 14 undefined on input 
+line 216.
+
+
+Overfull \hbox (128.12547pt too wide) in paragraph at lines 216--217
+[]\T1/cmr/m/n/12 Ebenfalls ent-steht durch je-de Schnitt-stel-le ei-ne fach-li-
+che Ab-hän-gig-keit geschaffen.[[]]
+ []
+
+
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 14 undefined on input lin
+e 220.
+
+
+Overfull \hbox (34.69421pt too wide) in paragraph at lines 220--221
+\T1/cmr/m/n/12 te-ren Ser-vices, son-dern trifft An-nah-men über et-wai-ge Syst
+emzustände.[[]]
+ []
+
+
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 14 undefined on input lin
+e 223.
+
+
+Overfull \hbox (14.07816pt too wide) in paragraph at lines 223--224
+\T1/cmr/m/n/12 über-ein-stim-men. Schlieÿ-lich kann sich ei-ne An-schrift änder
+n.[[]] 
+ []
+
+
+LaTeX Warning: Citation 'bruce2019mic_in_action' on page 14 undefined on input 
+line 228.
+
+
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 14 undefined on input lin
+e 228.
+
+
+Overfull \hbox (221.92888pt too wide) in paragraph at lines 228--229
+\T1/cmr/m/n/12 tu-el-len Da-ten be-füllt sind. Dies lässt sich durch so-ge-nann
+-te Events erreichen.[[]].[[]] 
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 228--229
 
  []
 
-<bilder/microservices_bus.png, id=62, 1058.45438pt x 426.09187pt>
+[14]
+<bilder/microservices_bus.png, id=65, 1058.45438pt x 426.09187pt>
 File: bilder/microservices_bus.png Graphic file (type png)
 <use bilder/microservices_bus.png>
 Package pdftex.def Info: bilder/microservices_bus.png  used on input line 234.
 (pdftex.def)             Requested size: 224.06548pt x 90.1971pt.
 
+
+LaTeX Warning: Citation 'cesardelatorre2018azure' on page 15 undefined on input
+ line 235.
+
+
+LaTeX Warning: Citation 'cesardelatorre2018azure' on page 15 undefined on input
+ line 235.
+
+
+LaTeX Warning: Citation 'cesardelatorre2018azure' on page 15 undefined on input
+ line 239.
+
+
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 15 undefined on input lin
+e 239.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 239--240
 
  []
 
-[14]
+
 Underfull \hbox (badness 10000) in paragraph at lines 241--242
 
  []
+
+
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 15 undefined on input lin
+e 249.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 249--250
@@ -849,8 +1144,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 249--250
  []
 
 
-Underfull \hbox (badness 5189) in paragraph at lines 263--264
-[]\T1/cmr/m/n/12 Paradigma ist Ent-
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 15 undefined on input lin
+e 263.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 263--264
+[]\T1/cmr/m/n/12 Paradigma ist
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 263--264
+\T1/cmr/m/n/12 Ent-wick-lern
+ []
+
+
+Overfull \hbox (56.42227pt too wide) in paragraph at lines 263--264
+\T1/cmr/m/n/12 bekannt[[]] 
  []
 
 
@@ -894,9 +1203,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 277--278
  []
 
 [15 <./bilder/microservices_bus.png>]
+
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 16 undefined on input lin
+e 291.
+
+
+LaTeX Warning: Citation 'bruce2019mic_in_action' on page 16 undefined on input 
+line 291.
+
+
+Overfull \hbox (94.90303pt too wide) in paragraph at lines 291--292
+\T1/cmr/m/n/12 ser-vices über-wie-gen und auch die-se wird empfohlen.[[]][[]]
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 291--292
 
  []
+
+
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 16 undefined on input lin
+e 300.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 300--301
@@ -910,18 +1237,60 @@ File: bilder/api_gateway.png Graphic file (type png)
 Package pdftex.def Info: bilder/api_gateway.png  used on input line 310.
 (pdftex.def)             Requested size: 268.8813pt x 174.32854pt.
 
+
+LaTeX Warning: Citation 'oracle' on page 17 undefined on input line 315.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 315--316
 
  []
 
+
+LaTeX Warning: Citation 'bruce2019mic_in_action' on page 17 undefined on input 
+line 319.
+
+
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 17 undefined on input lin
+e 320.
+
 [17 <./bilder/api_gateway.png>]
+
+LaTeX Warning: Citation 'wolff2018mic_praxis' on page 18 undefined on input lin
+e 321.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 324--325
 
  []
 
 
+LaTeX Warning: Citation 'bruce2019mic_in_action' on page 18 undefined on input 
+line 328.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 328--329
 
+ []
+
+
+LaTeX Warning: Citation 'bruce2019mic_in_action' on page 18 undefined on input 
+line 330.
+
+
+LaTeX Warning: Citation 'bruce2019mic_in_action' on page 18 undefined on input 
+line 331.
+
+
+LaTeX Warning: Citation 'rewe2019mic_ppp' on page 18 undefined on input line 33
+3.
+
+
+LaTeX Warning: Citation 'richardson2019mic_pattern' on page 18 undefined on inp
+ut line 333.
+
+
+Overfull \hbox (38.47092pt too wide) in paragraph at lines 333--334
+\T1/cmr/m/n/12 oder ins API-Gateway ver-la-gert werden.[[]][[]]
  []
 
 
@@ -930,14 +1299,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 333--334
  []
 
 
+LaTeX Warning: Citation 'richardson2019mic_pattern' on page 18 undefined on inp
+ut line 335.
+
+
+Overfull \hbox (38.8125pt too wide) in paragraph at lines 335--336
+\T1/cmr/m/n/12 La-tenz ver-ur-sacht und nur syn-chron ent-schlüs-selt wer-den k
+ann.[[]] 
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 335--336
 
  []
 
 
+LaTeX Warning: Citation 'richardson2019mic_pattern' on page 18 undefined on inp
+ut line 337.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 337--338
 
  []
+
+
+LaTeX Warning: Citation 'richardson2019mic_pattern' on page 18 undefined on inp
+ut line 339.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 339--340
@@ -947,6 +1334,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 339--340
 [18]
 Underfull \hbox (badness 10000) in paragraph at lines 341--342
 
+ []
+
+
+LaTeX Warning: Citation 'richardson2019mic_pattern' on page 19 undefined on inp
+ut line 343.
+
+
+Overfull \hbox (117.7058pt too wide) in paragraph at lines 343--344
+[]\T1/cmr/m/n/12 Um die Ab-bil-dung 9[] bes-ser zu ver-ste-hen, sind fol-gen-de
+ De-fi-ni-tio-nen hilfreich:[[]] 
  []
 
 
@@ -984,69 +1381,92 @@ File: bilder/password_grant.png Graphic file (type png)
 <use bilder/password_grant.png>
 Package pdftex.def Info: bilder/password_grant.png  used on input line 359.
 (pdftex.def)             Requested size: 313.69029pt x 186.97433pt.
+
+LaTeX Warning: Citation 'richardson2019mic_pattern' on page 19 undefined on inp
+ut line 360.
+
+
+LaTeX Warning: Citation 'richardson2019mic_pattern' on page 19 undefined on inp
+ut line 360.
+
+
+Overfull \hbox (6.27322pt too wide) in paragraph at lines 360--360
+[]\T1/cmr/m/n/12 Ablauf ei-nes so-ge-nann-ten `pass-word grant`[[]]| 
+ []
+
 [19]
 Underfull \hbox (badness 10000) in paragraph at lines 364--365
 
  []
 
 
+LaTeX Warning: Citation 'oauth2' on page 20 undefined on input line 366.
+
+
+LaTeX Warning: Citation 'richardson2019mic_pattern' on page 20 undefined on inp
+ut line 366.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 366--367
 
  []
 
-) (./konzept.tex
-Underfull \hbox (badness 10000) in paragraph at lines 372--1
+
+LaTeX Warning: Citation 'RedHat' on page 20 undefined on input line 372.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 372--373
 
  []
 
-[20 <./bilder/password_grant.png>]) (./implementierung.tex) (./fazit.tex
-[21]) (./microservices.lot)
+[20 <./bilder/password_grant.png>]) (./konzept.tex) (./implementierung.tex
+[21]) (./fazit.tex) (./microservices.lot)
 \tf@lot=\write6
 \openout6 = `microservices.lot'.
 
- (./microservices.lof)
+ (./microservices.lof [22])
 \tf@lof=\write7
 \openout7 = `microservices.lof'.
 
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 40.
 
-(/usr/local/texlive/2018/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-Overfull \hbox (38.27591pt too wide) in paragraph at lines 41--41
-[]\T1/cmr/m/n/12 Mark Fus-sel (ms-fus-sell). \T1/cmr/m/it/12 Ein-füh-rung in Mi
--cro-ser-vices in Azu-re - Microsoft-Dokumentation\T1/cmr/m/n/12 .
- []
 
-[22] [23] (./microservices.aux)
+LaTeX Warning: Empty bibliography on input line 40.
+
+[23] (./microservices.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                microservices
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'microservices.run.xml'.
 \openout1 = `microservices.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 11850 strings out of 492649
- 213332 string characters out of 6129622
- 759776 words of memory out of 5000000
- 15557 multiletter control sequences out of 15000+600000
- 15117 words of font info for 37 fonts, out of 8000000 for 9000
+ 11780 strings out of 492649
+ 210895 string characters out of 6129622
+ 758438 words of memory out of 5000000
+ 15492 multiletter control sequences out of 15000+600000
+ 14129 words of font info for 35 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  44i,10n,56p,9092b,2180s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
 /usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></u
-sr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr
-/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/l
-ocal/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/loc
-al/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local
-/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/t
-exlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/tex
-live/2018/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></usr/local/texli
-ve/2018/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive
-/2018/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on microservices.pdf (23 pages, 581195 bytes).
+sr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr
+/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/l
+ocal/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/loc
+al/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local
+/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1728.pfb></usr/local/t
+exlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></usr/local/tex
+live/2018/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on microservices.pdf (23 pages, 538037 bytes).
 PDF statistics:
- 137 PDF objects out of 1000 (max. 8388607)
- 87 compressed objects within 1 object stream
+ 129 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
