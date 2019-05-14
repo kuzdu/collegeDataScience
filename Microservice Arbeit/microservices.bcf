@@ -2058,6 +2058,8 @@
     <bcf:citekey order="82">RedHat</bcf:citekey>
     <bcf:citekey order="83">wolff2016mic_architectures</bcf:citekey>
     <bcf:citekey order="84">wolff2016mic_architectures</bcf:citekey>
+    <bcf:citekey order="85">UserStoryMapping</bcf:citekey>
+    <bcf:citekey order="86">UserStoryMapping</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

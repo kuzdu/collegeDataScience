@@ -1,19 +1,93 @@
 \section{Konzept}
-Das ist der Konzeptpart
+Das ist die Konzepteinleitung
 
 \subsection{Anforderungen definieren}
+Um die Anforderungen für das Spiel \textit{Stirnraten} zu erfassen, sollten zwei verschiedene Aspekte berücksichtigt werden: 
+
+\begin{itemize}
+	\item der \textbf{IST-Stand}, was muss mindestens erfüllt werden und 
+	\item welche \textbf{Erweiterungen} entstehen durch eine API.
+\end{itemize}
+
+Um die Anforderungen greifbarer zu gestalten, wird auf das Prinzip von User Story Mapping zurückgegriffen. D.h. jede Anforderung ergibt sich aus einer sogenannte User Story. Diese ist so aufgebaut, dass beschrieben wird \textbf{wer} möchte \textbf{was} und \textbf{aus welchem Grund}.\cite{UserStoryMapping}\\
+
+Im Folgenden gelten die zwei Definitionen. Ein Nutzer ist eine Person, welche die App spielt. Der Betreiber ist der Besitzer von Stirnraten. Ein User kann ein Nutzer oder Betreiber sein. \\
+
+Ein Beispiel für eine User Story könnte sein: Als Nutzer (\textit{wer}) möchte ich mein Spielprofil teilen (\textbf{was}), um mich besser mit meinen Freunden messen zu können ({\textbf{warum}).\\
+	
+Wie diese User Story nun umgesetzt wird, muss abgewogen werden. Zum einen sollten User Stories konkret genug formuliert werden, so dass klar ist, was der User möchte. Zum anderen bleibt bei der Entwicklung ein agiler Handlungsspielraum.\cite{UserStoryMapping} Eine Teile-Funkion beispielweise kann unterschiedlich aufwendig umgesetzt werden. Der Nutzer könnte ein Text teilen, ein extra aufbereitets Bild oder einen Link, welcher auf ein mögliches Online-Profile verweist. All diese Möglichkeiten bedeuten unterschiedliche Aufwände. Alternativ könnte man aus dieser einen User Story drei erstellen, welche entsprechend unterschiedlich priorisiert werden.\\
+
+\textit{Spielprinzip Stirnraten: Die Spieleranzahl muss mindestens zwei betragen. Ein Spieler wählt aus verschiedenen Kategorien eine aus und hält sich das Telefon an die Stirn. Es erscheint ein Begriff, welchen der Gegenüber erklären muss. Errät der Spieler den Begriff, neigt er das Telefon nach vorne und ein neuer Begriff erscheint. Weiß er ihn nicht, kann er diesen überspringen, in dem er das Telefon nach hinten neigt. Ziel ist es, innerhalb einer frei wählbaren Zeit (z.B. 60 Sekunden), so viele Begriffe wie möglich zu erraten.}
+
+\subsubsection{Erfassung Stirnratens IST-Stand}
+
+In der folgenden Tabelle wird gezeigt, welche Funktionen die App bereits auf dem Gerät bereitstellt, welche aber zukünftig serverseitig erledigt werden sollen. 
+
+\begin{table}
+	\begin{center}
+		\begin{tabular}{p{3cm}p{10cm}}
+			Funktion & Beschreibung \\ \hline
+			Profil/Statistik & Nach jedem Spiel werden verschiedene Daten erfasst, z.B. die Dauer des Spiels oder richtig geratene Wörter. Löscht man die App, ist dieses Profil unwiederbringlich. \\
+			Bereitstellung Begriffe & Die über 6000 verschiedenen Begriffe liegen nur offline zur Verfügung. Editieren, Hinzufügen und Löschen geht nur über das Updaten der App.\\
+			Zweisprachigkeit & Die App wird für den deutschen sowie den englischen Sprachraum angeboten. Es ist gewährleistet, dass je nach Nutzer, auf die sprachlich richtige Datenbank zugegriffen wird.\\
+		\end{tabular}
+	\end{center}
+\end{table}
+
+Aus dem IST-Zustand ergeben sich bereits folgende User Stories: 
+
+\begin{itemize}
+	\item Als Betreiber möchte ich neue Wörter über eine Schnittstelle hinzufügen, editieren und löschen können, um die Datenbank schneller und leichter pflegen zu können
+	\item Als Betreiber möchte ich eine Datenbank, um nicht für zwei Apps (iOS und Android) den Datenbestand zu pflegen
+	\item Als Betreiber möchte ich entscheiden können, in welcher Sprache (englisch oder deutsch) ich Wörter manipuliere, um sinnvolle Daten zu gewährleisten
+	\item Als Nutzer möchte ich das Spiel immer offline spielen können, da ich auf Reisen häufiger kein stabiles Internet habe
+	\item Als Nutzer möchte ich mein Spielerprofil online speichern, um es auf anderen Geräten oder nach einer Neuinstallation abrufen zu können
+	\item Als Nutzer möchte automatisch die Sprache angezeigt kriegen, welche für mich relevant ist, weil es mir sonst zu kompliziert ist
+\end{itemize}
+
+\subsubsection{Erweiterungen mittels User Story Mapping}
+
+Durch das Einführen einer API bieten sich folgende Erweiterungsmöglichkeiten an:
+
+\begin{itemize}
+	\item Als Betreiber möchte ich neue Kategorien hinzufügen, editieren und löschen können, um das Nutzerangebot zu vergrößern
+	\item Als Betreiber möchte ich Bilder pro Kategorien hinzufügen, editieren und löschen können, um ein ansprechendes Bild zu hinterlegen
+	\item Als Betreiber möchte ich eine Kategorie als Premium kennzeichnen können, um die Premiumversion attraktiver zu gestalten
+	\item Als Betreiber möchte ich eine Kategorie (de)aktivieren können, um sie immer zu einem sinnvollen Zeitpunkt anbieten zu können
+	\item Als Nutzer möchte ich mich in einer Rangliste mit anderen Nutzern vergleichen können, um zu sehen, wer in dem Spiel besser ist.
+	\item Als Betreiber möchte ich die Rangliste manipulieren können, um missbrauch zu verhindern.
+	\item Als Nutzer möchte ich mir andere Nutzer und deren Statistik ansehen, um mich zu vergleichen.
+	\item Als Betreiber möchte ich die Kategorien sortieren können, um die Anordnung für die Nutzer bestmöglich zu gestalten.  
+	\item Als Nutzer möchte ich eigene Wörter einreichen können, weil mir häufiger Wörter im Spiel fehlen
+	\item Als Betreiber möchte ich eingereichte Wörter zulassen oder ablehnen können, um die Datenqualität zu gewährleisten oder zu vergrößeren. 
+	\item Als Betreiber möchte ich eine Registrierfunktion anbieten, um die Nutzer stärker an mich zu binden.
+	\item Als Betreiber möchte ich die Nutzer abrufen, welche sich bei mir registriert haben, um einen Nutzerstamm aufzubauen
+	\item Als Betreiber möchte ich sehen, wann meine Nutzer zuletzt online waren, um ggf. Marketingmaßnahmen zu unternehmen
+	\item Als Betreiber möchte ich, dass Nutzer-Zugangsdaten entsprechend gut verschlüsselt sind, um die Datensicherheit zu gewährleisten
+\end{itemize}
+
+Die folgende Auflistung sind User Stories, welche auch als Anforderungen entstanden sind, aber im Rahmen der Projektarbeit aufgrund von Aufwänden nicht umgesetzt werden können.
+
+\begin{itemize}
+	\item Als Betreiber möchte ich eine Newsletter-Funktion anbieten, um die Nutzer über Neuigkeiten zu informieren
+	\item Als Nutzer möchte ich ein Profilbild hochladen, um mein Profil zu indiviualisieren
+	\item Als Nutzer möchte ich mein Passwort zurücksetzen können, wenn ich es vergessen habe. 
+	\item Als Betreiber möchte ich individuelle Animationen vom Server an den Nutzer weiterreichen können, um die Verspieltheit der App zu unterstreichen.
+	\item Als Betreiber möchte ich Themes und Farbcodes online bereitstellen, um schneller und leichter Themes bereitzustellen 
+	\item Als Betreiber möchte ich automatisiert, individuelle (Push)Nachrichten senden, um den Nutzer stärker zu binden  
+\end{itemize}
+
 
 \subsection{Macroarchitektonische Festlegungen}
 - MySQL, Docker, selbe Begründung
 - REST (Verlinkung auf Mobile Development-Modul)
-- Bounded Context erstellen
-- Aus sicht des User Story Mappings: 
+- Bounded Context erstellen 
 
 \subsection{Wahl des API-Gateway}
 - Ocelot 
 - welches gibt es noch? 
 - Eigenbau 
-- Auth0
+
 % Artikel lesen und Grundlagen rausarbeiten: https://docs.microsoft.com/de-de/dotnet/standard/microservices-architecture/secure-net-microservices-web-applications/
 
 % Guter Artikel bzgl. OAuth2: https://medium.com/google-cloud/understanding-oauth2-and-building-a-basic-authorization-server-of-your-own-a-beginners-guide-cf7451a16f66
@@ -23,6 +97,7 @@ Das ist der Konzeptpart
 - Technologie: Masstransit (RabbitMQ) vs. Kafka
 
 \subsection{Wahl der Authenfizierung/Authorisierung}
+- Auth0
 - OAuth2: Authentication Framework (mit OpenId Connect?) -> Spricht die Zeit, Komplexität und so eine Komplexität gar nicht benötigt 
 - JWT: Also Protocol
 - Dritteranbieter Dienst -> Auth0 (zu teuer)

@@ -202,6 +202,30 @@
       \verb https://oauth.net/2/grant-types/client-credentials/
       \endverb
     \endentry
+    \entry{UserStoryMapping}{book}{}
+      \name{author}{1}{}{%
+        {{hash=b98155f280d600641bc2f4f26140a2fc}{%
+           family={Patton},
+           familyi={P\bibinitperiod},
+           given={Jeff},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {O Reilly}%
+      }
+      \strng{namehash}{b98155f280d600641bc2f4f26140a2fc}
+      \strng{fullhash}{b98155f280d600641bc2f4f26140a2fc}
+      \strng{bibnamehash}{b98155f280d600641bc2f4f26140a2fc}
+      \strng{authorbibnamehash}{b98155f280d600641bc2f4f26140a2fc}
+      \strng{authornamehash}{b98155f280d600641bc2f4f26140a2fc}
+      \strng{authorfullhash}{b98155f280d600641bc2f4f26140a2fc}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{User Story Mapping - Die Technik für besseres Nutzerverständnis in der agilen Produktentwicklung}
+      \field{year}{2015}
+    \endentry
     \entry{richardson2019mic_pattern}{book}{}
       \name{author}{1}{}{%
         {{hash=d0740bcf48754b8fa2cd3549a1d73461}{%
@@ -389,7 +413,6 @@
       \field{year}{2016}
     \endentry
   \enddatalist
-  \missing{wolff2016}
 \endrefsection
 \endinput
 
