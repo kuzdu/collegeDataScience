@@ -41,13 +41,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {4.1.2}Erweiterungen mittels User Story Mapping}{24}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Macroarchitektonische Festlegungen}{25}
+\contentsline {subsection}{\numberline {4.2}Macroarchitektonische Festlegungen}{26}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}Wahl des API-Gateway}{25}
+\contentsline {subsection}{\numberline {4.3}Wahl des API-Gateway}{26}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4}Wahl der Kommunikation}{25}
+\contentsline {subsection}{\numberline {4.4}Wahl der Kommunikation}{26}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5}Wahl der Authenfizierung/Authorisierung}{25}
+\contentsline {subsection}{\numberline {4.5}Wahl der Authenfizierung/Authorisierung}{26}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5}Implementierung}{26}
 \defcounter {refsection}{0}\relax 
@@ -61,6 +61,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6}Fazit}{26}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1}Ausblick}{26}
+\contentsline {subsection}{\numberline {6.1}Ausblick}{27}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\nonumberline Literatur}{27}

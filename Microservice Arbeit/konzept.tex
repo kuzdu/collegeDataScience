@@ -6,24 +6,24 @@ Um die Anforderungen für das Spiel \textit{Stirnraten} zu erfassen, sollten zwe
 
 \begin{itemize}
 	\item der \textbf{IST-Stand}, was muss mindestens erfüllt werden und 
-	\item welche \textbf{Erweiterungen} entstehen durch eine API.
+	\item welche möglichen \textbf{Erweiterungen} entstehen durch eine API.
 \end{itemize}
 
 Um die Anforderungen greifbarer zu gestalten, wird auf das Prinzip von User Story Mapping zurückgegriffen. D.h. jede Anforderung ergibt sich aus einer sogenannte User Story. Diese ist so aufgebaut, dass beschrieben wird \textbf{wer} möchte \textbf{was} und \textbf{aus welchem Grund}.\cite{UserStoryMapping}\\
 
-Im Folgenden gelten die zwei Definitionen. Ein Nutzer ist eine Person, welche die App spielt. Der Betreiber ist der Besitzer von Stirnraten. Ein User kann ein Nutzer oder Betreiber sein. \\
+Im Folgenden gelten die zwei Definitionen: Ein Nutzer ist eine Person, welche die App spielt. Der Betreiber ist der Besitzer von Stirnraten. Ein User kann ein Nutzer oder Betreiber sein. \\
 
-Ein Beispiel für eine User Story könnte sein: Als Nutzer (\textit{wer}) möchte ich mein Spielprofil teilen (\textbf{was}), um mich besser mit meinen Freunden messen zu können ({\textbf{warum}).\\
+Ein Beispiel für eine User Story könnte lauten: Als Nutzer (\textit{wer}) möchte ich mein Spielprofil teilen (\textbf{was}), um mich besser mit meinen Freunden messen zu können ({\textbf{warum}).\\
 	
 Wie diese User Story nun umgesetzt wird, muss abgewogen werden. Zum einen sollten User Stories konkret genug formuliert werden, so dass klar ist, was der User möchte. Zum anderen bleibt bei der Entwicklung ein agiler Handlungsspielraum.\cite{UserStoryMapping} Eine Teile-Funkion beispielweise kann unterschiedlich aufwendig umgesetzt werden. Der Nutzer könnte ein Text teilen, ein extra aufbereitets Bild oder einen Link, welcher auf ein mögliches Online-Profile verweist. All diese Möglichkeiten bedeuten unterschiedliche Aufwände. Alternativ könnte man aus dieser einen User Story drei erstellen, welche entsprechend unterschiedlich priorisiert werden.\\
 
-\textit{Spielprinzip Stirnraten: Die Spieleranzahl muss mindestens zwei betragen. Ein Spieler wählt aus verschiedenen Kategorien eine aus und hält sich das Telefon an die Stirn. Es erscheint ein Begriff, welchen der Gegenüber erklären muss. Errät der Spieler den Begriff, neigt er das Telefon nach vorne und ein neuer Begriff erscheint. Weiß er ihn nicht, kann er diesen überspringen, in dem er das Telefon nach hinten neigt. Ziel ist es, innerhalb einer frei wählbaren Zeit (z.B. 60 Sekunden), so viele Begriffe wie möglich zu erraten.}
+\textit{Exkurs - Spielprinzip Stirnraten: Die Spieleranzahl muss mindestens zwei betragen. Ein Spieler wählt aus verschiedenen Kategorien aus und hält sich das Telefon an die Stirn. Es erscheint Begriff, welchen der Gegenüber erklären muss. Errät der Spieler den Begriff, neigt er das Telefon nach vorne und ein neuer Begriff erscheint. Weiß er ihn nicht, kann er diesen überspringen, in dem er das Telefon nach hinten neigt. Ziel ist es, innerhalb einer frei wählbaren Zeit (z.B. 60 Sekunden), so viele Begriffe wie möglich zu erraten.}
 
 \subsubsection{Erfassung Stirnratens IST-Stand}
 
-In der folgenden Tabelle wird gezeigt, welche Funktionen die App bereits auf dem Gerät bereitstellt, welche aber zukünftig serverseitig erledigt werden sollen. 
+In der folgenden Tabelle \ref{tab:bestehende_funktionen} wird gezeigt, welche Funktionen die App bereits auf dem Gerät bereitstellt, welche aber zukünftig serverseitig erledigt werden sollen. 
 
-\begin{table}
+\begin{table}[H]
 	\begin{center}
 		\begin{tabular}{p{3cm}p{10cm}}
 			Funktion & Beschreibung \\ \hline
@@ -32,17 +32,19 @@ In der folgenden Tabelle wird gezeigt, welche Funktionen die App bereits auf dem
 			Zweisprachigkeit & Die App wird für den deutschen sowie den englischen Sprachraum angeboten. Es ist gewährleistet, dass je nach Nutzer, auf die sprachlich richtige Datenbank zugegriffen wird.\\
 		\end{tabular}
 	\end{center}
+	\caption[bestehende Funktionen in Stirnraten]{bestehende Funktionen in Stirnraten}
+	\label{tab:bestehende_funktionen} 
 \end{table}
 
 Aus dem IST-Zustand ergeben sich bereits folgende User Stories: 
 
 \begin{itemize}
-	\item Als Betreiber möchte ich neue Wörter über eine Schnittstelle hinzufügen, editieren und löschen können, um die Datenbank schneller und leichter pflegen zu können
+	\item Als Betreiber möchte ich neue Begriffe über eine Schnittstelle hinzufügen, editieren und löschen können, um die Datenbank schneller und leichter zu pflegen
 	\item Als Betreiber möchte ich eine Datenbank, um nicht für zwei Apps (iOS und Android) den Datenbestand zu pflegen
-	\item Als Betreiber möchte ich entscheiden können, in welcher Sprache (englisch oder deutsch) ich Wörter manipuliere, um sinnvolle Daten zu gewährleisten
+	\item Als Betreiber möchte ich entscheiden können, in welcher Sprache (englisch oder deutsch) ich Begriffe manipuliere, um sinnvolle Daten zu gewährleisten
 	\item Als Nutzer möchte ich das Spiel immer offline spielen können, da ich auf Reisen häufiger kein stabiles Internet habe
 	\item Als Nutzer möchte ich mein Spielerprofil online speichern, um es auf anderen Geräten oder nach einer Neuinstallation abrufen zu können
-	\item Als Nutzer möchte automatisch die Sprache angezeigt kriegen, welche für mich relevant ist, weil es mir sonst zu kompliziert ist
+	\item Als Nutzer möchte ich automatisch die Sprache angezeigt kriegen, welche für mich relevant ist, weil es mir sonst zu kompliziert ist
 \end{itemize}
 
 \subsubsection{Erweiterungen mittels User Story Mapping}
@@ -51,17 +53,21 @@ Durch das Einführen einer API bieten sich folgende Erweiterungsmöglichkeiten a
 
 \begin{itemize}
 	\item Als Betreiber möchte ich neue Kategorien hinzufügen, editieren und löschen können, um das Nutzerangebot zu vergrößern
-	\item Als Betreiber möchte ich Bilder pro Kategorien hinzufügen, editieren und löschen können, um ein ansprechendes Bild zu hinterlegen
-	\item Als Betreiber möchte ich eine Kategorie als Premium kennzeichnen können, um die Premiumversion attraktiver zu gestalten
+	\item Als Betreiber möchte ich Bilder pro Kategorie hinzufügen, editieren und löschen können, um ein sprechendes Bild für die Nutzer zu hinterlegen
+	\item Als Betreiber möchte ich eine Kategorie als Premium kennzeichnen können, um Angebotsaktionen zu schalten
 	\item Als Betreiber möchte ich eine Kategorie (de)aktivieren können, um sie immer zu einem sinnvollen Zeitpunkt anbieten zu können
-	\item Als Nutzer möchte ich mich in einer Rangliste mit anderen Nutzern vergleichen können, um zu sehen, wer in dem Spiel besser ist.
-	\item Als Betreiber möchte ich die Rangliste manipulieren können, um missbrauch zu verhindern.
-	\item Als Nutzer möchte ich mir andere Nutzer und deren Statistik ansehen, um mich zu vergleichen.
-	\item Als Betreiber möchte ich die Kategorien sortieren können, um die Anordnung für die Nutzer bestmöglich zu gestalten.  
-	\item Als Nutzer möchte ich eigene Wörter einreichen können, weil mir häufiger Wörter im Spiel fehlen
-	\item Als Betreiber möchte ich eingereichte Wörter zulassen oder ablehnen können, um die Datenqualität zu gewährleisten oder zu vergrößeren. 
 	\item Als Betreiber möchte ich eine Registrierfunktion anbieten, um die Nutzer stärker an mich zu binden.
 	\item Als Betreiber möchte ich die Nutzer abrufen, welche sich bei mir registriert haben, um einen Nutzerstamm aufzubauen
+	\item Als Betreiber möchte ich Nutzer aus Datenschutzgründen löschen können
+	\item Als Nutzer möchte ich mich in einer Rangliste mit anderen Nutzern vergleichen können, um zu sehen, wer in dem Spiel besser ist.
+	\item Als Nutzer möchte ich die Spielerprofile von anderen Nutzern detailliert ansehen, um zu sehen, was ihnen gefällt 
+	\item Als Betreiber möchte ich die Ranglisten-Namen der Nutzer manipulieren können, um unflätige Namen/Missbrauch zu verhindern.
+	\item Als Betreiber möchte ich kummulitierte Daten aus den Nutzerstatistiken sehen, um Marktentscheidungen besser treffen zu können
+	\item Als Betreiber möchte ich die Kategorien sortieren können, um die Anordnung für die Nutzer bestmöglich zu gestalten
+	\item Als Betreiber möchte ich sehen, wenn ein Begriff bereits in der Kategorie ist, um die Datenqualität zu gewährleisten
+	\item Als Nutzer möchte ich eigene Begriffe einreichen können, weil mir manche Begriffe oder Kategorien im Spiel fehlen
+	\item Als Nutzer möchte ich sehen, wenn ein eingereichter Begriff bereits in einer Kategorie existiert, um Bescheid zu wissen
+	\item Als Betreiber möchte ich eingereichte Begriffe zulassen oder ablehnen können, um den Datenbestand zu vergrößeren bzw. die Qualität zu gewährleisten 
 	\item Als Betreiber möchte ich sehen, wann meine Nutzer zuletzt online waren, um ggf. Marketingmaßnahmen zu unternehmen
 	\item Als Betreiber möchte ich, dass Nutzer-Zugangsdaten entsprechend gut verschlüsselt sind, um die Datensicherheit zu gewährleisten
 \end{itemize}
@@ -73,10 +79,11 @@ Die folgende Auflistung sind User Stories, welche auch als Anforderungen entstan
 	\item Als Nutzer möchte ich ein Profilbild hochladen, um mein Profil zu indiviualisieren
 	\item Als Nutzer möchte ich mein Passwort zurücksetzen können, wenn ich es vergessen habe. 
 	\item Als Betreiber möchte ich individuelle Animationen vom Server an den Nutzer weiterreichen können, um die Verspieltheit der App zu unterstreichen.
-	\item Als Betreiber möchte ich Themes und Farbcodes online bereitstellen, um schneller und leichter Themes bereitzustellen 
-	\item Als Betreiber möchte ich automatisiert, individuelle (Push)Nachrichten senden, um den Nutzer stärker zu binden  
+	\item Als Betreiber möchte ich Themes und Farbcodes online bereitstellen, um den Nutzern Individualsierungsmöglichkeiten schneller und leichter bereitzustellen 
+	\item Als Betreiber möchte ich automatisiert, individuelle (Push)Nachrichten senden, um den Nutzer stärker zu binden
 \end{itemize}
 
+Aus den User Stories ergeben sich konkrete Abhängigkeiten zwischen den Microservices sowie klare Vorlagen für die Datenhaltung, z.B. benötigt der Nutzer mindestens einen eindeutigen Namen sowie ein Passwort. Die konkrete Umsetzung ist in FIGURE-VERLINKEN-AUF-KAPITEL-5.
 
 \subsection{Macroarchitektonische Festlegungen}
 - MySQL, Docker, selbe Begründung
