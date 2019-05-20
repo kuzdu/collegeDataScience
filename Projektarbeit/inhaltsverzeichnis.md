@@ -25,23 +25,24 @@ Planung und Erstellung einer Backend-Microservices-Architektur aus den Anforderu
 * Docker ✅ 
 
 ## Konzept Stirnraten API 
-### Anforderungen
-* Anforderungen erfassen 🔨
-* Gesetzte Makroarchitektur festlegen und begründen (Technologiestack, Programmiersprachen, Datenbanken, Docker, Rest etc.) 🔜
-* DDD anwenden, um Bounded Contexts für mögliche Microservices zu entwerfen: Wörter CRUD, Customer CRUD, Rangliste CRUD, Authentifizierung, Messaging Service  🔜
-* Authentifizierung und Authorisierung (Was gibt es, Eigenbau, Drittanbieter, Netflixs Zhul?) 🔜
+* Anforderungen erfassen ✅
+* Makroarchitektur - Festlegungen von Technologie und Programmiersprache 🔨
+* DDD anwenden, um Bounded Contexts für mögliche Microservices zu entwerfen: Wörter CRUD, Customer CRUD, Rangliste CRUD, Authentifizierung, Messaging Service, API-Gateway, Ggf. Datenmodell aufführen 🔜
 * Abwägen zwischen Kommunikationsarten: Messaging (Kafka vs. RabbitMQ vs. ?) 🔜
+* Authentifizierung und Autorisierung (Was gibt es, Eigenbau, Drittanbieter, Netflixs Zhul?) 🔜
 
-### Implementierung/Umsetzung
-* Architektur für Services (Messaging, Authentifizierung) 🔜
-* Datenbank anlegen und verbinden 🔜
-* Einzelne Services Dockern, um einen Container zu erhalten 🔜
-* Container in einer Container Registry in Dockerhub erstellen (vllt zu spezifisch) 🔜
-* Container Instanz erstellen und von außen erreichbar machen 🔜
+## Implementierung/Umsetzung
+* Umgesetzte Softwarearchitektur darstellen 🔜
+* Umsetzung API-Gateway 🔜
+* Umsetzung Authentifizierung und Autorisierung 🔜
+* Umsetzung Messaging 🔜
+* Umsetzung Docker und Dockerhub 🔜
+* Umsetzung eines Beispiel Microservices 🔜
 
 ## Schluss/Fazit 
 * Ausblick Kubernetes (...) 🔜
 * (Microservice) Frontend 🔜
+* Logging, CI/CD, Lastüberwachung
 
 ------
 (Ggf.) offene Fragen:
