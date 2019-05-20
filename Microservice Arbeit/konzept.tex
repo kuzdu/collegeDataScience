@@ -85,9 +85,22 @@ Die folgende Auflistung sind User Stories, welche auch als Anforderungen entstan
 
 Aus den User Stories ergeben sich konkrete Abhängigkeiten zwischen den Microservices sowie klare Vorlagen für die Datenhaltung, z.B. benötigt der Nutzer mindestens einen eindeutigen Namen sowie ein Passwort. Die konkrete Umsetzung ist in FIGURE-VERLINKEN-AUF-KAPITEL-5.
 
-\subsection{Macroarchitektonische Festlegungen}
-- MySQL, Docker, selbe Begründung
-- REST (Verlinkung auf Mobile Development-Modul)
+\subsection{Macroarchitektonische Festlegungen von Technologien}
+Wie bereits in 3.4.2 erwähnt, können durch makroarchitektonische Entscheidungen gewisse Vorteile erzielt werden, wie z.B. dass die Technologien zur Infrastruktur des Unternehmens und zu den Kompetenzen der Mitarbeiter passen. Ebenfalls können strategische Entscheidungen (z.B. ausschließlich Nutzen von Cloudtechnologien) die Makroarchitektur beeinflussen. Im Folgenden werden einige Technologien für `Stirnraten` makroarchitektonisch festgelegt. 
+
+\subsubsection Wahl der Datenbank
+% VERLINKEN AUF http://pi.informatik.uni-siegen.de/Mitarbeiter/mrindt/Lehre/Seminare/NoSQL/einreichungen/NOSQLTEC-2015_paper_9.pdf 
+
+Bei der Entscheidung, ob eine relationale oder schemalose (NoSQL) Datenbank verwendet wird, wurde sich für eine relationale entschieden. NoSQL Datenbanken sind häufig für spezielle Anwendungsfälle sinnvoll, z.B. wenn das Datenbankmodell sich häufig ändert oder ein hohes Maß an Skalierung notwendig ist. Diese Fälle sind für Stirnraten nicht absehbar, weshalb auf den etablierten Standard einer relationalen Datenbank gesetzt wird.
+% Verlinken auf https://db-engines.com/de/ranking
+Im Bereich der relationalen Datenbanken können verschiedene Technologien zur Umsetzung genutzt werden. Es wurde sich auf die derzeit (Stand Mai 2019) vier Populärsten Technologien konzentriert: Oracle (Rang 1), MSSQL (2), MySQL (Rang 3) und Postgres (Rang 4). Oracle und MSSQL wurden für das Projekt ausgeschlossen, da diese kommerziell betrieben werden. Für Postgres und MqSQL wurde ein sogenanntes Proof of Concept erstellt, d.h. es wurde in einem einfachen Szenario eine Machbarkeit überprüft. Die Grundanforderungen war, dass MySQL und Postgres in verschiedenen Docker-Containern auf einer Maschine laufen können. Bei dem Proof of Concept hat sich gezeigt, dass es deutlich komplizierter ist, multiple Postgres Instanzen auf einer Maschine zu starten, da zusätzlich individuelle Scripts ausgeführt werden müssen. %Siehe https://github.com/docker-library/postgres/issues/151
+
+Beim Erstellen von multiplen MySQL-Instanzen kam es zu keinerlei Problemen. Aufgrund des Rankings und der einfacheren technischen Implementierung durch das Proof of Concept wurde, sollen makroarchitektonisch die Microservices MySQL verwenden.
+
+\subsubsection Docker und REST
+Docker -> Standards, REST (Verlinkung auf Mobile Development-Modul) -> Standards
+
+\subsubsection{Bounded Contexts - Architektur des Projektes}
 - Bounded Context erstellen 
 
 \subsection{Wahl des API-Gateway}
