@@ -41,26 +41,32 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {4.1.2}Erweiterungen mittels User Story Mapping}{24}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Macroarchitektonische Festlegungen}{26}
+\contentsline {subsection}{\numberline {4.2}Macroarchitektonische Festlegungen von Technologien}{26}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}Wahl des API-Gateway}{26}
+\contentsline {subsubsection}{\numberline {4.2.1}Wahl der Datenbank}{26}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4}Wahl der Kommunikation}{26}
+\contentsline {subsubsection}{\numberline {4.2.2}Programmiersprachen, Darstellungsart, REST und Docker}{26}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5}Wahl der Authenfizierung/Authorisierung}{26}
+\contentsline {subsubsection}{\numberline {4.2.3}Bounded Contexts - Architektur des Projektes}{27}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Implementierung}{26}
+\contentsline {subsection}{\numberline {4.3}Wahl des API-Gateway}{27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1}Service Architektur}{26}
+\contentsline {subsection}{\numberline {4.4}Wahl der Kommunikation}{27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2}Umsetzung API-Gateway}{26}
+\contentsline {subsection}{\numberline {4.5}Wahl der Authenfizierung/Authorisierung}{27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3}Authentifizierung und Authorisierung}{26}
+\contentsline {section}{\numberline {5}Implementierung}{27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4}Asynchrone Kommunikation}{26}
+\contentsline {subsection}{\numberline {5.1}Service Architektur}{27}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Fazit}{26}
+\contentsline {subsection}{\numberline {5.2}Umsetzung API-Gateway}{27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1}Ausblick}{27}
+\contentsline {subsection}{\numberline {5.3}Authentifizierung und Authorisierung}{28}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\nonumberline Literatur}{27}
+\contentsline {subsection}{\numberline {5.4}Asynchrone Kommunikation}{28}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6}Fazit}{28}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.1}Ausblick}{28}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\nonumberline Literatur}{29}

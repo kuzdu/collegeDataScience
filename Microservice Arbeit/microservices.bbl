@@ -47,6 +47,30 @@
       \verb https://docs.microsoft.com/de-de/azure/service-fabric/service-fabric-overview-microservices
       \endverb
     \endentry
+    \entry{ayadi2008rest_vs_soap}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=80ec7cef273d8e8aa6d595242b6d5c95}{%
+           family={Ayadi},
+           familyi={A\bibinitperiod},
+           given={Amine\bibnamedelima El},
+           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Hochschule für Angewandte Wissenschaften Hamburg}%
+      }
+      \strng{namehash}{80ec7cef273d8e8aa6d595242b6d5c95}
+      \strng{fullhash}{80ec7cef273d8e8aa6d595242b6d5c95}
+      \strng{bibnamehash}{80ec7cef273d8e8aa6d595242b6d5c95}
+      \strng{authorbibnamehash}{80ec7cef273d8e8aa6d595242b6d5c95}
+      \strng{authornamehash}{80ec7cef273d8e8aa6d595242b6d5c95}
+      \strng{authorfullhash}{80ec7cef273d8e8aa6d595242b6d5c95}
+      \field{sortinit}{A}
+      \field{sortinithash}{d77c7cdd82ff690d4c3ef13216f92f0b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Webservices: REST vs. SOAP}
+      \field{year}{2008}
+    \endentry
     \entry{birk2016mic_soa}{thesis}{}
       \name{author}{1}{}{%
         {{hash=b699d542d4a455319a045f9fb7d44988}{%
@@ -123,6 +147,58 @@
       \field{title}{Microservice Architecture - Aligning Principels, Practices, and Culture}
       \field{year}{2016}
     \endentry
+    \entry{dbengines2019ranking}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=54e31a52a1da263f8ecf6002f90c61d4}{%
+           family={IT\bibnamedelima gmbh},
+           familyi={I\bibinitperiod\bibinitdelim g\bibinitperiod},
+           prefix={solid},
+           prefixi={s\bibinitperiod}}}%
+      }
+      \strng{namehash}{54e31a52a1da263f8ecf6002f90c61d4}
+      \strng{fullhash}{54e31a52a1da263f8ecf6002f90c61d4}
+      \strng{bibnamehash}{54e31a52a1da263f8ecf6002f90c61d4}
+      \strng{authorbibnamehash}{54e31a52a1da263f8ecf6002f90c61d4}
+      \strng{authornamehash}{54e31a52a1da263f8ecf6002f90c61d4}
+      \strng{authorfullhash}{54e31a52a1da263f8ecf6002f90c61d4}
+      \field{sortinit}{I}
+      \field{sortinithash}{320bc8fe8101b9376f9f21cd507de0e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{abgerufen am 21.5.2019}
+      \field{title}{DB-Engines Ranking}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://db-engines.com/de/ranking
+      \endverb
+      \verb{url}
+      \verb https://db-engines.com/de/ranking
+      \endverb
+    \endentry
+    \entry{kloeckner2015nosql_vs_relationale_datenbank}{manual}{}
+      \name{author}{1}{}{%
+        {{hash=0b4194c0808f6d87553890e7dc5efba1}{%
+           family={Klöckner},
+           familyi={K\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Universität Siegen}%
+      }
+      \strng{namehash}{0b4194c0808f6d87553890e7dc5efba1}
+      \strng{fullhash}{0b4194c0808f6d87553890e7dc5efba1}
+      \strng{bibnamehash}{0b4194c0808f6d87553890e7dc5efba1}
+      \strng{authorbibnamehash}{0b4194c0808f6d87553890e7dc5efba1}
+      \strng{authornamehash}{0b4194c0808f6d87553890e7dc5efba1}
+      \strng{authorfullhash}{0b4194c0808f6d87553890e7dc5efba1}
+      \field{sortinit}{K}
+      \field{sortinithash}{9fd838a31ba64d981e8f44562bd33f89}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Im Vergleich: NoSQL vs. relationale Datenbanken}
+      \field{year}{2015}
+    \endentry
     \entry{bruce2019mic_in_action}{book}{}
       \name{author}{1}{}{%
         {{hash=84432021bda80cf8ff69cfee0ff1eba8}{%
@@ -146,6 +222,34 @@
       \field{labeltitlesource}{title}
       \field{title}{Microservices in Action}
       \field{year}{2019}
+    \endentry
+    \entry{jsonxml2006heise}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d48920596610896b164c4ff83cfec8b4}{%
+           family={Neuhaus},
+           familyi={N\bibinitperiod},
+           given={Sven},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{d48920596610896b164c4ff83cfec8b4}
+      \strng{fullhash}{d48920596610896b164c4ff83cfec8b4}
+      \strng{bibnamehash}{d48920596610896b164c4ff83cfec8b4}
+      \strng{authorbibnamehash}{d48920596610896b164c4ff83cfec8b4}
+      \strng{authornamehash}{d48920596610896b164c4ff83cfec8b4}
+      \strng{authorfullhash}{d48920596610896b164c4ff83cfec8b4}
+      \field{sortinit}{N}
+      \field{sortinithash}{f7242c3ed3dc50029fca1be76c497c7c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{abgerufen am 21.5.2019}
+      \field{title}{Betont schlank}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://www.heise.de/ix/artikel/Betont-schlank-506574.html
+      \endverb
+      \verb{url}
+      \verb https://www.heise.de/ix/artikel/Betont-schlank-506574.html
+      \endverb
     \endentry
     \entry{nhiem2017mic_moving}{manual}{}
       \name{author}{1}{}{%
@@ -225,6 +329,32 @@
       \field{labeltitlesource}{title}
       \field{title}{User Story Mapping - Die Technik für besseres Nutzerverständnis in der agilen Produktentwicklung}
       \field{year}{2015}
+    \endentry
+    \entry{postgres2016}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=f7ceac32f3ff67190cfae0721d8eaf55}{%
+           family={phlegx},
+           familyi={p\bibinitperiod}}}%
+      }
+      \strng{namehash}{f7ceac32f3ff67190cfae0721d8eaf55}
+      \strng{fullhash}{f7ceac32f3ff67190cfae0721d8eaf55}
+      \strng{bibnamehash}{f7ceac32f3ff67190cfae0721d8eaf55}
+      \strng{authorbibnamehash}{f7ceac32f3ff67190cfae0721d8eaf55}
+      \strng{authornamehash}{f7ceac32f3ff67190cfae0721d8eaf55}
+      \strng{authorfullhash}{f7ceac32f3ff67190cfae0721d8eaf55}
+      \field{sortinit}{p}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{abgerufen am 21.5.2019}
+      \field{title}{Create multiple users and databases}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://github.com/docker-library/postgres/issues/151
+      \endverb
+      \verb{url}
+      \verb https://github.com/docker-library/postgres/issues/151
+      \endverb
     \endentry
     \entry{richardson2019mic_pattern}{book}{}
       \name{author}{1}{}{%

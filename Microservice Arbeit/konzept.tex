@@ -88,16 +88,21 @@ Aus den User Stories ergeben sich konkrete Abhängigkeiten zwischen den Microser
 \subsection{Macroarchitektonische Festlegungen von Technologien}
 Wie bereits in 3.4.2 erwähnt, können durch makroarchitektonische Entscheidungen gewisse Vorteile erzielt werden, wie z.B. dass die Technologien zur Infrastruktur des Unternehmens und zu den Kompetenzen der Mitarbeiter passen. Ebenfalls können strategische Entscheidungen (z.B. ausschließlich Nutzen von Cloudtechnologien) die Makroarchitektur beeinflussen. Im Folgenden werden einige Technologien für `Stirnraten` makroarchitektonisch festgelegt. 
 
-\subsubsection Wahl der Datenbank
-% VERLINKEN AUF http://pi.informatik.uni-siegen.de/Mitarbeiter/mrindt/Lehre/Seminare/NoSQL/einreichungen/NOSQLTEC-2015_paper_9.pdf 
+\subsubsection{Wahl der Datenbank}
+Bei der Entscheidung, ob eine relationale oder schemalose (NoSQL) Datenbank verwendet wird, wurde sich für eine relationale entschieden. NoSQL Datenbanken sind häufig für spezielle Anwendungsfälle sinnvoll, z.B. wenn das Datenbankmodell sich häufig ändert oder ein hohes Maß an Skalierung notwendig ist. Diese Fälle sind für Stirnraten nicht absehbar, weshalb auf den etablierten Standard einer relationalen Datenbank gesetzt wird.\cite{kloeckner2015nosql_vs_relationale_datenbank}\\
 
-Bei der Entscheidung, ob eine relationale oder schemalose (NoSQL) Datenbank verwendet wird, wurde sich für eine relationale entschieden. NoSQL Datenbanken sind häufig für spezielle Anwendungsfälle sinnvoll, z.B. wenn das Datenbankmodell sich häufig ändert oder ein hohes Maß an Skalierung notwendig ist. Diese Fälle sind für Stirnraten nicht absehbar, weshalb auf den etablierten Standard einer relationalen Datenbank gesetzt wird.
-% Verlinken auf https://db-engines.com/de/ranking
-Im Bereich der relationalen Datenbanken können verschiedene Technologien zur Umsetzung genutzt werden. Es wurde sich auf die derzeit (Stand Mai 2019) vier Populärsten Technologien konzentriert: Oracle (Rang 1), MSSQL (2), MySQL (Rang 3) und Postgres (Rang 4). Oracle und MSSQL wurden für das Projekt ausgeschlossen, da diese kommerziell betrieben werden. Für Postgres und MqSQL wurde ein sogenanntes Proof of Concept erstellt, d.h. es wurde in einem einfachen Szenario eine Machbarkeit überprüft. Die Grundanforderungen war, dass MySQL und Postgres in verschiedenen Docker-Containern auf einer Maschine laufen können. Bei dem Proof of Concept hat sich gezeigt, dass es deutlich komplizierter ist, multiple Postgres Instanzen auf einer Maschine zu starten, da zusätzlich individuelle Scripts ausgeführt werden müssen. %Siehe https://github.com/docker-library/postgres/issues/151
+Im Bereich der relationalen Datenbanken können verschiedene Technologien zur Umsetzung genutzt werden. Es wurde sich auf die derzeit (Stand Mai 2019) vier Populärsten Technologien konzentriert: Oracle (Rang 1), MSSQL (2), MySQL (Rang 3) und Postgres (Rang 4).\cite{dbengines2019ranking}  Oracle und MSSQL wurden für das Projekt ausgeschlossen, da diese kommerziell betrieben werden. Für Postgres und MqSQL wurde ein sogenanntes Proof of Concept erstellt, d.h. es wurde in einem einfachen Szenario eine Machbarkeit überprüft. Die Grundanforderungen war, dass MySQL und Postgres in verschiedenen Docker-Containern auf einer Maschine laufen können. Bei dem Proof of Concept hat sich gezeigt, dass es deutlich komplizierter ist, multiple Postgres Instanzen auf einer Maschine zu starten, da zusätzlich individuelle Scripts ausgeführt werden müssen.\cite{postgres2016}\\
 
 Beim Erstellen von multiplen MySQL-Instanzen kam es zu keinerlei Problemen. Aufgrund des Rankings und der einfacheren technischen Implementierung durch das Proof of Concept wurde, sollen makroarchitektonisch die Microservices MySQL verwenden.
 
-\subsubsection Docker und REST
+\subsubsection{Programmiersprachen, Darstellungsart, REST und Docker}
+Anfangs wurde erwähnt, dass aufgrund unternehmensstrategischer Gründe Entscheidungen darüber getroffen werden, welcher Technologiestack verwendet wird. In Hinblick auf die Programmiersprachen wird deshalb festgelegt, dass die Microservices im .net Framework in c\# entwickelt werden. Diese Sprache wird am besten von dem Entwickler beherrscht, so dass Wartbarkeit, Nachhaltigkeit und Pflege des Codes langfristig garantiert sind. Als zusätzliche Alternative ist kotlin ebenfalls erlaubt.\\
+
+%Fußnote einfügen und auf mobile Kommunikation verweisen.
+Das verwendete Datenformat beim Austausch von Daten ist JSON (JavaScript Object Notation). Alternativ wäre auch die Extensible Markup Language (XML) möglich, allerdings ist XML deutlich aufgeblähter und damit weniger leichtgewichtig. Zusätzlich lässt JSON sich leichter von den Programmiersprachen weiterverarbeiten.\cite{jsonxml2006heise}\\
+
+Die Kommunikation zwischen den Microservices wird so festgelegt, dass sie dem Representational State Transfer-Paradigma (REST) unterliegen. Eine Alternative zu REST wäre SOAP (Simple Object Access Protocol) in Kombination mit WSDL (Web Services Description Language). Da WSDL allerdings auf der Basis von XML arbeitet und SOAP deutlich komplexer und schwerer skalierbar ist als REST wird es nicht verwendet. \cite{ayadi2008rest_vs_soap}\\ 
+
 Docker -> Standards, REST (Verlinkung auf Mobile Development-Modul) -> Standards
 
 \subsubsection{Bounded Contexts - Architektur des Projektes}
@@ -121,4 +126,5 @@ Docker -> Standards, REST (Verlinkung auf Mobile Development-Modul) -> Standards
 - OAuth2: Authentication Framework (mit OpenId Connect?) -> Spricht die Zeit, Komplexität und so eine Komplexität gar nicht benötigt 
 - JWT: Also Protocol
 - Dritteranbieter Dienst -> Auth0 (zu teuer)
+- ggf. ohne OAuth
 
