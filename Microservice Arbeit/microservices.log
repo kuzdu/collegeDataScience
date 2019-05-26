@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  21 MAY 2019 07:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  26 MAY 2019 23:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1116,11 +1116,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
  []
 
-) (./implementierung.tex [27]) (./fazit.tex) (./microservices.lot)
+<bilder/ddd_context.png, id=110, 656.4525pt x 581.17125pt>
+File: bilder/ddd_context.png Graphic file (type png)
+<use bilder/ddd_context.png>
+Package pdftex.def Info: bilder/ddd_context.png  used on input line 116.
+(pdftex.def)             Requested size: 268.8813pt x 238.04231pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
+
+ []
+
+[27 <./bilder/ddd_context.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 123--124
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 125--126
+
+ []
+
+[28]) (./implementierung.tex) (./fazit.tex) (./microservices.lot)
 \tf@lot=\write6
 \openout6 = `microservices.lot'.
 
-
+ [29]
 (./microservices.lof)
 \tf@lof=\write7
 \openout7 = `microservices.lof'.
@@ -1135,7 +1155,7 @@ Overfull \hbox (38.27591pt too wide) in paragraph at lines 41--41
 -cro-ser-vices in Azu-re - Microsoft-Dokumentation\T1/cmr/m/n/12 .
  []
 
-[28] [29] [30] (./microservices.aux)
+[30] [31] (./microservices.aux)
 Package logreq Info: Writing requests to 'microservices.run.xml'.
 \openout1 = `microservices.run.xml'.
 
@@ -1145,10 +1165,10 @@ Package logreq Info: Writing requests to 'microservices.run.xml'.
 ### simple group (level 1) entered at line 16 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 11872 strings out of 492649
- 214321 string characters out of 6129622
- 759459 words of memory out of 5000000
- 15578 multiletter control sequences out of 15000+600000
+ 11879 strings out of 492649
+ 214486 string characters out of 6129622
+ 759481 words of memory out of 5000000
+ 15584 multiletter control sequences out of 15000+600000
  15117 words of font info for 37 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  44i,10n,56p,9092b,2180s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1164,10 +1184,10 @@ fb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb
 /usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></u
 sr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr
 /local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on microservices.pdf (30 pages, 1078199 bytes).
+Output written on microservices.pdf (31 pages, 1106166 bytes).
 PDF statistics:
- 162 PDF objects out of 1000 (max. 8388607)
- 102 compressed objects within 2 object streams
+ 168 PDF objects out of 1000 (max. 8388607)
+ 105 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -101,12 +101,45 @@ Anfangs wurde erwähnt, dass aufgrund unternehmensstrategischer Gründe Entschei
 %Fußnote einfügen und auf mobile Kommunikation verweisen.
 Das verwendete Datenformat beim Austausch von Daten ist JSON (JavaScript Object Notation). Alternativ wäre auch die Extensible Markup Language (XML) möglich, allerdings ist XML deutlich aufgeblähter und damit weniger leichtgewichtig. Zusätzlich lässt JSON sich leichter von den Programmiersprachen weiterverarbeiten.\cite{jsonxml2006heise}\\
 
-Die Kommunikation zwischen den Microservices wird so festgelegt, dass sie dem Representational State Transfer-Paradigma (REST) unterliegen. Eine Alternative zu REST wäre SOAP (Simple Object Access Protocol) in Kombination mit WSDL (Web Services Description Language). Da WSDL allerdings auf der Basis von XML arbeitet und SOAP deutlich komplexer und schwerer skalierbar ist als REST wird es nicht verwendet. \cite{ayadi2008rest_vs_soap}\\ 
+Die Kommunikation zwischen den Microservices wird so festgelegt, dass sie dem Representational State Transfer-Paradigma (REST) unterliegen. Eine Alternative zu REST wäre SOAP (Simple Object Access Protocol) in Kombination mit WSDL (Web Services Description Language). Da WSDL allerdings auf der Basis von XML arbeitet und SOAP deutlich komplexer und schwerer skalierbar ist als REST, wird es nicht verwendet. \cite{ayadi2008rest_vs_soap}\\ 
 
-Docker -> Standards, REST (Verlinkung auf Mobile Development-Modul) -> Standards
+Die Prinzipien von REST sind bereits aus dem \textit{Modul Mobile Application Development} bekannt und werden deshalb nicht weiter erwähnt. 
+
+%DOCKER FEHLT
 
 \subsubsection{Bounded Contexts - Architektur des Projektes}
-- Bounded Context erstellen 
+
+Aus den Abschnitt \ref{sec:domain_driven_design} lassen sich folgende Bounded Contexts erstellen: 
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.6\textwidth]{ddd_context}
+	\caption[Bounded Contexts für Stirnraten] {Bounded Contexts für die Stirnraten API.}
+	\label{fig:ddd_context}
+\end{figure}
+
+Durch die verschiedenen Kontexte lassen sich entsprechende Microservices abbilden. Zusätzlich wird definiert, was unter welchen Fachtermini im entsprechenden Context zu verstehen ist. Zum Beispiel stellt der \textit{Identity Context} dem Nutzer ein Token aus mit dem er weitere Aktionen ausführen darf. Dafür speichert der \textit{Identity Context} sich in seinem Customer-Modell (Domänenmodell) einen Namen und ein Passwort. Der Customer im \textit{Profile Context} dagegen enthält noch weitere Informationen wie z.B. Anzahl der gespielten Spiele, geratene Begriffe, Lieblingskategorie und Spielminuten. Der Customer im \textit{Rank Context} benötigt dagegen nur den Customer-Namen und noch zu definierende Parameter aus denen Customer-Punkte generiert werden können, um eine Bestenliste darzustellen.\\
+
+Es wurde bereits erwähnt, dass der \textit{upstream} dem \textit{downstream} Informationen bereitstellt. Zusätzlich können Anforderungen gestellt werden, damit mit den Daten, die der \textit{downstream} erhält, entsprechend gerarbeitet werden kann. In der Abbildung \ref{fig:ddd_context} fordert der \textit{Profile Context} Informationen vom \textit{Words Context} sowie der \textit{Rank Context} vom \textit{Profile Context}  \\
+
+Um die aus den User Stories entstanden Anforderungen zu erfüllen, werden im Folgenden die Domainmodels konzeptioniert. Diese können während der Implementierungsphase noch abweichen. \\
+
+Words-Domainmodel:
+\begin{itemize}
+	\item id: Dient als unique identifier 
+	\item category\_name: Name der Kategorie
+	\item subtitle: Beschreibung der Kategorie
+	\item image\_name: Name des Bildes, welches für eine Kategorie hinterlegt werden soll
+	\item premium\_key: Notwendig für die Kaufabwicklung zum Identifizieren, um welchen In-App-Kauf es sich handelt
+	\item is\_premium: Markiert, ob eine Kategorie kostenpflichtig ist oder nicht
+	\item selected: Definiert, ob die Kategorie in der App vorausgewählt ist oder nicht
+	\item words: Die Begriffe pro Kategorie, welche erraten werden können
+	\item sort: Definiert, an welcher Stelle in der Sortierung die Kategorie ist
+	\item is\_activ: Definiert, ob die Kategorie in der App angezeigt wird oder nicht
+	\item updated\_at: Zeitpunkt, wann die Kategorie das letzte mal verändert worden ist 
+\end{itemize}
+
+%TODO - morgen: Die restlichen Models ausdefinieren, ein Abschlusswort sagen und Docker rechtfertigen.
 
 \subsection{Wahl des API-Gateway}
 - Ocelot 
