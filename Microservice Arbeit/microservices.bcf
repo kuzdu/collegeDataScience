@@ -2065,6 +2065,8 @@
     <bcf:citekey order="89">postgres2016</bcf:citekey>
     <bcf:citekey order="90">jsonxml2006heise</bcf:citekey>
     <bcf:citekey order="91">ayadi2008rest_vs_soap</bcf:citekey>
+    <bcf:citekey order="92">heise2019Podman</bcf:citekey>
+    <bcf:citekey order="93">t3n2017Container</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

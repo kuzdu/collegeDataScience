@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  26 MAY 2019 23:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  27 MAY 2019 06:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1116,31 +1116,68 @@ Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
  []
 
-<bilder/ddd_context.png, id=110, 656.4525pt x 581.17125pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
+
+ []
+
+<bilder/docker_google_trend.png, id=110, 1159.33125pt x 337.26pt>
+File: bilder/docker_google_trend.png Graphic file (type png)
+<use bilder/docker_google_trend.png>
+Package pdftex.def Info: bilder/docker_google_trend.png  used on input line 112
+.
+(pdftex.def)             Requested size: 224.06548pt x 65.18134pt.
+<bilder/ddd_context.png, id=111, 656.4525pt x 581.17125pt>
 File: bilder/ddd_context.png Graphic file (type png)
 <use bilder/ddd_context.png>
-Package pdftex.def Info: bilder/ddd_context.png  used on input line 116.
+Package pdftex.def Info: bilder/ddd_context.png  used on input line 124.
 (pdftex.def)             Requested size: 268.8813pt x 238.04231pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--122
+Underfull \hbox (badness 10000) in paragraph at lines 129--130
 
  []
 
-[27 <./bilder/ddd_context.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 123--124
+[27 <./bilder/docker_google_trend.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--126
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
 
  []
 
-[28]) (./implementierung.tex) (./fazit.tex) (./microservices.lot)
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--147
+
+ []
+
+[28 <./bilder/ddd_context.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 148--152
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--164
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--173
+
+ []
+
+
+Overfull \hbox (12.41342pt too wide) in paragraph at lines 174--175
+[]\T1/cmr/m/n/12 Es lässt sich fest-stel-len, dass es Über-schnei-dun-gen zwi-s
+chen dem Customer-Domainmodel
+ []
+
+[29]) (./implementierung.tex) (./fazit.tex) (./microservices.lot [30])
 \tf@lot=\write6
 \openout6 = `microservices.lot'.
 
- [29]
+
 (./microservices.lof)
 \tf@lof=\write7
 \openout7 = `microservices.lof'.
@@ -1155,7 +1192,13 @@ Overfull \hbox (38.27591pt too wide) in paragraph at lines 41--41
 -cro-ser-vices in Azu-re - Microsoft-Dokumentation\T1/cmr/m/n/12 .
  []
 
-[30] [31] (./microservices.aux)
+
+Overfull \hbox (4.6897pt too wide) in paragraph at lines 41--41
+\T1/cmtt/m/n/12 de / developer / meldung / Die -[] Docker -[] Alternative -[] P
+odman -[] erreicht -[] Version -[]
+ []
+
+[31] [32] (./microservices.aux)
 Package logreq Info: Writing requests to 'microservices.run.xml'.
 \openout1 = `microservices.run.xml'.
 
@@ -1165,10 +1208,10 @@ Package logreq Info: Writing requests to 'microservices.run.xml'.
 ### simple group (level 1) entered at line 16 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 11879 strings out of 492649
- 214486 string characters out of 6129622
- 759481 words of memory out of 5000000
- 15584 multiletter control sequences out of 15000+600000
+ 11889 strings out of 492649
+ 214866 string characters out of 6129622
+ 759611 words of memory out of 5000000
+ 15593 multiletter control sequences out of 15000+600000
  15117 words of font info for 37 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  44i,10n,56p,9092b,2180s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1184,10 +1227,10 @@ fb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb
 /usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></u
 sr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr
 /local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on microservices.pdf (31 pages, 1106166 bytes).
+Output written on microservices.pdf (32 pages, 1183929 bytes).
 PDF statistics:
- 168 PDF objects out of 1000 (max. 8388607)
- 105 compressed objects within 2 object streams
+ 173 PDF objects out of 1000 (max. 8388607)
+ 107 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

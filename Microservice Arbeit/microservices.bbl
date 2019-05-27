@@ -95,6 +95,34 @@
       \field{title}{Microservices - Eine State-of-the-Art Bestandsaufnahme und Abgrenzung zu SOA}
       \field{year}{2016}
     \endentry
+    \entry{heise2019Podman}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=63f2c612943efaba2f1fe1470c63a7d2}{%
+           family={Bohn},
+           familyi={B\bibinitperiod},
+           given={Björn},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{63f2c612943efaba2f1fe1470c63a7d2}
+      \strng{fullhash}{63f2c612943efaba2f1fe1470c63a7d2}
+      \strng{bibnamehash}{63f2c612943efaba2f1fe1470c63a7d2}
+      \strng{authorbibnamehash}{63f2c612943efaba2f1fe1470c63a7d2}
+      \strng{authornamehash}{63f2c612943efaba2f1fe1470c63a7d2}
+      \strng{authorfullhash}{63f2c612943efaba2f1fe1470c63a7d2}
+      \field{sortinit}{B}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{abgerufen am 27.5.2019}
+      \field{title}{Podman}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.heise.de/developer/meldung/Die-Docker-Alternative-Podman-erreicht-Version-1-0-4281333.html
+      \endverb
+      \verb{url}
+      \verb https://www.heise.de/developer/meldung/Die-Docker-Alternative-Podman-erreicht-Version-1-0-4281333.html
+      \endverb
+    \endentry
     \entry{rewe2019mic_ppp}{unpublished}{}
       \name{author}{1}{}{%
         {{hash=acda88e2bd6d6f880c345a5083cfabbc}{%
@@ -436,6 +464,34 @@
       \endverb
       \verb{url}
       \verb https://docs.microsoft.com/de-de/dotnet/standard/microservices-architecture/multi-container-microservice-net-applications/integration-event-based-microservice-communications
+      \endverb
+    \endentry
+    \entry{t3n2017Container}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b9f5099961fbeaf9e85cced4f177f9d4}{%
+           family={V.},
+           familyi={V\bibinitperiod},
+           prefix={o.},
+           prefixi={o\bibinitperiod}}}%
+      }
+      \strng{namehash}{b9f5099961fbeaf9e85cced4f177f9d4}
+      \strng{fullhash}{b9f5099961fbeaf9e85cced4f177f9d4}
+      \strng{bibnamehash}{b9f5099961fbeaf9e85cced4f177f9d4}
+      \strng{authorbibnamehash}{b9f5099961fbeaf9e85cced4f177f9d4}
+      \strng{authornamehash}{b9f5099961fbeaf9e85cced4f177f9d4}
+      \strng{authorfullhash}{b9f5099961fbeaf9e85cced4f177f9d4}
+      \field{sortinit}{V}
+      \field{sortinithash}{75dd7385c90b2252c3ae853a80ca853b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{abgerufen am 27.5.2019}
+      \field{title}{App-Container: 5 professionelle Docker-Alternativen im Überblick}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://t3n.de/news/docker-alternativen-container-783741/
+      \endverb
+      \verb{url}
+      \verb https://t3n.de/news/docker-alternativen-container-783741/
       \endverb
     \endentry
     \entry{oracle}{misc}{}

@@ -96,16 +96,24 @@ Im Bereich der relationalen Datenbanken können verschiedene Technologien zur Um
 Beim Erstellen von multiplen MySQL-Instanzen kam es zu keinerlei Problemen. Aufgrund des Rankings und der einfacheren technischen Implementierung durch das Proof of Concept wurde, sollen makroarchitektonisch die Microservices MySQL verwenden.
 
 \subsubsection{Programmiersprachen, Darstellungsart, REST und Docker}
-Anfangs wurde erwähnt, dass aufgrund unternehmensstrategischer Gründe Entscheidungen darüber getroffen werden, welcher Technologiestack verwendet wird. In Hinblick auf die Programmiersprachen wird deshalb festgelegt, dass die Microservices im .net Framework in c\# entwickelt werden. Diese Sprache wird am besten von dem Entwickler beherrscht, so dass Wartbarkeit, Nachhaltigkeit und Pflege des Codes langfristig garantiert sind. Als zusätzliche Alternative ist kotlin ebenfalls erlaubt.\\
+\textbf{Programmiersprachen}: Anfangs wurde erwähnt, dass aufgrund unternehmensstrategischer Gründe Entscheidungen darüber getroffen werden, welcher Technologiestack verwendet wird. In Hinblick auf die Programmiersprachen wird deshalb festgelegt, dass die Microservices im .net Framework in c\# entwickelt werden. Diese Sprache wird am besten von dem Entwickler beherrscht, so dass Wartbarkeit, Nachhaltigkeit und Pflege des Codes langfristig garantiert sind. Als zusätzliche Alternative ist kotlin ebenfalls erlaubt.\\
 
 %Fußnote einfügen und auf mobile Kommunikation verweisen.
-Das verwendete Datenformat beim Austausch von Daten ist JSON (JavaScript Object Notation). Alternativ wäre auch die Extensible Markup Language (XML) möglich, allerdings ist XML deutlich aufgeblähter und damit weniger leichtgewichtig. Zusätzlich lässt JSON sich leichter von den Programmiersprachen weiterverarbeiten.\cite{jsonxml2006heise}\\
+\textbf{Darstellungsart}: Das verwendete Datenformat beim Austausch von Daten ist JSON (JavaScript Object Notation). Alternativ wäre auch die Extensible Markup Language (XML) möglich, allerdings ist XML deutlich aufgeblähter und damit weniger leichtgewichtig. Zusätzlich lässt JSON sich leichter von den Programmiersprachen weiterverarbeiten.\cite{jsonxml2006heise}\\
 
-Die Kommunikation zwischen den Microservices wird so festgelegt, dass sie dem Representational State Transfer-Paradigma (REST) unterliegen. Eine Alternative zu REST wäre SOAP (Simple Object Access Protocol) in Kombination mit WSDL (Web Services Description Language). Da WSDL allerdings auf der Basis von XML arbeitet und SOAP deutlich komplexer und schwerer skalierbar ist als REST, wird es nicht verwendet. \cite{ayadi2008rest_vs_soap}\\ 
+\textbf{REST}: Die Kommunikation zwischen den Microservices wird so festgelegt, dass sie dem Representational State Transfer-Paradigma (REST) unterliegen. Eine Alternative zu REST wäre SOAP (Simple Object Access Protocol) in Kombination mit WSDL (Web Services Description Language). Da WSDL allerdings auf der Basis von XML arbeitet und SOAP deutlich komplexer und schwerer skalierbar ist als REST, wird es nicht verwendet. \cite{ayadi2008rest_vs_soap}\\ 
 
-Die Prinzipien von REST sind bereits aus dem \textit{Modul Mobile Application Development} bekannt und werden deshalb nicht weiter erwähnt. 
+Die Prinzipien von REST sind bereits aus dem \textit{Modul Mobile Application Development} bekannt und werden deshalb nicht weiter erwähnt. \\
 
-%DOCKER FEHLT
+\textbf{Docker}: Neben Docker als Containerisierung existieren einige Alternativen wie Podman, Rocket, LXD, Flockport, Windocks oder Boxfuse. Sie unterscheiden sich teils in Sicherheitsaspekten, Preis, Kompatibilität zum Betriebssystem oder der Anbindung zu Kubernetes (Programm zum Bereitstellen, Skalieren und Verwalten von Container-Anwendungen).\cite{heise2019Podman}\cite{t3n2017Container} Es wurde sich für Docker entschieden. Zum einen da dies - wie bereits bei den Programmiersprachen - eine beherrschte Technologie ist. Zum anderen - gemessen am Google Trend - ist Docker die bevorzugt gesuchte Technologie für Containerisierung:  
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.5\textwidth]{docker_google_trend}
+	\caption[Docker Google Trends] {Trends bei den Suchworten: Docker, Rocket Container, LXD, Flockport und Podman}
+	\label{fig:docker_google_trends}
+\end{figure}
+
 
 \subsubsection{Bounded Contexts - Architektur des Projektes}
 
@@ -124,22 +132,46 @@ Es wurde bereits erwähnt, dass der \textit{upstream} dem \textit{downstream} In
 
 Um die aus den User Stories entstanden Anforderungen zu erfüllen, werden im Folgenden die Domainmodels konzeptioniert. Diese können während der Implementierungsphase noch abweichen. \\
 
-Words-Domainmodel:
-\begin{itemize}
-	\item id: Dient als unique identifier 
-	\item category\_name: Name der Kategorie
-	\item subtitle: Beschreibung der Kategorie
-	\item image\_name: Name des Bildes, welches für eine Kategorie hinterlegt werden soll
-	\item premium\_key: Notwendig für die Kaufabwicklung zum Identifizieren, um welchen In-App-Kauf es sich handelt
-	\item is\_premium: Markiert, ob eine Kategorie kostenpflichtig ist oder nicht
-	\item selected: Definiert, ob die Kategorie in der App vorausgewählt ist oder nicht
-	\item words: Die Begriffe pro Kategorie, welche erraten werden können
-	\item sort: Definiert, an welcher Stelle in der Sortierung die Kategorie ist
-	\item is\_activ: Definiert, ob die Kategorie in der App angezeigt wird oder nicht
-	\item updated\_at: Zeitpunkt, wann die Kategorie das letzte mal verändert worden ist 
-\end{itemize}
+\underline{Words-Context: Words Domainmodel}\\
+\textit{id}: Dient als unique identifier\\
+\textit{category\_name}: Name der Kategorie\\
+\textit{subtitle}: Optionale Beschreibung der Kategorie\\
+\textit{image\_name}: Name des Bildes, welches für eine Kategorie hinterlegt werden soll\\
+\textit{premium\_key}: Notwendig für die Kaufabwicklung zum Identifizieren, um welchen In-App-Kauf es sich handelt\\
+\textit{is\_premium}: Markiert, ob eine Kategorie kostenpflichtig ist oder nicht\\
+\textit{selected}: Definiert, ob die Kategorie in der App vorausgewählt ist oder nicht\\
+\textit{words}: Die Begriffe pro Kategorie, welche erraten werden können\\
+\textit{sort}: Definiert, an welcher Stelle in der Sortierung die Kategorie ist\\
+\textit{is\_activ}: Definiert, ob die Kategorie in der App angezeigt wird oder nicht\\
+\textit{updated\_at}: Zeitpunkt, wann die Kategorie das letzte mal verändert worden ist \\
 
-%TODO - morgen: Die restlichen Models ausdefinieren, ein Abschlusswort sagen und Docker rechtfertigen.
+\underline{Identiy-Context: Customer-Domainmodel}:\\
+\textit{id}: Dient als unique identifier \\
+\textit{name}: Name des Benutzers\\
+\textit{password}: Passwort des Benuzters\\
+
+\underline{Profile-Context: Customer-Domainmodel}:\\
+\textit{id}: Dient als unique identifier \\
+\textit{name}: Name des Benutzers (kommt aus dem Identiy-Context)\\
+\textit{mail}: E-Mail-Adresse des Benutzers (optional)\\
+\textit{played\_games}: Zeigt die Anzahl absolvierter Spiele\\
+\textit{most\_right\_words}: Zeigt die Anzahl der Wörter, die während einer Runde geraten worden sind\\
+\textit{most\_skipped\_words}: Zeigt die Anzahl der Wörter, die während einer Runde übersprungen worden sind\\
+\textit{right\_words}: Zeigt Anzahl aller Wörter, die richtig geraten worden sind\\
+\textit{skipped\_words}: Zeigt Anzahl aller Wörter, die übersprungen worden sind\\
+\textit{time}: Zeigt, wie lange der Benutzer gespielt hat \\
+\textit{top\_categories}: Speichert, welche Kategorien der Benutzer favorisiert\\
+
+\underline{Rank-Context: Customer-Domainmodel}:\\
+\textit{id}: Dient als unique identifier \\
+\textit{name}: Name des Benutzers (kommt aus dem Identiy-Context)\\
+\textit{played\_games}: Zeigt die Anzahl absolvierter Spiele (kommt aus Profile-Context)\\
+\textit{right\_words}: Zeigt Anzahl aller Wörter, die richtig geraten worden sind (kommt aus Profile-Context)\\
+\textit{skipped\_words}: Zeigt Anzahl aller Wörter, die übersprungen worden sind (kommt aus Profile-Context)\\
+\textit{time}: Zeigt, wie lange der Benutzer gespielt hat (kommt aus Profile-Context)\\
+\textit{points}: Punkte, die sich aus played\_games, right\_words, skipped\_words und time berechnen \\
+
+Es lässt sich feststellen, dass es Überschneidungen zwischen dem Customer-Domainmodel gibt, je nach dem in welchem Kontext man sich befindet. Natürlich verändert dieses Konzept sich noch im Laufe der Produktentwicklung und muss iterativ an den Stand der Entwicklung angepasst werden. Ebenfalls gilt zu erwähnen, dass es an dieser Stelle im Domain Driven Design nicht zwangsweise ein richtig oder falsch gibt. Dies ist ein Konzeptentwurf, aber natürlich nicht die einzige mögliche Lösung.
 
 \subsection{Wahl des API-Gateway}
 - Ocelot 
