@@ -2067,6 +2067,8 @@
     <bcf:citekey order="91">ayadi2008rest_vs_soap</bcf:citekey>
     <bcf:citekey order="92">heise2019Podman</bcf:citekey>
     <bcf:citekey order="93">t3n2017Container</bcf:citekey>
+    <bcf:citekey order="94">GoogleCloudEndpointsDotNet</bcf:citekey>
+    <bcf:citekey order="95">AWSDotNet</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
