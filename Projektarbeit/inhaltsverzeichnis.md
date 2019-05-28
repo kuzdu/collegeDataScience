@@ -44,8 +44,3 @@ Planung und Erstellung einer Backend-Microservices-Architektur aus den Anforderu
 * Ausblick Kubernetes (...) 🔜
 * (Microservice) Frontend 🔜
 * Logging, CI/CD, Lastüberwachung
-
-------
-(Ggf.) offene Fragen:
-In Grundlagen ist geplant, allgemein zu erklären, was ist Authentifzierung und Authorisierung und welche gängigen Möglichkeiten gibt es.  
-Im Konzept entscheide ich mich für XY und wäge zwischen Technologien ab.
