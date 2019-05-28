@@ -26,10 +26,11 @@ Planung und Erstellung einer Backend-Microservices-Architektur aus den Anforderu
 
 ## Konzept Stirnraten API 
 * Anforderungen erfassen ✅
-* Makroarchitektur - Festlegungen von Technologie und Programmiersprache 🔨
-* DDD anwenden, um Bounded Contexts für mögliche Microservices zu entwerfen: Wörter CRUD, Customer CRUD, Rangliste CRUD, Authentifizierung, Messaging Service, API-Gateway, Ggf. Datenmodell aufführen 🔜
-* Abwägen zwischen Kommunikationsarten: Messaging (Kafka vs. RabbitMQ vs. ?) 🔜
-* Authentifizierung und Autorisierung (Was gibt es, Eigenbau, Drittanbieter, Netflixs Zhul?) 🔜
+* Makroarchitektur - Festlegungen von Technologie und Programmiersprache ✅
+* DDD anwenden, um Bounded Contexts für mögliche Microservices zu entwerfen: Wörter CRUD, Customer CRUD, Rangliste CRUD, Authentifizierung aufführen ✅
+* API Gateway entscheiden - Architektonisch aufzeigen 🔨
+* Abwägen zwischen Kommunikationsarten: Messaging (Kafka vs. RabbitMQ vs. ?), Architektonisch aufzeigen 🔜
+* Authentifizierung und Autorisierung 🔜
 
 ## Implementierung/Umsetzung
 * Umgesetzte Softwarearchitektur darstellen 🔜
