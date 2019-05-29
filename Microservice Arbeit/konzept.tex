@@ -114,9 +114,7 @@ Die Prinzipien von REST sind bereits aus dem \textit{Modul Mobile Application De
 	\label{fig:docker_google_trends}
 \end{figure}
 
-
 \subsubsection{Bounded Contexts - Architektur des Projektes}
-
 Aus den Abschnitt \ref{sec:domain_driven_design} lassen sich folgende Bounded Contexts erstellen: 
 
 \begin{figure}[ht]
@@ -181,28 +179,50 @@ Bei der Wahl des API-Gateways existieren verschiedene Technologien, die gegenein
 
 \textbf{Libraries}: Eine etablierte und leichtgewichtige Lösung ist das API-Gateway Zuul zu verwenden, welches allerdings auf Java basiert und dementsprechend aus macroarchitektonischer Sicht nicht bevorzugt wird. \\
 
-Eine weitere Möglichkeit ist ein Gateway mit \textbf{Istio} in Kombination mit Kubernetes aufzubauen. Das hätte unter anderem den großen Vorteil, dass die Services sich untereinander kennen und die Kommunikation sehr wenig händische Konfigurationen benötigt. Allerdings erfordert Kubernetes sowie Istio jeweils ein hohes Maß an technischem Verständnis und ist nicht lohnenswert für eine Handvoll Services.\\    
-% TODO Verlinken
-%https://www.heise.de/developer/artikel/Istio-Das-Service-Mesh-fuer-verteilte-Systeme-4153426.html
-%https://istio.io/docs/setup/kubernetes/install/kubernetes/
+Eine weitere Möglichkeit ist ein Gateway mit \textbf{Istio} in Kombination mit Kubernetes aufzubauen. Das hätte unter anderem den großen Vorteil, dass die Services sich untereinander kennen und die Kommunikation sehr wenig händische Konfigurationen benötigt. Allerdings erfordert Kubernetes sowie Istio jeweils ein hohes Maß an technischem Verständnis und erscheint nicht lohnenswert für ein verhältnismäßig kleines Projekt zu implementieren.\cite{HeiseIstio}\cite{istioQuickstart} \\    
 
-- Ocelot % Microsoft empfohlen.  (leichtgewichtig und open source (https://devblogs.microsoft.com/cesardelatorre/designing-and-implementing-api-gateways-with-ocelot-in-a-microservices-and-container-based-architecture/), empfohlen von Microsoft für .net)
-% Artikel lesen und Grundlagen rausarbeiten: https://docs.microsoft.com/de-de/dotnet/standard/microservices-architecture/secure-net-microservices-web-applications/
+Von Microsoft empfohlen wir das Open Source Gateway \textbf{Ocelot}. Es ist leichtgewichtig und überschneidet sich mit gesuchten Anforderungen (Routing, Load Balancing, Authorization usw.). Zusätzlich ist es explizit desigend für ASP .NET Core und bietet so eine überschaubare Implementierung vom Aufwand her.\cite{microsoftOcelot}\\
 
 \textbf{Cloudanbieter}: AWS, Azure und Google Cloud bieten alle Gateways an, die auch einen entsprechend großen Funktionsumfang garantieren. Ein weiterer Vorteil ist die Skalierbarkeit, die jeder Cloud-Anbieter verspricht. Ebenfalls wird die Programmiersprache c\# im .net Kontext unterstützt.\cite{GoogleCloudEndpointsDotNet}\cite{AWSDotNet} Ein Nachteil dagegen ist die preisliche Komponentene. Es ist nicht absehbar, wie sich die Stirnraten API bezüglich der Last entwickelt, weshalb unsicher ist, wie viele Kosten entstehen werden. Auch wenn eine selbstgehoste Lösung andere Nachtteile mit sich bringt, ist ein Festpreis garantiert, welcher für eine Projektarbeit bevorzugt wird. \\
 
-Aufgrund der Rercheren wird sich für Ocelot entschieden.\\
+Aufgrund der Rercheren wird sich weder für eine Eigenentwicklung (zu aufwendig) noch für eine Cloudlösung (unsichere Kostenfrage) entschiedene. Betrachtet man die Vor- und Nachteile der Libraries bietet Ocelot den größten Mehrwert, weshalb ein Gateway via Ocelot implementiert wird.\\
+
+Die Architektur erweitert sich wie folgt: 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.5\textwidth]{gateway}
+	\caption[API Gateway mit Ocelot] {Struktur mit dem API Gateway Ocelot}
+	\label{fig:gateway}
+\end{figure}
+\\
 
 \subsection{Wahl der Kommunikation}
+-> Anspruch: schnell, robust und zuverlässig, einfach zu implementieren
+
 - Erwähnen, dass asynchrone Kommunikation verwendet wird, aufgrund der Vorteile aus den Grundlagen 
 - Technologie: Masstransit (RabbitMQ) vs. Kafka
+
+%Argumentationsstruktur folgen: https://medium.com/linagora-engineering/how-to-choose-a-message-queue-247dde46e66c
+
+Cloudlösung erwähnen, wird aber nicht verwendet: https://aws.amazon.com/de/sqs/ oder https://cloud.google.com/pubsub/
+
 
 \subsection{Wahl der Authenfizierung/Authorisierung}
 - Auth0
 - OAuth2: Authentication Framework (mit OpenId Connect?) -> Spricht die Zeit, Komplexität und so eine Komplexität gar nicht benötigt 
 - JWT: Also Protocol
 - Dritteranbieter Dienst -> Auth0 (zu teuer)
+- IdentityServer4
 - ggf. ohne OAuth
+
+%Im Endeffekt habe ich zwei Frameworks, IdentityServer4 überzeugt mich mehr, Clouds erwähnen, Drittanbieter (zu teuer), selbst schreiben zu komplex
+
+%Owin: Ist Schnittstelle zwischen .NET und Webservern
+%https://www.youtube.com/watch?v=TsH3BzIPzeU
+%Identity Server Talk: https://www.youtube.com/watch?v=8IXIFuaHAt8
+%IDentity Server Implementierung: https://www.youtube.com/watch?v=wQaOWc_bwpM
+
 % Guter Artikel bzgl. OAuth2: https://medium.com/google-cloud/understanding-oauth2-and-building-a-basic-authorization-server-of-your-own-a-beginners-guide-cf7451a16f66
+%https://docs.microsoft.com/de-de/dotnet/standard/microservices-architecture/secure-net-microservices-web-applications/
 
 

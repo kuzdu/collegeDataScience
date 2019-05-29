@@ -123,6 +123,32 @@
       \verb https://www.heise.de/developer/meldung/Die-Docker-Alternative-Podman-erreicht-Version-1-0-4281333.html
       \endverb
     \endentry
+    \entry{microsoftOcelot}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=f1adb3bbdb727fcc7c4e4f355084c70a}{%
+           family={Cesar},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{f1adb3bbdb727fcc7c4e4f355084c70a}
+      \strng{fullhash}{f1adb3bbdb727fcc7c4e4f355084c70a}
+      \strng{bibnamehash}{f1adb3bbdb727fcc7c4e4f355084c70a}
+      \strng{authorbibnamehash}{f1adb3bbdb727fcc7c4e4f355084c70a}
+      \strng{authornamehash}{f1adb3bbdb727fcc7c4e4f355084c70a}
+      \strng{authorfullhash}{f1adb3bbdb727fcc7c4e4f355084c70a}
+      \field{sortinit}{C}
+      \field{sortinithash}{963e9d84a3da2344e8833203de5aed05}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{abgerufen am 29.5.2019}
+      \field{title}{Designing and implementing API Gateways with Ocelot in .NET Core containers and microservices architectures}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://devblogs.microsoft.com/cesardelatorre/designing-and-implementing-api-gateways-with-ocelot-in-a-microservices-and-container-based-architecture/
+      \endverb
+      \verb{url}
+      \verb https://devblogs.microsoft.com/cesardelatorre/designing-and-implementing-api-gateways-with-ocelot-in-a-microservices-and-container-based-architecture/
+      \endverb
+    \endentry
     \entry{rewe2019mic_ppp}{unpublished}{}
       \name{author}{1}{}{%
         {{hash=acda88e2bd6d6f880c345a5083cfabbc}{%
@@ -436,6 +462,34 @@
       \verb https://www.heise.de/developer/artikel/Domain-driven-Design-erklaert-3130720.html?seite=all
       \endverb
     \endentry
+    \entry{HeiseIstio}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=68e184556111137f643ab00dd4c84c16}{%
+           family={Rupp},
+           familyi={R\bibinitperiod},
+           given={Heiko},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{68e184556111137f643ab00dd4c84c16}
+      \strng{fullhash}{68e184556111137f643ab00dd4c84c16}
+      \strng{bibnamehash}{68e184556111137f643ab00dd4c84c16}
+      \strng{authorbibnamehash}{68e184556111137f643ab00dd4c84c16}
+      \strng{authornamehash}{68e184556111137f643ab00dd4c84c16}
+      \strng{authorfullhash}{68e184556111137f643ab00dd4c84c16}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{abgerufen am 29.5.2019}
+      \field{title}{Das Service Mesh für verteilte Systeme}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://www.heise.de/developer/artikel/Istio-Das-Service-Mesh-fuer-verteilte-Systeme-4153426.html
+      \endverb
+      \verb{url}
+      \verb https://www.heise.de/developer/artikel/Istio-Das-Service-Mesh-fuer-verteilte-Systeme-4153426.html
+      \endverb
+    \endentry
     \entry{cesardelatorre2018azure}{misc}{}
       \name{author}{1}{}{%
         {{hash=a6a5e581f6c53e57e21b4995d61190ef}{%
@@ -550,6 +604,34 @@
       \verb https://cloud.google.com/endpoints/docs/openapi/get-started-app-engine-dotnet
       \endverb
     \endentry
+    \entry{istioQuickstart}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b9f5099961fbeaf9e85cced4f177f9d4}{%
+           family={V.},
+           familyi={V\bibinitperiod},
+           prefix={o.},
+           prefixi={o\bibinitperiod}}}%
+      }
+      \strng{namehash}{b9f5099961fbeaf9e85cced4f177f9d4}
+      \strng{fullhash}{b9f5099961fbeaf9e85cced4f177f9d4}
+      \strng{bibnamehash}{b9f5099961fbeaf9e85cced4f177f9d4}
+      \strng{authorbibnamehash}{b9f5099961fbeaf9e85cced4f177f9d4}
+      \strng{authornamehash}{b9f5099961fbeaf9e85cced4f177f9d4}
+      \strng{authorfullhash}{b9f5099961fbeaf9e85cced4f177f9d4}
+      \field{sortinit}{V}
+      \field{sortinithash}{75dd7385c90b2252c3ae853a80ca853b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{abgerufen am 29.5.2019}
+      \field{title}{Istio Quickstart}
+      \field{year}{o. J.}
+      \verb{urlraw}
+      \verb https://istio.io/docs/setup/kubernetes/install/kubernetes/
+      \endverb
+      \verb{url}
+      \verb https://istio.io/docs/setup/kubernetes/install/kubernetes/
+      \endverb
+    \endentry
     \entry{oracle}{misc}{}
       \name{author}{1}{}{%
         {{hash=b9f5099961fbeaf9e85cced4f177f9d4}{%
@@ -604,34 +686,6 @@
       \endverb
       \verb{url}
       \verb https://www.redhat.com/de/topics/containers/what-is-docker
-      \endverb
-    \endentry
-    \entry{NetflixZuul}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=b9f5099961fbeaf9e85cced4f177f9d4}{%
-           family={V.},
-           familyi={V\bibinitperiod},
-           prefix={o.},
-           prefixi={o\bibinitperiod}}}%
-      }
-      \strng{namehash}{b9f5099961fbeaf9e85cced4f177f9d4}
-      \strng{fullhash}{b9f5099961fbeaf9e85cced4f177f9d4}
-      \strng{bibnamehash}{b9f5099961fbeaf9e85cced4f177f9d4}
-      \strng{authorbibnamehash}{b9f5099961fbeaf9e85cced4f177f9d4}
-      \strng{authornamehash}{b9f5099961fbeaf9e85cced4f177f9d4}
-      \strng{authorfullhash}{b9f5099961fbeaf9e85cced4f177f9d4}
-      \field{sortinit}{V}
-      \field{sortinithash}{75dd7385c90b2252c3ae853a80ca853b}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{abgerufen am 28.5.2019}
-      \field{title}{Zuul}
-      \field{year}{o. J.}
-      \verb{urlraw}
-      \verb https://github.com/Netflix/zuul
-      \endverb
-      \verb{url}
-      \verb https://github.com/Netflix/zuul
       \endverb
     \endentry
     \entry{wolff2018mic_praxis}{book}{}
