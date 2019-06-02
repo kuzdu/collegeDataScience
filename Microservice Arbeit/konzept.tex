@@ -198,18 +198,26 @@ Die Architektur erweitert sich wie folgt:
 
 \subsection{Wahl der Kommunikation}
 
-Es gibt zahlreiche Message Queues, die selbstbeschreibend schnell, robust, zuverlässig und einfach zu implementieren sind. Derzeitig verwendete Message Queues könnten sein: RabbitMQ, Kafka, RocketMQ, Artemis oder NSQ.\\
+Um die in den VERLINKEN\_GRUNDLAGEN ausgearbeitete asynchrone Kommunikation zu gewährleisten, werden sogenannte Message Broker (kurz: Broker) verwendet. Diese empfangen Nachrichten und senden diese ggf. an mehrere Empfänger weiter. Die folgenden Message Broker sind in der Selbstbeschreibung schnell, robust, zuverlässig und einfach zu implementieren: \textit{RabbitMQ}, \textit{Kafka}, \textit{RocketMQ}, \textit{Artemis} oder \textit{NSQ}.\\
 
-Bevor die Message Queues Im Detail gegeneinander abgewogen werden, wird untersucht, ob es bereits Ausschlusskriterien gibt. Zum Beispiel weist die RocketMQ (Apache Projekt) noch über 130 Github Issues auf, weshalb davon auszugehen ist, dass diese Message Queue noch in der Entwicklung steht. Artemis verwendet noch ältere Technologien wie XML und NSQ bietet nicht den Funktionsumfang wie andere Queues (z.B. Haltbarkeit der Nachrichten oder Clustering).\\ %verlinken auf medium artikel
+Bevor die Message Broker jedoch im Detail gegeneinander abgewogen werden, wird untersucht, ob es bereits vorherige Ausschlusskriterien gibt. Zum Beispiel weist die \textit{RocketMQ} (Apache Projekt) noch über 130 Github Issues auf, weshalb davon auszugehen ist, dass dieser Message Broker sich noch in der Entwicklung befindet. \textit{Artemis} verwendet noch ältere Technologien wie XML und \textit{NSQ} bietet nicht den Funktionsumfang wie andere Broker (z.B. Haltbarkeit der Nachrichten oder Clustering).\cite{messageQueue2018} Deshalb werden diese Message Broker von vorneherein ausgeschlossen. \\ %verlinken auf medium artikel
 
-%Abwägen zwischen RabbitMQ und Kafka
-%https://medium.com/linagora-engineering/how-to-choose-a-message-queue-247dde46e66c
+Im Folgenden wird der von LinkedIn entwickelte Broker \textit{Kafka} mit dem \textit{RabbitMQ} Broker verglichen. 
 
-Einige der MessageQueues lassen sich aus unterschiedlichen Gründen ausschließen: RocketMQ 
+Auch wenn beide Broker in unterschiedlichen Sprachen entwickelt worden sind, können sie mittels C\# verwendet werden und sind Open Source.
 
-%Cloudlösung erwähnen, wird aber nicht verwendet: https://aws.amazon.com/de/sqs/ oder https://cloud.google.com/pubsub/
+Architektonisch arbeitet RabbitMQ mit einer Entkopplung, da die Produzenten ihre Nachrichten in eine sogenannte Börse (exchange) übermitteln (publish). Die Konsumenten entnehmen die Nachrichten aus einer Queue. So liegt das Routing zwischen Exchange und Queue nicht bei den Produzenten bzw. Konsumenten. Kafka dagegen ist für ein höheres Volumen auslegt. Im Gegensatz zur RabbitMQ merken die Consumer sich, ob sie bereits eine Nachricht gelesen haben oder nicht. D.h. die Nachrichten werden in einem Kafka Cluster zeitlich begrenzt gespeichert, unabhängig ob sie schon gelesen oder ungelesen sind. Kafka könnte diesbezüglich sinnvoll für Event Sourcing sein, also in einem System, wo der Zustand eines Systems durch Sequenzen von Events abgebildet werden kann.\cite{richardson2019mic_pattern} Kafka benötigt im Gegensatz zur RabbitMQ einen externen Dienst (häufig Zookeper verwendet) durch den vereinfacht ausgedrückt mit Kafka kommuniziert werden kann.\cite{understandingRabbitMQApacheKafka}\cite{kafkaUseCases} Typische Anwendungsfälle werden bei Kafka beim Messaging, Webseiten-Aktivitäts-Tracking, erfassen von Metriken, Log Aggregationen und Event Sourcing gesehen.\cite{kafkaUseCases} RabbitMQ setzt dagegen mehr auf sehr zuverlässige Zustellung der Nachrichten und unterstützt eine Vielzahl von Kommunikationsprotokollen. Zusätzlich lassen sich viele Kafka-Anwendungsfälle (z.B. Event Sourcing) mit Hilfe von Drittsoftware (z.B. Cassandra) in Kombination mit der RabbitMQ abbilden.\cite{understandingRabbitMQApacheKafka}\\
 
-\subsection{Wahl der Authenfizierung/Authorisierung}\label{sec:concept_authentifizierung_autorisierung}
+Es ist schwierig zu entscheiden, welcher Broker der besser geeinete ist. Beide Technologien sind sehr umfangreich und decken gerade in Kombination mit Drittsoftware viele selbe Anwendungsfälle ab. Ebenfalls sind die in \textit{Stirnraten} zu erwartetenden Anwedungsfälle im Gegensatz zu den Möglichkeiten, die die Broker bieten, eher trivial. Da Kafka allerdings wie bereits erwähnt ein zusätzliches Programm für die Verwaltung benötigt und im Gesamten größer sowie umfangreicher erscheint, wird auf eine schlankere Implementierung mittels RabbitMQ gesetzt.\\
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.5\textwidth]{architecture_rabbit_mq}
+	\caption[Architektur mit Hilfe von RabbitMQ] {Architektur mit Hilfe der RabbitMQ}
+	\label{fig:architecture_rabbit_mq}
+\end{figure}
+
+\subsection{Wahl der Authenfizierung/Authorisierung} \label{sec:concept_authentifizierung_autorisierung}
 
 In \ref{sec:authentifizierung_autorisierung} wurde bereits argumentiert, dass OAuth2 für die Authentifizierung und Autorisierung verwendet wird. Ebenfalls wurde festgelegt, dass jeder Microservices die Autorisierung durchführt, die Authentifizierung allerdings in einem eigenen Service liegen muss. Damit ein Microservice die Autorisierung durchführen kann, muss ein Request vom API-Gateway entsprechend aufbereitet werden. Im Detail sieht dies wie folgt aus\cite{richardson2019mic_pattern}:\\
 \begin{enumerate}

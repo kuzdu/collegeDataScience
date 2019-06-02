@@ -1,22 +1,23 @@
 [0] Config.pm:302> INFO - This is Biber 2.11
 [0] Config.pm:305> INFO - Logfile is 'microservices.blg'
-[37] biber-darwin:313> INFO - === Sun Jun  2, 2019, 10:23:01
+[36] biber-darwin:313> INFO - === Sun Jun  2, 2019, 21:25:28
 [58] Biber.pm:371> INFO - Reading 'microservices.bcf'
-[146] Biber.pm:857> INFO - Found 28 citekeys in bib section 0
-[158] Biber.pm:3976> INFO - Processing section 0
-[168] Biber.pm:4136> INFO - Looking for bibtex format file 'literatur.bib' for section 0
-[169] bibtex.pm:1500> INFO - LaTeX decoding ...
-[192] bibtex.pm:1316> INFO - Found BibTeX data source 'literatur.bib'
-[226] Utils.pm:193> WARN - year field 'o. J.' in entry 'oracle' is not an integer - this will probably not sort properly.
-[231] Utils.pm:193> WARN - year field 'o. J.' in entry 'oauth2' is not an integer - this will probably not sort properly.
-[234] Utils.pm:193> WARN - year field 'o. J.' in entry 'RedHat' is not an integer - this will probably not sort properly.
-[262] Utils.pm:193> WARN - year field 'o. J.' in entry 'istioQuickstart' is not an integer - this will probably not sort properly.
-[267] Utils.pm:193> WARN - year field 'o. J.' in entry 'GoogleCloudEndpointsDotNet' is not an integer - this will probably not sort properly.
-[270] Utils.pm:193> WARN - year field 'o. J.' in entry 'AWSDotNet' is not an integer - this will probably not sort properly.
-[301] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[301] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[302] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
-[302] Biber.pm:3810> INFO - No sort tailoring available for locale 'de-DE'
-[326] bbl.pm:617> INFO - Writing 'microservices.bbl' with encoding 'UTF-8'
-[334] bbl.pm:720> INFO - Output to microservices.bbl
-[334] Biber.pm:110> INFO - WARNINGS: 6
+[146] Biber.pm:857> INFO - Found 31 citekeys in bib section 0
+[159] Biber.pm:3976> INFO - Processing section 0
+[171] Biber.pm:4136> INFO - Looking for bibtex format file 'literatur.bib' for section 0
+[173] bibtex.pm:1500> INFO - LaTeX decoding ...
+[199] bibtex.pm:1316> INFO - Found BibTeX data source 'literatur.bib'
+[233] Utils.pm:193> WARN - year field 'o. J.' in entry 'oracle' is not an integer - this will probably not sort properly.
+[238] Utils.pm:193> WARN - year field 'o. J.' in entry 'oauth2' is not an integer - this will probably not sort properly.
+[241] Utils.pm:193> WARN - year field 'o. J.' in entry 'RedHat' is not an integer - this will probably not sort properly.
+[273] Utils.pm:193> WARN - year field 'o. J.' in entry 'istioQuickstart' is not an integer - this will probably not sort properly.
+[279] Utils.pm:193> WARN - year field 'o. J.' in entry 'GoogleCloudEndpointsDotNet' is not an integer - this will probably not sort properly.
+[284] Utils.pm:193> WARN - year field 'o. J.' in entry 'AWSDotNet' is not an integer - this will probably not sort properly.
+[294] Utils.pm:193> WARN - year field 'o. J.' in entry 'kafkaUseCases' is not an integer - this will probably not sort properly.
+[328] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[328] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[328] Biber.pm:3804> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[329] Biber.pm:3810> INFO - No sort tailoring available for locale 'de-DE'
+[356] bbl.pm:617> INFO - Writing 'microservices.bbl' with encoding 'UTF-8'
+[365] bbl.pm:720> INFO - Output to microservices.bbl
+[365] Biber.pm:110> INFO - WARNINGS: 7
