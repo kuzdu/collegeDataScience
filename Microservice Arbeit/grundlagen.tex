@@ -317,7 +317,7 @@ API-Gateways haben neben dem einzelnen Einstiegspunkt noch weitere Vorteile:
 
 Ein Nachtteil in der Struktur des API-Gateways ist, dass die Abfragen länger sind, da sie immer erst über das Gateway gehen.\\
 
-\subsection{Authentifizierung und Autorisierung}
+\subsection{Authentifizierung und Autorisierung}\label{sec:authentifizierung_autorisierung}
 
 Beim Monolithen ist architektonisch klar, dass die Authentifizierung und Autorisierung innerhalb des Monolithen stattfindet. Im Bereich der Microservice Architektur existieren verschiedene Szenarien, wie man eine Authentifizierung sowie Autorisierung gestalten kann.\cite{bruce2019mic_in_action} \\
 
@@ -359,7 +359,7 @@ Die Abbildung \ref{fig:password_grant} zeigt einen Ablauf, bei dem ein Client se
 
 Neben dem \textit{password grant Flow} existiert auch der sogenannte \textit{client credentials grant Flow}. Dieser funktioniert ähnlich, nur dass nicht Username und Passwort übertragen werden, sondern der Anwendungen durch gemeinsam bekannte Daten zwischen Anwendungen und Authorization Server vertraut wird. Den \textit{client credentials grant Flow} sollte man verwenden, wenn eine Applikation Ressourcen aufrufen möchte, die außerhalb eines User-Kontextes liegen, d.h. es handelt sich in der Regel um recht allgemeine Daten.\cite{oauth2}\cite{richardson2019mic_pattern} \\
 
-Aufgrund dieser Grundlage wird im Konzept VERLINKUNG-EINFÜGEN herausgearbeitet, welche Möglichkeiten zur technischen Umsetzung dieser Flows bereitstehen. 
+Aufgrund dieser Grundlage wird im Konzept \ref{sec:concept_authentifizierung_autorisierung} herausgearbeitet, welche Möglichkeiten zur technischen Umsetzung von OAuth2 bereitstehen. 
 
 \subsection{Docker}
 

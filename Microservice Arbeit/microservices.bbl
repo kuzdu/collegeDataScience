@@ -332,6 +332,34 @@
       \field{title}{Moving mountains – practical approaches for moving monolithic applications to Microservices}
       \field{year}{2017}
     \endentry
+    \entry{owin2019Microsoft}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=ab387a555d1c7e4ea48572bc5d10c77b}{%
+           given={olprod},
+           giveni={o\bibinitperiod},
+           prefix={hongyes\bibnamedelima olprod},
+           prefixi={h\bibinitperiod\bibinitdelim o\bibinitperiod}}}%
+      }
+      \strng{namehash}{ab387a555d1c7e4ea48572bc5d10c77b}
+      \strng{fullhash}{ab387a555d1c7e4ea48572bc5d10c77b}
+      \strng{bibnamehash}{ab387a555d1c7e4ea48572bc5d10c77b}
+      \strng{authorbibnamehash}{ab387a555d1c7e4ea48572bc5d10c77b}
+      \strng{authornamehash}{ab387a555d1c7e4ea48572bc5d10c77b}
+      \strng{authorfullhash}{ab387a555d1c7e4ea48572bc5d10c77b}
+      \field{sortinit}{o}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{abgerufen am 2.6.2019}
+      \field{title}{OWIN-OAuth 2.0-Autorisierungsserver}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://docs.microsoft.com/de-de/aspnet/aspnet/overview/owin-and-katana/owin-oauth-20-authorization-server
+      \endverb
+      \verb{url}
+      \verb https://docs.microsoft.com/de-de/aspnet/aspnet/overview/owin-and-katana/owin-oauth-20-authorization-server
+      \endverb
+    \endentry
     \entry{oauth2}{misc}{}
       \name{author}{1}{}{%
         {{hash=a0d750ea4c4bd6e7beeb53741ae4b101}{%

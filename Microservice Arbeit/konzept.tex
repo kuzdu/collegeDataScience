@@ -207,22 +207,24 @@ Die Architektur erweitert sich wie folgt:
 Cloudlösung erwähnen, wird aber nicht verwendet: https://aws.amazon.com/de/sqs/ oder https://cloud.google.com/pubsub/
 
 
-\subsection{Wahl der Authenfizierung/Authorisierung}
-- Auth0
-- OAuth2: Authentication Framework (mit OpenId Connect?) -> Spricht die Zeit, Komplexität und so eine Komplexität gar nicht benötigt 
-- JWT: Also Protocol
-- Dritteranbieter Dienst -> Auth0 (zu teuer)
-- IdentityServer4
-- ggf. ohne OAuth
+\subsection{Wahl der Authenfizierung/Authorisierung}\label{sec:concept_authentifizierung_autorisierung}
 
-%Im Endeffekt habe ich zwei Frameworks, IdentityServer4 überzeugt mich mehr, Clouds erwähnen, Drittanbieter (zu teuer), selbst schreiben zu komplex
+In \ref{sec:authentifizierung_autorisierung} wurde bereits argumentiert, dass OAuth2 für die Authentifizierung und Autorisierung verwendet wird. Ebenfalls wurde festgelegt, dass jeder Microservices die Autorisierung durchführt, die Authentifizierung allerdings in einem eigenen Service liegen muss. Damit ein Microservice die Autorisierung durchführen kann, muss ein Request vom API-Gateway entsprechend aufbereitet werden. Im Detail sieht dies wie folgt aus\cite{richardson2019mic_pattern}:\\
+\begin{enumerate}
+	\item  Ein Request mit JWT wird vom Gateway empfangen
+	\item Das Gateway prüft die Signatur. Ist der Request valide, werden Informationen (z.B. Schreibrecht um neues Wort zu hinterlegen) in den Header vom Request geparst. 
+	\item Das Gateway leitet den Request angereichert mit entpackten Daten im Header weiter an den Microservice.
+	\item Der Microservice liest die Daten aus und überprüft, ob die nötigen Rechte für die entsprechende Aktion vorliegen.
+\end{enumerate}
 
-%Owin: Ist Schnittstelle zwischen .NET und Webservern
-%https://www.youtube.com/watch?v=TsH3BzIPzeU
-%Identity Server Talk: https://www.youtube.com/watch?v=8IXIFuaHAt8
-%IDentity Server Implementierung: https://www.youtube.com/watch?v=wQaOWc_bwpM
+Während der strukturelle Ablauf nun festgelegt ist, stellt sich die Frage, wie OAuth2 implementiert wird. Dafür stehen verschiedene Möglichkeiten zur Verfügung: Auth0 (Drittanbieter), IdentityServer4 oder Owin (jeweils Frameworks für ASP .net) sowie Clouds.\\
 
-% Guter Artikel bzgl. OAuth2: https://medium.com/google-cloud/understanding-oauth2-and-building-a-basic-authorization-server-of-your-own-a-beginners-guide-cf7451a16f66
-%https://docs.microsoft.com/de-de/dotnet/standard/microservices-architecture/secure-net-microservices-web-applications/
+\textbf{Auth0}: Bei Auth0 (http://auth0.com) handelt sich um einen Drittanbieter, welcher laut eigenen Angaben alle gängigen Authenifizierungsmöglichkeiten abbildet. Die Dienste, welche bereitgestellt werden (z.B. Social Login, Zwei-Faktor-Authentifizierung, E-Mail-Verfication, Forget Password usw.) würden laut eigenen Angaben um die 90 Tage Eigenentwicklung beanspruchen. Mit Auth0 benötigt man zum Implementieren wenige Stunden und hat Zugriff auf gute gepflegte Dokumenation. Der Nachteil ist, dass Auth0 ab einer gewissen Last (über 7000 aktive Nutzer im Monat) kostenpflichtig wird. Zusätzlich ist das Angebot z.B. Zwei-Faktor-Authentifizierung für Stirnraten nicht notwendig.\\
 
+\textbf{.net OWIN}: Allgemein ist OWIN eine von Microsoft für ASP .net core entwickelt und hat den Vorteil, dass Webanwendung und Webserver voneinander entkoppelt sind. Durch OWIN sitzt eine Middleware vor dem Webserver. Dort bietet OWIN die Möglichkeit Autorisierungsserver basierend auf OAuth2 zu implementieren. Der Dienst ist kostenfrei und auf ASP .net core zugeschnitten, leider ist die Dokumentation sehr rudimentär. Es ist schwer herauszufinden, welche Möglichkeiten OWIN genau bietet und wie man diese implementiert.\cite{owin2019Microsoft}\\
 
+\textbf{IdentityServer4}: Der IdentityServer4 ist ein OAuth2 Framework für ASP.NET Core, welches in ASP.NET Core 3.0 (derzeitige produktivversion ist 2.2 - Stand 2.6.2019) künftig vorhanden sein soll. Derzeit muss es noch über Libraries installiert werden. Es vereinfacht die Handhabung mit OAuth2, bietet eine umfangreiche Dokumenation und arbeitet unterstützend mit Ocelot zusammen. Es bietet natürlich nicht so eine leichte Implementierung an wie Auth0, ist allerdings kostenfrei.\\
+
+\textbf{Clouds}: Die Clouddienste Google, AWS und Azure bieten ebenfalls eigene Lösungen an. Auf diese wird allerdings nicht weiter eingegangen, da bei dem Gateway und dem Hosting bereits auf eine Cloudlösung verzichtet worden ist. \\
+
+Aus den genannten Möglichkeiten wird sich für das Framework IdentityServer4 entschieden, da es kostenlos ist (im Gegensatz zu Auth0), besser dokumentiert als OWIN und mit Ocelot kompatibel ist. Zusätzlich spart man sich gegenüber der kompletten Eigentlichentwicklung Zeit.\\ 
