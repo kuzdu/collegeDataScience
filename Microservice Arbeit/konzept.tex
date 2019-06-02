@@ -197,15 +197,17 @@ Die Architektur erweitert sich wie folgt:
 \\
 
 \subsection{Wahl der Kommunikation}
--> Anspruch: schnell, robust und zuverlässig, einfach zu implementieren
 
-- Erwähnen, dass asynchrone Kommunikation verwendet wird, aufgrund der Vorteile aus den Grundlagen 
-- Technologie: Masstransit (RabbitMQ) vs. Kafka
+Es gibt zahlreiche Message Queues, die selbstbeschreibend schnell, robust, zuverlässig und einfach zu implementieren sind. Derzeitig verwendete Message Queues könnten sein: RabbitMQ, Kafka, RocketMQ, Artemis oder NSQ.\\
 
-%Argumentationsstruktur folgen: https://medium.com/linagora-engineering/how-to-choose-a-message-queue-247dde46e66c
+Bevor die Message Queues Im Detail gegeneinander abgewogen werden, wird untersucht, ob es bereits Ausschlusskriterien gibt. Zum Beispiel weist die RocketMQ (Apache Projekt) noch über 130 Github Issues auf, weshalb davon auszugehen ist, dass diese Message Queue noch in der Entwicklung steht. Artemis verwendet noch ältere Technologien wie XML und NSQ bietet nicht den Funktionsumfang wie andere Queues (z.B. Haltbarkeit der Nachrichten oder Clustering).\\ %verlinken auf medium artikel
 
-Cloudlösung erwähnen, wird aber nicht verwendet: https://aws.amazon.com/de/sqs/ oder https://cloud.google.com/pubsub/
+%Abwägen zwischen RabbitMQ und Kafka
+%https://medium.com/linagora-engineering/how-to-choose-a-message-queue-247dde46e66c
 
+Einige der MessageQueues lassen sich aus unterschiedlichen Gründen ausschließen: RocketMQ 
+
+%Cloudlösung erwähnen, wird aber nicht verwendet: https://aws.amazon.com/de/sqs/ oder https://cloud.google.com/pubsub/
 
 \subsection{Wahl der Authenfizierung/Authorisierung}\label{sec:concept_authentifizierung_autorisierung}
 
@@ -225,6 +227,6 @@ Während der strukturelle Ablauf nun festgelegt ist, stellt sich die Frage, wie 
 
 \textbf{IdentityServer4}: Der IdentityServer4 ist ein OAuth2 Framework für ASP.NET Core, welches in ASP.NET Core 3.0 (derzeitige produktivversion ist 2.2 - Stand 2.6.2019) künftig vorhanden sein soll. Derzeit muss es noch über Libraries installiert werden. Es vereinfacht die Handhabung mit OAuth2, bietet eine umfangreiche Dokumenation und arbeitet unterstützend mit Ocelot zusammen. Es bietet natürlich nicht so eine leichte Implementierung an wie Auth0, ist allerdings kostenfrei.\\
 
-\textbf{Clouds}: Die Clouddienste Google, AWS und Azure bieten ebenfalls eigene Lösungen an. Auf diese wird allerdings nicht weiter eingegangen, da bei dem Gateway und dem Hosting bereits auf eine Cloudlösung verzichtet worden ist. \\
+\textbf{Clouds}: Die Clouddienste Google, AWS und Azure bieten ebenfalls eigene Lösungen an. Auf diese wird allerdings nicht weiter eingegangen, da bei dem Gateway und Hosting bereits auf eine Cloudlösung verzichtet worden ist. \\
 
-Aus den genannten Möglichkeiten wird sich für das Framework IdentityServer4 entschieden, da es kostenlos ist (im Gegensatz zu Auth0), besser dokumentiert als OWIN und mit Ocelot kompatibel ist. Zusätzlich spart man sich gegenüber der kompletten Eigentlichentwicklung Zeit.\\ 
+Aus den genannten Möglichkeiten wird sich für das Frsamework IdentityServer4 entschieden, da es kostenlos ist (im Gegensatz zu Auth0), besser dokumentiert als OWIN und mit Ocelot kompatibel ist. Zusätzlich spart man sich gegenüber der kompletten Eigentlichentwicklung Zeit.\\ 
