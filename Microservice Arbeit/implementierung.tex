@@ -1,16 +1,188 @@
 \section{Implementierung}
 Das ist der Implementierungspart
 
+\subsection{Authentifizierung und Autorisierung}
+Ein zentraler Teil bei Microservices ist die Authentifizierung sowie die Autorisierung. Es wurde sich für eine Identity Server mit OAuth2 entschieden. Die MySQL-Datenstruktur ergibt sich aus dem Datenmodell:
+
+\begin{verbatim}
+public class User
+{
+	[Required] public int Id { set; get; }
+	public string Name { set; get; }
+	public string Password { set; get; }
+	public bool Active { set; get; }
+	public string Role { set; get; }
+}
+\end{verbatim}
+
+Als eindeutiger Identifier ist eine `Id` notwendig. Zusätzlich besitzt jeder User einen Namen, ein Passwort, ist im Standaradfall aktiviert und es wird zwischen zwei Rollen unterschieden: `customer` und  `admin`. Wie zu erwarten hat die `admin`-Rolle mehr Berechtigung als ein Customer. \\
+
+Um den Identity Server einzurichten, müssen sogenannte NuGet-Pakete heruntergeladen werden. NuGet ist ein System, mit welchem Softwarebibliotheken bereitgestellt werden können. Diese Verweise werden zur Projektdatei hinzugefügt.
+
+\begin{verbatim}
+    <PackageReference Include="IdentityServer4" Version="2.3.0" />
+	<PackageReference Include="IdentityServer4.AccessTokenValidation" Version="2.7.0" />
+\end{verbatim}
+
+In der `Startup.cs`, welche standardmäßig bei C\# .net vorliegt, werden grundsätzlich Serverkonfigurationen initialisiert. Dies muss für den Identity Server ebenfalls getan werden.
+
+\begin{verbatim}
+			(1)
+            var builder = services.AddIdentityServer()
+			.AddInMemoryIdentityResources(Config.GetIdentityResources()) //check below
+			.AddInMemoryApiResources(Config.GetApis())
+			.AddInMemoryClients(Config.GetClients())
+			.AddProfileService<ProfileService>();
+			services.AddTransient<IResourceOwnerPasswordValidator, ResourceOwnerPasswordValidator>();
+			services.AddTransient<IProfileService, ProfileService>();
+						
+			(2)
+			services.AddAuthentication("Bearer")
+			.AddJwtBearer("Bearer", options =>
+			{
+			options.Authority = "http://identity_server_service";
+			[...]
+			options.Audience = "srapi";
+			});
+\end{verbatim}  
+
+Wie man feststellen kann, sind diese Konfigurationen schon recht umfangreich, obwohl es sich in dieser Version schon um eine sehr leichtgewichtige Implementierung von OAuth2 handelt. In (1) wird der Identity Server zum Projekt hinzugefügt. Zusätzlich wird auf den `ProfileService` sowie den `ResourceOwnerPasswordValidator` verwiesen, welche anschließend initialisiert werden müssen. In (2) wird noch die `Authority` und die `Audience` gesetzt. Die `Authority` garantiert zusätzlich, dass das Token nicht von einem anderen Identity Server ausgestellt wird. Die `Audience` gibt noch einmal an, dass das ausgestellte Token nur Zugriff auf eine entsprechende `srapi`(Stirnraten-API) Ressource hat. 
+
+\begin{verbatim}
+	new ApiResource("srapi", "Stirnraten API")
+	{
+		ApiSecrets = new List<Secret>()
+		{
+		new Secret(CustomClientSecret.Sha256())
+		}
+	}
+\end{verbatim}
+
+Zusätzlich müssen noch die beiden in den Grundlagen erwähnten Flows (`ClientCredentials` und `ResourceOwnerPassword`) implementiert werden. 
+
+\begin{verbatim}{
+[...]
+new Client
+{
+	ClientId = CustomClientId,
+	AllowedGrantTypes = GrantTypes.ClientCredentials,
+	ClientSecrets =
+		{
+		new Secret(CustomClientSecret.Sha256())
+		},
+	AllowedScopes =
+	{
+	"srapi"
+	}
+},
+
+new Client
+{
+	ClientId = "sr.client",
+	AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
+	ClientSecrets =
+		{
+		new Secret("secret".Sha256())
+		},
+	AllowedScopes =
+		{
+		"srapi"
+		}
+	}
+	};
+}
+\end{verbatim}
+
+Durch diese Flows ist garantiert, dass die API grundsätzlich geschützt ist, d.h. auch dann wenn Benutzer keine Benutzerdaten hinterlegt haben. Werden allerdings benutzerspezifische Zugänge hinterlegt, erhalten diese noch mehr Zugriffsrechte auf die API. Dies wird im Bereich \ref{sec:umsetzung_api_gateway} deutlich. \\
+
+Wenn eine Anfrage mit Benutzernamen und Passwort gestellt wird, ruft der Identity Server in seinem Abarbeitungszyklus folgende Methode ab: 
+
+\begin{verbatim}
+public async Task ValidateAsync(ResourceOwnerPasswordValidationContext context)
+		{
+		(1)
+		var user = await _unitOfWork.UserRepository.GetUserByNameAndPasswordAsync(context.UserName,
+		context.Password);
+		
+		(2)
+		if (user == null)
+		{
+		context.Result = new GrantValidationResult(
+		TokenRequestErrors.InvalidGrant,
+		"invalid custom credential");
+		return;
+		}
+		
+		if (!user.Active)
+		{
+		context.Result = new GrantValidationResult(
+		TokenRequestErrors.InvalidClient,
+		"User was deactivated by admin");
+		return;
+		}
+		
+		(3)
+		context.Result = new GrantValidationResult(
+		subject: user.Id.ToString(),
+		authenticationMethod: "custom",
+		claims: GetUserClaims(user)); //get user claims
+		}
+\end{verbatim}
+
+In (1) wird ein Benutzer gesucht, welcher mit dem übergebenen Namen und Passwort übereinstimmt. In (2) wird dieser validiert und in (3) das Token anhand der `Claims` generiert. `Claims` sind vereinfacht ausgedrückt, zusätzlich Informationen, welche man in dem Token übergeben möchte. 
+
+\begin{verbatim}
+return new[]
+{
+new Claim("user_id", user.Id.ToString() ?? ""),
+new Claim(JwtClaimTypes.Name, user.Name),
+new Claim(JwtClaimTypes.Role, user.Role)
+};
+\end{verbatim}
+
+In der umgesetzten API wird eine `UserId`, der `Name` sowie die `Role` übergeben. Alles wird ggf. von anderen Microservices benötigt, um die Autorisierung durchzuführen.\\
+
+Möchte man sich nun ein Token ausstellen, muss man folgenden POST-Api Request durchführen: 
+% TODO: Bild einfügen Client Flow
+% TODO: Bild einfügen Password 
+
+Durch diesen Token kann das API-Gateway den Request authentifizieren. Das Autorisieren wiederum liegt im Endeffekt bei jedem Microservice. \\
+
+Als abschließenden Punkt, ist es interessant, einen ausgestellten Token z.B. über www.jwt.io zu dekodieren. Der auf dem Bild (VERLINKEN) ausgestellte Token sieht wie folgt aus:
+
+\begin{verbatim}
+	[...]
+	{
+		[...]
+		"iss": "http://identity_server_service",
+		"aud": [
+		"http://identity_server_service/resources",
+		"srapi"
+		],
+		"client_id": "sr.client",
+		[...]
+		"role": "admin",
+		"user_id": "1",
+		"scope": [
+		"srapi"
+		],
+		"amr": [
+		"custom"
+		]
+	}
+	[...]
+\end{verbatim}  
+
+Diese Daten werden von dem API-Gateway weitergegeben und können verarbeitet werden. 
 
 \subsection{Service Architektur}
 // Grafik erstellen, welche Services es gibt und wie diese Kommunizieren 
 // Docker erwähnen und Beispiel einfügen
 
-\subsection{Umsetzung API-Gateway}
+\subsection{Umsetzung API-Gateway}\label{sec:umsetzung_api_gateway}
+
 // Grafik erstellen, welche Services es gibt und wie diese Kommunizieren 
 
-\subsection{Authentifizierung und Authorisierung}
-// Authentifizerungsart umsetzen
 %http://docs.identityserver.io/en/latest/quickstarts/1_client_credentials.html Umsetzung
 %mit Datenbank http://docs.identityserver.io/en/latest/quickstarts/7_entity_framework.html#identityserver4-entityframework
 

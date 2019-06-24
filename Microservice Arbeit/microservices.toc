@@ -57,16 +57,16 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5}Implementierung}{34}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1}Service Architektur}{34}
+\contentsline {subsection}{\numberline {5.1}Authentifizierung und Autorisierung}{34}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2}Umsetzung API-Gateway}{34}
+\contentsline {subsection}{\numberline {5.2}Service Architektur}{38}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3}Authentifizierung und Authorisierung}{34}
+\contentsline {subsection}{\numberline {5.3}Umsetzung API-Gateway}{38}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4}Asynchrone Kommunikation}{34}
+\contentsline {subsection}{\numberline {5.4}Asynchrone Kommunikation}{38}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Fazit}{34}
+\contentsline {section}{\numberline {6}Fazit}{38}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1}Ausblick}{34}
+\contentsline {subsection}{\numberline {6.1}Ausblick}{38}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\nonumberline Literatur}{35}
+\contentsline {section}{\nonumberline Literatur}{39}
