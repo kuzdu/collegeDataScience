@@ -59,11 +59,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.1}Authentifizierung und Autorisierung}{34}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2}Service Architektur}{38}
+\contentsline {subsection}{\numberline {5.2}Umsetzung API-Gateway}{38}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3}Umsetzung API-Gateway}{38}
+\contentsline {subsection}{\numberline {5.3}Asynchrone Kommunikation}{38}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4}Asynchrone Kommunikation}{38}
+\contentsline {subsection}{\numberline {5.4}Service Architektur}{38}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6}Fazit}{38}
 \defcounter {refsection}{0}\relax 

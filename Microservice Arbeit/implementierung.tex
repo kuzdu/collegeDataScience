@@ -7,11 +7,11 @@ Ein zentraler Teil bei Microservices ist die Authentifizierung sowie die Autoris
 \begin{verbatim}
 public class User
 {
-	[Required] public int Id { set; get; }
-	public string Name { set; get; }
-	public string Password { set; get; }
-	public bool Active { set; get; }
-	public string Role { set; get; }
+    [Required] public int Id { set; get; }
+    public string Name { set; get; }
+    public string Password { set; get; }
+    public bool Active { set; get; }
+    public string Role { set; get; }
 }
 \end{verbatim}
 
@@ -20,42 +20,43 @@ Als eindeutiger Identifier ist eine `Id` notwendig. Zusätzlich besitzt jeder Us
 Um den Identity Server einzurichten, müssen sogenannte NuGet-Pakete heruntergeladen werden. NuGet ist ein System, mit welchem Softwarebibliotheken bereitgestellt werden können. Diese Verweise werden zur Projektdatei hinzugefügt.
 
 \begin{verbatim}
-    <PackageReference Include="IdentityServer4" Version="2.3.0" />
-	<PackageReference Include="IdentityServer4.AccessTokenValidation" Version="2.7.0" />
+<PackageReference Include="IdentityServer4" Version="2.3.0" />
+<PackageReference Include="IdentityServer4.AccessTokenValidation" Version="2.7.0" />
 \end{verbatim}
 
 In der `Startup.cs`, welche standardmäßig bei C\# .net vorliegt, werden grundsätzlich Serverkonfigurationen initialisiert. Dies muss für den Identity Server ebenfalls getan werden.
 
 \begin{verbatim}
-			(1)
-            var builder = services.AddIdentityServer()
-			.AddInMemoryIdentityResources(Config.GetIdentityResources()) //check below
-			.AddInMemoryApiResources(Config.GetApis())
-			.AddInMemoryClients(Config.GetClients())
-			.AddProfileService<ProfileService>();
-			services.AddTransient<IResourceOwnerPasswordValidator, ResourceOwnerPasswordValidator>();
-			services.AddTransient<IProfileService, ProfileService>();
-						
-			(2)
-			services.AddAuthentication("Bearer")
-			.AddJwtBearer("Bearer", options =>
-			{
-			options.Authority = "http://identity_server_service";
-			[...]
-			options.Audience = "srapi";
-			});
+(1)
+var builder = services.AddIdentityServer()
+.AddInMemoryIdentityResources(Config.GetIdentityResources()) //check below
+.AddInMemoryApiResources(Config.GetApis())
+.AddInMemoryClients(Config.GetClients())
+.AddProfileService<ProfileService>();
+
+services.AddTransient<IResourceOwnerPasswordValidator, ResourceOwnerPasswordValidator>();
+services.AddTransient<IProfileService, ProfileService>();
+	
+	(2)
+	services.AddAuthentication("Bearer")
+	.AddJwtBearer("Bearer", options =>
+{
+   options.Authority = "http://identity_server_service";
+   [...]
+   options.Audience = "srapi";
+});
 \end{verbatim}  
 
 Wie man feststellen kann, sind diese Konfigurationen schon recht umfangreich, obwohl es sich in dieser Version schon um eine sehr leichtgewichtige Implementierung von OAuth2 handelt. In (1) wird der Identity Server zum Projekt hinzugefügt. Zusätzlich wird auf den `ProfileService` sowie den `ResourceOwnerPasswordValidator` verwiesen, welche anschließend initialisiert werden müssen. In (2) wird noch die `Authority` und die `Audience` gesetzt. Die `Authority` garantiert zusätzlich, dass das Token nicht von einem anderen Identity Server ausgestellt wird. Die `Audience` gibt noch einmal an, dass das ausgestellte Token nur Zugriff auf eine entsprechende `srapi`(Stirnraten-API) Ressource hat. 
 
 \begin{verbatim}
-	new ApiResource("srapi", "Stirnraten API")
-	{
-		ApiSecrets = new List<Secret>()
-		{
-		new Secret(CustomClientSecret.Sha256())
-		}
-	}
+new ApiResource("srapi", "Stirnraten API")
+{
+    ApiSecrets = new List<Secret>()
+    {
+    new Secret(CustomClientSecret.Sha256())
+    }
+}
 \end{verbatim}
 
 Zusätzlich müssen noch die beiden in den Grundlagen erwähnten Flows (`ClientCredentials` und `ResourceOwnerPassword`) implementiert werden. 
@@ -64,33 +65,32 @@ Zusätzlich müssen noch die beiden in den Grundlagen erwähnten Flows (`ClientC
 [...]
 new Client
 {
-	ClientId = CustomClientId,
-	AllowedGrantTypes = GrantTypes.ClientCredentials,
-	ClientSecrets =
-		{
-		new Secret(CustomClientSecret.Sha256())
-		},
-	AllowedScopes =
-	{
-	"srapi"
-	}
+    ClientId = CustomClientId,
+    AllowedGrantTypes = GrantTypes.ClientCredentials,
+    ClientSecrets =
+    {
+    new Secret(CustomClientSecret.Sha256())
+    },
+    AllowedScopes =
+    {
+    "srapi"
+    }
 },
 
 new Client
 {
-	ClientId = "sr.client",
-	AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
-	ClientSecrets =
-		{
-		new Secret("secret".Sha256())
-		},
-	AllowedScopes =
-		{
-		"srapi"
-		}
-	}
-	};
+    ClientId = "sr.client",
+    AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
+    ClientSecrets =
+    {
+    new Secret("secret".Sha256())
+    },
+    AllowedScopes =
+    {
+    "srapi"
+    }
 }
+
 \end{verbatim}
 
 Durch diese Flows ist garantiert, dass die API grundsätzlich geschützt ist, d.h. auch dann wenn Benutzer keine Benutzerdaten hinterlegt haben. Werden allerdings benutzerspezifische Zugänge hinterlegt, erhalten diese noch mehr Zugriffsrechte auf die API. Dies wird im Bereich \ref{sec:umsetzung_api_gateway} deutlich. \\
@@ -151,8 +151,6 @@ Durch diesen Token kann das API-Gateway den Request authentifizieren. Das Autori
 Als abschließenden Punkt, ist es interessant, einen ausgestellten Token z.B. über www.jwt.io zu dekodieren. Der auf dem Bild (VERLINKEN) ausgestellte Token sieht wie folgt aus:
 
 \begin{verbatim}
-	[...]
-	{
 		[...]
 		"iss": "http://identity_server_service",
 		"aud": [
@@ -169,32 +167,22 @@ Als abschließenden Punkt, ist es interessant, einen ausgestellten Token z.B. ü
 		"amr": [
 		"custom"
 		]
-	}
-	[...]
+		[...]
 \end{verbatim}  
 
 Diese Daten werden von dem API-Gateway weitergegeben und können verarbeitet werden. 
 
-\subsection{Service Architektur}
-// Grafik erstellen, welche Services es gibt und wie diese Kommunizieren 
-// Docker erwähnen und Beispiel einfügen
-
 \subsection{Umsetzung API-Gateway}\label{sec:umsetzung_api_gateway}
-
-// Grafik erstellen, welche Services es gibt und wie diese Kommunizieren 
-
-%http://docs.identityserver.io/en/latest/quickstarts/1_client_credentials.html Umsetzung
-%mit Datenbank http://docs.identityserver.io/en/latest/quickstarts/7_entity_framework.html#identityserver4-entityframework
-
-%https://www.youtube.com/watch?v=TsH3BzIPzeU
-%Identity Server Talk: https://www.youtube.com/watch?v=8IXIFuaHAt8
-%IDentity Server Implementierung: https://www.youtube.com/watch?v=wQaOWc_bwpM
-
-% Guter Artikel bzgl. OAuth2: https://medium.com/google-cloud/understanding-oauth2-and-building-a-basic-authorization-server-of-your-own-a-beginners-guide-cf7451a16f66
-%https://docs.microsoft.com/de-de/dotnet/standard/microservices-architecture/secure-net-microservices-web-applications/
-
-
 
 \subsection{Asynchrone  Kommunikation}
 // ieine Queue umsetzen (RabbitMQ, Kafka...)
+
+\subsection{Service Architektur}
+// nginx vom Hoster
+// deployment
+// Grafik erstellen, welche Services es gibt und wie diese Kommunizieren 
+// Docker erwähnen und Beispiel einfügen
+
+
+
 
