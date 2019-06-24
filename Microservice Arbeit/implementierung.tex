@@ -198,14 +198,15 @@ Durch diese Pakete wird zum einen das Ocelot Gateway eingebunden, zum anderen wi
 \begin{verbatim}
 (1)
 var authenticationProviderKey = "NTT9N7MXLJN9";
+
+(2)
 void Options(IdentityServerAuthenticationOptions o)
 {
-(2)
    o.Authority = "http://identity_server_service";
    o.ApiName = "srapi";
    o.RequireHttpsMetadata = false;
    o.SupportedTokens = SupportedTokens.Both;
-   o.ApiSecret = "secret";
+   o.ApiSecret = "xxxxxx";
 }
 services.AddAuthentication()
 .AddIdentityServerAuthentication(authenticationProviderKey, Options);
@@ -216,13 +217,57 @@ await app.UseOcelot();
 [...]
 \end{verbatim}
 
-% TODO: Begründen mit dem AuthetnciatonProviderKey dann die Daten, die man eh schon kennt und benutzen von Ocelot
-% TODO: Beispielhaftes Schema von Ocelot vergeben, wo alles gemacht wird und fertig
+In (1) muss ein sogenannter `Authentication Provider Key` gesetzt werden. Dies ist obligatorisch vorgegeben von Ocelot und notwendig, um weitergeleitete Requests eindeutig zuzuordnen. In (2) werden die Optionen für die Verbindung zum Identity Server definiert. Diese Konfigurationen müssen mit den Einstellungen aus dem zuvor erwähnten Identity Server übereinstimmen. In (3) wird noch einmal explizit ausgedrückt, dass Ocelot auch verwendet werden soll. \\
+
+Um eingehende Request zu verarbeiten, verwendet Ocelot eine JSON, in dem sogenannte ReRoutes (Weiterleitungen) hinterlegt werden. 
+
+\begin{verbatim}
+"ReRoutes": [
+ {
+ (1)
+ "DownstreamPathTemplate": "/api/customers",
+ (2)
+ "DownstreamScheme": "http",
+ "DownstreamHostAndPorts": [
+    {
+    (3)
+    "Host": "customer_service",
+    "Port": 80
+    }
+  ],
+  (4)
+  "UpstreamPathTemplate": "/api/stats",
+  (5)
+  "AuthenticationOptions": {
+  "AuthenticationProviderKey": "NTT9N7MXLJN9",
+  "AllowedScopes": [
+    "srapi"
+  ]
+  },
+  (6)
+  "RouteClaimsRequirement": {
+  "role": "admin"
+  }
+ },
+[...]
+]
+\end{verbatim}
+
+Diese dargestellte ReRoute zeigt bereits viele Vorteile von Ocelot. Durch (1) wird das `DownstreamPathTemplate` definiert. D.h. das Gateway präsentiert über das `UpstreamPathTemplate` (5) die öffentlichen Schnittstellen, welche man als Client anspricht. Dadurch lässt sich das Weiterleiten flexibel gestalten. Zusätzlich ist es nicht zwingend notwendig, dass wenn das `DownstreamPathTemplate` seine Route ändert, die Clienten davon betroffen sind, da das `UpstreamPathTemplate` gleichgeblieben ist. \\
+
+Das `DownstreamScheme` (2) ist http, da die Microservices zu denen weiterleitet wird, nur in einem lokalen Netz befinden. Das hat den Vorteil, dass die Microservices nur über das Gateway zu erreichen sind. So kann garantiert werden, dass kein Dritter Zugriff auf die Services hat ohne über das Gateway zu gehen. \\
+
+In (3) wird definiert an welchen Microservice weitergeleitet werden soll. In diesem Beispiel der `customer\_service`.\\
+
+In (5) findet die Authentifizierung statt: Jeder Request welcher eingeht, muss im Token als Scope die `srapi` enthalten. In diesem Beispiel wird bereits auch autorisiert. Denn es wird die Rolle `admin` erwartet. D.h. wenn ein Request kein gültiges Token oder die entsprechende Rolle hat, wird der Request abgelehnt. \\
+
+% noch ein Beispiel mit der Limitierung der Routen bringen
 
 \subsection{Asynchrone  Kommunikation}
 // ieine Queue umsetzen (RabbitMQ, Kafka...)
 
 \subsection{Service Architektur}
+% Morgen das
 // nginx vom Hoster
 // deployment
 // Grafik erstellen, welche Services es gibt und wie diese Kommunizieren 

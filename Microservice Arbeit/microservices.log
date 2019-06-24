@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  24 JUN 2019 19:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  24 JUN 2019 23:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1370,11 +1370,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 161--162
 LaTeX Warning: Reference `umsetzung_api_gateway' on page 39 undefined on input 
 line 183.
 
+
+Overfull \hbox (138.35083pt too wide) in paragraph at lines 194--194
+[] \T1/cmtt/m/n/12 <PackageReference Include="IdentityServer4.AccessTokenValida
+tion" Version="3.0.0-preview.2" />[] 
+ []
+
+
+Overfull \hbox (21.05447pt too wide) in paragraph at lines 194--194
+[]\T1/cmtt/m/n/12 <PackageReference Include="Microsoft.AspNetCore.Authenticatio
+n.JwtBearer" />[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--221
+
+ []
+
+[39]
+Underfull \hbox (badness 10000) in paragraph at lines 256--257
+
+ []
+
+[40]
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 260--261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 262--263
+
+ []
+
 ) (./fazit.tex) (./microservices.lot)
 \tf@lot=\write6
 \openout6 = `microservices.lot'.
 
- (./microservices.lof [39])
+ [41] (./microservices.lof)
 \tf@lof=\write7
 \openout7 = `microservices.lof'.
 
@@ -1396,19 +1433,19 @@ Overfull \hbox (34.05716pt too wide) in paragraph at lines 41--41
 ning -[] and -[] implementing -[]
  []
 
-[40]
+[42]
 Overfull \hbox (21.01991pt too wide) in paragraph at lines 41--41
 []\T1/cmr/m/n/12 olprod hon-gyes ol-prod. \T1/cmr/m/it/12 OWIN-OAuth 2.0-Autori
 sierungsserver\T1/cmr/m/n/12 . ab-ge-ru-fen am 2.6.2019.
  []
 
-[41]
+[43]
 Overfull \hbox (2.65814pt too wide) in paragraph at lines 41--41
 []\T1/cmr/m/n/12 o. V. \T1/cmr/m/it/12 Ers-te Schrit-te mit End-points in ei-ne
 r fle-xiblen App Engine-Umgebung (.NET)\T1/cmr/m/n/12 .
  []
 
-[42] (./microservices.aux)
+[44] (./microservices.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1440,10 +1477,10 @@ fb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb
 /usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></u
 sr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr
 /local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on microservices.pdf (42 pages, 1568803 bytes).
+Output written on microservices.pdf (44 pages, 1572608 bytes).
 PDF statistics:
- 214 PDF objects out of 1000 (max. 8388607)
- 130 compressed objects within 2 object streams
+ 221 PDF objects out of 1000 (max. 8388607)
+ 135 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
