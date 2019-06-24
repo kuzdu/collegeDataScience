@@ -140,15 +140,25 @@ new Claim(JwtClaimTypes.Role, user.Role)
 };
 \end{verbatim}
 
-In der umgesetzten API wird eine `UserId`, der `Name` sowie die `Role` übergeben. Alles wird ggf. von anderen Microservices benötigt, um die Autorisierung durchzuführen.\\
+In der umgesetzten API wird eine `user\_id`, der `Name` sowie die `Role` übergeben. Alles wird ggf. von anderen Microservices benötigt, um eine entsprechende Autorisierung zu gewährleisten.\\
 
-Möchte man sich nun ein Token ausstellen, muss man folgenden POST-Api Request durchführen: 
-% TODO: Bild einfügen Client Flow
-% TODO: Bild einfügen Password 
+Abbildung \ref{fig:client_credentials_flow} und \ref{fig:password_flow} zeigen wie über eine POST Abfrage die entsprechenden Token ausgestellt werden können.\\
 
-Durch diesen Token kann das API-Gateway den Request authentifizieren. Das Autorisieren wiederum liegt im Endeffekt bei jedem Microservice. \\
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.6\textwidth]{client_credentials_flow}
+	\caption[Über Postman gesendeter Client Credential Flow] {Über Postman gesendeter Client Credential Flow. Mit Hilfe dieses Tokens erhält man für 3600 Sekunden (eine Stunde) beschränkten Zugang zur API, um  z.B. Kategorien abzurufen, neue Wörter einzusenden oder ein Benutzerkonto anzulegen.}
+	\label{fig:client_credentials_flow}
+\end{figure} 
 
-Als abschließenden Punkt, ist es interessant, einen ausgestellten Token z.B. über www.jwt.io zu dekodieren. Der auf dem Bild (VERLINKEN) ausgestellte Token sieht wie folgt aus:
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.6\textwidth]{password_flow}
+	\caption[Über Postman gesendeter Password Flow] {Über Postman gesendeter Password Flow. Er ist ebenfalls 3600 Sekunden lang gültig und hat mehr Berechtigung, wie z.B. das Speichern eines Benutzerprofils.}
+	\label{fig:password_flow}
+\end{figure} \\
+
+Enkodiert sieht so ein ausgestellter Benutzer-Token wie folgt aus: \\
 
 \begin{verbatim}
 		[...]
@@ -170,7 +180,7 @@ Als abschließenden Punkt, ist es interessant, einen ausgestellten Token z.B. ü
 		[...]
 \end{verbatim}  
 
-Diese Daten werden von dem API-Gateway weitergegeben und können verarbeitet werden. 
+Durch diese Informationen kann das API-Gateway bereits eine Autorisierung vornehmen. Wie dies im Detail funktioniert, wird im Abschnitt \ref{umsetzung_api_gateway} deutlich. 
 
 \subsection{Umsetzung API-Gateway}\label{sec:umsetzung_api_gateway}
 

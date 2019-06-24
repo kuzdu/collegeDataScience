@@ -28,3 +28,7 @@
 \contentsline {figure}{\numberline {13}{\ignorespaces API Gateway mit Ocelot}}{31}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {14}{\ignorespaces Architektur mit Hilfe von RabbitMQ}}{32}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {15}{\ignorespaces \IeC {\"U}ber Postman gesendeter Client Credential Flow}}{38}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {16}{\ignorespaces \IeC {\"U}ber Postman gesendeter Password Flow}}{38}
