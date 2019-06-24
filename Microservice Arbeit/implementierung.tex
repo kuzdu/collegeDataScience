@@ -184,6 +184,41 @@ Durch diese Informationen kann das API-Gateway bereits eine Autorisierung vorneh
 
 \subsection{Umsetzung API-Gateway}\label{sec:umsetzung_api_gateway}
 
+Ähnlich wie bei dem Identity Server müssen für Ocelot auch gewisse Bibliotheken über NuGet hinterlegt werden.
+
+\begin{verbatim}
+ <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="3.0.0-preview.2" />
+<PackageReference Include="IdentityServer4" Version="2.4.0" />
+<PackageReference Include="Ocelot" Version="11.0.2" />
+<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+\end{verbatim}
+
+Durch diese Pakete wird zum einen das Ocelot Gateway eingebunden, zum anderen wird der Authentifizierungsmechanismus zum Identity Server vereinfacht. Des Weiteren müssen Verbindungsdaten hinterlegt werden, die garantieren, dass das Gateway den Identity Server erreichen kann. Diese werden in der Startup.cs hinterlegt.
+
+\begin{verbatim}
+(1)
+var authenticationProviderKey = "NTT9N7MXLJN9";
+void Options(IdentityServerAuthenticationOptions o)
+{
+(2)
+   o.Authority = "http://identity_server_service";
+   o.ApiName = "srapi";
+   o.RequireHttpsMetadata = false;
+   o.SupportedTokens = SupportedTokens.Both;
+   o.ApiSecret = "secret";
+}
+services.AddAuthentication()
+.AddIdentityServerAuthentication(authenticationProviderKey, Options);
+
+[...]
+(3)
+await app.UseOcelot();
+[...]
+\end{verbatim}
+
+% TODO: Begründen mit dem AuthetnciatonProviderKey dann die Daten, die man eh schon kennt und benutzen von Ocelot
+% TODO: Beispielhaftes Schema von Ocelot vergeben, wo alles gemacht wird und fertig
+
 \subsection{Asynchrone  Kommunikation}
 // ieine Queue umsetzen (RabbitMQ, Kafka...)
 
