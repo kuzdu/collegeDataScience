@@ -284,7 +284,65 @@ Ebenfalls lassen sich die HTTP Methoden über die `UpstreamHttpMethod` einschrä
 Zusammenfassend lässt sich sagen, dass Ocelot sehr mächtig über die JSON konfigurierbar ist. Ocelot bietet noch weitere Funktionen an, die allerdings nicht in der Stirnraten API verwendet worden sind.  
 
 \subsection{Asynchrone  Kommunikation}
-// ieine Queue umsetzen (RabbitMQ, Kafka...)
+
+Um wie geplant eine asynchrone Kommunikation zu erreichen, wird auf eine RabbitMQ zurückgegriffen. Diese läuft als eigentständiger Dienst auf dem Server. Um dies ohne viel Aufwand zu erreichen, wird die RabbitMQ als Container gestartet. Anschließend kann sich über eine grafische Oberfläche mit der RabbitMQ verbunden werden. Die grafische Oberfläche vereinfacht die Handhabung, ist allerdings nicht notwendig. Wie die Containerisierung im Detail verwendet wird, ist in dem nächsten Abschnitt 'Service Architektur' nachzulesen.\\
+
+Wenn die RabbitMQ gestartet ist, können die Services sich mit dieser verbinden. Dafür benötigen sie folgende Bibliotheken:
+
+\begin{verbatim}
+<PackageReference Include="MassTransit" Version="5.5.1" />
+<PackageReference Include="MassTransit.Autofac" Version="5.5.1" />
+<PackageReference Include="MassTransit.RabbitMQ" Version="5.5.1" />
+\end{verbatim}
+
+Es muss ein sogenannter Contract erzeugt werden, dies ist im Prinzip, die Nachricht, die übertragen werden soll. In diesem Fall sind es minimale Informationen, darüber, wenn ein Benutzer erstellt worden ist.
+
+\begin{verbatim}
+public class UserCreated
+{
+public string UserId { get; set; }
+public string Name { get; set; }
+}
+\end{verbatim}
+
+Anschließend muss die `Startup.cs` mit folgenden Informationen angereichert werden: 
+
+\begin{verbatim}
+private void ConfigureBus(ContainerBuilder builder)
+{
+builder.Register(context =>
+{
+return Bus.Factory.CreateUsingRabbitMq(config =>
+{ 
+(1)
+var host = config.Host(new Uri("rabbitmq://" + _rabbitMqPath), h =>
+{
+(2)
+h.Username("xxxxx"); 
+h.Password("xxxxx");
+});
+});
+}).As<IBus, IBusControl, IPublishEndpoint>().SingleInstance();
+}
+\end{verbatim}
+
+Über die Uri wird dem Service mitgeteilt, über welche Adresse er sich mit der RabbitMQ verbinden kann. Anschließend werden Benutzernamen und Passwort benötigt (2). Anschließend muss die RabbitMQ gestartet werden, dies geschieht ebenfalls noch in der `Startup.cs`.
+
+\begin{verbatim}
+var containerBuilder = new ContainerBuilder();
+containerBuilder.RegisterConsumers(Assembly.GetExecutingAssembly());
+ConfigureBus(containerBuilder);
+containerBuilder.Populate(services);
+
+var container = containerBuilder.Build();
+var busControl = container.Resolve<IBusControl>();
+busControl.Start();
+\end{verbatim}
+
+%TODO schreiben was passiert 
+
+%Anschließend das Publishen
+%Dann das konsumieren
 
 \subsection{Service Architektur}
 

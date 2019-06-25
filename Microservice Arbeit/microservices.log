@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  25 JUN 2019 19:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  25 JUN 2019 20:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1409,58 +1409,71 @@ Underfull \hbox (badness 10000) in paragraph at lines 282--283
 
  []
 
-[41]
-<bilder/stirnraten_live.png, id=170, 710.655pt x 352.31625pt>
-File: bilder/stirnraten_live.png Graphic file (type png)
-<use bilder/stirnraten_live.png>
-Package pdftex.def Info: bilder/stirnraten_live.png  used on input line 295.
-(pdftex.def)             Requested size: 313.69029pt x 155.51958pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 309--310
+Underfull \hbox (badness 10000) in paragraph at lines 288--289
 
  []
 
-[42 <./bilder/stirnraten_live.png>]
-Overfull \hbox (8.70749pt too wide) in paragraph at lines 332--332
+[41] [42]
+<bilder/stirnraten_live.png, id=173, 710.655pt x 352.31625pt>
+File: bilder/stirnraten_live.png Graphic file (type png)
+<use bilder/stirnraten_live.png>
+Package pdftex.def Info: bilder/stirnraten_live.png  used on input line 353.
+(pdftex.def)             Requested size: 313.69029pt x 155.51958pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 367--368
+
+ []
+
+[43 <./bilder/stirnraten_live.png>]
+Overfull \hbox (8.70749pt too wide) in paragraph at lines 390--390
 []\T1/cmtt/m/n/12 docker build --tag kuzdu/stirnraten:gateway_service_live ../G
 atewayService[] 
  []
 
 
-Overfull \hbox (0.46632pt too wide) in paragraph at lines 334--335
+Overfull \hbox (0.46632pt too wide) in paragraph at lines 392--393
 []\T1/cmr/m/n/12 Über die Kon-so-le mit-tels `build` wird ein Image er-stellt u
 nd mit `ga-te-way_service_live`
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--335
+Underfull \hbox (badness 10000) in paragraph at lines 392--393
 
  []
 
-
-Overfull \hbox (521.10736pt too wide) in paragraph at lines 350--350
+[44]
+Overfull \hbox (521.10736pt too wide) in paragraph at lines 408--408
 []\T1/cmtt/m/n/12 docker run --restart unless-stopped --name stirnraten_gateway
 _service_live -p 127.0.0.1:6200:80 --network stirnraten -d kuzdu/stirnraten:gat
 eway_service_live[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 351--352
+Underfull \hbox (badness 10000) in paragraph at lines 409--410
 
  []
 
-[43]
-<bilder/portainer.png, id=179, 1176.395pt x 607.26875pt>
+<bilder/portainer.png, id=182, 1176.395pt x 607.26875pt>
 File: bilder/portainer.png Graphic file (type png)
 <use bilder/portainer.png>
-Package pdftex.def Info: bilder/portainer.png  used on input line 357.
+Package pdftex.def Info: bilder/portainer.png  used on input line 415.
 (pdftex.def)             Requested size: 313.69029pt x 161.9262pt.
-) (./fazit.tex) (./microservices.lot [44 <./bilder/portainer.png>])
+) (./fazit.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+[45 <./bilder/portainer.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+) (./microservices.lot)
 \tf@lot=\write6
 \openout6 = `microservices.lot'.
 
-
-(./microservices.lof)
+ (./microservices.lof [46])
 \tf@lof=\write7
 \openout7 = `microservices.lof'.
 
@@ -1482,21 +1495,24 @@ Overfull \hbox (34.05716pt too wide) in paragraph at lines 41--41
 ning -[] and -[] implementing -[]
  []
 
-[45]
+[47]
 Overfull \hbox (21.01991pt too wide) in paragraph at lines 41--41
 []\T1/cmr/m/n/12 olprod hon-gyes ol-prod. \T1/cmr/m/it/12 OWIN-OAuth 2.0-Autori
 sierungsserver\T1/cmr/m/n/12 . ab-ge-ru-fen am 2.6.2019.
  []
 
-[46]
+
 Overfull \hbox (2.65814pt too wide) in paragraph at lines 41--41
 []\T1/cmr/m/n/12 o. V. \T1/cmr/m/it/12 Ers-te Schrit-te mit End-points in ei-ne
 r fle-xiblen App Engine-Umgebung (.NET)\T1/cmr/m/n/12 .
  []
 
-[47] (./microservices.aux)
+[48] [49] (./microservices.aux)
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package logreq Info: Writing requests to 'microservices.run.xml'.
 \openout1 = `microservices.run.xml'.
@@ -1526,10 +1542,10 @@ fb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb
 /usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></u
 sr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr
 /local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on microservices.pdf (47 pages, 1787304 bytes).
+Output written on microservices.pdf (49 pages, 1790623 bytes).
 PDF statistics:
- 234 PDF objects out of 1000 (max. 8388607)
- 141 compressed objects within 2 object streams
+ 241 PDF objects out of 1000 (max. 8388607)
+ 146 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  91 words of extra memory for PDF output out of 10000 (max. 10000000)
 

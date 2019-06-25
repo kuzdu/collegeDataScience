@@ -1,16 +1,19 @@
 \section{Fazit}
-Gelungen, weil grundlegende Microservices Architektur konnte umgesetzt werden. D.h. Datenbankenund Services gekoppelt, Gateway ud Authentifizierung. Das Ganze läuft im Livebetrieb mittels Docker. 
 
-Mittels User Story Mapping und Bounded Contexts konnten Anforderungen sowie Grenzen der MS gut erfasst werden.
+Das Ziel, den Aufbau einer Microservice Architektur anhand des Spieles Stirnraten, betrachte ich meiner Meinung nach als gelungen. Mittels Domain Driven Design konnten verschiedene Microservices detektiert und abgegrenzt werden. Unterstüzend diente User Story Mapping als Werkzeug zum Erfassen von Anforderungen. Diese wurden nach Priorität sortiert und gewährleisten die Einsatzfähigkeit des entstanden Produktes sowie mögliche Ausbauarbeiten. Selbstverständlich konnten nicht alle Anforderungen umgesetzt werden. \\
 
-Schwierigkeiten in der Portvergabe.
+Zusätzlich wurde eine grundlegende Architektur erschaffen, die den anfänglich definierten Bewertungskriterien an die Microservices (klein, unabhängige Entwicklung, kommunizieren über Schnittstellen, plattformunabhängig) entspricht. Zusätzlich wurden empfohlene Pattern wie das Verwenden eines Gateways und das Nutzen der asynchrone Kommunikation angewandt. Ebenfalls bietet die Authentifizierung sowie Autorisierung ein hohes Maß an flexiblität. Dies bedeutet weitere Microservices aber auch etwaige Drittnutzer können geordneten Zugriff auf die API erhalten.\\
+
+Es gilt zu erwähnen, dass die Größe dieses Projektes derzeit keine Microservice Architektur rechtfertigen würde. Durch die vielen verschiedenen Microservices ist Mehrarbeit entstanden. Beispielsweise wurde die Datenstruktur auf drei Datenbanken anstatt auf eine abgebildet. Trotzdem war dieses Projekt ein Erfolg, um die Aufwände für größere Projekte abzuschätzen, denn die Vorteile einer Microservice Architektur sind definitiv da.  
 
 \subsection{Ausblick}
-- CI/CD 
-- Loadbalancing
-- ELK Stack
-- Service Mash, Verknüpfung sehr aufwendig
-- Kubernetes (Orchestrierung)
-- Sichtbarkeit von Microservices (was soll alles erreichbar sein): Also nur das Gateway und/oder auch die Microservices
-- Logging, Ausfallsicherheit, Informationen (Errors werden noch verschluckt)
-- Health Check
+Diese Projektarbeit bietet ebenfalls noch zahlreiche, technische Erweiterungen an. Die Portvergabe und das Zusammenspiel der Microservices war aufwändig und teilweise sehr fehleranfällig, da es manuell und per Hand betrieben worden ist. Wenn die Serviceanzahl wächst, ist dies tendenziell eine große Fehlerquelle und gleichzeitig ein hoher Arbeitsaufwand nicht den Überblick zu verlieren. Dafür gibt es bereits mögliche Lösungen. Zum einen wäre Kubernetes als Orchestrierungsprogramm möglich. Zum anderen könnte ein sogenannter Service Mesh/Servicemesh erforscht werden, bei dem die Microservices sehr vereinfacht ausgedrückt, sich selbst ins System einpflegen. \\
+
+Zusätzlich sollte eine automatisierte Build- und Deploymentstruktur (CI/CD) erschaffen werden. Open Source Tools wie z.B. Jenkins oder kostenpflichtige Tools wie z.B. Bamboo bieten zahlreiche Automatisierungsoptionen. Automatisierte Build- und Deploymentscripts sparen viel Zeit und Aufwände. \\
+
+Wenn die Last wächst, sollten Microservices skalierbar sein. Möglichkeiten dafür wären das verwenden von mehreren Servern und einem Loadbalancer, der die Last entsprechend verteilt. Natürlich muss dabei drauf geachtet werden, dass keine Inkonsistenzen in den Datenbanken entstehen. \\
+
+%auschreiben (ELK Stack)
+Der letzte und möglicherweise wichtigste Punkt ist die Microservices zu überwachen. Dies umfasst es, entstandene Error zu erkennen (Logging). Dafür gibt es bereits etablierte Tools wie z.B. den ELK Stack. Ebenfalls sollte man sich die Frage stellen, was passiert, wenn ein Service ausfällt oder ob er eine Route hat, wo man öffentlich sehen kann, wie es ihm geht (Health Check). \\
+ 
+Natürlich sind die genannten Ausblicke auch für eine monolithische Anwendung wichtig. Allerdings bewerte ich die Umsetzung der genannten Punkte in einer Microservice Architektur als komplexer und umfangreicher. Umso größer die Anwendung wird, desto eher sollte man diese Architektur verwenden.
