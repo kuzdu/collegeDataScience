@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  24 JUN 2019 23:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  25 JUN 2019 07:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -609,7 +609,7 @@ Overfull \hbox (17.40407pt too wide) in alignment at lines 5--26
  []
 
 
-Overfull \hbox (17.40407pt too wide) in alignment at lines 26--43
+Overfull \hbox (17.40407pt too wide) in alignment at lines 26--46
  [] [] 
  []
 
@@ -707,17 +707,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--86
 
  []
 
-<bilder/bounded_context_1.jpg, id=34, 390.45876pt x 118.4425pt>
+[8]
+<bilder/bounded_context_1.jpg, id=37, 390.45876pt x 118.4425pt>
 File: bilder/bounded_context_1.jpg Graphic file (type jpg)
 <use bilder/bounded_context_1.jpg>
 Package pdftex.def Info: bilder/bounded_context_1.jpg  used on input line 91.
 (pdftex.def)             Requested size: 224.06548pt x 67.96835pt.
-<bilder/bounded_context_2.jpg, id=35, 417.56pt x 125.46875pt>
+<bilder/bounded_context_2.jpg, id=38, 417.56pt x 125.46875pt>
 File: bilder/bounded_context_2.jpg Graphic file (type jpg)
 <use bilder/bounded_context_2.jpg>
 Package pdftex.def Info: bilder/bounded_context_2.jpg  used on input line 98.
 (pdftex.def)             Requested size: 224.06548pt x 67.329pt.
-<bilder/bounded_context_3.png, id=36, 360.34625pt x 141.52875pt>
+<bilder/bounded_context_3.png, id=39, 360.34625pt x 141.52875pt>
 File: bilder/bounded_context_3.png Graphic file (type png)
 <use bilder/bounded_context_3.png>
 Package pdftex.def Info: bilder/bounded_context_3.png  used on input line 105.
@@ -727,17 +728,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--111
 
  []
 
-[8]
+
 Underfull \hbox (badness 10000) in paragraph at lines 112--113
 
  []
 
-
+[9 <./bilder/bounded_context_1.jpg> <./bilder/bounded_context_2.jpg> <./bilder/
+bounded_context_3.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 118--119
 
  []
 
-[9 <./bilder/bounded_context_1.jpg> <./bilder/bounded_context_2.jpg>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 143--143
 []\T1/cmr/m/n/12 Continuous-Delivery-
  []
@@ -752,7 +754,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 149--150
 
  []
 
-[10 <./bilder/bounded_context_3.png>]
+[10]
 Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
@@ -772,12 +774,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 157--158
 
  []
 
-
+[11]
 Underfull \hbox (badness 10000) in paragraph at lines 159--160
 
  []
 
-[11]
+
 Underfull \hbox (badness 10000) in paragraph at lines 161--162
 
  []
@@ -792,14 +794,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 169--170
 
  []
 
-<bilder/synchrone_kommunikation_microservices.png, id=49, 234.8775pt x 111.4162
+[12]
+<bilder/synchrone_kommunikation_microservices.png, id=53, 234.8775pt x 111.4162
 4pt>
 File: bilder/synchrone_kommunikation_microservices.png Graphic file (type png)
 <use bilder/synchrone_kommunikation_microservices.png>
 Package pdftex.def Info: bilder/synchrone_kommunikation_microservices.png  used
  on input line 188.
 (pdftex.def)             Requested size: 224.06548pt x 106.28685pt.
-[12]
+
 Underfull \hbox (badness 10000) in paragraph at lines 195--196
 
  []
@@ -815,13 +818,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 204--205
 
  []
 
-[13 <./bilder/synchrone_kommunikation_microservices.png> <./bilder/snyn_com_dep
-endencies.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 206--207
 
  []
 
-
+[13 <./bilder/synchrone_kommunikation_microservices.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 208--209
 
  []
@@ -831,7 +833,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 222--223
 
  []
 
-<bilder/microservices_bus.png, id=62, 1058.45438pt x 426.09187pt>
+[14 <./bilder/snyn_com_dependencies.png>]
+<bilder/microservices_bus.png, id=65, 1058.45438pt x 426.09187pt>
 File: bilder/microservices_bus.png Graphic file (type png)
 <use bilder/microservices_bus.png>
 Package pdftex.def Info: bilder/microservices_bus.png  used on input line 228.
@@ -841,7 +844,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 233--234
 
  []
 
-[14]
+
 Underfull \hbox (badness 10000) in paragraph at lines 235--236
 
  []
@@ -1407,11 +1410,63 @@ Underfull \hbox (badness 10000) in paragraph at lines 262--263
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 282--283
+
+ []
+
+[41]
+<bilder/stirnraten_live.png, id=170, 710.655pt x 352.31625pt>
+File: bilder/stirnraten_live.png Graphic file (type png)
+<use bilder/stirnraten_live.png>
+Package pdftex.def Info: bilder/stirnraten_live.png  used on input line 295.
+(pdftex.def)             Requested size: 313.69029pt x 155.51958pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 309--310
+
+ []
+
+[42 <./bilder/stirnraten_live.png>]
+Overfull \hbox (8.70749pt too wide) in paragraph at lines 332--332
+[]\T1/cmtt/m/n/12 docker build --tag kuzdu/stirnraten:gateway_service_live ../G
+atewayService[] 
+ []
+
+
+Overfull \hbox (0.46632pt too wide) in paragraph at lines 334--335
+[]\T1/cmr/m/n/12 Über die Kon-so-le mit-tels `build` wird ein Image er-stellt u
+nd mit `ga-te-way_service_live`
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--335
+
+ []
+
+
+Overfull \hbox (521.10736pt too wide) in paragraph at lines 350--350
+[]\T1/cmtt/m/n/12 docker run --restart unless-stopped --name stirnraten_gateway
+_service_live -p 127.0.0.1:6200:80 --network stirnraten -d kuzdu/stirnraten:gat
+eway_service_live[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--352
+
+ []
+
+[43]
+<bilder/portainer.png, id=179, 1176.395pt x 607.26875pt>
+File: bilder/portainer.png Graphic file (type png)
+<use bilder/portainer.png>
+Package pdftex.def Info: bilder/portainer.png  used on input line 357.
+(pdftex.def)             Requested size: 313.69029pt x 161.9262pt.
 ) (./fazit.tex) (./microservices.lot)
 \tf@lot=\write6
 \openout6 = `microservices.lot'.
 
- [41] (./microservices.lof)
+ [44 <./bilder/portainer.png>]
+(./microservices.lof)
 \tf@lof=\write7
 \openout7 = `microservices.lof'.
 
@@ -1433,19 +1488,19 @@ Overfull \hbox (34.05716pt too wide) in paragraph at lines 41--41
 ning -[] and -[] implementing -[]
  []
 
-[42]
+[45]
 Overfull \hbox (21.01991pt too wide) in paragraph at lines 41--41
 []\T1/cmr/m/n/12 olprod hon-gyes ol-prod. \T1/cmr/m/it/12 OWIN-OAuth 2.0-Autori
 sierungsserver\T1/cmr/m/n/12 . ab-ge-ru-fen am 2.6.2019.
  []
 
-[43]
+[46]
 Overfull \hbox (2.65814pt too wide) in paragraph at lines 41--41
 []\T1/cmr/m/n/12 o. V. \T1/cmr/m/it/12 Ers-te Schrit-te mit End-points in ei-ne
 r fle-xiblen App Engine-Umgebung (.NET)\T1/cmr/m/n/12 .
  []
 
-[44] (./microservices.aux)
+[47] (./microservices.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1458,10 +1513,10 @@ Package logreq Info: Writing requests to 'microservices.run.xml'.
 ### simple group (level 1) entered at line 16 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 11949 strings out of 492649
- 216929 string characters out of 6129622
- 760487 words of memory out of 5000000
- 15645 multiletter control sequences out of 15000+600000
+ 11961 strings out of 492649
+ 217219 string characters out of 6129622
+ 760506 words of memory out of 5000000
+ 15655 multiletter control sequences out of 15000+600000
  15117 words of font info for 37 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  44i,10n,56p,9115b,2180s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1477,10 +1532,10 @@ fb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb
 /usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></u
 sr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr
 /local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on microservices.pdf (44 pages, 1572608 bytes).
+Output written on microservices.pdf (47 pages, 1785922 bytes).
 PDF statistics:
- 221 PDF objects out of 1000 (max. 8388607)
- 135 compressed objects within 2 object streams
+ 234 PDF objects out of 1000 (max. 8388607)
+ 141 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
 

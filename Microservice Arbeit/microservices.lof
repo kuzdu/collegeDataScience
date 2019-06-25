@@ -7,11 +7,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {3}{\ignorespaces Bounded Context 2 adaptiert das Dom\IeC {\"a}nenmodel von Bounded Context 1}}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4}{\ignorespaces Bounded Context 2 erh\IeC {\"a}lt ein auf ihn zugeschnittenes Dom\IeC {\"a}nenmodel von Bounded Context 1}}{10}
+\contentsline {figure}{\numberline {4}{\ignorespaces Bounded Context 2 erh\IeC {\"a}lt ein auf ihn zugeschnittenes Dom\IeC {\"a}nenmodel von Bounded Context 1}}{9}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {5}{\ignorespaces Synchrone Kommunikation}}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6}{\ignorespaces Abh\IeC {\"a}ngigkeiten in synchroner Kommunikation}}{13}
+\contentsline {figure}{\numberline {6}{\ignorespaces Abh\IeC {\"a}ngigkeiten in synchroner Kommunikation}}{14}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {7}{\ignorespaces Eventbus mit Events}}{15}
 \defcounter {refsection}{0}\relax 
@@ -32,3 +32,7 @@
 \contentsline {figure}{\numberline {15}{\ignorespaces \IeC {\"U}ber Postman gesendeter Client Credential Flow}}{38}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {16}{\ignorespaces \IeC {\"U}ber Postman gesendeter Password Flow}}{38}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {17}{\ignorespaces Stirnraten Live Architektur}}{42}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {18}{\ignorespaces Alle laufenden Microservices}}{44}

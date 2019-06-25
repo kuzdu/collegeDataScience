@@ -259,19 +259,106 @@ Das `DownstreamScheme` (2) ist http, da die Microservices zu denen weiterleitet 
 
 In (3) wird definiert an welchen Microservice weitergeleitet werden soll. In diesem Beispiel der `customer\_service`.\\
 
-In (5) findet die Authentifizierung statt: Jeder Request welcher eingeht, muss im Token als Scope die `srapi` enthalten. In diesem Beispiel wird bereits auch autorisiert. Denn es wird die Rolle `admin` erwartet. D.h. wenn ein Request kein gültiges Token oder die entsprechende Rolle hat, wird der Request abgelehnt. \\
+In (5) findet die Authentifizierung statt: Jeder Request welcher eingeht, muss im Token als Scope die `srapi` enthalten. In diesem Beispiel wird bereits auch autorisiert. Denn es wird die Rolle `admin` erwartet (6). D.h. wenn ein Request kein gültiges Token oder die entsprechende Rolle hat, wird der Request abgelehnt. \\
 
-% noch ein Beispiel mit der Limitierung der Routen bringen
+Ocelot bietet zusätzlich an, Informationen aus dem Token direkt in den Request-Header zu parsen. Das kann sinnvoll sein, wenn der verarbeitende Service mit Daten aus dem Token arbeiten muss. Zum Beispiel darf ein Benutzer nur seine eigene Statistik sehen und verändern oder wenn ein neuer Benutzer angelegt wird, darf dieser nur die Rolle `admin` von einem anderen `admin` erhalten.  
+
+\begin{verbatim}
+[...]
+(7)
+"AddHeadersToRequest": {
+ "claims_user_id": "Claims[user_id] > value > |",
+ "claims_role": "Claims[role] > value > |"
+},
+(8)
+"UpstreamHttpMethod": [
+ "Get",
+ "Delete",
+ "Patch"
+]
+[...]
+\end{verbatim}
+
+Ebenfalls lassen sich die HTTP Methoden über die `UpstreamHttpMethod` einschränken (8). Dies bietet zusätzliche Sicherheit und Einschränkungen. \\
+
+Zusammenfassend lässt sich sagen, dass Ocelot sehr mächtig über die JSON konfigurierbar ist. Ocelot bietet noch weitere Funktionen an, die allerdings nicht in der Stirnraten API verwendet worden sind.  
 
 \subsection{Asynchrone  Kommunikation}
 // ieine Queue umsetzen (RabbitMQ, Kafka...)
 
 \subsection{Service Architektur}
-% Morgen das
-// nginx vom Hoster
-// deployment
-// Grafik erstellen, welche Services es gibt und wie diese Kommunizieren 
-// Docker erwähnen und Beispiel einfügen
+
+Die Architektur für den Livebetrieb hat sich ein wenig erweitert, da ein Proxy (siehe Abbildung \ref{fig:stirnraten_live} `nginx`) hinzugekommen ist. Dies wird in der Regel von Hostingdiensten angeboten oder kann z.B. mittels Docker selbst erstellt werden. Es wird nur als eine Weiterleitung genutzt, hat allerdings den Vorteil, dass Nutzer von außen nicht sehen, welche Technologien oder Systeme für die Stirnraten API verwendet werden. Dies schützt vor möglichen Angreifern.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.7\textwidth]{stirnraten_live}
+	\caption[Stirnraten Live Architektur] {Abbildung der Live-Architektur von der Stirnraten API}
+	\label{fig:stirnraten_live}
+\end{figure} 
+
+Die Einstellung für den `nginx` beinhalten gerade einmal folgende Zeilen: 
+
+\begin{verbatim}
+<Location "/>
+ProxyPass "http://127.0.0.1:6200/"
+ProxyPassReverse "http://127.0.0.1:6200/"
+</Location>
+\end{verbatim}
+
+Sobald ein Request eingeht, wird dieser auf an den Port 6200 weitergeleitet, wo der Ocelot-Service läuft. Die Abbildung \ref{fig:stirnraten_live} zeigt insgesamt 8 Microservices. Das umfasst drei MySQL-Datenbanken, drei Services mit Geschäftslogik (Words, Customer, Identity Server), das Gateway und die RabbitMQ. Jeder dieser Services muss auf seinem eigenen Port laufen, um erreichbar zu sein und muss eigenständig deployed werden können.\\
+
+Im Konzept wurde sich darauf festgelegt, dass die Microservices eigene Container sind. D.h. immer wenn ein Service gebaut wird, wird ein Docker-Image erzeugt. Das Bauen des Images wird über die Dockerfile beschrieben: 
+
+\begin{verbatim}
+(1)
+FROM microsoft/dotnet:2.2-sdk
+WORKDIR /app
+
+(2)
+# copy csproj and restore as distinct layers
+COPY *.csproj ./
+RUN dotnet restore
+COPY . ./
+RUN dotnet publish -c Release -o out
+ENTRYPOINT ["dotnet", "out/GatewayService.dll"]
+\end{verbatim}
+
+In (1) wird beschrieben, welches dotnet notwendig ist, in (2) wird in das Image eine ausführbare `dll` generiert. Dieses Image muss in eine Docker Registry. Für Unternehmen bietet es sich an, eine eigene Registry zu betreiben, der einfachhalber wegen, wurde für Stirnraten ein öffentlicher Dienst namens Dockerhub verwendet. Das Build-Script sieht exemplarisch wie folgt aus: 
+
+\begin{verbatim}
+docker build --tag kuzdu/stirnraten:gateway_service_live ../GatewayService
+docker push kuzdu/stirnraten:gateway_service_live
+\end{verbatim}
+
+Über die Konsole mittels `build` wird ein Image erstellt und mit `gateway\_service\_live` getagged. Tags sind zum Identifizieren notwendig. Anschließend wird es nach Dockerhub übertragen. Hinweis: Um mit dem eigenen Dockerhub Account zu kommunizieren, muss man sich einmalig pro Gerät über die Konsole authentifizieren, dies wurde hier nicht abgebildet. \\
+
+Wenn das Image nun in der Registry bereitliegt, muss der Live-Server es nur noch ausführen. Dieses Script sieht wie folgt aus:
+
+\begin{verbatim}
+#!/bin/bash
+(1)
+ssh root@mein-kochwerk.de << EOF 
+(2)
+docker stop stirnraten_gateway_service_live
+docker rm stirnraten_gateway_service_live
+
+(3)
+docker run --restart unless-stopped --name stirnraten_gateway_service_live -p 127.0.0.1:6200:80 --network stirnraten -d kuzdu/stirnraten:gateway_service_live
+exit
+EOF #end of file
+\end{verbatim}
+Mittels `ssh` wird sich mit dem Server (hier mein-kochwerk.de heißend) verbunden (1). Es wird überprüft, ob bereits ein Microservice läuft, wenn ja, wird dieser gestoppt und anschließend entfernt (2). In (3) wird sich über `kuzdu/stirnraten:gateway\_service\_live` das entsprechende Image aus dem Dockerhub-Repository geladen und ausgeführt. Beim Ausführen vergeben wir einen Namen, lassen das Gateway auf dem Port 6200 laufen und teilen mit, dass die Anwendung sich neustarten soll, falls sie abstürzen sollte. Sehr wichtig ist auch der `network` Parameter. Dieser fasst die Microservices in einem Netzwerk zusammen. Dies bedeutet, dass die Services innerhalb dieses Netzwerk problemlos kommunzieren können. Falls auf dem Server noch andere Container laufen, die gar nicht zur Anwendung gehören, sehen diese Container sich nicht.\\
+
+Um eine bessere Übersicht zu behalten, wurde auf dem Server ein Dienst namens `Portainer` installiert. Dieser bietet zur Docker-Konsole eine grafische Oberfläche. In der Abbildung \ref{fig:portainer} sieht man alle Stirnraten-Container.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.7\textwidth]{portainer}
+	\caption[Alle laufenden Microservices] {Alle laufenden Microservices}
+	\label{fig:portainer}
+\end{figure} 
+
 
 
 
