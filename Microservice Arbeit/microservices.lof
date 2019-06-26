@@ -1,38 +1,38 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {ngerman}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Monolith und Microservice-Architektur}}{6}
+\contentsline {figure}{\numberline {1}{\ignorespaces Monolith und Microservice-Architektur}}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2}{\ignorespaces Bounded Contexts mit eigenst\IeC {\"a}ndigem Dom\IeC {\"a}nenmodel}}{9}
+\contentsline {figure}{\numberline {2}{\ignorespaces Bounded Contexts mit eigenst\IeC {\"a}ndigem Dom\IeC {\"a}nenmodel}}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3}{\ignorespaces Bounded Context 2 adaptiert das Dom\IeC {\"a}nenmodel von Bounded Context 1}}{9}
+\contentsline {figure}{\numberline {3}{\ignorespaces Bounded Context 2 adaptiert das Dom\IeC {\"a}nenmodel von Bounded Context 1}}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4}{\ignorespaces Bounded Context 2 erh\IeC {\"a}lt ein auf ihn zugeschnittenes Dom\IeC {\"a}nenmodel von Bounded Context 1}}{9}
+\contentsline {figure}{\numberline {4}{\ignorespaces Bounded Context 2 erh\IeC {\"a}lt ein auf ihn zugeschnittenes Dom\IeC {\"a}nenmodel von Bounded Context 1}}{10}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5}{\ignorespaces Synchrone Kommunikation}}{13}
+\contentsline {figure}{\numberline {5}{\ignorespaces Synchrone Kommunikation}}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6}{\ignorespaces Abh\IeC {\"a}ngigkeiten in synchroner Kommunikation}}{14}
+\contentsline {figure}{\numberline {6}{\ignorespaces Abh\IeC {\"a}ngigkeiten in synchroner Kommunikation}}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7}{\ignorespaces Eventbus mit Events}}{15}
+\contentsline {figure}{\numberline {7}{\ignorespaces Eventbus mit Events}}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {8}{\ignorespaces Prinzip API-Gateway}}{17}
+\contentsline {figure}{\numberline {8}{\ignorespaces Prinzip API-Gateway}}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {9}{\ignorespaces Ablauf eines password grants}}{20}
+\contentsline {figure}{\numberline {9}{\ignorespaces Ablauf eines password grants}}{21}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {10}{\ignorespaces Docker Architektur}}{22}
+\contentsline {figure}{\numberline {10}{\ignorespaces Docker Architektur}}{23}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {11}{\ignorespaces Docker Google Trends}}{27}
+\contentsline {figure}{\numberline {11}{\ignorespaces Docker Google Trends}}{28}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {12}{\ignorespaces Bounded Contexts f\IeC {\"u}r Stirnraten}}{28}
+\contentsline {figure}{\numberline {12}{\ignorespaces Bounded Contexts f\IeC {\"u}r Stirnraten}}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {13}{\ignorespaces API Gateway mit Ocelot}}{31}
+\contentsline {figure}{\numberline {13}{\ignorespaces API Gateway mit Ocelot}}{32}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {14}{\ignorespaces Architektur mit Hilfe von RabbitMQ}}{32}
+\contentsline {figure}{\numberline {14}{\ignorespaces Architektur mit Hilfe von RabbitMQ}}{33}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {15}{\ignorespaces \IeC {\"U}ber Postman gesendeter Client Credential Flow}}{38}
+\contentsline {figure}{\numberline {15}{\ignorespaces \IeC {\"U}ber Postman gesendeter Client Credential Flow}}{39}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {16}{\ignorespaces \IeC {\"U}ber Postman gesendeter Password Flow}}{38}
+\contentsline {figure}{\numberline {16}{\ignorespaces \IeC {\"U}ber Postman gesendeter Password Flow}}{39}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {17}{\ignorespaces Stirnraten Live Architektur}}{43}
+\contentsline {figure}{\numberline {17}{\ignorespaces Stirnraten Live Architektur}}{45}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {18}{\ignorespaces Alle laufenden Microservices}}{45}
+\contentsline {figure}{\numberline {18}{\ignorespaces Alle laufenden Microservices}}{47}

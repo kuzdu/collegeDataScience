@@ -1,5 +1,5 @@
 \section{Konzept}
-Das ist die Konzepteinleitung
+In dem folgenden Abschnitt werden verschiedene Anforderungen an die Stirnraten API mittels User Story Mapping erfasst. Anschließend werden verschiedene Technologien und Strategien zum Umsetzen der Kommunikation, des Gateways und der Authentifizierung/Autorisierung gegeneinander abgewogen und festgelegt.
 
 \subsection{Anforderungen definieren}
 Um die Anforderungen für das Spiel \textit{Stirnraten} zu erfassen, sollten zwei verschiedene Aspekte berücksichtigt werden: 
@@ -217,7 +217,7 @@ Es ist schwierig zu entscheiden, welcher Broker der besser geeinete ist. Beide T
 	\label{fig:architecture_rabbit_mq}
 \end{figure}
 
-\subsection{Wahl der Authenfizierung/Authorisierung} \label{sec:concept_authentifizierung_autorisierung}
+\subsection{Wahl der Authenfizierung/Autorisierung} \label{sec:concept_authentifizierung_autorisierung}
 
 In \ref{sec:authentifizierung_autorisierung} wurde bereits argumentiert, dass OAuth2 für die Authentifizierung und Autorisierung verwendet wird. Ebenfalls wurde festgelegt, dass jeder Microservices die Autorisierung durchführt, die Authentifizierung allerdings in einem eigenen Service liegen muss. Damit ein Microservice die Autorisierung durchführen kann, muss ein Request vom API-Gateway entsprechend aufbereitet werden. Im Detail sieht dies wie folgt aus\cite{richardson2019mic_pattern}:\\
 \begin{enumerate}

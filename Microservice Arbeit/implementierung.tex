@@ -1,7 +1,7 @@
 \section{Implementierung}
-Das ist der Implementierungspart
+In dem folgenden Abschnitt wird gezeigt wie man technisch die Authentifizierung und Autorisierung umsetzt, ein API Gateway mit Hilfe von Ocelot verwendet, eine RabbitMQ zur Verfügung stellt und die unterschiedlichen Services miteinander in einem Netzwerk verknüpft und deployed.  
 
-\subsection{Authentifizierung und Autorisierung}
+\subsection{Implementieren der Authentifizierung und Autorisierung}
 Ein zentraler Teil bei Microservices ist die Authentifizierung sowie die Autorisierung. Es wurde sich für eine Identity Server mit OAuth2 entschieden. Die MySQL-Datenstruktur ergibt sich aus dem Datenmodell:
 
 \begin{verbatim}
@@ -182,7 +182,7 @@ Enkodiert sieht so ein ausgestellter Benutzer-Token wie folgt aus: \\
 
 Durch diese Informationen kann das API-Gateway bereits eine Autorisierung vornehmen. Wie dies im Detail funktioniert, wird im Abschnitt \ref{umsetzung_api_gateway} deutlich. 
 
-\subsection{Umsetzung API-Gateway}\label{sec:umsetzung_api_gateway}
+\subsection{Implementierung des API Gateway mit Ocelot}\label{sec:umsetzung_api_gateway}
 
 Ähnlich wie bei dem Identity Server müssen für Ocelot auch gewisse Bibliotheken über NuGet hinterlegt werden.
 
@@ -283,7 +283,7 @@ Ebenfalls lassen sich die HTTP Methoden über die `UpstreamHttpMethod` einschrä
 
 Zusammenfassend lässt sich sagen, dass Ocelot sehr mächtig über die JSON konfigurierbar ist. Ocelot bietet noch weitere Funktionen an, die allerdings nicht in der Stirnraten API verwendet worden sind.  
 
-\subsection{Asynchrone  Kommunikation}
+\subsection{Aufsetzen einer RabbitMQ}
 
 Um wie geplant eine asynchrone Kommunikation zu erreichen, wird auf eine RabbitMQ zurückgegriffen. Diese läuft als eigentständiger Dienst auf dem Server. Um dies ohne viel Aufwand zu erreichen, wird die RabbitMQ als Container gestartet. Anschließend kann sich über eine grafische Oberfläche mit der RabbitMQ verbunden werden. Die grafische Oberfläche vereinfacht die Handhabung, ist allerdings nicht notwendig. Wie die Containerisierung im Detail verwendet wird, ist in dem nächsten Abschnitt 'Service Architektur' nachzulesen.\\
 
@@ -344,7 +344,7 @@ busControl.Start();
 %Anschließend das Publishen
 %Dann das konsumieren
 
-\subsection{Service Architektur}
+\subsection{Bauen und Hochladen der Microservices}
 
 Die Architektur für den Livebetrieb hat sich ein wenig erweitert, da ein Proxy (siehe Abbildung \ref{fig:stirnraten_live} `nginx`) hinzugekommen ist. Dies wird in der Regel von Hostingdiensten angeboten oder kann z.B. mittels Docker selbst erstellt werden. Es wird nur als eine Weiterleitung genutzt, hat allerdings den Vorteil, dass Nutzer von außen nicht sehen, welche Technologien oder Systeme für die Stirnraten API verwendet werden. Dies schützt vor möglichen Angreifern.
 

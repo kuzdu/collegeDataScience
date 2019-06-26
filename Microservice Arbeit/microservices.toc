@@ -5,68 +5,68 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2}Einleitung}{4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Grundlagen}{4}
+\contentsline {section}{\numberline {3}Grundlagen}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Microservices}{4}
+\contentsline {subsection}{\numberline {3.1}Microservices}{5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2}Monolithische Struktur}{5}
+\contentsline {subsection}{\numberline {3.2}Monolithische Struktur}{6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3}Monolith vs. Microservices}{6}
+\contentsline {subsection}{\numberline {3.3}Monolith vs. Microservices}{7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4}Architektur von Micrsoservices}{8}
+\contentsline {subsection}{\numberline {3.4}Architektur von Micrsoservices}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.1}Domain Driven Design}{8}
+\contentsline {subsubsection}{\numberline {3.4.1}Domain Driven Design}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.4.2}Macro- und Mikroarchitektur}{10}
+\contentsline {subsubsection}{\numberline {3.4.2}Macro- und Mikroarchitektur}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5}Kommunikation}{12}
+\contentsline {subsection}{\numberline {3.5}Kommunikation}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.1}Synchrone Kommunikation}{13}
+\contentsline {subsubsection}{\numberline {3.5.1}Synchrone Kommunikation}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.2}Asynchrone Kommunikation}{14}
+\contentsline {subsubsection}{\numberline {3.5.2}Asynchrone Kommunikation}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.3}Abw\IeC {\"a}gung asynchrone vs. synchrone Kommunikation}{15}
+\contentsline {subsubsection}{\numberline {3.5.3}Abw\IeC {\"a}gung asynchrone vs. synchrone Kommunikation}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.5.4}API-Gateway}{17}
+\contentsline {subsubsection}{\numberline {3.5.4}API-Gateway}{18}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6}Authentifizierung und Autorisierung}{18}
+\contentsline {subsection}{\numberline {3.6}Authentifizierung und Autorisierung}{19}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.7}Docker}{20}
+\contentsline {subsection}{\numberline {3.7}Docker}{21}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4}Konzept}{22}
+\contentsline {section}{\numberline {4}Konzept}{23}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1}Anforderungen definieren}{22}
+\contentsline {subsection}{\numberline {4.1}Anforderungen definieren}{23}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.1}Erfassung Stirnratens IST-Stand}{23}
+\contentsline {subsubsection}{\numberline {4.1.1}Erfassung Stirnratens IST-Stand}{24}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.1.2}Erweiterungen mittels User Story Mapping}{24}
+\contentsline {subsubsection}{\numberline {4.1.2}Erweiterungen mittels User Story Mapping}{25}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2}Macroarchitektonische Festlegungen von Technologien}{26}
+\contentsline {subsection}{\numberline {4.2}Macroarchitektonische Festlegungen von Technologien}{27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.1}Wahl der Datenbank}{26}
+\contentsline {subsubsection}{\numberline {4.2.1}Wahl der Datenbank}{27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.2}Programmiersprachen, Darstellungsart, REST und Docker}{26}
+\contentsline {subsubsection}{\numberline {4.2.2}Programmiersprachen, Darstellungsart, REST und Docker}{27}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.3}Bounded Contexts - Architektur des Projektes}{27}
+\contentsline {subsubsection}{\numberline {4.2.3}Bounded Contexts - Architektur des Projektes}{28}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3}Wahl des API-Gateway}{29}
+\contentsline {subsection}{\numberline {4.3}Wahl des API-Gateway}{31}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.4}Wahl der Kommunikation}{31}
+\contentsline {subsection}{\numberline {4.4}Wahl der Kommunikation}{32}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5}Wahl der Authenfizierung/Authorisierung}{32}
+\contentsline {subsection}{\numberline {4.5}Wahl der Authenfizierung/Autorisierung}{33}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5}Implementierung}{34}
+\contentsline {section}{\numberline {5}Implementierung}{35}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.1}Authentifizierung und Autorisierung}{34}
+\contentsline {subsection}{\numberline {5.1}Implementieren der Authentifizierung und Autorisierung}{35}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2}Umsetzung API-Gateway}{39}
+\contentsline {subsection}{\numberline {5.2}Implementierung des API Gateway mit Ocelot}{40}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3}Asynchrone Kommunikation}{42}
+\contentsline {subsection}{\numberline {5.3}Aufsetzen einer RabbitMQ}{43}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4}Service Architektur}{43}
+\contentsline {subsection}{\numberline {5.4}Bauen und Hochladen der Microservices}{44}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6}Fazit}{45}
+\contentsline {section}{\numberline {6}Fazit}{46}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.1}Ausblick}{46}
+\contentsline {subsection}{\numberline {6.1}Ausblick}{47}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\nonumberline Literatur}{47}
+\contentsline {section}{\nonumberline Literatur}{49}
