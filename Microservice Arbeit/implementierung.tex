@@ -285,7 +285,7 @@ Zusammenfassend lässt sich sagen, dass Ocelot sehr mächtig über die JSON konf
 
 \subsection{Aufsetzen einer RabbitMQ}
 
-Um wie geplant eine asynchrone Kommunikation zu erreichen, wird auf eine RabbitMQ zurückgegriffen. Diese läuft als eigentständiger Dienst auf dem Server. Um dies ohne viel Aufwand zu erreichen, wird die RabbitMQ als Container gestartet. Anschließend kann sich über eine grafische Oberfläche mit der RabbitMQ verbunden werden. Die grafische Oberfläche vereinfacht die Handhabung, ist allerdings nicht notwendig. Wie die Containerisierung im Detail verwendet wird, ist in dem nächsten Abschnitt 'Service Architektur' nachzulesen.\\
+Um wie geplant eine asynchrone Kommunikation zu erreichen, wird auf eine RabbitMQ zurückgegriffen. Diese läuft als eigentständiger Dienst auf dem Server. Um dies ohne viel Aufwand zu erreichen, wird die RabbitMQ als Container gestartet. Anschließend kann sich über eine Oberfläche mit der RabbitMQ verbunden werden. Die Oberfläche vereinfacht die Handhabung, ist allerdings nicht notwendig. Wie die Containerisierung im Detail verwendet wird, ist in dem Abschnitt 'Bauen und Hochladen der Microservices' nachzulesen.\\
 
 Wenn die RabbitMQ gestartet ist, können die Services sich mit dieser verbinden. Dafür benötigen sie folgende Bibliotheken:
 
@@ -295,7 +295,7 @@ Wenn die RabbitMQ gestartet ist, können die Services sich mit dieser verbinden.
 <PackageReference Include="MassTransit.RabbitMQ" Version="5.5.1" />
 \end{verbatim}
 
-Es muss ein sogenannter Contract erzeugt werden, dies ist im Prinzip, die Nachricht, die übertragen werden soll. In diesem Fall sind es minimale Informationen, darüber, wenn ein Benutzer erstellt worden ist.
+Es muss ein sogenannter Contract erzeugt werden, dies ist im Prinzip die Nachricht, die übertragen werden soll. In diesem Fall sind die Informationen eine UserId und der Name, welche beim Erzeugen eines neuen Benutzers erstellt worden sind.
 
 \begin{verbatim}
 public class UserCreated
@@ -309,40 +309,50 @@ Anschließend muss die `Startup.cs` mit folgenden Informationen angereichert wer
 
 \begin{verbatim}
 private void ConfigureBus(ContainerBuilder builder)
-{
-builder.Register(context =>
-{
-return Bus.Factory.CreateUsingRabbitMq(config =>
-{ 
-(1)
-var host = config.Host(new Uri("rabbitmq://" + _rabbitMqPath), h =>
-{
-(2)
-h.Username("xxxxx"); 
-h.Password("xxxxx");
-});
-});
-}).As<IBus, IBusControl, IPublishEndpoint>().SingleInstance();
+ {
+ builder.Register(context =>
+ {
+  return Bus.Factory.CreateUsingRabbitMq(config =>
+  { 
+   (1)
+   var host = config.Host(new Uri("rabbitmq://" + _rabbitMqPath), h =>
+   {
+   (2)
+   h.Username("xxxxx");  
+   h.Password("xxxxx");
+   });
+  });
+ }).As<IBus, IBusControl, IPublishEndpoint>().SingleInstance();
 }
 \end{verbatim}
 
-Über die Uri wird dem Service mitgeteilt, über welche Adresse er sich mit der RabbitMQ verbinden kann. Anschließend werden Benutzernamen und Passwort benötigt (2). Anschließend muss die RabbitMQ gestartet werden, dies geschieht ebenfalls noch in der `Startup.cs`.
+Jeder Service, der mit der RabbitMQ verbunden sein möchte, benötigt diese Konfiguration. Über die Uri wird dem Service mitgeteilt, über welche Adresse er sich mit der RabbitMQ verbinden kann. Anschließend werden Benutzernamen und Passwort benötigt (2). Anschließend muss die RabbitMQ gestartet werden, dies geschieht ebenfalls noch in der `Startup.cs`.
 
 \begin{verbatim}
-var containerBuilder = new ContainerBuilder();
-containerBuilder.RegisterConsumers(Assembly.GetExecutingAssembly());
-ConfigureBus(containerBuilder);
-containerBuilder.Populate(services);
-
-var container = containerBuilder.Build();
-var busControl = container.Resolve<IBusControl>();
 busControl.Start();
 \end{verbatim}
 
-%TODO schreiben was passiert 
+Wenn ein neuer Benutzer erstellt wird, wird folgendes Kommando abgesetzt.
 
-%Anschließend das Publishen
-%Dann das konsumieren
+\begin{verbatim}
+await _busControl.Publish(newUserCreated);
+\end{verbatim}
+
+Alle Services, die sich auf diese Nachricht abonniert haben, erhalten nun die Informationen. Dies impliziert das `IConsumer` Interface.  
+
+\begin{verbatim}
+public class UserCreatedConsumer : IConsumer<UserCreated>
+{
+ public Task Consume(ConsumeContext<UserCreated> context)
+ {
+ (1)
+ var user = context.Message;
+ return TaskUtil.Completed;
+ }
+}
+\end{verbatim}
+
+Bei (1) liegt der Benutzer vor, so dass der Service die Daten verarbeiten kann, wie er es benötigt. 
 
 \subsection{Bauen und Hochladen der Microservices}
 
