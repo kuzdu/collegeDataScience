@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  1 JUL 2019 06:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  1 JUL 2019 06:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -819,7 +819,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 169--170
  []
 
 [13]
-<bilder/synchrone_kommunikation_microservices.png, id=57, 234.8775pt x 111.4162
+<bilder/synchrone_kommunikation_microservices.png, id=56, 234.8775pt x 111.4162
 4pt>
 File: bilder/synchrone_kommunikation_microservices.png Graphic file (type png)
 <use bilder/synchrone_kommunikation_microservices.png>
@@ -831,7 +831,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 195--196
 
  []
 
-<bilder/snyn_com_dependencies.png, id=59, 357.335pt x 162.6075pt>
+<bilder/snyn_com_dependencies.png, id=58, 357.335pt x 162.6075pt>
 File: bilder/snyn_com_dependencies.png Graphic file (type png)
 <use bilder/snyn_com_dependencies.png>
 Package pdftex.def Info: bilder/snyn_com_dependencies.png  used on input line 1
@@ -842,22 +842,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 204--205
 
  []
 
-
+[14 <./bilder/synchrone_kommunikation_microservices.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 206--207
 
  []
 
-[14 <./bilder/synchrone_kommunikation_microservices.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 208--209
 
  []
 
-
+[15 <./bilder/snyn_com_dependencies.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 222--223
 
  []
 
-[15 <./bilder/snyn_com_dependencies.png>]
 <bilder/microservices_bus.png, id=68, 1058.45438pt x 426.09187pt>
 File: bilder/microservices_bus.png Graphic file (type png)
 <use bilder/microservices_bus.png>
@@ -928,12 +927,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 285--286
 
  []
 
-
+[17]
 Underfull \hbox (badness 10000) in paragraph at lines 294--295
 
  []
 
-[17]
 <bilder/api_gateway.png, id=75, 602.25pt x 390.45876pt>
 File: bilder/api_gateway.png Graphic file (type png)
 <use bilder/api_gateway.png>
@@ -969,12 +967,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 331--332
 
  []
 
-
+[19]
 Underfull \hbox (badness 10000) in paragraph at lines 333--334
 
  []
 
-[19]
+
 Underfull \hbox (badness 10000) in paragraph at lines 335--336
 
  []
@@ -1561,6 +1559,9 @@ r fle-xiblen App Engine-Umgebung (.NET)\T1/cmr/m/n/12 .
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package logreq Info: Writing requests to 'microservices.run.xml'.
 \openout1 = `microservices.run.xml'.
 
@@ -1572,7 +1573,7 @@ Package logreq Info: Writing requests to 'microservices.run.xml'.
 Here is how much of TeX's memory you used:
  11961 strings out of 492649
  217219 string characters out of 6129622
- 759509 words of memory out of 5000000
+ 760509 words of memory out of 5000000
  15655 multiletter control sequences out of 15000+600000
  15117 words of font info for 37 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
@@ -1589,7 +1590,7 @@ fb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb
 /usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></u
 sr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr
 /local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on microservices.pdf (51 pages, 1784610 bytes).
+Output written on microservices.pdf (51 pages, 1784833 bytes).
 PDF statistics:
  245 PDF objects out of 1000 (max. 8388607)
  150 compressed objects within 2 object streams
