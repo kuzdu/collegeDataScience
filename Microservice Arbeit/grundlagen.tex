@@ -3,7 +3,7 @@
 
 In dem folgenden Abschnitt wird eine Abgrenzung zwischen einer Microservice- und monolithischen Architektur herausgearbeitet. Zusätzlich wird auf unterschiedliche Kommunikationsarten bei Microservices sowie die Authentifizierung und Autorisierung eingegangen. 
 
-\subsection{Microservices}
+\subsection{Definition Microservices}
 
 Für den Begriff Microservices existiert keine einheitlich anerkannte Definition. Während Wolff unter Microservices unabhängig, deploybare Module versteht\cite{wolff2018mic_praxis}, spricht Newman von kleinen, autonomen Services, die zusammenarbeiten. Cockcroft verwendet den Begriff Microservice gekoppelt mit einem Architekturbegriff: Eine Microservice Architektur sind gekoppelte Services, welche für einen gewissen Kontextbereich zuständig sind.\cite{irakli2016mic_arc} D.h. jeder Service behandelte gewisse, fachliche Aufgaben und kann genau für diese genutzt werden. Eine Vielzahl von solchen Services bildet dann die gesamte Anwendung. \\
 
@@ -295,20 +295,20 @@ In einem verteilten System können immer nur zwei von den drei Bedinungen erfül
 
 Dementsprechend ist es sinnvoll sich die Anforderungen, welches man an sein System hat zu überlegen und sich aufgrund dieser Grundlage zu entscheiden, welche Kommunikationsart implementiert werden soll. 
 
-\subsubsection{API-Gateway}
+\subsubsection{API Gateway}
 
-Umso mehr Services aufgesetzt werden, desto komplexer ist es, die Übersicht über alle zu behalten. Eine Abhilfe im Routing bietet ein sogeanntes API-Gateway. Ein API-Gateway ist der einzige Einstiegspunkt für den Nutzer (\textbf{Client}). Von dort wird er weitergeleitet, ohne die Routen von einzelnen Services zu kennen. 
+Umso mehr Services aufgesetzt werden, desto komplexer ist es, die Übersicht über alle zu behalten. Eine Abhilfe im Routing bietet ein sogeanntes API Gateway. Ein API Gateway ist der einzige Einstiegspunkt für den Nutzer (\textbf{Client}). Von dort wird er weitergeleitet, ohne die Routen von einzelnen Services zu kennen. 
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=0.6\textwidth]{api_gateway}
-	\caption[Prinzip API-Gateway] { Prinzip API-Gateway }
+	\caption[Prinzip API Gateway] { Prinzip API Gateway }
 	\label{fig:api_gateway}
 \end{figure}
 
-Abbildung \ref{fig:api_gateway} zeigt deutlich wie die Clients über das Gateway kommunizieren, welches anschließend an die entsprechenden Services weiterleitet. Wenn APIs eine hohe Auslastung haben, würde man mehrere Instanzen von einem API-Gateway erstellen. Ein sogenannter Load Balancer wäre der Einstiegspunkt für die Clients. Dieser würde die Anfragen sinnvoll an die API-Gateway-Instanzen verteilen, so dass keine Überlastung entsteht.\cite{oracle} \\
+Abbildung \ref{fig:api_gateway} zeigt deutlich wie die Clients über das Gateway kommunizieren, welches anschließend an die entsprechenden Services weiterleitet. Wenn APIs eine hohe Auslastung haben, würde man mehrere Instanzen von einem API Gateway erstellen. Ein sogenannter Load Balancer wäre der Einstiegspunkt für die Clients. Dieser würde die Anfragen sinnvoll an die API Gateway Instanzen verteilen, so dass keine Überlastung entsteht.\cite{oracle} \\
 
-API-Gateways haben neben dem einzelnen Einstiegspunkt noch weitere Vorteile: 
+API Gateways haben neben dem einzelnen Einstiegspunkt noch weitere Vorteile: 
 \begin{itemize}
 	\item Höhere Sicherheit, das einzelne Services nicht sichtbar und nur über das Gateway zu erreichen\cite{bruce2019mic_in_action}
 	\item Authentifizierung kann bereits im Gateway ausgeführt werden, dies führt zu weniger Last für einzelne Microservices.\cite{wolff2018mic_praxis}
@@ -324,7 +324,7 @@ Beim Monolithen ist architektonisch klar, dass die Authentifizierung und Autoris
 \textbf{Authentifizierung}: Identifiziert, wer jemand ist. Z.B. Nutzer A, der sich durch Benutzername und Passwort registriert hat.\cite{bruce2019mic_in_action}
 \textbf{Autorisierung}: Bestimmt, wie viel ein Nutzer darf. Nutzer A hat eine Rolle, welche ihn berechtigt gewisse Aktionen durchzuführen.\cite{bruce2019mic_in_action}
 
-Es emphielt sich die Autorisierung in den Microservices ansich zu überprüfen, da diese den entsprechenden Datenbestand haben. Um unnötige Last zu verhindern, kann die Validität - ob es sich überhaupt um einen gültigen Request handelt - bereits im API-Gateway überprüft werden. Die Authentifizierung dagegen sollte in einem eigenen Service oder ins API-Gateway verlagert werden.\cite{rewe2019mic_ppp}\cite{richardson2019mic_pattern} Zu empfehlen ist, dass die Authentifizierung an einer zentralen Stelle durchgeführt wird, um Redundanz und fehlerhafte Implementierungen zu verhindern. \\
+Es emphielt sich die Autorisierung in den Microservices ansich zu überprüfen, da diese den entsprechenden Datenbestand haben. Um unnötige Last zu verhindern, kann die Validität - ob es sich überhaupt um einen gültigen Request handelt - bereits im API Gateway überprüft werden. Die Authentifizierung dagegen sollte in einem eigenen Service oder ins API Gateway verlagert werden.\cite{rewe2019mic_ppp}\cite{richardson2019mic_pattern} Zu empfehlen ist, dass die Authentifizierung an einer zentralen Stelle durchgeführt wird, um Redundanz und fehlerhafte Implementierungen zu verhindern. \\
 
 Die Idee ist, dass der Benutzer nach dem Anmelden ein Security-Token erhält, welches verwendet wird, um sensible Anfragen zu verifizieren. Zum einen gibt es die Möglichkeit ein Token auszustellen, welches beim Auslesen verschlüsselt ist (opaque Token) und zum anderen auf ein offenen Standard namens Json Web Token (JWT, transparent Token) zu setzen. Das opaque Token hat den großen Nachteil, dass es zusätzliche Performance sowie Latenz verursacht und nur synchron entschlüsselt werden kann.\cite{richardson2019mic_pattern} \\
 
@@ -355,7 +355,7 @@ Um die Abbildung \ref{fig:password_grant} besser zu verstehen, sind folgende Def
 	\label{fig:password_grant}
 \end{figure}
 
-Die Abbildung \ref{fig:password_grant} zeigt einen Ablauf, bei dem ein Client sein Usernamen und Passwort übermittelt (1). Diese Anfrage wird von dem API-Gateway weitergeleitet an einen Authorization Server (2). Wurde der Nutzer gefunden, wird ein Access und Refresh Token über das API-Gateway (3) an den Nutzer übermittelt (4). Mit der entsprechenden Authorisierung ruft der Client seine Bestellungen (5) ab. Dieser Request wird entsprechend von dem API-Gateway weitergeleitet (6). \\
+Die Abbildung \ref{fig:password_grant} zeigt einen Ablauf, bei dem ein Client sein Usernamen und Passwort übermittelt (1). Diese Anfrage wird von dem API Gateway weitergeleitet an einen Authorization Server (2). Wurde der Nutzer gefunden, wird ein Access und Refresh Token über das API Gateway (3) an den Nutzer übermittelt (4). Mit der entsprechenden Authorisierung ruft der Client seine Bestellungen (5) ab. Dieser Request wird entsprechend von dem API Gateway weitergeleitet (6). \\
 
 Neben dem \textit{password grant Flow} existiert auch der sogenannte \textit{client credentials grant Flow}. Dieser funktioniert ähnlich, nur dass nicht Username und Passwort übertragen werden, sondern der Anwendungen durch gemeinsam bekannte Daten zwischen Anwendungen und Authorization Server vertraut wird. Den \textit{client credentials grant Flow} sollte man verwenden, wenn eine Applikation Ressourcen aufrufen möchte, die außerhalb eines User-Kontextes liegen, d.h. es handelt sich in der Regel um recht allgemeine Daten.\cite{oauth2}\cite{richardson2019mic_pattern} \\
 

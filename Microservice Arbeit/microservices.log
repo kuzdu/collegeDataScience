@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  26 JUN 2019 22:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  1 JUL 2019 06:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -599,12 +599,12 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout5 = `microservices.toc'.
 
  [2] (./begrifflichkeiten.tex
-Overfull \hbox (17.40407pt too wide) in alignment at lines 6--27
+Overfull \hbox (17.40407pt too wide) in alignment at lines 5--26
  [] [] 
  []
 
 
-Overfull \hbox (17.40407pt too wide) in alignment at lines 27--43
+Overfull \hbox (17.40407pt too wide) in alignment at lines 26--42
  [] [] 
  []
 
@@ -1157,11 +1157,11 @@ File: bilder/docker_google_trend.png Graphic file (type png)
 Package pdftex.def Info: bilder/docker_google_trend.png  used on input line 112
 .
 (pdftex.def)             Requested size: 224.06548pt x 65.18134pt.
-<bilder/ddd_context.png, id=114, 656.4525pt x 581.17125pt>
+<bilder/ddd_context.png, id=114, 656.4525pt x 366.36874pt>
 File: bilder/ddd_context.png Graphic file (type png)
 <use bilder/ddd_context.png>
 Package pdftex.def Info: bilder/ddd_context.png  used on input line 122.
-(pdftex.def)             Requested size: 268.8813pt x 238.04231pt.
+(pdftex.def)             Requested size: 268.8813pt x 150.06122pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 127--128
 
@@ -1203,12 +1203,12 @@ Overfull \hbox (12.41342pt too wide) in paragraph at lines 172--173
 chen dem Customer-Domainmodel
  []
 
-[30]
+
 Underfull \hbox (badness 10000) in paragraph at lines 176--177
 
  []
 
-
+[30]
 Underfull \hbox (badness 10000) in paragraph at lines 178--179
 
  []
@@ -1238,18 +1238,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 188--189
 
  []
 
-[31]
-<bilder/gateway.png, id=130, 429.605pt x 332.24126pt>
+<bilder/gateway.png, id=125, 429.605pt x 275.0275pt>
 File: bilder/gateway.png Graphic file (type png)
 <use bilder/gateway.png>
 Package pdftex.def Info: bilder/gateway.png  used on input line 193.
-(pdftex.def)             Requested size: 224.06548pt x 173.28354pt.
+(pdftex.def)             Requested size: 224.06548pt x 143.44316pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 190--198
 
  []
 
-
+[31]
 Underfull \hbox (badness 10000) in paragraph at lines 201--202
 
  []
@@ -1269,12 +1268,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 211--212
 
  []
 
-<bilder/architecture_rabbit_mq.png, id=135, 560.0925pt x 332.24126pt>
+<bilder/architecture_rabbit_mq.png, id=133, 560.0925pt x 315.1775pt>
 File: bilder/architecture_rabbit_mq.png Graphic file (type png)
 <use bilder/architecture_rabbit_mq.png>
 Package pdftex.def Info: bilder/architecture_rabbit_mq.png  used on input line 
 215.
-(pdftex.def)             Requested size: 224.06548pt x 132.91441pt.
+(pdftex.def)             Requested size: 224.06548pt x 126.088pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 222--223
 
@@ -1305,13 +1304,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 238--239
 
  []
 
-[34]) (./implementierung.tex
+) (./implementierung.tex
 Underfull \hbox (badness 10000) in paragraph at lines 240--1
 
  []
 
+[34]
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 7.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/base/t1cmtt.fd
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 Underfull \hbox (badness 10000) in paragraph at lines 18--19
@@ -1324,7 +1324,7 @@ Overfull \hbox (70.44241pt too wide) in paragraph at lines 25--25
 ion" Version="2.7.0" />[] 
  []
 
-[35]
+
 Overfull \hbox (8.70749pt too wide) in paragraph at lines 48--48
 []\T1/cmtt/m/n/12 .AddInMemoryIdentityResources(Config.GetIdentityResources()) 
 //check below[] 
@@ -1336,7 +1336,7 @@ Overfull \hbox (101.30988pt too wide) in paragraph at lines 48--48
 ceOwnerPasswordValidator>();[] 
  []
 
-[36]
+[35] [36]
 Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
@@ -1363,13 +1363,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 145--146
 
  []
 
-<bilder/client_credentials_flow.png, id=154, 706.64pt x 608.2725pt>
+<bilder/client_credentials_flow.png, id=152, 706.64pt x 608.2725pt>
 File: bilder/client_credentials_flow.png Graphic file (type png)
 <use bilder/client_credentials_flow.png>
 Package pdftex.def Info: bilder/client_credentials_flow.png  used on input line
  149.
 (pdftex.def)             Requested size: 268.8813pt x 231.45224pt.
-<bilder/password_flow.png, id=155, 822.07124pt x 626.34pt>
+<bilder/password_flow.png, id=153, 822.07124pt x 626.34pt>
 File: bilder/password_flow.png Graphic file (type png)
 <use bilder/password_flow.png>
 Package pdftex.def Info: bilder/password_flow.png  used on input line 156.
@@ -1409,17 +1409,17 @@ Overfull \hbox (21.05447pt too wide) in paragraph at lines 194--194
 n.JwtBearer" />[] 
  []
 
-[40]
+
 Underfull \hbox (badness 10000) in paragraph at lines 220--221
 
  []
 
-[41]
+[40]
 Underfull \hbox (badness 10000) in paragraph at lines 256--257
 
  []
 
-
+[41]
 Underfull \hbox (badness 10000) in paragraph at lines 258--259
 
  []
@@ -1434,7 +1434,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 262--263
 
  []
 
-[42]
+
 Underfull \hbox (badness 10000) in paragraph at lines 282--283
 
  []
@@ -1444,18 +1444,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 288--289
 
  []
 
-[43]
-<bilder/stirnraten_live.png, id=177, 710.655pt x 352.31625pt>
+[42] [43]
+<bilder/stirnraten_live.png, id=175, 710.655pt x 352.31625pt>
 File: bilder/stirnraten_live.png Graphic file (type png)
 <use bilder/stirnraten_live.png>
 Package pdftex.def Info: bilder/stirnraten_live.png  used on input line 363.
 (pdftex.def)             Requested size: 313.69029pt x 155.51958pt.
- [44]
+
 Underfull \hbox (badness 10000) in paragraph at lines 377--378
 
  []
 
-[45 <./bilder/stirnraten_live.png>]
+[44]
 Overfull \hbox (8.70749pt too wide) in paragraph at lines 400--400
 []\T1/cmtt/m/n/12 docker build --tag kuzdu/stirnraten:gateway_service_live ../G
 atewayService[] 
@@ -1472,7 +1472,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 402--403
 
  []
 
-
+[45 <./bilder/stirnraten_live.png>]
 Overfull \hbox (521.10736pt too wide) in paragraph at lines 418--418
 []\T1/cmtt/m/n/12 docker run --restart unless-stopped --name stirnraten_gateway
 _service_live -p 127.0.0.1:6200:80 --network stirnraten -d kuzdu/stirnraten:gat
@@ -1484,7 +1484,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 419--420
 
  []
 
-<bilder/portainer.png, id=185, 1176.395pt x 607.26875pt>
+<bilder/portainer.png, id=183, 1176.395pt x 607.26875pt>
 File: bilder/portainer.png Graphic file (type png)
 <use bilder/portainer.png>
 Package pdftex.def Info: bilder/portainer.png  used on input line 425.
@@ -1504,12 +1504,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  []
 
-[47 <./bilder/portainer.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
-
+[47 <./bilder/portainer.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
  []
@@ -1589,9 +1589,9 @@ fb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb
 /usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></u
 sr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr
 /local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on microservices.pdf (51 pages, 1797235 bytes).
+Output written on microservices.pdf (51 pages, 1784610 bytes).
 PDF statistics:
- 247 PDF objects out of 1000 (max. 8388607)
+ 245 PDF objects out of 1000 (max. 8388607)
  150 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  91 words of extra memory for PDF output out of 10000 (max. 10000000)

@@ -5,7 +5,7 @@ In dem folgenden Abschnitt werden verschiedene Anforderungen an die Stirnraten A
 Um die Anforderungen für das Spiel \textit{Stirnraten} zu erfassen, sollten zwei verschiedene Aspekte berücksichtigt werden: 
 
 \begin{itemize}
-	\item der \textbf{IST-Stand}, was muss mindestens erfüllt werden und 
+	\item der \textbf{Ist-Stand}, was muss mindestens erfüllt werden und 
 	\item welche möglichen \textbf{Erweiterungen} entstehen durch eine API.
 \end{itemize}
 
@@ -19,7 +19,7 @@ Wie diese User Story nun umgesetzt wird, muss abgewogen werden. Zum einen sollte
 
 \textit{Exkurs - Spielprinzip Stirnraten: Die Spieleranzahl muss mindestens zwei betragen. Ein Spieler wählt aus verschiedenen Kategorien aus und hält sich das Telefon an die Stirn. Es erscheint Begriff, welchen der Gegenüber erklären muss. Errät der Spieler den Begriff, neigt er das Telefon nach vorne und ein neuer Begriff erscheint. Weiß er ihn nicht, kann er diesen überspringen, in dem er das Telefon nach hinten neigt. Ziel ist es, innerhalb einer frei wählbaren Zeit (z.B. 60 Sekunden), so viele Begriffe wie möglich zu erraten.}
 
-\subsubsection{Erfassung Stirnratens IST-Stand}
+\subsubsection{Erfassung Stirnratens Ist-Stand}
 
 In der folgenden Tabelle \ref{tab:bestehende_funktionen} wird gezeigt, welche Funktionen die App bereits auf dem Gerät bereitstellt, welche aber zukünftig serverseitig erledigt werden sollen. 
 
@@ -36,7 +36,7 @@ In der folgenden Tabelle \ref{tab:bestehende_funktionen} wird gezeigt, welche Fu
 	\label{tab:bestehende_funktionen} 
 \end{table}
 
-Aus dem IST-Zustand ergeben sich bereits folgende User Stories: 
+Aus dem Ist-Stand ergeben sich bereits folgende User Stories: 
 
 \begin{itemize}
 	\item Als Betreiber möchte ich neue Begriffe über eine Schnittstelle hinzufügen, editieren und löschen können, um die Datenbank schneller und leichter zu pflegen
@@ -171,9 +171,9 @@ Um die aus den User Stories entstanden Anforderungen zu erfüllen, werden im Fol
 
 Es lässt sich feststellen, dass es Überschneidungen zwischen dem Customer-Domainmodel gibt, je nach dem in welchem Kontext man sich befindet. Natürlich verändert dieses Konzept sich noch im Laufe der Produktentwicklung und muss iterativ an den Stand der Entwicklung angepasst werden. Ebenfalls gilt zu erwähnen, dass es an dieser Stelle im Domain Driven Design nicht zwangsweise ein richtig oder falsch gibt. Dies ist ein Konzeptentwurf, aber natürlich nicht die einzige mögliche Lösung.
 
-\subsection{Wahl des API-Gateway}
+\subsection{Wahl des API Gateway}
 
-Bei der Wahl des API-Gateways existieren verschiedene Technologien, die gegeneinander abgewogen werden müssen. Dabei werden unterschiedliche Aspekte betrachtet: Zum einen sollte das API-Gateway etabliert und leichtgewichtigsowie leicht zu implementieren sein, d.h. der Projektgröße angemessen. Zusätzlich muss das Gateway ein OAuth2 Token verarbeiten können. Um das Gateway umzusetzen, könnte es selbst entwickelt werden, auf ein Library zurückgegriffen oder ein Clouddienst (z.B AWS, Azure oder Google Cloud) verwendet werden. \\
+Bei der Wahl des API Gateways existieren verschiedene Technologien, die gegeneinander abgewogen werden müssen. Dabei werden unterschiedliche Aspekte betrachtet: Zum einen sollte das API Gateway etabliert und leichtgewichtigsowie leicht zu implementieren sein, d.h. der Projektgröße angemessen. Zusätzlich muss das Gateway ein OAuth2 Token verarbeiten können. Um das Gateway umzusetzen, könnte es selbst entwickelt werden, auf ein Library zurückgegriffen oder ein Clouddienst (z.B AWS, Azure oder Google Cloud) verwendet werden. \\
 
 \textbf{Eigenentwicklung}: Die eigene Entwicklung eines Gateways ist kritisch zu betrachten, da viele aktuelle, umfangreiche und bereits etablierte Libraries für diesen Einsatzzweck existieren. Schätzungsweise kostet es viel Zeit und Energie die Funktionen, die ein Gateway erfüllen muss, technisch sauber umzusetzen. Beispiele für Funktionen eines Gateways sind: Routing, Caching, Load Balancing, Headers/Query String/Claims Transformation, Logging ...  \\
 
@@ -217,9 +217,9 @@ Es ist schwierig zu entscheiden, welcher Broker der besser geeinete ist. Beide T
 	\label{fig:architecture_rabbit_mq}
 \end{figure}
 
-\subsection{Wahl der Authenfizierung/Autorisierung} \label{sec:concept_authentifizierung_autorisierung}
+\subsection{Wahl der Authenfizierung und Autorisierung} \label{sec:concept_authentifizierung_autorisierung}
 
-In \ref{sec:authentifizierung_autorisierung} wurde bereits argumentiert, dass OAuth2 für die Authentifizierung und Autorisierung verwendet wird. Ebenfalls wurde festgelegt, dass jeder Microservices die Autorisierung durchführt, die Authentifizierung allerdings in einem eigenen Service liegen muss. Damit ein Microservice die Autorisierung durchführen kann, muss ein Request vom API-Gateway entsprechend aufbereitet werden. Im Detail sieht dies wie folgt aus\cite{richardson2019mic_pattern}:\\
+In \ref{sec:authentifizierung_autorisierung} wurde bereits argumentiert, dass OAuth2 für die Authentifizierung und Autorisierung verwendet wird. Ebenfalls wurde festgelegt, dass jeder Microservices die Autorisierung durchführt, die Authentifizierung allerdings in einem eigenen Service liegen muss. Damit ein Microservice die Autorisierung durchführen kann, muss ein Request vom API Gateway entsprechend aufbereitet werden. Im Detail sieht dies wie folgt aus\cite{richardson2019mic_pattern}:\\
 \begin{enumerate}
 	\item  Ein Request mit JWT wird vom Gateway empfangen
 	\item Das Gateway prüft die Signatur. Ist der Request valide, werden Informationen (z.B. Schreibrecht um neues Wort zu hinterlegen) in den Header vom Request geparst. 
