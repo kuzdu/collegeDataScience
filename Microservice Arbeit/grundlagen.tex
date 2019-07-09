@@ -357,19 +357,19 @@ Um die Abbildung \ref{fig:password_grant} besser zu verstehen, sind folgende Def
 
 Die Abbildung \ref{fig:password_grant} zeigt einen Ablauf, bei dem ein Client sein Usernamen und Passwort übermittelt (1). Diese Anfrage wird von dem API Gateway weitergeleitet an einen Authorization Server (2). Wurde der Nutzer gefunden, wird ein Access und Refresh Token über das API Gateway (3) an den Nutzer übermittelt (4). Mit der entsprechenden Autorisierung ruft der Client seine Bestellungen (5) ab. Dieser Request wird entsprechend von dem API Gateway weitergeleitet (6). \\
 
-Neben dem \textit{password grant Flow} existiert auch der sogenannte \textit{client credentials grant Flow}. Dieser funktioniert ähnlich, nur dass nicht Username und Passwort übertragen werden, sondern der Anwendungen durch gemeinsam bekannte Daten zwischen Anwendungen und Authorization Server vertraut wird. Den \textit{client credentials grant Flow} sollte man verwenden, wenn eine Applikation Ressourcen aufrufen möchte, die außerhalb eines User-Kontextes liegen, d.h. es handelt sich in der Regel um recht allgemeine Daten.\cite{oauth2}\cite{richardson2019mic_pattern} \\
+Neben dem \textit{password grant Flow} existiert auch der sogenannte \textit{client credentials grant Flow}. Dieser funktioniert ähnlich, nur dass nicht Username und Passwort übertragen werden, sondern geheime Daten für die Authentifikation zwischen Anwendung und Authorization Server bekannt sind. Den \textit{client credentials grant Flow} sollte man verwenden, wenn eine Applikation Ressourcen aufrufen möchte, die außerhalb eines User-Kontextes liegen, d.h. es handelt sich in der Regel um recht allgemeine Daten.\cite{oauth2}\cite{richardson2019mic_pattern} \\
 
 Aufgrund dieser Grundlage wird im Konzept \ref{sec:concept_authentifizierung_autorisierung} herausgearbeitet, welche Möglichkeiten zur technischen Umsetzung von OAuth2 bereitstehen. 
 
 \subsection{Docker}
 
-Über Docker können Anwendungen innerhalb eines Containers laufen. Ein Container ist vergleichbar mit einer sehr leichtgewichtigen, modularen virtuellen Maschine.\cite{RedHat} Docker in der Tiefe aufzuarbeiten, würde den Umfang dieser Arbeit überschreiten. Dennoch wird im Folgenden erläutert, warum speziell Docker sich sehr gut für Microservices eignet und wie das grundsätzliche Wirkungsprinzip von Docker funktioniert. \\
+Über Docker können Anwendungen innerhalb eines Containers laufen. Ein Container ist vergleichbar mit einer sehr leichtgewichtigen, modularen virtuellen Maschine.\cite{RedHat} Docker in der Tiefe aufzuarbeiten, würde den Umfang dieser Arbeit überschreiten. Dennoch wird im Folgenden erläutert, warum speziell Docker sich sehr gut für Microservices eignet und wie das grundsätzliche Wirkungsprinzip funktioniert. \\
 
 Anfangs wurden Microservices so definiert, dass sie als möglichst eigenständige, deploybare Einheiten zu betrachten sind. Beim Hosten - also dem Bereitstellen des Services - sollte dies ebenfalls berücksichtigt werden. Nimmt man an, man hostet alle Services auf einer Maschine, läuft man Gefahr, dass die Microservices sich z. B. durch Portkonfigurationen oder dem Zugriff auf selbe Ressourcen behindern.\cite{wolff2016mic_architectures} \\
 
-Bisherige Lösungen - und je nach Anwendungsfall auch sinnvoll - bieten sich an dieser Stelle virtuelle Maschinen (\textbf{VM}) an. D.h. auf einem Host könnten mehrere Betriebssysteme laufen, die sich die Hardwareressourcen vom Host teilen. Die angestrebte Isolation zwischen den Microservices wäre erreicht und individuelle Konfigurationsmöglichkeiten wie z.B. Portfreigeben könnten sich gegensetitig nicht mehr stören. Durch die VMs entstehen allerdings eine Performanceeinbußen, welche nicht im Verhältnis zum Nutzen stehen und zusätzlich ein höherer Verbrauch der Hardwareressourcen.\cite{wolff2016mic_architectures} Gesucht ist dementsprechend eine Technologie, die es schafft Services zu isolieren und dabei gleichzeitig leichtgewichtig zu sein: Docker. \\
+Bisherige Lösungen - und je nach Anwendungsfall auch sinnvoll - bieten sich an dieser Stelle virtuelle Maschinen (\textbf{VM}) an. D.h. auf einem Host könnten mehrere Betriebssysteme laufen, die sich die Hardwareressourcen vom Host teilen. Die angestrebte Isolation zwischen den Microservices wäre erreicht und individuelle Konfigurationsmöglichkeiten könnten sich gegensetitig nicht mehr stören. Durch die VMs entstehen allerdings Leistungseinbußen, welche nicht im Verhältnis zum Nutzen stehen und zusätzlich einen höheren Verbrauch der Hardwareressourcen mit sich bringen.\cite{wolff2016mic_architectures} Gesucht ist dementsprechend eine Technologie, die es schafft Services zu isolieren und dabei gleichzeitig leichtgewichtig zu sein: Docker. \\
 
-Startet man einen Microservice über Docker ist dies damit gleichzusetzen, als würde im Betriebssystem der Service als Prozess gestartet werden. Es entsteht kein deutlich sichtbarer Overhead in Bezug auf Ressourcenverbrauch.\cite{wolff2016mic_architectures} \\
+Startet man einen Microservice über Docker, ist dies damit gleichzusetzen, als würde im Betriebssystem der Service als Prozess gestartet werden. Es entsteht kein deutlich sichtbarer Overhead in Bezug auf den Ressourcenverbrauch.\cite{wolff2016mic_architectures} \\
 
 Um den Docker-Aufbau (siehe Abbildung \ref{fig:docker_architektur_edited}) besser zu verstehen, ist folgendes Vokabular nützlich:\cite{wolff2016mic_architectures} \\
 
@@ -385,7 +385,7 @@ Um den Docker-Aufbau (siehe Abbildung \ref{fig:docker_architektur_edited}) besse
 
 \textbf{Docker-Host}: Ein Docker-Host unterstützt die Docker-Technologie, d.h. es können entsprechend Images ausgeführt werden. Zusätzlich ist es möglich, Images von einem Repository auszuführen. D.h. man muss die Images nicht extra auf den Host laden, um sie auszuführen. \\
 
-Bei genauerer Betrachtung der Abbildung \ref{fig:docker_architektur_edited} fällt auf, dass Container in einem Netzwerk sind und sich denselben Kernel teilen. Dateisysteme, Netzwerk-Interface und containereigene Prozesse sind voneinander isoliert. D.h. Portfreigaben oder ähnliches behindern sich nicht. \\
+Bei genauerer Betrachtung der Abbildung \ref{fig:docker_architektur_edited} fällt auf, dass Container in einem Netzwerk sind und sich denselben Kernel teilen. Dateisysteme, Netzwerk-Interface und containereigene Prozesse sind voneinander isoliert. D.h. Portfreigaben oder ähnliche Konfigurationen behindern sich nicht. \\
 
 \begin{figure}[H]
 	\centering
