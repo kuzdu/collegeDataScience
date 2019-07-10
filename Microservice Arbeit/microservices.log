@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  4 JUL 2019 08:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  10 JUL 2019 06:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1099,14 +1099,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 388--389
 
  []
 
-[22]
-<bilder/docker_architektur_edited.png, id=95, 727.96968pt x 356.83313pt>
+<bilder/docker_architektur_edited.png, id=92, 727.96968pt x 356.83313pt>
 File: bilder/docker_architektur_edited.png Graphic file (type png)
 <use bilder/docker_architektur_edited.png>
 Package pdftex.def Info: bilder/docker_architektur_edited.png  used on input li
 ne 392.
 (pdftex.def)             Requested size: 313.69029pt x 153.76738pt.
-
+[22]
 Underfull \hbox (badness 10000) in paragraph at lines 397--398
 
  []
@@ -1137,198 +1136,198 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--31
  []
 
 [24] [25] [26]
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--100
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
 
  []
 
 [27]
-Underfull \hbox (badness 10000) in paragraph at lines 102--103
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 104--105
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--107
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
  []
 
 <bilder/docker_google_trend.png, id=113, 1159.33125pt x 337.26pt>
 File: bilder/docker_google_trend.png Graphic file (type png)
 <use bilder/docker_google_trend.png>
-Package pdftex.def Info: bilder/docker_google_trend.png  used on input line 112
+Package pdftex.def Info: bilder/docker_google_trend.png  used on input line 113
 .
 (pdftex.def)             Requested size: 224.06548pt x 65.18134pt.
 <bilder/ddd_context.png, id=114, 656.4525pt x 366.36874pt>
 File: bilder/ddd_context.png Graphic file (type png)
 <use bilder/ddd_context.png>
-Package pdftex.def Info: bilder/ddd_context.png  used on input line 122.
-(pdftex.def)             Requested size: 268.8813pt x 150.06122pt.
+Package pdftex.def Info: bilder/ddd_context.png  used on input line 123.
+(pdftex.def)             Requested size: 313.69029pt x 175.07234pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 127--128
+Underfull \hbox (badness 10000) in paragraph at lines 128--129
 
  []
 
 [28 <./bilder/docker_google_trend.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--145
+Underfull \hbox (badness 10000) in paragraph at lines 134--145
 
  []
 
-[29 <./bilder/ddd_context.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 146--150
 
  []
 
-
+[29 <./bilder/ddd_context.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 151--162
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 163--171
-
- []
-
-
-Overfull \hbox (12.41342pt too wide) in paragraph at lines 172--173
+Overfull \hbox (12.41342pt too wide) in paragraph at lines 163--164
 []\T1/cmr/m/n/12 Es lässt sich fest-stel-len, dass es Über-schnei-dun-gen zwi-s
 chen dem Customer-Domainmodel
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 176--177
+Underfull \hbox (badness 10000) in paragraph at lines 167--168
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--172
 
  []
 
 [30]
-Underfull \hbox (badness 10000) in paragraph at lines 178--179
+Underfull \hbox (badness 10000) in paragraph at lines 173--174
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 180--181
+Underfull \hbox (badness 10000) in paragraph at lines 175--176
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 182--183
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--185
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 186--187
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 188--189
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
 
  []
 
 <bilder/gateway.png, id=125, 429.605pt x 275.0275pt>
 File: bilder/gateway.png Graphic file (type png)
 <use bilder/gateway.png>
-Package pdftex.def Info: bilder/gateway.png  used on input line 193.
+Package pdftex.def Info: bilder/gateway.png  used on input line 184.
 (pdftex.def)             Requested size: 224.06548pt x 143.44316pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--198
-
- []
-
-[31]
-Underfull \hbox (badness 10000) in paragraph at lines 201--202
+Underfull \hbox (badness 10000) in paragraph at lines 181--189
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--204
+Underfull \hbox (badness 10000) in paragraph at lines 192--193
+
+ []
+
+[31 <./bilder/gateway.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 194--195
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 209--210
+Underfull \hbox (badness 10000) in paragraph at lines 196--197
 
  []
 
-[32 <./bilder/gateway.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 211--212
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--199
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
+
+ []
+
+[32]
 <bilder/architecture_rabbit_mq.png, id=133, 560.0925pt x 315.1775pt>
 File: bilder/architecture_rabbit_mq.png Graphic file (type png)
 <use bilder/architecture_rabbit_mq.png>
 Package pdftex.def Info: bilder/architecture_rabbit_mq.png  used on input line 
-215.
+204.
 (pdftex.def)             Requested size: 224.06548pt x 126.088pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--223
+Underfull \hbox (badness 10000) in paragraph at lines 211--212
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--222
 
  []
 
 [33 <./bilder/architecture_rabbit_mq.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 230--231
+Underfull \hbox (badness 10000) in paragraph at lines 223--224
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 232--233
+Underfull \hbox (badness 10000) in paragraph at lines 225--226
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 234--235
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--237
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 238--239
+Underfull \hbox (badness 10000) in paragraph at lines 227--228
 
  []
 
 ) (./implementierung.tex
-Underfull \hbox (badness 10000) in paragraph at lines 240--1
+Underfull \hbox (badness 10000) in paragraph at lines 229--1
 
  []
 
-[34]
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 7.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/base/t1cmtt.fd
+(/usr/local/texlive/2018/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
+) [34]
 Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
@@ -1407,9 +1406,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 161--162
 
  []
 
-[38] [39 <./bilder/client_credentials_flow.png> <./bilder/password_flow.png>]
+[38 <./bilder/client_credentials_flow.png>]
 
-LaTeX Warning: Reference `umsetzung_api_gateway' on page 40 undefined on input 
+LaTeX Warning: Reference `umsetzung_api_gateway' on page 39 undefined on input 
 line 183.
 
 
@@ -1418,7 +1417,7 @@ Overfull \hbox (138.35083pt too wide) in paragraph at lines 194--194
 tion" Version="3.0.0-preview.2" />[] 
  []
 
-
+[39 <./bilder/password_flow.png>]
 Overfull \hbox (21.05447pt too wide) in paragraph at lines 194--194
 []\T1/cmtt/m/n/12 <PackageReference Include="Microsoft.AspNetCore.Authenticatio
 n.JwtBearer" />[] 
@@ -1434,7 +1433,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 256--257
 
  []
 
-[41]
+
 Underfull \hbox (badness 10000) in paragraph at lines 258--259
 
  []
@@ -1449,7 +1448,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 262--263
 
  []
 
-
+[41]
 Underfull \hbox (badness 10000) in paragraph at lines 282--283
 
  []
@@ -1470,7 +1469,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 377--378
 
  []
 
-[44]
+[44 <./bilder/stirnraten_live.png>]
 Overfull \hbox (8.70749pt too wide) in paragraph at lines 400--400
 []\T1/cmtt/m/n/12 docker build --tag kuzdu/stirnraten:gateway_service_live ../G
 atewayService[] 
@@ -1487,14 +1486,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 402--403
 
  []
 
-[45 <./bilder/stirnraten_live.png>]
+
 Overfull \hbox (521.10736pt too wide) in paragraph at lines 418--418
 []\T1/cmtt/m/n/12 docker run --restart unless-stopped --name stirnraten_gateway
 _service_live -p 127.0.0.1:6200:80 --network stirnraten -d kuzdu/stirnraten:gat
 eway_service_live[] 
  []
 
-
+[45]
 Underfull \hbox (badness 10000) in paragraph at lines 419--420
 
  []
@@ -1509,7 +1508,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-[46]
+[46 <./bilder/portainer.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
@@ -1524,7 +1523,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
-[47 <./bilder/portainer.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
  []
@@ -1534,11 +1533,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
-) (./microservices.lot)
+) [47] (./microservices.lot)
 \tf@lot=\write6
 \openout6 = `microservices.lot'.
 
- (./microservices.lof [48])
+ (./microservices.lof)
 \tf@lof=\write7
 \openout7 = `microservices.lof'.
 
@@ -1548,7 +1547,7 @@ Overfull \hbox (38.27591pt too wide) in paragraph at lines 41--41
 -cro-ser-vices in Azu-re - Microsoft-Dokumentation\T1/cmr/m/n/12 .
  []
 
-
+[48]
 Overfull \hbox (4.6897pt too wide) in paragraph at lines 41--41
 \T1/cmtt/m/n/12 de / developer / meldung / Die -[] Docker -[] Alternative -[] P
 odman -[] erreicht -[] Version -[]
@@ -1560,19 +1559,19 @@ Overfull \hbox (34.05716pt too wide) in paragraph at lines 41--41
 ning -[] and -[] implementing -[]
  []
 
-[49]
+
 Overfull \hbox (21.01991pt too wide) in paragraph at lines 41--41
 []\T1/cmr/m/n/12 olprod hon-gyes ol-prod. \T1/cmr/m/it/12 OWIN-OAuth 2.0-Autori
 sierungsserver\T1/cmr/m/n/12 . ab-ge-ru-fen am 2.6.2019.
  []
 
-
+[49]
 Overfull \hbox (2.65814pt too wide) in paragraph at lines 41--41
 []\T1/cmr/m/n/12 o. V. \T1/cmr/m/it/12 Ers-te Schrit-te mit End-points in ei-ne
 r fle-xiblen App Engine-Umgebung (.NET)\T1/cmr/m/n/12 .
  []
 
-[50] [51] (./microservices.aux)
+[50] (./microservices.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1585,10 +1584,10 @@ Package logreq Info: Writing requests to 'microservices.run.xml'.
 ### simple group (level 1) entered at line 16 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 11963 strings out of 492649
- 217263 string characters out of 6129622
- 759527 words of memory out of 5000000
- 15657 multiletter control sequences out of 15000+600000
+ 11964 strings out of 492649
+ 217295 string characters out of 6129622
+ 759540 words of memory out of 5000000
+ 15658 multiletter control sequences out of 15000+600000
  15117 words of font info for 37 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  44i,11n,56p,9115b,2180s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1604,10 +1603,10 @@ fb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb
 /usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></u
 sr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr
 /local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on microservices.pdf (51 pages, 1784761 bytes).
+Output written on microservices.pdf (50 pages, 1784028 bytes).
 PDF statistics:
- 245 PDF objects out of 1000 (max. 8388607)
- 150 compressed objects within 2 object streams
+ 242 PDF objects out of 1000 (max. 8388607)
+ 148 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  91 words of extra memory for PDF output out of 10000 (max. 10000000)
 

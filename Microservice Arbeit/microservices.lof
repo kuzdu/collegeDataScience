@@ -25,14 +25,14 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {12}{\ignorespaces Bounded Contexts f\IeC {\"u}r Stirnraten}}{29}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {13}{\ignorespaces API Gateway mit Ocelot}}{32}
+\contentsline {figure}{\numberline {13}{\ignorespaces API Gateway mit Ocelot}}{31}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {14}{\ignorespaces Architektur mit Hilfe von RabbitMQ}}{33}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {15}{\ignorespaces \IeC {\"U}ber Postman gesendeter Client Credential Flow}}{39}
+\contentsline {figure}{\numberline {15}{\ignorespaces \IeC {\"U}ber Postman gesendeter Client Credential Flow}}{38}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {16}{\ignorespaces \IeC {\"U}ber Postman gesendeter Password Flow}}{39}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {17}{\ignorespaces Stirnraten Live Architektur}}{45}
+\contentsline {figure}{\numberline {17}{\ignorespaces Stirnraten Live Architektur}}{44}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {18}{\ignorespaces Alle laufenden Microservices}}{47}
+\contentsline {figure}{\numberline {18}{\ignorespaces Alle laufenden Microservices}}{46}

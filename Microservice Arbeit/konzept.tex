@@ -9,15 +9,15 @@ Um die Anforderungen für das Spiel \textit{Stirnraten} zu erfassen, sollten zwe
 	\item welche möglichen \textbf{Erweiterungen} entstehen durch eine API.
 \end{itemize}
 
-Um die Anforderungen greifbarer zu gestalten, wird auf das Prinzip von User Story Mapping zurückgegriffen. D.h. jede Anforderung ergibt sich aus einer sogenannte User Story. Diese ist so aufgebaut, dass beschrieben wird \textbf{wer} möchte \textbf{was} und \textbf{aus welchem Grund}.\cite{UserStoryMapping}\\
+Um die Anforderungen greifbarer zu gestalten, wird auf das Prinzip von User Story Mapping zurückgegriffen. D.h. jede Anforderung ergibt sich aus einer sogenannten User Story. Diese ist so aufgebaut, dass folgendes beschrieben wird: \textbf{Wer} möchte \textbf{was} und \textbf{aus welchem Grund}.\cite{UserStoryMapping}\\
 
 Im Folgenden gelten die zwei Definitionen: Ein Nutzer ist eine Person, welche die App spielt. Der Betreiber ist der Besitzer von Stirnraten. Ein User kann ein Nutzer oder Betreiber sein. \\
 
-Ein Beispiel für eine User Story könnte lauten: Als Nutzer (\textit{wer}) möchte ich mein Spielprofil teilen (\textbf{was}), um mich besser mit meinen Freunden messen zu können ({\textbf{warum}).\\
+Ein Beispiel für eine User Story könnte lauten: Als Nutzer (\textbf{wer}) möchte ich mein Spielprofil teilen (\textbf{was}), um mich besser mit meinen Freunden messen zu können ({\textbf{warum}).\\
 	
-Wie diese User Story nun umgesetzt wird, muss abgewogen werden. Zum einen sollten User Stories konkret genug formuliert werden, so dass klar ist, was der User möchte. Zum anderen bleibt bei der Entwicklung ein agiler Handlungsspielraum.\cite{UserStoryMapping} Eine Teile-Funkion beispielweise kann unterschiedlich aufwendig umgesetzt werden. Der Nutzer könnte ein Text teilen, ein extra aufbereitets Bild oder einen Link, welcher auf ein mögliches Online-Profile verweist. All diese Möglichkeiten bedeuten unterschiedliche Aufwände. Alternativ könnte man aus dieser einen User Story drei erstellen, welche entsprechend unterschiedlich priorisiert werden.\\
+Wie diese User Story nun umgesetzt wird, muss abgewogen werden. Zum einen sollten User Stories konkret genug formuliert werden, so dass klar ist, was der User möchte. Zum anderen bleibt bei der Entwicklung ein agiler Handlungsspielraum.\cite{UserStoryMapping} Eine Teilen-Funkion beispielweise kann unterschiedlich aufwendig umgesetzt werden. Der Nutzer könnte ein Text teilen, ein extra aufbereitets Bild oder einen Link, welcher auf ein mögliches Online-Profil verweist. All diese Möglichkeiten bedeuten unterschiedliche Aufwände. Alternativ könnte man aus dieser einen User Story drei erstellen, welche entsprechend unterschiedlich priorisiert werden.\\
 
-\textit{Exkurs - Spielprinzip Stirnraten: Die Spieleranzahl muss mindestens zwei betragen. Ein Spieler wählt aus verschiedenen Kategorien aus und hält sich das Telefon an die Stirn. Es erscheint Begriff, welchen der Gegenüber erklären muss. Errät der Spieler den Begriff, neigt er das Telefon nach vorne und ein neuer Begriff erscheint. Weiß er ihn nicht, kann er diesen überspringen, in dem er das Telefon nach hinten neigt. Ziel ist es, innerhalb einer frei wählbaren Zeit (z.B. 60 Sekunden), so viele Begriffe wie möglich zu erraten.}
+\textit{Exkurs - Spielprinzip Stirnraten: Die Spieleranzahl muss mindestens zwei betragen. Ein Spieler entscheidet sich für eine oder mehrere Kategorien und hält sich das Telefon an die Stirn. Es erscheint ein Begriff, welchen der Gegenüber erklären muss. Errät der Spieler den Begriff, neigt er das Telefon nach vorne und ein neuer Begriff erscheint. Weiß er ihn nicht, kann er diesen überspringen, in dem er das Telefon nach hinten neigt. Ziel ist es, innerhalb einer frei wählbaren Zeit (z.B. 60 Sekunden), so viele Begriffe wie möglich zu erraten.}
 
 \subsubsection{Erfassung Stirnratens Ist-Stand}
 
@@ -32,19 +32,19 @@ In der folgenden Tabelle \ref{tab:bestehende_funktionen} wird gezeigt, welche Fu
 			Zweisprachigkeit & Die App wird für den deutschen sowie den englischen Sprachraum angeboten. Es ist gewährleistet, dass je nach Nutzer, auf die sprachlich richtige Datenbank zugegriffen wird.\\
 		\end{tabular}
 	\end{center}
-	\caption[bestehende Funktionen in Stirnraten]{bestehende Funktionen in Stirnraten}
+	\caption[Bestehende Funktionen in Stirnraten]{Bestehende Funktionen in Stirnraten}
 	\label{tab:bestehende_funktionen} 
 \end{table}
 
 Aus dem Ist-Stand ergeben sich bereits folgende User Stories: 
 
 \begin{itemize}
-	\item Als Betreiber möchte ich neue Begriffe über eine Schnittstelle hinzufügen, editieren und löschen können, um die Datenbank schneller und leichter zu pflegen
-	\item Als Betreiber möchte ich eine Datenbank, um nicht für zwei Apps (iOS und Android) den Datenbestand zu pflegen
-	\item Als Betreiber möchte ich entscheiden können, in welcher Sprache (englisch oder deutsch) ich Begriffe manipuliere, um sinnvolle Daten zu gewährleisten
-	\item Als Nutzer möchte ich das Spiel immer offline spielen können, da ich auf Reisen häufiger kein stabiles Internet habe
-	\item Als Nutzer möchte ich mein Spielerprofil online speichern, um es auf anderen Geräten oder nach einer Neuinstallation abrufen zu können
-	\item Als Nutzer möchte ich automatisch die Sprache angezeigt kriegen, welche für mich relevant ist, weil es mir sonst zu kompliziert ist
+	\item Als Betreiber möchte ich, neue Begriffe über eine Schnittstelle hinzufügen, editieren und löschen können, um die Datenbank schneller und leichter zu pflegen.
+	\item Als Betreiber möchte ich, eine Datenbank nutzen, um nicht für zwei Apps (iOS und Android) den Datenbestand zu pflegen.
+	\item Als Betreiber möchte ic,h entscheiden können, in welcher Sprache (englisch oder deutsch) ich Begriffe manipuliere, um sinnvolle Daten zu gewährleisten.
+	\item Als Nutzer möchte ich, das Spiel immer offline spielen können, da ich auf Reisen häufiger kein stabiles Internet habe.
+	\item Als Nutzer möchte ich, mein Spielerprofil online speichern, um es auf anderen Geräten oder nach einer Neuinstallation abrufen zu können.
+	\item Als Nutzer möchte ich, automatisch die Sprache angezeigt kriegen, welche für mich relevant ist, weil es mir sonst zu kompliziert ist.
 \end{itemize}
 
 \subsubsection{Erweiterungen mittels User Story Mapping}
@@ -52,58 +52,59 @@ Aus dem Ist-Stand ergeben sich bereits folgende User Stories:
 Durch das Einführen einer API bieten sich folgende Erweiterungsmöglichkeiten an:
 
 \begin{itemize}
-	\item Als Betreiber möchte ich neue Kategorien hinzufügen, editieren und löschen können, um das Nutzerangebot zu vergrößern
-	\item Als Betreiber möchte ich Bilder pro Kategorie hinzufügen, editieren und löschen können, um ein sprechendes Bild für die Nutzer zu hinterlegen
-	\item Als Betreiber möchte ich eine Kategorie als Premium kennzeichnen können, um Angebotsaktionen zu schalten
-	\item Als Betreiber möchte ich eine Kategorie (de)aktivieren können, um sie immer zu einem sinnvollen Zeitpunkt anbieten zu können
+	\item Als Betreiber möchte ich, neue Kategorien hinzufügen, editieren und löschen können, um das Nutzerangebot zu vergrößern.
+	\item Als Betreiber möchte ich, eine Kategorie als Premium kennzeichnen können, um Angebotsaktionen zu schalten.
+	\item Als Betreiber möchte ich, eine Kategorie (de)aktivieren können, um sie immer zu einem sinnvollen Zeitpunkt anbieten zu können.
 	\item Als Betreiber möchte ich eine Registrierfunktion anbieten, um die Nutzer stärker an mich zu binden.
-	\item Als Betreiber möchte ich die Nutzer abrufen, welche sich bei mir registriert haben, um einen Nutzerstamm aufzubauen
-	\item Als Betreiber möchte ich Nutzer aus Datenschutzgründen löschen können
-	\item Als Nutzer möchte ich mich in einer Rangliste mit anderen Nutzern vergleichen können, um zu sehen, wer in dem Spiel besser ist.
-	\item Als Nutzer möchte ich die Spielerprofile von anderen Nutzern detailliert ansehen, um zu sehen, was ihnen gefällt 
-	\item Als Betreiber möchte ich die Ranglisten-Namen der Nutzer manipulieren können, um unflätige Namen/Missbrauch zu verhindern.
-	\item Als Betreiber möchte ich kummulitierte Daten aus den Nutzerstatistiken sehen, um Marktentscheidungen besser treffen zu können
-	\item Als Betreiber möchte ich die Kategorien sortieren können, um die Anordnung für die Nutzer bestmöglich zu gestalten
-	\item Als Betreiber möchte ich sehen, wenn ein Begriff bereits in der Kategorie ist, um die Datenqualität zu gewährleisten
-	\item Als Nutzer möchte ich eigene Begriffe einreichen können, weil mir manche Begriffe oder Kategorien im Spiel fehlen
-	\item Als Nutzer möchte ich sehen, wenn ein eingereichter Begriff bereits in einer Kategorie existiert, um Bescheid zu wissen
-	\item Als Betreiber möchte ich eingereichte Begriffe zulassen oder ablehnen können, um den Datenbestand zu vergrößeren bzw. die Qualität zu gewährleisten 
-	\item Als Betreiber möchte ich sehen, wann meine Nutzer zuletzt online waren, um ggf. Marketingmaßnahmen zu unternehmen
-	\item Als Betreiber möchte ich, dass Nutzer-Zugangsdaten entsprechend gut verschlüsselt sind, um die Datensicherheit zu gewährleisten
+	\item Als Betreiber möchte ich die Nutzer abrufen, welche sich bei mir registriert haben, um einen Nutzerstamm aufzubauen.
+	\item Als Betreiber möchte ich, Nutzer aus Datenschutzgründen löschen können.
+	\item Als Betreiber möchte ich, sehen, wenn ein Begriff bereits in der Kategorie ist, um die Datenqualität zu gewährleisten.
+	\item Als Nutzer möchte ich, eigene Begriffe einreichen können, weil mir manche Begriffe oder Kategorien im Spiel fehlen.
+	\item Als Nutzer möchte ich, sehen, wenn ein eingereichter Begriff bereits in einer Kategorie existiert, um Bescheid zu wissen.	
+	\item Als Betreiber möchte ich, dass Nutzer-Zugangsdaten entsprechend gut verschlüsselt sind, um die Datensicherheit zu gewährleisten.
 \end{itemize}
 
 Die folgende Auflistung sind User Stories, welche auch als Anforderungen entstanden sind, aber im Rahmen der Projektarbeit aufgrund von Aufwänden nicht umgesetzt werden können.
 
 \begin{itemize}
-	\item Als Betreiber möchte ich eine Newsletter-Funktion anbieten, um die Nutzer über Neuigkeiten zu informieren
-	\item Als Nutzer möchte ich ein Profilbild hochladen, um mein Profil zu indiviualisieren
-	\item Als Nutzer möchte ich mein Passwort zurücksetzen können, wenn ich es vergessen habe. 
-	\item Als Betreiber möchte ich individuelle Animationen vom Server an den Nutzer weiterreichen können, um die Verspieltheit der App zu unterstreichen.
-	\item Als Betreiber möchte ich Themes und Farbcodes online bereitstellen, um den Nutzern Individualsierungsmöglichkeiten schneller und leichter bereitzustellen 
-	\item Als Betreiber möchte ich automatisiert, individuelle (Push)Nachrichten senden, um den Nutzer stärker zu binden
+	\item Als Betreiber möchte ich, eine Newsletter-Funktion anbieten, um die Nutzer über Neuigkeiten zu informieren
+	\item Als Nutzer möchte ich, ein Profilbild hochladen, um mein Profil zu indiviualisieren.
+	\item Als Nutzer möchte ich, mein Passwort zurücksetzen können, wenn ich es vergessen habe. 
+	\item Als Betreiber möchte ich, individuelle Animationen vom Server an den Nutzer weiterreichen können, um die Verspieltheit der App zu unterstreichen.
+	\item Als Betreiber möchte ich, Themes und Farbcodes online bereitstellen, um den Nutzern Individualsierungsmöglichkeiten schneller und leichter bereitzustellen.
+	\item Als Betreiber möchte ich, automatisiert, individuelle Nachrichten senden, um den Nutzer stärker zu binden.
+	\item Als Betreiber möchte ich, Bilder pro Kategorie hinzufügen, editieren und löschen können, um ein ansprechendes Bild für die Nutzer zu hinterlegen.
+	\item Als Nutzer möchte ich, mich in einer Rangliste mit anderen Nutzern vergleichen können, um zu sehen, wer in dem Spiel besser ist.
+	\item Als Nutzer möchte ich, die Spielerprofile von anderen Nutzern detailliert ansehen, um zu sehen, was ihnen gefällt. 
+	\item Als Betreiber möchte ich die Ranglisten-Namen der Nutzer manipulieren können, um unflätige Namen/Missbrauch zu verhindern.
+	\item Als Betreiber möchte ich, kumulierte Daten aus den Nutzerstatistiken sehen, um Marktentscheidungen besser treffen zu können.
+	\item Als Betreiber möchte ich, die Kategorien sortieren können, um die Anordnung für die Nutzer bestmöglich zu gestalten.
+	\item Als Betreiber möchte ich, eingereichte Begriffe zulassen oder ablehnen können, um den Datenbestand zu vergrößeren bzw. die Qualität zu gewährleisten.
+	\item Als Betreiber möchte ich sehen, wann meine Nutzer zuletzt online waren, um ggf. Marketingmaßnahmen zu unternehmen.
+	
 \end{itemize}
 
-Aus den User Stories ergeben sich konkrete Abhängigkeiten zwischen den Microservices sowie klare Vorlagen für die Datenhaltung, z.B. benötigt der Nutzer mindestens einen eindeutigen Namen sowie ein Passwort. Die konkrete Umsetzung ist in FIGURE-VERLINKEN-AUF-KAPITEL-5.
+Aus den User Stories ergeben sich konkrete Abhängigkeiten zwischen den Microservices sowie klare Vorlagen für die Datenhaltung.
 
 \subsection{Macroarchitektonische Festlegungen von Technologien}
-Wie bereits in 3.4.2 erwähnt, können durch makroarchitektonische Entscheidungen gewisse Vorteile erzielt werden, wie z.B. dass die Technologien zur Infrastruktur des Unternehmens und zu den Kompetenzen der Mitarbeiter passen. Ebenfalls können strategische Entscheidungen (z.B. ausschließlich Nutzen von Cloudtechnologien) die Makroarchitektur beeinflussen. Im Folgenden werden einige Technologien für `Stirnraten` makroarchitektonisch festgelegt. 
+Wie bereits in Abschnitt \ref{sec:macro_und_mikroarchitektur} erwähnt, können durch makroarchitektonische Entscheidungen gewisse Vorteile erzielt werden, wie z.B. dass die Technologien zur Infrastruktur des Unternehmens und zu den Kompetenzen der Mitarbeiter passen. Ebenfalls können strategische Entscheidungen (z.B. ausschließlich Nutzen von Cloudtechnologien) die Makroarchitektur beeinflussen. Im Folgenden werden einige Technologien für \textit{Stirnraten} makroarchitektonisch festgelegt. 
 
 \subsubsection{Wahl der Datenbank}
 Bei der Entscheidung, ob eine relationale oder schemalose (NoSQL) Datenbank verwendet wird, wurde sich für eine relationale entschieden. NoSQL Datenbanken sind häufig für spezielle Anwendungsfälle sinnvoll, z.B. wenn das Datenbankmodell sich häufig ändert oder ein hohes Maß an Skalierung notwendig ist. Diese Fälle sind für Stirnraten nicht absehbar, weshalb auf den etablierten Standard einer relationalen Datenbank gesetzt wird.\cite{kloeckner2015nosql_vs_relationale_datenbank}\\
 
-Im Bereich der relationalen Datenbanken können verschiedene Technologien zur Umsetzung genutzt werden. Es wurde sich auf die derzeit (Stand Mai 2019) vier Populärsten Technologien konzentriert: Oracle (Rang 1), MSSQL (2), MySQL (Rang 3) und Postgres (Rang 4).\cite{dbengines2019ranking}  Oracle und MSSQL wurden für das Projekt ausgeschlossen, da diese kommerziell betrieben werden. Für Postgres und MqSQL wurde ein sogenanntes Proof of Concept erstellt, d.h. es wurde in einem einfachen Szenario eine Machbarkeit überprüft. Die Grundanforderungen war, dass MySQL und Postgres in verschiedenen Docker-Containern auf einer Maschine laufen können. Bei dem Proof of Concept hat sich gezeigt, dass es deutlich komplizierter ist, multiple Postgres Instanzen auf einer Maschine zu starten, da zusätzlich individuelle Scripts ausgeführt werden müssen.\cite{postgres2016}\\
+Im Bereich der relationalen Datenbanken können verschiedene Technologien zur Umsetzung genutzt werden. Es wurde sich auf die derzeit (Stand Mai 2019) vier Populärsten Technologien konzentriert: Oracle (Rang 1), MSSQL (2), MySQL (Rang 3) und Postgres (Rang 4).\cite{dbengines2019ranking}  Oracle und MSSQL wurden für das Projekt ausgeschlossen, da diese kostenpflichtig betrieben werden müssten. Für Postgres und MySQL wurde ein sogenanntes Proof of Concept erstellt, d.h. es wurde in einem einfachen Szenario eine Machbarkeit überprüft. Die Grundanforderungen war, dass MySQL und Postgres in verschiedenen Docker-Containern auf einer Maschine laufen können. Bei dem Proof of Concept hat sich gezeigt, dass es deutlich komplizierter ist, multiple Postgres Instanzen auf einer Maschine zu starten, da zusätzlich individuelle Scripts ausgeführt werden müssen.\cite{postgres2016}\\
 
-Beim Erstellen von multiplen MySQL-Instanzen kam es zu keinerlei Problemen. Aufgrund des Rankings und der einfacheren technischen Implementierung durch das Proof of Concept wurde, sollen makroarchitektonisch die Microservices MySQL verwenden.
+Beim Erstellen von multiplen MySQL-Instanzen kam es zu keinerlei Problemen. Aufgrund des Rankings und der einfacheren technischen Implementierung durch das Proof of Concept werden die Microservices MySQL verwenden.
 
 \subsubsection{Programmiersprachen, Darstellungsart, REST und Docker}
-\textbf{Programmiersprachen}: Anfangs wurde erwähnt, dass aufgrund unternehmensstrategischer Gründe Entscheidungen darüber getroffen werden, welcher Technologiestack verwendet wird. In Hinblick auf die Programmiersprachen wird deshalb festgelegt, dass die Microservices im .net Framework in c\# entwickelt werden. Diese Sprache wird am besten von dem Entwickler beherrscht, so dass Wartbarkeit, Nachhaltigkeit und Pflege des Codes langfristig garantiert sind. Als zusätzliche Alternative ist kotlin ebenfalls erlaubt.\\
+\textbf{Programmiersprachen}: Anfangs wurde erwähnt, dass aufgrund unternehmensstrategischer Gründe Entscheidungen darüber getroffen werden, welcher Technologiestack verwendet wird. In Hinblick auf die Programmiersprachen wird deshalb festgelegt, dass die Microservices im .NET Framework in c\# entwickelt werden. Diese Sprache wird am besten von dem Entwickler beherrscht, so dass Wartbarkeit, Nachhaltigkeit und Pflege des Codes langfristig garantiert sind. Als zusätzliche Alternative ist kotlin ebenfalls erlaubt.\\
 
 %Fußnote einfügen und auf mobile Kommunikation verweisen.
-\textbf{Darstellungsart}: Das verwendete Datenformat beim Austausch von Daten ist JSON (JavaScript Object Notation). Alternativ wäre auch die Extensible Markup Language (XML) möglich, allerdings ist XML deutlich aufgeblähter und damit weniger leichtgewichtig. Zusätzlich lässt JSON sich leichter von den Programmiersprachen weiterverarbeiten.\cite{jsonxml2006heise}\\
+\textbf{Darstellungsart}: Das verwendete Datenformat beim Austausch von Daten ist JSON (JavaScript Object Notation). Alternativ wäre auch die Extensible Markup Language (XML) möglich, allerdings ist XML deutlich aufgeblähter und damit weniger leichtgewichtig. Zusätzlich lässt JSON sich besser von den Programmiersprachen weiterverarbeiten.\cite{jsonxml2006heise}\\
 
-\textbf{REST}: Die Kommunikation zwischen den Microservices wird so festgelegt, dass sie dem Representational State Transfer-Paradigma (REST) unterliegen. Eine Alternative zu REST wäre SOAP (Simple Object Access Protocol) in Kombination mit WSDL (Web Services Description Language). Da WSDL allerdings auf der Basis von XML arbeitet und SOAP deutlich komplexer und schwerer skalierbar ist als REST, wird es nicht verwendet. \cite{ayadi2008rest_vs_soap}\\ 
+\textbf{REST}: Die Kommunikation zwischen den Microservices wird so festgelegt, dass sie dem Representational State Transfer-Paradigma (REST) unterliegen. Eine Alternative zu REST wäre SOAP (Simple Object Access Protocol) in Kombination mit WSDL (Web Services Description Language). Da WSDL allerdings auf der Basis von XML arbeitet und SOAP deutlich komplexer und schwerer skalierbar als REST ist, wird es nicht verwendet. \cite{ayadi2008rest_vs_soap}\\ 
 
-Die Prinzipien von REST sind bereits aus dem \textit{Modul Mobile Application Development} bekannt und werden deshalb nicht weiter erwähnt. \\
+Die Prinzipien von REST sind bereits aus dem Modul \textit{Mobile Application Development} bekannt und werden deshalb nicht weiter erwähnt. \\
 
 \textbf{Docker}: Neben Docker als Containerisierung existieren einige Alternativen wie Podman, Rocket, LXD, Flockport, Windocks oder Boxfuse. Sie unterscheiden sich teils in Sicherheitsaspekten, Preis, Kompatibilität zum Betriebssystem oder der Anbindung zu Kubernetes (Programm zum Bereitstellen, Skalieren und Verwalten von Container-Anwendungen).\cite{heise2019Podman}\cite{t3n2017Container} Es wurde sich für Docker entschieden. Zum einen da dies - wie bereits bei den Programmiersprachen - eine beherrschte Technologie ist. Zum anderen - gemessen am Google Trend - ist Docker die bevorzugt gesuchte Technologie für Containerisierung:  
 
@@ -115,77 +116,67 @@ Die Prinzipien von REST sind bereits aus dem \textit{Modul Mobile Application De
 \end{figure}
 
 \subsubsection{Bounded Contexts - Architektur des Projektes}
-Aus den Abschnitt \ref{sec:domain_driven_design} lassen sich folgende Bounded Contexts erstellen: 
+Mit Hilfe des Wissens aus dem Abschnitt \ref{sec:domain_driven_design} lassen sich folgende Bounded Contexts erstellen, welche in Abbildung \ref{fig:ddd_context} dargestellt sind.
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.6\textwidth]{ddd_context}
+	\includegraphics[width=0.7\textwidth]{ddd_context}
 	\caption[Bounded Contexts für Stirnraten] {Bounded Contexts für die Stirnraten API.}
 	\label{fig:ddd_context}
 \end{figure}
 
-Durch die verschiedenen Kontexte lassen sich entsprechende Microservices abbilden. Zusätzlich wird definiert, was unter welchen Fachtermini im entsprechenden Context zu verstehen ist. Zum Beispiel stellt der \textit{Identity Context} dem Nutzer ein Token aus mit dem er weitere Aktionen ausführen darf. Dafür speichert der \textit{Identity Context} sich in seinem Customer-Modell (Domänenmodell) einen Namen und ein Passwort. Der Customer im \textit{Profile Context} dagegen enthält noch weitere Informationen wie z.B. Anzahl der gespielten Spiele, geratene Begriffe, Lieblingskategorie und Spielminuten. Der Customer im \textit{Rank Context} benötigt dagegen nur den Customer-Namen und noch zu definierende Parameter aus denen Customer-Punkte generiert werden können, um eine Bestenliste darzustellen.\\
+Durch diese verschiedenen Kontexte lassen sich entsprechende Microservices abbilden. Zusätzlich wird definiert, was unter welchen Fachtermini im entsprechenden Kontext zu verstehen ist. Zum Beispiel stellt der \textit{Identity Context} dem Nutzer ein Token aus mit dem er weitere Aktionen ausführen darf. Dafür speichert der \textit{Identity Context} sich in seinem Customer-Modell (Domänenmodell) einen Namen und ein Passwort. Der Customer im \textit{Profile Context} dagegen enthält noch weitere Informationen wie z.B. Anzahl der gespielten Spiele, geratene Begriffe, Lieblingskategorien und Spielminuten. Der Customer im \textit{Rank Context} benötigt dagegen nur den Customer-Namen und noch zu definierende Parameter, aus denen Customer-Punkte generiert werden können, um eine Bestenliste darzustellen.\\
 
-Es wurde bereits erwähnt, dass der \textit{upstream} dem \textit{downstream} Informationen bereitstellt. Zusätzlich können Anforderungen gestellt werden, damit mit den Daten, die der \textit{downstream} erhält, entsprechend gerarbeitet werden kann. In der Abbildung \ref{fig:ddd_context} fordert der \textit{Profile Context} Informationen vom \textit{Words Context} sowie der \textit{Rank Context} vom \textit{Profile Context}  \\
+Es wurde bereits erwähnt, dass der \textit{upstream} dem \textit{downstream} Informationen bereitstellt. Zusätzlich können Anforderungen an Kontexte gestellt werden, damit mit den empfangenen Daten entsprechend gearbeitet werden kann. In der Abbildung \ref{fig:ddd_context} fordert der \textit{Profile Context} Informationen vom \textit{Words Context}.  \\
 
 Um die aus den User Stories entstanden Anforderungen zu erfüllen, werden im Folgenden die Domainmodels konzeptioniert. Diese können während der Implementierungsphase noch abweichen. \\
 
 \underline{Words-Context: Words Domainmodel}\\
-\textit{id}: Dient als unique identifier\\
-\textit{category\_name}: Name der Kategorie\\
-\textit{subtitle}: Optionale Beschreibung der Kategorie\\
-\textit{image\_name}: Name des Bildes, welches für eine Kategorie hinterlegt werden soll\\
-\textit{premium\_key}: Notwendig für die Kaufabwicklung zum Identifizieren, um welchen In-App-Kauf es sich handelt\\
+\textit{id}: Dient als unique identifier.\\
+\textit{category\_name}: Name der Kategorie.\\
+\textit{subtitle}: Optionale Beschreibung der Kategorie.\\
+\textit{premium\_key}: Notwendig für die Kaufabwicklung zum Identifizieren, um welchen In-App-Kauf es sich handelt.\\
 \textit{is\_premium}: Markiert, ob eine Kategorie kostenpflichtig ist oder nicht\\
-\textit{selected}: Definiert, ob die Kategorie in der App vorausgewählt ist oder nicht\\
-\textit{words}: Die Begriffe pro Kategorie, welche erraten werden können\\
-\textit{sort}: Definiert, an welcher Stelle in der Sortierung die Kategorie ist\\
-\textit{is\_activ}: Definiert, ob die Kategorie in der App angezeigt wird oder nicht\\
-\textit{updated\_at}: Zeitpunkt, wann die Kategorie das letzte mal verändert worden ist \\
+\textit{selected}: Definiert, ob die Kategorie in der App vorausgewählt ist oder nicht.\\
+\textit{words}: Die Begriffe pro Kategorie, welche erraten werden können.\\
+\textit{sort}: Definiert, an welcher Stelle in der Sortierung die Kategorie ist.\\
+\textit{is\_activ}: Definiert, ob die Kategorie in der App angezeigt wird oder nicht.\\
+\textit{updated\_at}: Zeitpunkt, wann die Kategorie das letzte mal verändert worden ist.\\
 
-\underline{Identiy-Context: Customer-Domainmodel}:\\
-\textit{id}: Dient als unique identifier \\
-\textit{name}: Name des Benutzers\\
-\textit{password}: Passwort des Benuzters\\
+\underline{Identitiy-Context: Customer-Domainmodel}:\\
+\textit{id}: Dient als unique identifier.\\
+\textit{name}: Name des Benutzers.\\
+\textit{password}: Passwort des Benuzters.\\
 
 \underline{Profile-Context: Customer-Domainmodel}:\\
-\textit{id}: Dient als unique identifier \\
-\textit{name}: Name des Benutzers (kommt aus dem Identiy-Context)\\
-\textit{mail}: E-Mail-Adresse des Benutzers (optional)\\
-\textit{played\_games}: Zeigt die Anzahl absolvierter Spiele\\
-\textit{most\_right\_words}: Zeigt die Anzahl der Wörter, die während einer Runde geraten worden sind\\
-\textit{most\_skipped\_words}: Zeigt die Anzahl der Wörter, die während einer Runde übersprungen worden sind\\
-\textit{right\_words}: Zeigt Anzahl aller Wörter, die richtig geraten worden sind\\
-\textit{skipped\_words}: Zeigt Anzahl aller Wörter, die übersprungen worden sind\\
-\textit{time}: Zeigt, wie lange der Benutzer gespielt hat \\
-\textit{top\_categories}: Speichert, welche Kategorien der Benutzer favorisiert\\
-
-\underline{Rank-Context: Customer-Domainmodel}:\\
-\textit{id}: Dient als unique identifier \\
-\textit{name}: Name des Benutzers (kommt aus dem Identiy-Context)\\
-\textit{played\_games}: Zeigt die Anzahl absolvierter Spiele (kommt aus Profile-Context)\\
-\textit{right\_words}: Zeigt Anzahl aller Wörter, die richtig geraten worden sind (kommt aus Profile-Context)\\
-\textit{skipped\_words}: Zeigt Anzahl aller Wörter, die übersprungen worden sind (kommt aus Profile-Context)\\
-\textit{time}: Zeigt, wie lange der Benutzer gespielt hat (kommt aus Profile-Context)\\
-\textit{points}: Punkte, die sich aus played\_games, right\_words, skipped\_words und time berechnen \\
+\textit{id}: Dient als unique identifier.\\
+\textit{name}: Name des Benutzers (kommt aus dem Identitiy-Context).\\
+\textit{mail}: E-Mail-Adresse des Benutzers (optional).\\
+\textit{played\_games}: Zeigt die Anzahl absolvierter Spiele.\\
+\textit{most\_right\_words}: Zeigt die Anzahl der Wörter, die während einer Runde geraten worden sind.\\
+\textit{most\_skipped\_words}: Zeigt die Anzahl der Wörter, die während einer Runde übersprungen worden sind.\\
+\textit{right\_words}: Zeigt Anzahl aller Wörter, die richtig geraten worden sind.\\
+\textit{skipped\_words}: Zeigt Anzahl aller Wörter, die übersprungen worden sind.\\
+\textit{time}: Zeigt, wie lange der Benutzer gespielt hat.\\
+\textit{top\_categories}: Speichert, welche Kategorien der Benutzer favorisiert.\\
 
 Es lässt sich feststellen, dass es Überschneidungen zwischen dem Customer-Domainmodel gibt, je nach dem in welchem Kontext man sich befindet. Natürlich verändert dieses Konzept sich noch im Laufe der Produktentwicklung und muss iterativ an den Stand der Entwicklung angepasst werden. Ebenfalls gilt zu erwähnen, dass es an dieser Stelle im Domain Driven Design nicht zwangsweise ein richtig oder falsch gibt. Dies ist ein Konzeptentwurf, aber natürlich nicht die einzige mögliche Lösung.
 
 \subsection{Wahl des API Gateway}
 
-Bei der Wahl des API Gateways existieren verschiedene Technologien, die gegeneinander abgewogen werden müssen. Dabei werden unterschiedliche Aspekte betrachtet: Zum einen sollte das API Gateway etabliert und leichtgewichtigsowie leicht zu implementieren sein, d.h. der Projektgröße angemessen. Zusätzlich muss das Gateway ein OAuth2 Token verarbeiten können. Um das Gateway umzusetzen, könnte es selbst entwickelt werden, auf ein Library zurückgegriffen oder ein Clouddienst (z.B AWS, Azure oder Google Cloud) verwendet werden. \\
+Bei der Wahl des API Gateways existieren verschiedene Technologien, die gegeneinander abgewogen werden müssen. Dabei werden unterschiedliche Aspekte betrachtet: Zum einen sollte das API Gateway etabliert und leichtgewichtig sowie gemessen an der Projektgrößte einfach zu implementieren sein. Zusätzlich muss das Gateway ein OAuth2 Token verarbeiten können. Um das Gateway umzusetzen, bieten sich verschiedene Möglichkeiten an, wie z.B. die Eigenentwicklung, das Einbinden einer Library oder das Nutzen von Lösungen, die von Clouddiensten wie AWS, Azure oder Google Cloud bereitsgestellt werden. \\
 
-\textbf{Eigenentwicklung}: Die eigene Entwicklung eines Gateways ist kritisch zu betrachten, da viele aktuelle, umfangreiche und bereits etablierte Libraries für diesen Einsatzzweck existieren. Schätzungsweise kostet es viel Zeit und Energie die Funktionen, die ein Gateway erfüllen muss, technisch sauber umzusetzen. Beispiele für Funktionen eines Gateways sind: Routing, Caching, Load Balancing, Headers/Query String/Claims Transformation, Logging ...  \\
+\textbf{Eigenentwicklung}: Die eigene Entwicklung eines Gateways ist kritisch zu betrachten, da viele aktuelle, umfangreiche und bereits etablierte Libraries für diesen Einsatzzweck existieren. Schätzungsweise kostet es viel Zeit und Energie die Funktionen, die ein Gateway erfüllen muss, technisch sauber umzusetzen. Beispiele für Funktionen eines Gateways sind: Routing, Caching, Load Balancing, Headers/Query und String/Claims Transformation, Logging ...  \\
 
-\textbf{Libraries}: Eine etablierte und leichtgewichtige Lösung ist das API-Gateway Zuul zu verwenden, welches allerdings auf Java basiert und dementsprechend aus macroarchitektonischer Sicht nicht bevorzugt wird. \\
+\textbf{Libraries}: Eine etablierte und leichtgewichtige Lösung ist das API Gateway Zuul, welches allerdings auf Java basiert und dementsprechend aus macroarchitektonischer Sicht nicht bevorzugt wird. \\
 
-Eine weitere Möglichkeit ist ein Gateway mit \textbf{Istio} in Kombination mit Kubernetes aufzubauen. Das hätte unter anderem den großen Vorteil, dass die Services sich untereinander kennen und die Kommunikation sehr wenig händische Konfigurationen benötigt. Allerdings erfordert Kubernetes sowie Istio jeweils ein hohes Maß an technischem Verständnis und erscheint nicht lohnenswert für ein verhältnismäßig kleines Projekt zu implementieren.\cite{HeiseIstio}\cite{istioQuickstart} \\    
+Eine weitere Möglichkeit ist ein Gateway mit \textbf{Istio} in Kombination mit Kubernetes aufzubauen. Das hätte unter anderem den großen Vorteil, dass die Services sich untereinander kennen und die Kommunikation sehr wenig händische Konfigurationen benötigt. Allerdings erfordert Kubernetes sowie Istio jeweils ein hohes Maß an technischem Verständnis und erscheint nicht lohnenswert für ein eher kleines Projekt.\cite{HeiseIstio}\cite{istioQuickstart} \\    
 
 Von Microsoft empfohlen wir das Open Source Gateway \textbf{Ocelot}. Es ist leichtgewichtig und überschneidet sich mit gesuchten Anforderungen (Routing, Load Balancing, Authorization usw.). Zusätzlich ist es explizit desigend für ASP .NET Core und bietet so eine überschaubare Implementierung vom Aufwand her.\cite{microsoftOcelot}\\
 
-\textbf{Cloudanbieter}: AWS, Azure und Google Cloud bieten alle Gateways an, die auch einen entsprechend großen Funktionsumfang garantieren. Ein weiterer Vorteil ist die Skalierbarkeit, die jeder Cloud-Anbieter verspricht. Ebenfalls wird die Programmiersprache c\# im .net Kontext unterstützt.\cite{GoogleCloudEndpointsDotNet}\cite{AWSDotNet} Ein Nachteil dagegen ist die preisliche Komponentene. Es ist nicht absehbar, wie sich die Stirnraten API bezüglich der Last entwickelt, weshalb unsicher ist, wie viele Kosten entstehen werden. Auch wenn eine selbstgehoste Lösung andere Nachtteile mit sich bringt, ist ein Festpreis garantiert, welcher für eine Projektarbeit bevorzugt wird. \\
+\textbf{Cloudanbieter}: AWS, Azure und Google Cloud bieten alle Gateways an, die auch einen entsprechend großen Funktionsumfang garantieren. Ein weiterer Vorteil ist die Skalierbarkeit, die jeder Cloud-Anbieter verspricht. Ebenfalls wird die Programmiersprache c\# im .NET Kontext unterstützt.\cite{GoogleCloudEndpointsDotNet}\cite{AWSDotNet} Ein Nachteil dagegen ist die preisliche Komponente. Es ist nicht absehbar, wie sich die Stirnraten API bezüglich der Last entwickelt, weshalb unsicher ist, wie viele Kosten entstehen werden. Auch wenn eine selbstgehoste Lösung andere Nachteile mit sich bringt, ist ein Festpreis garantiert, welcher für eine Projektarbeit bevorzugt wird. \\
 
-Aufgrund der Rercheren wird sich weder für eine Eigenentwicklung (zu aufwendig) noch für eine Cloudlösung (unsichere Kostenfrage) entschiedene. Betrachtet man die Vor- und Nachteile der Libraries bietet Ocelot den größten Mehrwert, weshalb ein Gateway via Ocelot implementiert wird.\\
+Aufgrund der Recheren wird sich weder für eine Eigenentwicklung (zu aufwendig) noch für eine Cloudlösung (unsichere Kostenfrage) entschieden. Betrachtet man die Vor- und Nachteile der Libraries bietet Ocelot den größten Mehrwert, weshalb ein Gateway via Ocelot implementiert wird.\\
 
 Die Architektur erweitert sich wie folgt: 
 \begin{figure}[ht]
@@ -198,15 +189,13 @@ Die Architektur erweitert sich wie folgt:
 
 \subsection{Wahl der Kommunikation}
 
-Um die in den VERLINKEN\_GRUNDLAGEN ausgearbeitete asynchrone Kommunikation zu gewährleisten, werden sogenannte Message Broker (kurz: Broker) verwendet. Diese empfangen Nachrichten und senden diese ggf. an mehrere Empfänger weiter. Die folgenden Message Broker sind in der Selbstbeschreibung schnell, robust, zuverlässig und einfach zu implementieren: \textit{RabbitMQ}, \textit{Kafka}, \textit{RocketMQ}, \textit{Artemis} oder \textit{NSQ}.\\
+Um die im Abschnitt \ref{sec:asynchrone_kommunikation}  ausgearbeitete asynchrone Kommunikation zu gewährleisten, werden sogenannte Message Broker (kurz: Broker) verwendet. Diese empfangen Nachrichten und senden diese ggf. an mehrere Empfänger weiter. Die folgenden Message Broker sind in der Selbstbeschreibung schnell, robust, zuverlässig und einfach zu implementieren: \textit{RabbitMQ}, \textit{Kafka}, \textit{RocketMQ}, \textit{Artemis} oder \textit{NSQ}.\\
 
 Bevor die Message Broker jedoch im Detail gegeneinander abgewogen werden, wird untersucht, ob es bereits vorherige Ausschlusskriterien gibt. Zum Beispiel weist die \textit{RocketMQ} (Apache Projekt) noch über 130 Github Issues auf, weshalb davon auszugehen ist, dass dieser Message Broker sich noch in der Entwicklung befindet. \textit{Artemis} verwendet noch ältere Technologien wie XML und \textit{NSQ} bietet nicht den Funktionsumfang wie andere Broker (z.B. Haltbarkeit der Nachrichten oder Clustering).\cite{messageQueue2018} Deshalb werden diese Message Broker von vorneherein ausgeschlossen. \\ %verlinken auf medium artikel
 
-Im Folgenden wird der von LinkedIn entwickelte Broker \textit{Kafka} mit dem \textit{RabbitMQ} Broker verglichen. 
+Im Folgenden wird der von LinkedIn entwickelte Broker \textit{Kafka} mit dem \textit{RabbitMQ} Broker verglichen. Auch wenn beide Broker in unterschiedlichen Sprachen entwickelt worden sind, können sie mittels c\# verwendet werden und sind Open Source.\\
 
-Auch wenn beide Broker in unterschiedlichen Sprachen entwickelt worden sind, können sie mittels C\# verwendet werden und sind Open Source.
-
-Architektonisch arbeitet RabbitMQ mit einer Entkopplung, da die Produzenten ihre Nachrichten in eine sogenannte Börse (exchange) übermitteln (publish). Die Konsumenten entnehmen die Nachrichten aus einer Queue. So liegt das Routing zwischen Exchange und Queue nicht bei den Produzenten bzw. Konsumenten. Kafka dagegen ist für ein höheres Volumen auslegt. Im Gegensatz zur RabbitMQ merken die Consumer sich, ob sie bereits eine Nachricht gelesen haben oder nicht. D.h. die Nachrichten werden in einem Kafka Cluster zeitlich begrenzt gespeichert, unabhängig ob sie schon gelesen oder ungelesen sind. Kafka könnte diesbezüglich sinnvoll für Event Sourcing sein, also in einem System, wo der Zustand eines Systems durch Sequenzen von Events abgebildet werden kann.\cite{richardson2019mic_pattern} Kafka benötigt im Gegensatz zur RabbitMQ einen externen Dienst (häufig Zookeper verwendet) durch den vereinfacht ausgedrückt mit Kafka kommuniziert werden kann.\cite{understandingRabbitMQApacheKafka}\cite{kafkaUseCases} Typische Anwendungsfälle werden bei Kafka beim Messaging, Webseiten-Aktivitäts-Tracking, erfassen von Metriken, Log Aggregationen und Event Sourcing gesehen.\cite{kafkaUseCases} RabbitMQ setzt dagegen mehr auf sehr zuverlässige Zustellung der Nachrichten und unterstützt eine Vielzahl von Kommunikationsprotokollen. Zusätzlich lassen sich viele Kafka-Anwendungsfälle (z.B. Event Sourcing) mit Hilfe von Drittsoftware (z.B. Cassandra) in Kombination mit der RabbitMQ abbilden.\cite{understandingRabbitMQApacheKafka}\\
+Architektonisch arbeitet die RabbitMQ mit einer Entkopplung, da die Produzenten ihre Nachrichten in eine sogenannte Börse (exchange) übermitteln (publish). Die Konsumenten entnehmen die Nachrichten aus einer Queue. So liegt das Routing zwischen Exchange und Queue nicht bei den Produzenten bzw. Konsumenten. Kafka dagegen ist für ein höheres Volumen auslegt. Im Gegensatz zur RabbitMQ merken die Consumer sich, ob sie bereits eine Nachricht gelesen haben oder nicht. D.h. die Nachrichten werden in einem Kafka Cluster zeitlich begrenzt gespeichert, unabhängig ob sie schon gelesen oder ungelesen sind. Kafka könnte diesbezüglich sinnvoll für Event Sourcing sein, also in einem System, wo der Zustand eines Systems durch Sequenzen von Events abgebildet werden kann.\cite{richardson2019mic_pattern} Kafka benötigt im Gegensatz zur RabbitMQ einen externen Dienst (häufig Zookeper verwendet) durch den vereinfacht ausgedrückt mit Kafka kommuniziert werden kann.\cite{understandingRabbitMQApacheKafka}\cite{kafkaUseCases} Typische Anwendungsfälle werden bei Kafka beim Messaging, Webseiten-Aktivitäts-Tracking, erfassen von Metriken, Log Aggregationen und Event Sourcing gesehen.\cite{kafkaUseCases} RabbitMQ setzt dagegen mehr auf sehr zuverlässige Zustellung der Nachrichten und unterstützt eine Vielzahl von Kommunikationsprotokollen. Zusätzlich lassen sich viele Kafka-Anwendungsfälle (z.B. Event Sourcing) mit Hilfe von Drittsoftware (z.B. Cassandra) in Kombination mit der RabbitMQ abbilden.\cite{understandingRabbitMQApacheKafka}\\
 
 Es ist schwierig zu entscheiden, welcher Broker der besser geeinete ist. Beide Technologien sind sehr umfangreich und decken gerade in Kombination mit Drittsoftware viele selbe Anwendungsfälle ab. Ebenfalls sind die in \textit{Stirnraten} zu erwartetenden Anwedungsfälle im Gegensatz zu den Möglichkeiten, die die Broker bieten, eher trivial. Da Kafka allerdings wie bereits erwähnt ein zusätzliches Programm für die Verwaltung benötigt und im Gesamten größer sowie umfangreicher erscheint, wird auf eine schlankere Implementierung mittels RabbitMQ gesetzt.\\
 
@@ -219,19 +208,19 @@ Es ist schwierig zu entscheiden, welcher Broker der besser geeinete ist. Beide T
 
 \subsection{Wahl der Authenfizierung und Autorisierung} \label{sec:concept_authentifizierung_autorisierung}
 
-In \ref{sec:authentifizierung_autorisierung} wurde bereits argumentiert, dass OAuth2 für die Authentifizierung und Autorisierung verwendet wird. Ebenfalls wurde festgelegt, dass jeder Microservices die Autorisierung durchführt, die Authentifizierung allerdings in einem eigenen Service liegen muss. Damit ein Microservice die Autorisierung durchführen kann, muss ein Request vom API Gateway entsprechend aufbereitet werden. Im Detail sieht dies wie folgt aus\cite{richardson2019mic_pattern}:\\
+In Abschnitt \ref{sec:authentifizierung_autorisierung} wurde bereits argumentiert, dass OAuth2 für die Authentifizierung und Autorisierung verwendet wird. Ebenfalls wurde festgelegt, dass jeder Microservices die Autorisierung durchführt, die Authentifizierung allerdings in einem eigenen Service liegen muss. Damit ein Microservice die Autorisierung durchführen kann, muss ein Request vom API Gateway entsprechend aufbereitet werden. Im Detail sieht dies wie folgt aus\cite{richardson2019mic_pattern}:\\
 \begin{enumerate}
-	\item  Ein Request mit JWT wird vom Gateway empfangen
+	\item  Ein Request mit JWT wird vom Gateway empfangen.
 	\item Das Gateway prüft die Signatur. Ist der Request valide, werden Informationen (z.B. Schreibrecht um neues Wort zu hinterlegen) in den Header vom Request geparst. 
 	\item Das Gateway leitet den Request angereichert mit entpackten Daten im Header weiter an den Microservice.
 	\item Der Microservice liest die Daten aus und überprüft, ob die nötigen Rechte für die entsprechende Aktion vorliegen.
 \end{enumerate}
 
-Während der strukturelle Ablauf nun festgelegt ist, stellt sich die Frage, wie OAuth2 implementiert wird. Dafür stehen verschiedene Möglichkeiten zur Verfügung: Auth0 (Drittanbieter), IdentityServer4 oder Owin (jeweils Frameworks für ASP .net) sowie Clouds.\\
+Während der strukturelle Ablauf nun festgelegt ist, stellt sich die Frage, wie OAuth2 implementiert wird. Dafür stehen verschiedene Möglichkeiten zur Verfügung: Auth0 (Drittanbieter), IdentityServer4, Owin (Framework für ASP .NET) oder cloudbasierte Lösungen.\\
 
 \textbf{Auth0}: Bei Auth0 (http://auth0.com) handelt sich um einen Drittanbieter, welcher laut eigenen Angaben alle gängigen Authenifizierungsmöglichkeiten abbildet. Die Dienste, welche bereitgestellt werden (z.B. Social Login, Zwei-Faktor-Authentifizierung, E-Mail-Verfication, Forget Password usw.) würden laut eigenen Angaben um die 90 Tage Eigenentwicklung beanspruchen. Mit Auth0 benötigt man zum Implementieren wenige Stunden und hat Zugriff auf gute gepflegte Dokumenation. Der Nachteil ist, dass Auth0 ab einer gewissen Last (über 7000 aktive Nutzer im Monat) kostenpflichtig wird. Zusätzlich ist das Angebot z.B. Zwei-Faktor-Authentifizierung für Stirnraten nicht notwendig.\\
 
-\textbf{.net OWIN}: Allgemein ist OWIN eine von Microsoft für ASP .net core entwickelt und hat den Vorteil, dass Webanwendung und Webserver voneinander entkoppelt sind. Durch OWIN sitzt eine Middleware vor dem Webserver. Dort bietet OWIN die Möglichkeit Autorisierungsserver basierend auf OAuth2 zu implementieren. Der Dienst ist kostenfrei und auf ASP .net core zugeschnitten, leider ist die Dokumentation sehr rudimentär. Es ist schwer herauszufinden, welche Möglichkeiten OWIN genau bietet und wie man diese implementiert.\cite{owin2019Microsoft}\\
+\textbf{.NET OWIN}: Allgemein ist OWIN von Microsoft für ASP .NET Core entwickelt und hat den Vorteil, dass Webanwendung und Webserver voneinander entkoppelt sind. Durch OWIN sitzt eine Middleware vor dem Webserver. Dort bietet OWIN die Möglichkeit Autorisierungsserver basierend auf OAuth2 zu implementieren. Der Dienst ist kostenfrei und auf ASP .NET Core zugeschnitten, leider ist die Dokumentation sehr rudimentär. Es ist schwer herauszufinden, welche Möglichkeiten OWIN genau bietet und wie man diese implementiert.\cite{owin2019Microsoft}\\
 
 \textbf{IdentityServer4}: Der IdentityServer4 ist ein OAuth2 Framework für ASP.NET Core, welches in ASP.NET Core 3.0 (derzeitige produktivversion ist 2.2 - Stand 2.6.2019) künftig vorhanden sein soll. Derzeit muss es noch über Libraries installiert werden. Es vereinfacht die Handhabung mit OAuth2, bietet eine umfangreiche Dokumenation und arbeitet unterstützend mit Ocelot zusammen. Es bietet natürlich nicht so eine leichte Implementierung an wie Auth0, ist allerdings kostenfrei.\\
 
