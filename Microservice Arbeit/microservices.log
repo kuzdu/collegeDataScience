@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  14 JUL 2019 16:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.3.25)  14 JUL 2019 16:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -519,18 +519,18 @@ File: german.lbx 2018/03/04 v3.11 biblatex localization (PK/MW)
 (./microservices.aux)
 \openout1 = `microservices.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
 
 (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -574,31 +574,32 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'microservices.bbl' found.
 
 (./microservices.bbl)
-Package biblatex Info: Reference section=0 on input line 23.
-Package biblatex Info: Reference segment=0 on input line 23.
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 27.
+Package biblatex Info: Reference section=0 on input line 27.
+Package biblatex Info: Reference segment=0 on input line 27.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 31.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <17.28> on input line 27.
+(Font)              <17.28> on input line 31.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 27.
+(Font)              <12> on input line 31.
+ [1
 
-(./microservices.toc
+
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./micr
+oservices.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 10.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 10.
- [1
-
-
-{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
+)
 \tf@toc=\write5
 \openout5 = `microservices.toc'.
 
- [2] (./begrifflichkeiten.tex
+
+(./begrifflichkeiten.tex [2]
 Overfull \hbox (17.40407pt too wide) in alignment at lines 5--25
  [] [] 
  []
@@ -1498,31 +1499,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
 \openout7 = `microservices.lof'.
 
 
-Overfull \hbox (38.27591pt too wide) in paragraph at lines 41--41
+Overfull \hbox (38.27591pt too wide) in paragraph at lines 47--47
 []\T1/cmr/m/n/12 Mark Fus-sel (ms-fus-sell). \T1/cmr/m/it/12 Ein-füh-rung in Mi
 -cro-ser-vices in Azu-re - Microsoft-Dokumentation\T1/cmr/m/n/12 .
  []
 
 
-Overfull \hbox (4.6897pt too wide) in paragraph at lines 41--41
+Overfull \hbox (4.6897pt too wide) in paragraph at lines 47--47
 \T1/cmtt/m/n/12 de / developer / meldung / Die -[] Docker -[] Alternative -[] P
 odman -[] erreicht -[] Version -[]
  []
 
 
-Overfull \hbox (34.05716pt too wide) in paragraph at lines 41--41
+Overfull \hbox (34.05716pt too wide) in paragraph at lines 47--47
 \T1/cmtt/m/n/12 https : / / devblogs . microsoft . com / cesardelatorre / desig
 ning -[] and -[] implementing -[]
  []
 
 [50]
-Overfull \hbox (21.01991pt too wide) in paragraph at lines 41--41
+Overfull \hbox (21.01991pt too wide) in paragraph at lines 47--47
 []\T1/cmr/m/n/12 olprod hon-gyes ol-prod. \T1/cmr/m/it/12 OWIN-OAuth 2.0-Autori
 sierungsserver\T1/cmr/m/n/12 . ab-ge-ru-fen am 2.6.2019.
  []
 
 [51]
-Overfull \hbox (2.65814pt too wide) in paragraph at lines 41--41
+Overfull \hbox (2.65814pt too wide) in paragraph at lines 47--47
 []\T1/cmr/m/n/12 o. V. \T1/cmr/m/it/12 Ers-te Schrit-te mit End-points in ei-ne
 r fle-xiblen App Engine-Umgebung (.NET)\T1/cmr/m/n/12 .
  []
@@ -1539,7 +1540,7 @@ Package logreq Info: Writing requests to 'microservices.run.xml'.
 Here is how much of TeX's memory you used:
  11963 strings out of 492649
  217272 string characters out of 6129622
- 766542 words of memory out of 5000000
+ 766577 words of memory out of 5000000
  15657 multiletter control sequences out of 15000+600000
  15117 words of font info for 37 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
@@ -1556,7 +1557,7 @@ fb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb
 /usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></u
 sr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr
 /local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on microservices.pdf (52 pages, 1786687 bytes).
+Output written on microservices.pdf (52 pages, 1788253 bytes).
 PDF statistics:
  248 PDF objects out of 1000 (max. 8388607)
  152 compressed objects within 2 object streams
