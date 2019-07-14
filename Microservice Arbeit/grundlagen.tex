@@ -1,15 +1,15 @@
 
 \section{Grundlagen}
 
-In dem folgenden Abschnitt wird eine Abgrenzung zwischen einer Microservice- und monolithischen Architektur herausgearbeitet. Zusätzlich wird auf unterschiedliche Kommunikationsarten bei Microservices sowie die Authentifizierung und Autorisierung eingegangen. 
+Der folgende Abschnitt arbeitet eine Abgrenzung zwischen einer Microservice- und monolithischen Architektur heraus. Zusätzlich geht er auf unterschiedliche Kommunikationsarten bei Microservices sowie die Authentifizierung und Autorisierung ein. 
 
 \subsection{Definition Microservices}
 
-Für den Begriff Microservices existiert keine einheitlich anerkannte Definition. Während Wolff unter Microservices unabhängig, deploybare Module versteht\cite{wolff2018mic_praxis}, spricht Newman von kleinen, autonomen Services, die zusammenarbeiten. Cockcroft verwendet den Begriff Microservice gekoppelt mit einem Architekturbegriff: Eine Microservice Architektur sind gekoppelte Services, welche für einen gewissen Kontextbereich zuständig sind.\cite{irakli2016mic_arc} D.h. jeder Service behandelte gewisse, fachliche Aufgaben und kann genau für diese genutzt werden. Eine Vielzahl von solchen Services bildet dann die gesamte Anwendung. \\
+Für den Begriff Microservices existiert keine einheitlich anerkannte Definition. Während Wolff unter Microservices unabhängige, deploybare Module versteht\cite{wolff2018mic_praxis}, spricht Newman von kleinen, autonomen Services, die zusammenarbeiten. Cockcroft verwendet den Begriff Microservice gekoppelt mit einem Architekturbegriff: Eine Microservice Architektur sind gekoppelte Services, welche für einen gewissen Kontextbereich zuständig sind.\cite{irakli2016mic_arc} D.h. jeder Service behandelt gewisse, fachliche Aufgaben und kann genau für diese genutzt werden. Eine Vielzahl von solchen Services bildet dann die gesamte Anwendung. \\
 
 Amudsen schreibt dem Microservice an sich die Eigenschaft zu, dass er unabhängig zu anderen Microservices sein muss, d.h. ein Microservice kann losgelöst von anderen geupdated (deployed) werden. Weiter ist ein Microservice wie schon bei Cockcroft für einen gewissen Aufgabenbereich zuständig. Eine Microservice-Architektur ist ein zusammenschluss von miteinander kommunizierenden Microservices.\cite{irakli2016mic_arc} \\
 
-In \textit{Flexible Software Architecture}\cite{wolff2016mic_architectures} werden Microservices zu den bisherigen Eigenschaften noch weitere, teils technischemzugeschrieben: Microservices sind technologisch unabhängig, d.h. eine Microservice-Architektur ist beispielsweise nicht an eine bestimmte Programmiersprache oder Datenbank gebunden. Weiter müssen Microservices einen privaten Datenspeicher haben und sie kommunizieren mit anderen Services über das Netzwerk (z.B. über REST). Ebenfalls werden Microservices verwendet, um große Programme in kleine Teile zu unterteilen. Diese kleinen Teile lassen sich automatisch bauen und deployen. \\
+In \textit{Flexible Software Architecture}\cite{wolff2016mic_architectures} werden Microservices zu den bisherigen Eigenschaften noch weitere, teils technische zugeschrieben: Microservices sind technologisch unabhängig, d.h. eine Microservice-Architektur ist beispielsweise nicht an eine bestimmte Programmiersprache oder Datenbank gebunden. Weiter müssen Microservices einen privaten Datenspeicher haben und sie kommunizieren mit anderen Services über das Netzwerk (z.B. über REST). Ebenfalls werden Microservices verwendet, um große Programme in kleine Teile zu unterteilen. Diese kleinen Teile lassen sich automatisch bauen und deployen. \\
 
 Basierend auf den folgenden Definitionen wird der Microservice Begriff wie folgt verwendet: Microservices sind
 \begin{itemize}
@@ -34,59 +34,59 @@ Eine monolithische Struktur ist ein einziges Softwareprogramm (Monolith), welche
 	\label{fig:mono}
 \end{figure}
 
-Abbildung \ref{fig:mono} zeigt eine vereinfachte Gegenüberstellung der beiden Architekturen. Die App 1 ist in drei klassische Funktionen (Web, Business und Data) unterteilt. Die Skalierung (2) kann durchgeführt werden, in dem App 1 über mehrere Server oder VMs geklont wird. 
+Abbildung \ref{fig:mono} zeigt eine vereinfachte Gegenüberstellung der beiden Architekturen. Die App 1 ist in drei klassische Funktionen (Web, Business und Data) unterteilt. Die Skalierung (2) kann durchgeführt werden, indem App 1 über mehrere Server oder VMs geklont wird. 
 
 Bei der Microservice-Architektur werden die Funktionen auf unterschiedliche Dienste aufgeteilt. Konkreter könnte dies bedeuten, dass App 1 bei (3) zuständig für eine Benutzerkontoverwaltung ist und App 2 für ein Abrechnungssystem. Die Microservices (4) werden nicht geklont, sondern können unabhängig voneinander bereitgestellt werden. 
 
 \subsection{Monolith vs. Microservices}\label{sec:monolith_vs_microservices}
-Aus den vorherigen Abschnitten sind diverse Unterschiede zwischen den Architekturen erkennbar. Nun gilt es festzustellen, für welche Problemstellungen, welche Architektur sinnvoller ist. \cite{wolff2016mic_architectures} \cite{birk2016mic_soa}
+Aus den vorherigen Abschnitten sind diverse Unterschiede zwischen den Architekturen erkennbar geworden. Nun gilt es festzustellen, welche Architekturen für welche Problemstellungen, sinnvoller ist. \cite{wolff2016mic_architectures} \cite{birk2016mic_soa}
 %TODO: Nicht sicher, wo \cite{wolff2016mic_architectures} \cite{birk2016mic_soa} und genau platziert werden sollten
 \begin{table}
 	\begin{center}
-		\begin{tabular}{p{4cm}p{5cm}p{5cm}}
+		\begin{tabular}{|p{4cm}|p{5cm}|p{5cm}|}
 			& Monolithische Architektur & Microservice-Architektur \\ \hline
-			Abhängigkeiten & all1es in einer Anwendung & entkoppelt, da Prinzip von Modularisierung verwendet wird \\
-			Größe & linear steigend & einzelne Services sind klein \\
-			Geschwindigkeit der Zugriffe & schnell, da alles in einer Anwendung & Zugriffe können länger dauern \\ 
-			Deployment & schwieriger desto größer das Projekt, aufgrund von
+			Abhängigkeiten & all1es in einer Anwendung & entkoppelt, da Prinzip von Modularisierung verwendet wird \\  \hline
+			Größe & linear steigend & einzelne Services sind klein \\  \hline
+			\raggedright{Geschwindigkeit der Zugriffe} & schnell, da alles in einer Anwendung & Zugriffe können länger dauern \\  \hline
+			Deployment & schwieriger je größer das Projekt, aufgrund von
 			\begin{itemize}
 				\item Abhängigkeiten  
 				\item Größe \end{itemize}
 			 & einfach, da Microservices \begin{itemize}
 				\item klein und 
-			    \item modular sind \end{itemize} \\
-			Organisation & leichter, da alles an einem Ort & schwerer, da mehr Domänenlogik (wer macht was?) beachtet werden muss \\
-			Legacy-Systeme ablösen & ggf. schwierig, da System sehr verzahnt miteinander & leicht, da Microservices durch neue abgelöst werden können \\
-			Technologie & beschränkt & vielfältig \\
-			Nachhaltige Entwicklung & wartbar mit Einschränkungen & leicht wartbar \\
-			Robustheit & weniger, da ganzes System bei schweren Fehlern abstürzt & sehr, da im Zweifel immer nur ein Service abstürzt \\
-			Skalierung & horizontale und vertikale Skalierung, Umsetzung kann sehr komplex werden &  horizontale und vertikale Skalierung \\
-			Betrieb & nur ein System & komplex, da mehr Services verwaltet werden müssen
-		\end{tabular}
+			    \item modular sind \end{itemize} \\  \hline
+			Organisation & leichter, da alles an einem Ort & schwerer, da mehr Domänenlogik (wer macht was?) beachtet werden muss \\  \hline
+			Legacy-Systeme ablösen & ggf. schwierig, da System sehr verzahnt mit anderen Technologien ist & leicht, da Microservices durch neue abgelöst werden können \\  \hline
+			Technologie & beschränkt & vielfältig \\  \hline
+			Nachhaltige Entwicklung & wartbar mit Einschränkungen & leicht wartbar \\  \hline
+			Robustheit & weniger, da ganzes System bei schweren Fehlern abstürzt & sehr, da im Zweifel immer nur ein Service abstürzt \\  \hline
+			Skalierung & \raggedright{horizontale und vertikale Skalierung, Umsetzung kann sehr komplex werden} &  horizontale und vertikale Skalierung \\  \hline
+			Betrieb & nur ein System & komplex, da mehr Services verwaltet werden müssen  \\ \hline
+		\end{tabular} 
 	\end{center}
 	\caption[Monolitih vs. Mircoservice-Architektur]{Monolitih vs. Mircoservice-Architektur}
 	\label{tab:mono_vs_microservices} 
 \end{table}
 
-Aus der Tabelle \ref{tab:mono_vs_microservices} ergeben sich verschiedene Punkte: Der Monolith eignet sich besonders dann sehr gut, wenn die Projekt- sowie Teamgrößen absehbar sind und auch die benötigten Technologien klar sind. Zusätzlich kann es beim Projektanfang ein Vorteil sein, da die Abhängigkeiten innerhalb des Projektes liegen und so die Entwicklungsgeschwindigkeit nicht durch eine komplizierte Infrastrukturen blockiert wird. \\
+Aus der Tabelle \ref{tab:mono_vs_microservices} ergeben sich verschiedene Punkte: Der Monolith eignet sich besonders dann sehr gut, wenn die Projekt- sowie Teamgrößen absehbar und auch die benötigten Technologien klar sind. Zusätzlich kann ein Monolith beim Projektanfang von Vorteil sein, da die Abhängigkeiten innerhalb des Projektes liegen und so die Entwicklungsgeschwindigkeit nicht durch eine kompliziertere Infrastruktur blockiert wird. \\
 
-Ist die Projektgröße allerdings nicht absehbar, treten früher oder später mehrere Schwierigkeiten auf: Zum einen bindet der am Anfang des Projektes festgelegte Technologiestack und die Nutzung oder der Austausch neuer Technologien sind in der Regel mit sehr viel Arbeit verbunden. Des Weiteren führen die anfangs eingegangen Abhängigkeiten zu Problemen im Deployment (A kann erst updaten, wenn B soweit ist) und einem erhöhten Aufwand in der Kommunikation zwischen den Teams (A kann erst beginnen, wenn B xy erledigt hat). \\
+Ist die Projektgröße allerdings nicht absehbar, treten früher oder später mehrere Schwierigkeiten auf: Zum einen bindet der am Anfang des Projektes festgelegte Technologiestack, d.h. die Nutzung oder der Austausch neuer Technologien ist in der Regel mit sehr viel Arbeit verbunden. Zum anderen führen die anfangs eingegangen Abhängigkeiten zu Problemen im Deployment (A kann erst updaten, wenn B soweit ist) und einem erhöhten Aufwand in der Kommunikation zwischen den Teams (A kann erst beginnen, wenn B xy erledigt hat). \\
 
-Die Skalierung von Microservices dagegen ist unabhängiger. Es können sich feingranular Services gesucht werden, welche skaliert werden sollen. Diese benötigen nicht zwingend mehr Hardware (vertikale Skalierung), sondern könnten z.B. auch auf verschiedene Server verteilt werden (horizontale Skalierung). Dies ist bei einem Monolithen natürlich auch möglich, dennoch muss immer der ganze Monolith skaliert werden, welcher zum einen immer mehr Hardware als einzelne Microservices benötigt und zum anderen in der Regel auch durch die Komplexität auch schwerer zu skalieren ist.\cite{wolff2018mic_praxis}\\
+Die Skalierung von Microservices dagegen ist unabhängiger. Es können sich feingranular Services gesucht werden, welche skaliert werden sollen. Diese benötigen nicht zwingend mehr Hardware (vertikale Skalierung), sondern könnten z.B. auch auf verschiedene Server verteilt werden (horizontale Skalierung). Dies ist bei einem Monolithen natürlich auch möglich, dennoch muss immer der ganze Monolith skaliert werden, welcher zum einen immer mehr Hardware als einzelne Microservices benötigt und zum anderen in der Regel auch durch die Komplexität schwerer zu skalieren ist.\cite{wolff2018mic_praxis}\\
 
 Als abschließender Punkt ist die Robustheit zu erwähnen: Wenn ein Microservice einen Fehler enthält, stürzt dieser im schlechtesten Fall ab. Im besten Fall übernimmt dieser Service eine weniger wichtige Funktion und der Nutzer bemerkt den Ausfall noch nicht einmal. Beim Monolithen dagegen stürzt die gesamte Anwendungen ab. In der Regel startet so eine Anwendung automatisch neu, jedoch betrifft die Downtime alle Nutzer. \\
 
-Aus den genannten Punkten lässt sich schließen, dass eine generelle Aussage, ob eine monolithische oder Microservice-Architektur besser oder schlechter ist, sich nicht treffen lässt. Es kommt immer darauf an, welche Zielsetzung und wie viele Ressourcen für das Projekt festgelegt sind. Eine monolithische Architektur ist schneller umsetzbar und es ist nicht gegegeben, ob ein Softwareprodukt überhaupt so viel Nachfrage erzeugt, so dass eine Microservice-Architektur notwendig ist. Dementsprechend muss abgewogen werden, welche Architektur für welchen Anwendungsfall besser geeignet ist.\cite{wolff2018mic_praxis} REWE Digital beispielsweise hat ihr Produkt zuerst als Monolithen gestartet und ist erst später auf eine Microservice-Architektur umgeschwenkt.\cite{rewe2019mic_ppp} 
+Eine generelle Aussage, welche Architektur besser oder schlecht ist, lässt sich dementsprechend nicht treffen. Es kommt immer darauf an, welche Zielsetzung und wie viele Ressourcen für das Projekt festgelegt sind. Eine monolithische Architektur ist schneller umsetzbar und es ist nicht gegeben, dass ein Softwareprodukt überhaupt so viel Nachfrage erzeugt und somit eine Microservice-Architektur notwendig ist. Dementsprechend muss abgewogen werden, welche Architektur für welchen Anwendungsfall besser geeignet ist.\cite{wolff2018mic_praxis} REWE Digital beispielsweise hat ihr Produkt zuerst als Monolithen gestartet und ist erst später auf eine Microservice-Architektur umgeschwenkt.\cite{rewe2019mic_ppp} 
 
 \subsection{Architektur von Micrsoservices}
 
-Wie bereits erwähnt, ist die Entkopplung von Microservices ein großer Vorteil gegenüber dem Monolithen. Dennoch ist es sinnvoll, Richtlinien, Regeln und/oder Festlegungen zu schaffen, damit die Microservices nicht blockierend oder technologisch unnötig gegensätzlich arbeiten. Die Entscheidungsebene kann global (Makroarchitektur) oder nur für einen einzelne Services (Mikroarchitektur) gelten.\cite{wolff2016mic_architectures} Welche Festlegungen und mit welcher Strenge diese eingehalten werden müssen, hängt von verschiedenen Faktoren ab, welche technologisch, organisatorisch oder wirtschaftlich motiviert sein können.\cite{rewe2019mic_ppp} \\ 
+Wie bereits erwähnt, ist die Entkopplung von Microservices ein großer Vorteil gegenüber dem Monolithen. Dennoch ist es sinnvoll, Richtlinien, Regeln und/oder Festlegungen zu schaffen, damit die Microservices nicht blockierend oder technologisch gegensätzlich arbeiten. Die Entscheidungsebene kann global (Makroarchitektur) oder nur für einen einzelnen Service (Mikroarchitektur) gelten.\cite{wolff2016mic_architectures} Welche Festlegungen und mit welcher Strenge diese eingehalten werden müssen, hängt von verschiedenen Faktoren ab, welche technologisch, organisatorisch oder wirtschaftlich motiviert sein können.\cite{rewe2019mic_ppp} \\ 
 
 In dem folgenden Abschnitt wird das Grundprinzip der Software-Modellierungs-Methodik Domain Driven Design untersucht. Zusätzlich wird erläutert, welche Fälle makro- oder microarchitektonisch einzuordnen sind. \\
 
 \subsubsection{Domain Driven Design}\label{sec:domain_driven_design}
 
-Domain Driven Design (DDD) ist ein Vorgehen mit dem ein Softwaresystem modelliert werden kann. Im Sinne einer Microservice-Architektur kann dies als Werkzeug genutzt werden, um Microservices fachlich einzuteilen.\cite{heise2016ddd} Beim sogenannten \textit{Strategic Design} wird dafür das Softwaressytem in verschiedene \textit{Bounded Contexts} eingeteilt, welche an ein \textit{Domänenmodell} gebunden sind. Ein Domänenmodell bildet die Geschäftslogik ab, d.h. inwiefern einzelne Objekte innerhalb des Kontexts in Relation zueinander stehen, welche Eigenschaften sie haben und wie sie sich verhalten. Dabei kann ein Domänenmodell - je nach Entwurfsmuster - von einem oder mehreren Bounded Contexts genutzt werden.\cite{wolff2018mic_praxis}  \\
+Domain Driven Design (DDD) ist ein Vorgehen, mit dem ein Softwaresystem modelliert werden kann. Im Sinne einer Microservice-Architektur kann dies als Werkzeug genutzt werden, um Microservices fachlich einzuteilen.\cite{heise2016ddd} Beim sogenannten \textit{Strategic Design} wird dafür das Softwaressytem in verschiedene \textit{Bounded Contexts} eingeteilt, welche an ein \textit{Domänenmodell} gebunden sind. Ein Domänenmodell bildet die Geschäftslogik ab, d.h. inwiefern einzelne Objekte innerhalb des Kontextes in Relation zueinander stehen, welche Eigenschaften sie haben und wie sie sich verhalten. Dabei kann ein Domänenmodell - je nach Entwurfsmuster - von einem oder mehreren Bounded Contexts genutzt werden.\cite{wolff2018mic_praxis}  \\
 
 \begin{figure}[ht]
 	\centering
@@ -109,7 +109,7 @@ Domain Driven Design (DDD) ist ein Vorgehen mit dem ein Softwaresystem modellier
 	\label{fig:bounded_context_with_custom_datamodels}
 \end{figure}
 
-Wolff verdeutlicht das Prinzip von Bounded Contexts mit Hilfe von vier Microservices, welche einen Onlineshop repräsentieren: \textit{Suche}, \textit{Check Out}, \textit{Inkasso} und \textit{Lieferung}. Während das Datenmodell der Suche detaillierte Informationen über die Produkte enthält, reicht es im Warenkorb (hier Check Out), wenn ggf. nur der Produktname gespeichert wird. Bei Inkasso ist es ähnlich: An dieser Stelle sind Zahlungsdaten des Benutzers relevant, während bei der Lieferung ggf. nur die Adresse notwendig ist.\cite{wolff2018mic_praxis} An diesem Beispiel wird deutlich, dass zwar von selben Begrifflichkeiten wie Benutzer, Produkt usw. gesprochen wird, allerdings jeder Service sein eigenes Domänenmodell hat. Diese Technik ist unterstützend dabei, eine saubere Microservice-Architecktur abzubilden.\cite{wolff2018mic_praxis} \cite{heise2016ddd} \\
+Wolff verdeutlicht das Prinzip von Bounded Contexts mit Hilfe von vier Microservices, welche einen Onlineshop repräsentieren: \textit{Suche}, \textit{Check Out}, \textit{Inkasso} und \textit{Lieferung}. Während das Datenmodell der Suche detaillierte Informationen über die Produkte enthält, reicht es im Warenkorb (hier Check Out), wenn ggf. nur der Produktname gespeichert wird. Bei Inkasso ist es ähnlich: An dieser Stelle sind Zahlungsdaten des Benutzers relevant, während bei der Lieferung ggf. nur die Adresse notwendig ist.\cite{wolff2018mic_praxis} An diesem Beispiel wird deutlich, dass zwar von denselben Begrifflichkeiten wie Benutzer, Produkt usw. gesprochen wird, allerdings jeder Service sein eigenes Domänenmodell hat. Diese Technik ist unterstützend dabei, eine saubere Microservice-Architecktur abzubilden.\cite{wolff2018mic_praxis} \cite{heise2016ddd} \\
 
 Neben der fachlichen Trennung bildet DDD auch die Kommunikation zwischen Kontexten ab. Dabei wird grundsätzlich vom \textit{up-stream} (vorgeschaltet) und dem \textit{down-stream} (nachgeschaltet) gesprochen.\cite{wolff2018mic_praxis} Der up-stream stellt dem down-stream Informationen bereit. Wie dies technisch umgesetzt ist, also ob der down-stream nachfragt oder der up-stream aktiv Daten schickt, ist frei wählbar. \\
 
@@ -117,47 +117,47 @@ Nach dem Anwenden von DDD sollte die Struktur der Software erkennbar sein: D.h. 
 
 \subsubsection{Macro- und Mikroarchitektur}\label{sec:macro_und_mikroarchitektur}
 
-Wenn durch das DDD entworfen wird, welche Microservices voraussichtlich benötigt werden, ist es sinnvoll, einen Art Bauplan zu verfassen, welcher impliziert, an welche Regeln sich ein Microservice halten muss. Diese Regeln können wie bereits erwähnt auf globaler Ebene getroffen werden, d.h. sie gelten für alle Services (Makroarchitektur) oder sie gelten nur im Microservice selber (Microarchitektur). REWE Digital unterscheidet dabei zwischen \textit{Must}, \textit{Should}, \textit{Could}. D.h. es gibt Regeln, die Microservices erfüllen müssen wie z.B. das Kommunzieren über REST oder das Implementieren eine einheitlicher Autorisierung.\cite{rewe2019mic_ppp} Andere Regeln dagegen sind viel mehr Richtlinien (should) oder komplett optional (could). Das Ziel ist stets, dass durch die makroarchitektonischen Entscheidungen nicht die Vorteile von Microservices beschnitten werden.\cite{wolff2018mic_praxis}\cite{irakli2016mic_arc}. \\
+Wenn durch das DDD entworfen wird, welche Microservices voraussichtlich benötigt werden, ist es sinnvoll, einen Art Bauplan zu verfassen, welcher impliziert, an welche Regeln sich ein Microservice halten muss. Diese Regeln können wie bereits erwähnt auf globaler Ebene getroffen werden, d.h. sie gelten für alle Services (Makroarchitektur) oder sie gelten nur im Microservice selber (Microarchitektur). REWE Digital unterscheidet dabei zwischen \textit{Must}, \textit{Should}, \textit{Could}. D.h. es gibt Regeln, die Microservices erfüllen müssen, wie z.B. das Kommunzieren über REST oder das Implementieren einer einheitlichen Autorisierung.\cite{rewe2019mic_ppp} Andere Regeln dagegen sind viel mehr Richtlinien (should) oder komplett optional (could). Das Ziel ist stets, dass durch die makroarchitektonischen Entscheidungen nicht die Vorteile von Microservices beschnitten werden.\cite{wolff2018mic_praxis}\cite{irakli2016mic_arc}. \\
 
-Es gibt verschiedene Einflussfaktoren wie sich die Makroarchitektur für ein Unternehmen definiert: Zum einen empfiehlt es sich ein Gremium zu gründen, welches sich stetig mit den Regeln der Makroarchitektur auseinandersetzt, sie entsprechend erweitert, überarbeitet und die getroffenen Entscheidungen auch immer begründen kann.\cite{wolff2018mic_praxis} Zum anderen besteht immer ein technischer Einfluss\cite{wolff2018mic_praxis}:
+Es gibt verschiedene Einflussfaktoren wie sich die Makroarchitektur für ein Unternehmen definiert: Zum einen empfiehlt es sich, ein Gremium zu gründen, welches sich stetig mit den Regeln der Makroarchitektur auseinandersetzt, sie entsprechend erweitert, überarbeitet und die getroffenen Entscheidungen auch immer begründen kann.\cite{wolff2018mic_praxis} Zum anderen besteht immer ein technischer Einfluss\cite{wolff2018mic_praxis}:
 \begin{itemize}
 	\item Gewählte Technologien müssen in die Infrastruktur des Unternehmens passen: Angenommen die Auslastung eines Microservices muss überwacht werden und dies wird firmenweit mit Tool A erledigt, dann wäre es sehr aufwendig, wenn der besagte Service nur eine Schnittstelle für Tool B anbietet und der nächste Service nur für Tool C. Dies würde einerseits sehr unübersichtlich werden und andererseits viel Aufwand bedeuten. 
-	\item Technologien sind immer von dem Personal abhängig: Gerade wenn Unternehmen klein bis mittelständig sind, emphielt es sich Technologien zu nutzen, die mehrere Entwickler beherrschen, um Inselwissen zu reduzieren. 
-	\item Ebenfalls können gezielt strategische Entscheidungen getroffen werden, z.B. wenn ein Unternehmen die Dateninfrastruktur zu einem Cloudanbieter auslagern möchte, hat dies entsprechende makroarchitekonisches Auswirkungen.
+	\item Technologien sind immer von dem Personal abhängig: Gerade wenn Unternehmen klein bis mittelständig sind, empfiehlt es sich, Technologien zu nutzen, die mehrere Entwickler beherrschen, um Inselwissen zu reduzieren. 
+	\item Ebenfalls können gezielt strategische Entscheidungen getroffen werden, z.B. wenn ein Unternehmen die Dateninfrastruktur zu einem Cloudanbieter auslagern möchte, hat dies entsprechende makroarchitekonische Auswirkungen.
 \end{itemize}
 
 Basierend auf Wolff und Nadareishvili ist Tabelle \ref{tab:macro_micro} entstanden, welche einen Überblick darüber gibt, wie gängige Themen eingeordnet werden können. \cite{wolff2018mic_praxis}\cite{irakli2016mic_arc}\cite{rewe2019mic_ppp}
 
 \begin{table}[ht]
 	\begin{center}
-		\begin{tabular}{p{5cm}p{5cm}p{5cm}}
+		\begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
 			& Mikroarchitektur & Makroarchitektur \\ \hline
-			Programmiersprache &  x & x  \\
-			Datenbank & x & x \\
-			Look and Feel (UI) & x  & x  \\
-			Dokumentation & x & x  \\
-			Datenformat &   & x \\
-			Kommunikationsprotokoll &   & x \\
-			Authentifizierung &  & x \\
-			Integrationtests &  &  x \\
-			Autorisierung & x  &  \\
-			Unittests & x  &  \\
-			Continuous-Delivery-Pipeline & x &  \\
+			Programmiersprache &  x & x  \\ \hline
+			Datenbank & x & x \\ \hline
+			Look and Feel (UI) & x  & x  \\ \hline
+			Dokumentation & x & x  \\ \hline
+			Datenformat &   & x \\ \hline
+			Kommunikationsprotokoll &   & x \\ \hline
+			Authentifizierung &  & x \\ \hline
+			Integrationtests &  &  x \\ \hline
+			Autorisierung & x  &  \\ \hline
+			Unittests & x  &  \\ \hline
+			Continuous-Delivery-Pipeline & x &  \\ \hline
 		\end{tabular}
 	\end{center}
 	\caption[Entscheidungen Micro- und Macroarchitektur]{Entscheidungen Micro- und Macroarchitektur}
 	\label{tab:macro_micro} 
 \end{table}
 
-In der Tabelle \ref{tab:macro_micro} sieht man, dass gerade die ersten Punkten sehr von der Unternehmenskultur und den technischen sowie personellen Freiheiten abhängen. In der Theorie sollte die Programmiersprache sinnvoll für jeden Microservices gewählt werden, dennoch ergibt es auch Sinn einen Pool an Programmiersprachen auf Makroebene zu definieren, um Inselwissen zu reduzieren und nachhaltige Codequalität zu gewährleisten. Ähnliches gilt beispielsweise für die Wahl der Datenbank: Ist bereits eine globale Infrastruktur für Datenbank X geschaffen, sollte diese nicht ohne weiteres aufgebrochen werden, nur weil es technisch möglich ist. \\
+In der Tabelle \ref{tab:macro_micro} sieht man, dass gerade die ersten Punkten sehr von der Unternehmenskultur und den technischen sowie personellen Freiheiten abhängen. In der Theorie sollte die Programmiersprache sinnvoll für jeden Microservices gewählt werden, dennoch ergibt es auch Sinn, einen Pool an Programmiersprachen auf Makroebene zu definieren, um Inselwissen zu reduzieren und nachhaltige Codequalität zu gewährleisten. Ähnliches gilt beispielsweise für die Wahl der Datenbank: Ist bereits eine globale Infrastruktur für Datenbank X geschaffen, sollte diese nicht ohne Weiteres aufgebrochen werden, nur weil es technisch möglich ist. \\
 
 Bei der Dokumentation sowie beim Look \& Feel ist es sinnvoll, globale Richtlinien zu definieren, damit klar ist, wo bei jedem Microservices die Dokumentation zu finden ist oder wie ein User Interface grundsätzlich angeordnet und gestaltet werden soll. Dennoch können diese Punkte im Detail je nach Microservice abweichen. \\
 
-Ein Kommunikationsprotokoll (z.B. REST) sowie Datenformate (z.B. JSON) sollten festgeschrieben werden.\cite{rewe2019mic_ppp} \cite{wolff2018mic_praxis} Als Grund wird zum einen das Vermeiden von technischen Mehraufwand angegeben, zum anderen sind Microservices zwar eigenständig deploybare Einheiten, dennoch sollten sie technisch zum Gesamtsystem passen und nicht dagegen arbeiten. \\
+Ein Kommunikationsprotokoll (z.B. REST) sowie Datenformate (z.B. JSON) sollten festgeschrieben werden.\cite{rewe2019mic_ppp} \cite{wolff2018mic_praxis} Als Grund wird zum einen das Vermeiden von technischem Mehraufwand angegeben, zum anderen sind Microservices zwar eigenständig deploybare Einheiten, dennoch sollten sie technisch zum Gesamtsystem passen und nicht dagegen arbeiten. \\
 
 Während die Authentifzierung (um wen handelt es sich) einmalig festgelegt werden sollte, liegt die Überprüfung der Autorisierung (was darf der Benutzer) in jedem Microservice selbst. Die Alternative wäre, dass jede eingehende Anfrage noch einmal geprüft wird, was zu unnötig hohem Traffic und somit zu Verzögerungen führen würde.  \\
 
-Die hier erarbeitete Tabelle  \ref{tab:macro_micro}  ist an dieser Stelle nicht als feststehendes Manfifest für alle Unternehmen zu verstehen, sondern zeigt eine mögliche, sinnvolle Einordnung. Natürlich können architektonische Entscheidungen stark vom jeweiligen Anwendungszweck abhängen. Nicht aufgeführt ist beispielsweise der Umgang mit Konfigurationsdateien, Monitoring oder Logging. Beim Monitoring könnte zum Beispiel global entschieden werden, \textit{wo} Metriken abgelegt werden bzw. mit \textit{welcher} Technologie gearbeitet wird. Aus microarchitektonischer Sicht könnten die Services allerdings selbst entscheiden, \textit{was} gemessen wird.  \\
+Die hier erarbeitete Tabelle  \ref{tab:macro_micro}  ist an dieser Stelle nicht als feststehendes Manifest für alle Unternehmen zu verstehen, sondern zeigt eine mögliche, sinnvolle Einordnung. Natürlich können architektonische Entscheidungen stark vom jeweiligen Anwendungszweck abhängen. Nicht aufgeführt ist beispielsweise der Umgang mit Konfigurationsdateien, Monitoring oder Logging. Beim Monitoring könnte zum Beispiel global entschieden werden, \textit{wo} Metriken abgelegt werden bzw. mit \textit{welcher} Technologie gearbeitet wird. Aus microarchitektonischer Sicht könnten die Services allerdings selbst entscheiden, \textit{was} gemessen wird.  \\
 
 Ebenso beim Deployment: Es gibt zahlreiche Methoden, um neue Updates bereitzustellen wie z.B. mittels Docker, Kubernetes oder indivudelle Installationsskripte.\cite{wolff2018mic_praxis} Welche Technologie sich durchsetzt, muss anhand der Anforderung entschieden werden. \\
 
@@ -191,7 +191,7 @@ Anhand dieser Definition lässt sich folgendes Szenario darstellen (siehe Abbild
 	\label{fig:synchrone_kommunikation_microservices}
 \end{figure}
 
-Der Actor stellt bei Microservice A eine Anfrage, welche bearbeitet und schließlich an B weiterleitet wird. B verarbeitet diese ebenfalls und antwortet, so dass auch A wieder antworten kann. Aus diesem Ablauf lässt sich festhalten, dass die übertragenden Daten aktuell sind. D.h. der Actor erhält definitiv konsistente Daten, was positiv zu vermerken ist. Problematischer dagegen ist die Abhängigkeit, welche entsteht. Sollte B nicht erreichbar sein, läuft A in einen Timeout und ist blockiert. Einerseits ließe sich argumentieren, dass genau dies passieren soll, schließlich scheint es einen Fehler zu geben. Aber angenommen A wäre ein Service zum Erstellen von Rechnungen und B ein Service zum Sammeln von Daten für Marktanalysen. A möchte B infomieren, dass eine neue Rechnung erstellt wurde, läuft allerdings in einen Timeout. Die Operation eine Rechnung zu erstellen, hat allerdings eine höhere Priorität als es statistisch zu erfassen. Nach den aufgestellen Definitionen aus Abschnitt \ref{sec:monolith_vs_microservices} für Microservices wird die Entkopplung, Modularität und Robustheit des Systems verletzt, da A nicht weiterarbeiten kann.\cite{wolff2018mic_praxis} \cite{bruce2019mic_in_action}  
+Der Actor stellt bei Microservice A eine Anfrage, welche bearbeitet und schließlich an B weiterleitet wird. B verarbeitet diese ebenfalls und antwortet, so dass auch A wieder antworten kann. Aus diesem Ablauf lässt sich festhalten, dass die übertragenden Daten aktuell sind. D.h. der Actor erhält definitiv konsistente Daten, was positiv zu vermerken ist. Problematischer dagegen ist die Abhängigkeit, welche entsteht. Sollte B nicht erreichbar sein, läuft A in einen Timeout und ist blockiert. Einerseits ließe sich argumentieren, dass genau dies passieren soll, schließlich scheint es einen Fehler zu geben. Aber angenommen A wäre ein Service zum Erstellen von Rechnungen und B ein Service zum Sammeln von Daten für Marktanalysen. A möchte B infomieren, dass eine neue Rechnung erstellt wurde, läuft allerdings in einen Timeout. Die Operation, eine Rechnung zu erstellen, hat allerdings eine höhere Priorität als es statistisch zu erfassen. Nach den aufgestellen Definitionen aus Abschnitt \ref{sec:monolith_vs_microservices} für Microservices wird die Entkopplung, Modularität und Robustheit des Systems verletzt, da A nicht weiterarbeiten kann.\cite{wolff2018mic_praxis} \cite{bruce2019mic_in_action}  
 
 Bläht man das Beispiel auf, so dass weitere Services statistische Daten erfassen wollen, würden zahlreiche Microservices ausfallen (siehe Abbildung \ref{fig:snyn_com_dependencies}). \\
 
@@ -202,9 +202,9 @@ Bläht man das Beispiel auf, so dass weitere Services statistische Daten erfasse
 	\label{fig:snyn_com_dependencies}
 \end{figure}
 
-Die Microservices können auch nicht auf eine Notfallstrategie (\textbf{Fallback}) zurückgreifen. Nehme man an, wenn Service B nach x Sekunden nicht erreichbar ist, wird die ursprüngliche Abfrage durch A weiter abgearbeitet, um nicht zu blockieren. Nun müsste allerdings eine andere Logik dafür sorgen, dass die Daten, die nicht übertragen werden konnten, zu einem anderen Zeitpunkt nachgetragen werden. In diesem Moment würde keine Datenkonsistenz mehr gewährleistet sein. \\
+Die Microservices können auch nicht auf eine Notfallstrategie (\textbf{Fallback}) zurückgreifen. Nehme man an, Service B ist nach x Sekunden nicht erreichbar, so wird die ursprüngliche Abfrage durch A weiter abgearbeitet, um nicht zu blockieren. Nun müsste allerdings eine andere Logik dafür sorgen, dass die Daten, die nicht übertragen werden konnten, zu einem anderen Zeitpunkt nachgetragen werden. In diesem Moment würde keine Datenkonsistenz mehr gewährleistet sein. \\
 
-Auch nicht zu vernachlässigen, ist die Geschwindigkeit mit der die Abfragen abgearbeitet werden können. Möglicherweise muss B in einem anderen Szenario noch mit C kommunizieren. Die Anfrage würde sich über drei Services erstrecken, was zusätzliche Latenz mit sich bringt.\cite{wolff2018mic_praxis} \\   
+Auch nicht zu vernachlässigen, ist die Geschwindigkeit, mit der die Abfragen abgearbeitet werden können. Möglicherweise muss B in einem anderen Szenario noch mit C kommunizieren. Die Anfrage würde sich über drei Services erstrecken, was zusätzliche Latenz mit sich bringt.\cite{wolff2018mic_praxis} \\   
 
 Ebenfalls entsteht durch jede Schnittstelle eine fachliche Abhängigkeit.\cite{bruce2019mic_in_action} Die Anfragen von den Microservices A, C, D, E müssen der Schnittstellendefinition von B entsprechen. Änderungen führen gegebenenfalls zu Fehlern und weiteren Abhängigkeiten. Wie diese Problematik gelöst werden könnte, wird in Abschnitt \ref{sec:asynchrone_kommunikation} beschrieben.
 
@@ -213,9 +213,9 @@ Ebenfalls entsteht durch jede Schnittstelle eine fachliche Abhängigkeit.\cite{b
 Wie bereits beschrieben, wird bei der synchronen Kommunikation auf weiterführende Abfragen gewartet. Die asynchrone Kommunikation wartet nicht auf Antworten von weiteren Services, sondern trifft Annahmen über etwaige Systemzustände.\cite{wolff2018mic_praxis} Um Annahmen zu treffen, existieren je nach Anwendungsfall verschiedene Strategien:
 
 \begin{enumerate}
-\item{ Ein Microservice kann replizierte Daten vorhalten. Angenommen ein Artikel soll rausgeschickt werden: Der dafür verantwortliche Service benötigt die Anschrift des Kundens, aber nicht weitere Daten wie Geburtsdatum, Zahlungsmethode oder ähnliches. Dementsprechend werden nur relevante Daten repliziert vorgehalten. Eine Herausforderung ist es, dass diese replizierten Daten stets mit den Originaldaten übereinstimmen. Schließlich kann sich eine Anschrift ändern.\cite{wolff2018mic_praxis}}
+\item{ Ein Microservice kann replizierte Daten vorhalten. Angenommen ein Artikel soll rausgeschickt werden: Der dafür verantwortliche Service benötigt die Anschrift des Kunden, aber nicht weitere Daten wie Geburtsdatum, Zahlungsmethode oder ähnliches. Dementsprechend werden nur relevante Daten repliziert vorgehalten. Eine Herausforderung ist es, dass diese replizierten Daten stets mit den Originaldaten übereinstimmen. Schließlich kann sich eine Anschrift ändern.\cite{wolff2018mic_praxis}}
 
-\item{Ggf. muss nur ein weiterer Service informiert werden wie der Service B aus Abschnitt \ref{sec:synchrone_kommunikation}, welcher Statistiken erfasst. In dem Szenario der asynchronen Kommunikation würde die Abfrage gestellt werden, ohne das Ergebnis abzuwarten, da es schlichtweg nicht relevant ist. Die Herausforderung hier ist, zu gewährleisten, dass die Abfrage auch in Fehlerfehlen früher oder später zugestellt wird.}
+\item{Ggf. muss nur ein weiterer Service informiert werden, wie der Service B aus Abschnitt \ref{sec:synchrone_kommunikation}, welcher Statistiken erfasst. In dem Szenario der asynchronen Kommunikation würde die Abfrage gestellt werden, ohne das Ergebnis abzuwarten, da es schlichtweg nicht relevant ist. Die Herausforderung hier ist, zu gewährleisten, dass die Abfrage auch in Fehlerfällen früher oder später zugestellt wird.}
 \end{enumerate}
 
 Aus den Strategien ergeben sich Anforderungen an die Kommunikationsstruktur: Es muss gewährleisten sein, dass fehlerhafte Abfragen erneut übermittelt werden und ebenfalls wird eine Struktur benötigt, die dafür sorgt, dass replizierte Datensätze stets mit aktuellen Daten befüllt sind. Dies lässt sich durch sogenannte Events erreichen.\cite{bruce2019mic_in_action}\cite{wolff2018mic_praxis}  \\
@@ -247,12 +247,12 @@ Aus den zwei vorherigen Abschnitten ergibt sich folgende Aufstellung (siehe Tabe
 
 \begin{table}[H]
 	\begin{center}
-		\begin{tabular}{p{1,5cm}p{5cm}p{5cm}}
+		\begin{tabular}{|p{1,5cm}|p{5cm}|p{5cm}|}
 			& synchrone Kommunikation & asynchrone Kommunikation \\ \hline
 			 Vorteile
 			&
 				\begin{itemize}
-					\item Jederzeit Konsistent
+					\item Jederzeit konsistent
 					\item Paradigma ist Entwicklern bekannt\cite{wolff2018mic_praxis}
 				\end{itemize} 
 			& 
@@ -262,7 +262,7 @@ Aus den zwei vorherigen Abschnitten ergibt sich folgende Aufstellung (siehe Tabe
 					\item Nachrichtenempfang garantiert (ggf. mit Verzögerung)
 					\item Absicherung gegen Ausfall
 				\end{itemize} 
-  			\\
+  			\\ \hline
 			Nachteile
 		  &
  			  	\begin{itemize}
@@ -274,16 +274,16 @@ Aus den zwei vorherigen Abschnitten ergibt sich folgende Aufstellung (siehe Tabe
 		 	\begin{itemize}
 		 		\item nicht jederzeit garantiert konsistent
 		 		\item Idempotenz muss beachtet werden
-	 		\end{itemize}  \\
+	 		\end{itemize}  \\ \hline
 		\end{tabular}
 	\end{center}
 	\caption[synchrone vs. asynchrone Kommunikation]{synchrone vs. asynchrone Kommunikation}
 	\label{tab:sync_vs_async_table} 
 \end{table}
 
-Es lässt sich feststellen, dass die Vorteile einer asynchronen Kommunikation für Microservices überwiegen und auch diese wird empfohlen.\cite{wolff2018mic_praxis}\cite{bruce2019mic_in_action} Allerdings ist die Kommunikation nicht dogmatisch zu betrachten, sondern sollte je nach Projekt und Anwendungsfall entschieden werden. Synchrone Kommunikation bietet sich nämlich gerade dann an, wenn der Datenbestand definitiv konsistent sein soll. \\
+Es lässt sich feststellen, dass die Vorteile einer asynchronen Kommunikation für Microservices überwiegen, weshalb diese Kommunikationsart auch empfohlen wird.\cite{wolff2018mic_praxis}\cite{bruce2019mic_in_action} Dennoch ist die Kommunikation nicht dogmatisch zu betrachten, sondern sollte je nach Projekt und Anwendungsfall entschieden werden. Synchrone Kommunikation bietet sich nämlich gerade dann an, wenn der Datenbestand definitiv konsistent sein soll. \\
 
-Das sogenannte CAP-Theoreom beschreibt die Abwägung, welche man in verteilten Systemen bei der Auswahl der Kommunikation treffen muss. CAP bedeutet:
+Das sogenannte CAP-Theoreom beschreibt die Abwägung, welche man in verteilten Systemen bei der Auswahl der Kommunikation tätigen muss. CAP bedeutet:
 	\begin{itemize}
 		\item Consistency (Konsistenz): Die Daten in einem verteilten System sind konsistent.
 		\item Availability (Verfügbarkeit): Die Verfügbarkeit für alle Systeme ist gegeben. 
@@ -292,7 +292,7 @@ Das sogenannte CAP-Theoreom beschreibt die Abwägung, welche man in verteilten S
 
 In einem verteilten System können immer nur zwei von den drei Bedingungen erfüllt sein.\cite{wolff2018mic_praxis} Sofern Konsistenz gewährleistet werden soll, müssen alle Dienste stets verfügbar sein. Damit kann der Punkt Partitionstoleranz nicht mehr erfüllt sein. Umgekehrt: Wenn die Partitionstoleranz garantiert ist, z.B. dadurch dass Services ihre eigene Datenhaltung besitzen, ist zwar prinzipiell auch die Verfügbarkeit gegeben, aber nicht die Konsistenz. \\
 
-Dementsprechend ist es sinnvoll sich die Anforderungen, welche man an sein System hat, zu überlegen und sich aufgrund dieser Grundlage zu entscheiden, welche Kommunikationsart implementiert werden soll. 
+Dementsprechend ist es sinnvoll, sich die System-Anforderungen zu überlegen und aufgrund dieser Basis zu entscheiden, welche Kommunikationsart implementiert werden soll. 
 
 \subsubsection{API Gateway}
 
@@ -305,7 +305,7 @@ Umso mehr Services aufgesetzt werden, desto komplexer ist es, die Übersicht üb
 	\label{fig:api_gateway}
 \end{figure}
 
-Abbildung \ref{fig:api_gateway} zeigt deutlich wie die Clients über das Gateway anfragen, welches anschließend an die entsprechenden Services weiterleitet. Wenn APIs eine hohe Auslastung haben, würde man mehrere Instanzen von einem API Gateway erstellen. Ein sogenannter Load Balancer wäre der Einstiegspunkt für die Clients. Dieser würde die Anfragen sinnvoll an die API Gateway Instanzen verteilen, so dass keine Überlastung entsteht.\cite{oracle} \\
+Abbildung \ref{fig:api_gateway} zeigt deutlich, wie die Nutzer über das API Gateway anfragen, welches anschließend an die entsprechenden Services weiterleitet. Wenn APIs eine hohe Auslastung haben, würde man mehrere Instanzen von einem API Gateway erstellen. Ein sogenannter Load Balancer wäre der Einstiegspunkt für die Clients. Dieser würde die Anfragen sinnvoll an die API Gateway Instanzen verteilen, so dass keine Überlastung entsteht.\cite{oracle} \\
 
 API Gateways haben neben dem einzelnen Einstiegspunkt noch weitere Vorteile: 
 \begin{itemize}
@@ -322,17 +322,17 @@ Beim Monolithen ist architektonisch klar, dass die Authentifizierung und Autoris
 
 \textbf{Authentifizierung}: Identifiziert, wer jemand ist. Z.B. Nutzer A, der sich durch Benutzername und Passwort registriert hat.\cite{bruce2019mic_in_action}\\
 
-\textbf{Autorisierung}: Bestimmt, wie viel ein Nutzer darf. Nutzer A hat eine Rolle, welche ihn berechtigt gewisse Aktionen durchzuführen.\cite{bruce2019mic_in_action}\\
+\textbf{Autorisierung}: Bestimmt, wie viel ein Nutzer darf. Nutzer A hat eine Rolle, welche ihn berechtigt, gewisse Aktionen durchzuführen.\cite{bruce2019mic_in_action}\\
 
-Wenn möglich und sinnvoll, kann die Autorisierung auch bereits im Gateway geschehen. Häufig muss allerdings ein Microservice diese selbst durchführen, teils ist dies begründbar durch den Datenbestand, welcher nur dem Microservice vorliegt. \\
+Wenn möglich und sinnvoll, kann die Autorisierung auch bereits im Gateway geschehen. Häufig muss allerdings ein Microservice diese selbst durchführen. Teils ist dies begründbar durch den Datenbestand, welcher nur dem Microservice vorliegt. \\
 
 Um unnötige Last zu verhindern, kann die Validität (handelt es sich um einen gültigen Request) und die Authentifizierung bereits im API Gateway überprüft werden. Der weitere Vorteil ist, dass die Authentifizierung somit an einer zentralen Stelle durchgeführt wird. Dies verhindert Redundanz und fehlerhafte Implementierungen.\cite{rewe2019mic_ppp}\cite{richardson2019mic_pattern} \\
 
-Die Idee ist, dass der Benutzer nach dem Anmelden ein Security-Token erhält, welches verwendet wird, um sensible Anfragen zu verifizieren. Zum einen gibt es die Möglichkeit ein Token auszustellen, welches beim Auslesen verschlüsselt ist (opaque Token) und zum anderen auf ein offenen Standard namens \textit{JSON Web Token} (JWT, transparent Token) zu setzen. Das opaque Token hat den großen Nachteil, dass es zusätzliche Performance sowie Latenz verursacht und nur synchron entschlüsselt werden kann.\cite{richardson2019mic_pattern} \\
+Die Idee ist, dass der Benutzer nach dem Anmelden ein Security-Token erhält, welches verwendet wird, um sensible Anfragen zu verifizieren. Zum einen gibt es die Möglichkeit, ein Token auszustellen, welches beim Auslesen verschlüsselt ist (opaque Token) und zum anderen auf einen offenen Standard namens \textit{JSON Web Token} (JWT, transparent Token) zu setzen. Das opaque Token hat den großen Nachteil, dass es zusätzliche Performance sowie Latenz verursacht und nur synchron entschlüsselt werden kann.\cite{richardson2019mic_pattern} \\
 
 Das JWT wird beim Ausstellen signiert, um die Echtheit zu gewährleisten. Während die Nachteile des opaque Tokens hier nicht auftreten, ist ein anderes Problem, dass ein JWT nach Ausstellung nicht widerrufen werden kann. Theoretisch wäre es dauerhaft gültig, weshalb Ablauflaufzeiten gesetzt werden. Dies wiederum impliziert, dass der Client dafür sorgen muss, immer rechtzeitig ein neues Token anzuforden. Für solche und weitere Logiken exisitiert bereits ein Sicherheitsstandard namens OAuth2, welcher empfohlen wird zu verwenden.\cite{richardson2019mic_pattern} \\
 
-Ziel bei OAuth2 ist unter anderem, Autorisierungen zwischen verschiedene Anwendungen zu erlauben. Ursprünglich wurde das Authentifizierungsprotokoll so entworfen, dass Drittanwendungen Zugang zu Informationen erhalten, ohne dass Passwörter weitergeleitet werden müssen.\cite{richardson2019mic_pattern}  Beispielsweise wird OAuth2 verwendet, wenn Benutzer sich über ihren Facebook-Account bei Drittplattformen anmelden. Die Drittplattformen können natürlich nicht das Facebook-Passwort einsehen, erhalten aber je nach Anwendungsfall Zugriff auf verschiedene Ressourcen (z.B. Lesezugriff auf die E-Mail-Adresse und/oder Konakte, Schreibzugriffe zum Teilen von Nachrichten usw.). \\
+Ziel bei OAuth2 ist unter anderem, Autorisierungen zwischen verschiedenen Anwendungen zu erlauben. Ursprünglich wurde das Authentifizierungsprotokoll so entworfen, dass Drittanwendungen Zugang zu Informationen erhalten, ohne dass Passwörter weitergeleitet werden müssen.\cite{richardson2019mic_pattern}  Beispielsweise wird OAuth2 verwendet, wenn Benutzer sich über ihren Facebook-Account bei Drittplattformen anmelden. Die Drittplattformen können natürlich nicht das Facebook-Passwort einsehen, erhalten aber je nach Anwendungsfall Zugriff auf verschiedene Ressourcen (z.B. Lesezugriff auf die E-Mail-Adresse und/oder Konakte, Schreibzugriffe zum Teilen von Nachrichten usw.). \\
 
 Da OAuth2 ein sehr komplexes und umfangreiches Thema ist, wird im Folgenden nur ein häufig verwendetes Grundprinzip erklärt. \\
 
@@ -344,7 +344,7 @@ Um die Abbildung \ref{fig:password_grant} besser zu verstehen, sind folgende Def
 
 \textbf{Refresh Token}: Ein Token, welches langlebig ist, also eine lange Gültigkeit besitzt. Dieses kann allerdings im Gegensatz zum Access Token widerrufen werden. Ebenfalls wird es verwendet, um ein neues Access Token vom Authorization Server anzufordern. Dafür ist keine Übergabe der Benutzerdaten nötig.\\ 
 
-\textbf{Resource Server}: Eine Ressource auf die nur zugegriffen werden kann, wenn ein valides Access Token vorliegt. Eine Ressource könnte z.B. ein Micoservice sein.\\ 
+\textbf{Resource Server}: Eine Ressource auf die nur zugegriffen werden kann, wenn ein valides Access Token vorliegt. Eine Ressource könnte z.B. ein Microservice sein.\\ 
 
 \textbf{Client}: Ein Client möchte Zugriff auf den Resource Server. Clients können beispielsweise Drittanwendungen, Webanwendungen oder mobile Applikationen sein. Sie werden auch Resource Owner genannt. \\ 
 
@@ -355,19 +355,19 @@ Um die Abbildung \ref{fig:password_grant} besser zu verstehen, sind folgende Def
 	\label{fig:password_grant}
 \end{figure}
 
-Die Abbildung \ref{fig:password_grant} zeigt einen Ablauf, bei dem ein Client sein Usernamen und Passwort übermittelt (1). Diese Anfrage wird von dem API Gateway weitergeleitet an einen Authorization Server (2). Wurde der Nutzer gefunden, wird ein Access und Refresh Token über das API Gateway (3) an den Nutzer übermittelt (4). Mit der entsprechenden Autorisierung ruft der Client seine Bestellungen (5) ab. Dieser Request wird entsprechend von dem API Gateway weitergeleitet (6). \\
+Die Abbildung \ref{fig:password_grant} zeigt einen Ablauf, bei dem ein Client seinen Usernamen und sein Passwort übermittelt (1). Diese Anfrage wird von dem API Gateway weitergeleitet an einen Authorization Server (2). Wurde der Nutzer gefunden, wird ein Access und Refresh Token über das API Gateway (3) an den Nutzer übermittelt (4). Mit der entsprechenden Autorisierung ruft der Client seine Bestellungen (5) ab. Dieser Request wird entsprechend von dem API Gateway weitergeleitet (6). \\
 
 Neben dem \textit{password grant Flow} existiert auch der sogenannte \textit{client credentials grant Flow}. Dieser funktioniert ähnlich, nur dass nicht Username und Passwort übertragen werden, sondern geheime Daten für die Authentifikation zwischen Anwendung und Authorization Server bekannt sind. Den \textit{client credentials grant Flow} sollte man verwenden, wenn eine Applikation Ressourcen aufrufen möchte, die außerhalb eines User-Kontextes liegen, d.h. es handelt sich in der Regel um recht allgemeine Daten.\cite{oauth2}\cite{richardson2019mic_pattern} \\
 
-Aufgrund dieser Grundlage wird im Konzept \ref{sec:concept_authentifizierung_autorisierung} herausgearbeitet, welche Möglichkeiten zur technischen Umsetzung von OAuth2 bereitstehen. 
+Auf Basis dieses Abschnittes \ref{sec:authentifizierung_autorisierung} wird herausgearbeitet, welche Möglichkeiten zur technischen Umsetzung von OAuth2 bereitstehen (siehe \ref{sec:concept_authentifizierung_autorisierung}). 
 
 \subsection{Docker}
 
-Über Docker können Anwendungen innerhalb eines Containers laufen. Ein Container ist vergleichbar mit einer sehr leichtgewichtigen, modularen virtuellen Maschine.\cite{RedHat} Docker in der Tiefe aufzuarbeiten, würde den Umfang dieser Arbeit überschreiten. Dennoch wird im Folgenden erläutert, warum speziell Docker sich sehr gut für Microservices eignet und wie das grundsätzliche Wirkungsprinzip funktioniert. \\
+Über Docker können Anwendungen innerhalb eines Containers laufen. Ein Container ist vergleichbar mit einer sehr leichtgewichtigen, modularen virtuellen Maschine.\cite{RedHat} Docker in der Tiefe aufzuarbeiten, würde den Umfang dieser Arbeit übersteigen. Dennoch wird im Folgenden erläutert, warum speziell Docker sich sehr gut für Microservices eignet und wie das grundsätzliche Wirkungsprinzip funktioniert. \\
 
-Anfangs wurden Microservices so definiert, dass sie als möglichst eigenständige, deploybare Einheiten zu betrachten sind. Beim Hosten - also dem Bereitstellen des Services - sollte dies ebenfalls berücksichtigt werden. Nimmt man an, man hostet alle Services auf einer Maschine, läuft man Gefahr, dass die Microservices sich z. B. durch Portkonfigurationen oder dem Zugriff auf selbe Ressourcen behindern.\cite{wolff2016mic_architectures} \\
+Anfangs wurden Microservices so definiert, dass sie als möglichst eigenständige, deploybare Einheiten zu betrachten sind. Beim Hosten - also dem Bereitstellen des Services - sollte dies ebenfalls berücksichtigt werden. Nimmt man an, man hostet alle Services auf einer Maschine, läuft man Gefahr, dass die Microservices sich z. B. durch Portkonfigurationen oder dem Zugriff auf selben Ressourcen behindern.\cite{wolff2016mic_architectures} \\
 
-Bisherige Lösungen - und je nach Anwendungsfall auch sinnvoll - bieten sich an dieser Stelle virtuelle Maschinen (\textbf{VM}) an. D.h. auf einem Host könnten mehrere Betriebssysteme laufen, die sich die Hardwareressourcen vom Host teilen. Die angestrebte Isolation zwischen den Microservices wäre erreicht und individuelle Konfigurationsmöglichkeiten könnten sich gegensetitig nicht mehr stören. Durch die VMs entstehen allerdings Leistungseinbußen, welche nicht im Verhältnis zum Nutzen stehen und zusätzlich einen höheren Verbrauch der Hardwareressourcen mit sich bringen.\cite{wolff2016mic_architectures} Gesucht ist dementsprechend eine Technologie, die es schafft Services zu isolieren und dabei gleichzeitig leichtgewichtig zu sein: Docker. \\
+Als bisherige Lösung boten sich an dieser Stelle virtuelle Maschinen (\textbf{VM}) an. D.h. auf einem Host könnten mehrere Betriebssysteme laufen, die sich die Hardwareressourcen vom Host teilen. Die angestrebte Isolation zwischen den Microservices wäre erreicht und individuelle Konfigurationsmöglichkeiten könnten sich gegensetitig nicht mehr stören. Durch die VMs entstehen allerdings Leistungseinbußen, welche nicht im Verhältnis zum Nutzen stehen und zusätzlich einen höheren Verbrauch der Hardwareressourcen mit sich bringen.\cite{wolff2016mic_architectures} Gesucht ist dementsprechend eine Technologie, die es schafft, Services zu isolieren und dabei gleichzeitig leichtgewichtig zu sein: Docker. \\
 
 Startet man einen Microservice über Docker, ist dies damit gleichzusetzen, als würde im Betriebssystem der Service als Prozess gestartet werden. Es entsteht kein deutlich sichtbarer Overhead in Bezug auf den Ressourcenverbrauch.\cite{wolff2016mic_architectures} \\
 
@@ -394,5 +394,5 @@ Bei genauerer Betrachtung der Abbildung \ref{fig:docker_architektur_edited} fäl
 	\label{fig:docker_architektur_edited}
 \end{figure}
 
-Zusammenfassend lässt sich sagen, dass durch das Nutzen von Docker eine isolierte und ressourcenvertretbare Trennung von Microservices auf einem Host erreichen lässt. \\
+Zusammenfassend lässt sich sagen, dass sich durch das Nutzen von Docker eine isolierte und ressourcenvertretbare Trennung von Microservices auf einem Host erreichen lässt. \\
 
