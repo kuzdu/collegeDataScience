@@ -15,7 +15,7 @@ public class User
 }
 \end{verbatim}
 
-Als eindeutiger Identifier ist eine `Id` notwendig. Zusätzlich besitzt jeder User einen Namen, ein Passwort, ist im Standardfall aktiviert und es wird zwischen zwei Rollen unterschieden: `customer` und  `admin`. Wie zu erwarten hat die `admin`-Rolle mehr Berechtigung als ein `customer`. \\
+Als eindeutiger Identifier ist eine `Id` notwendig. Zusätzlich besitzt jeder User einen Namen, ein Passwort, ist im Standardfall aktiviert und es wird zwischen zwei Rollen unterschieden: `customer` und  `admin`. Wie zu erwarten,. hat die `admin`-Rolle mehr Berechtigung als ein `customer`. \\
 
 Um den Identity Server einzurichten, müssen sogenannte NuGet-Pakete heruntergeladen werden. NuGet ist ein System, mit welchem Softwarebibliotheken bereitgestellt werden können. Diese Verweise werden zur Projektdatei hinzugefügt.
 
@@ -24,7 +24,7 @@ Um den Identity Server einzurichten, müssen sogenannte NuGet-Pakete heruntergel
 <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="2.7.0" />
 \end{verbatim}
 
-In der `Startup.cs`, welche standardmäßig bei C\# .NET Projekten vorhanden ist, werden grundsätzlich Serverkonfigurationen initialisiert. Dies muss für den Identity Server ebenfalls getan werden.
+In der `Startup.cs`, welche standardmäßig bei C\# .NET Projekten vorhanden ist, werden grundsätzlich Serverkonfigurationen initialisiert. Dies muss für den Identity Server ebenfalls durchgeführt werden.
 
 \begin{verbatim}
 (1)
@@ -129,7 +129,7 @@ public async Task ValidateAsync(ResourceOwnerPasswordValidationContext context)
 		}
 \end{verbatim}
 
-In (1) wird ein Benutzer gesucht, welcher mit dem übergebenen Namen und Passwort übereinstimmt. In (2) wird dieser validiert und in (3) das Token anhand der `Claims` generiert. `Claims` sind vereinfacht ausgedrückt, zusätzlich Informationen, welche man in dem Token übergeben möchte. 
+In (1) wird ein Benutzer gesucht, welcher mit dem übergebenen Namen und Passwort übereinstimmt. In (2) wird dieser validiert und in (3) das Token anhand der `Claims` generiert. `Claims` sind vereinfacht ausgedrückt, zusätzliche Informationen, welche man in dem Token übergeben möchte. 
 
 \begin{verbatim}
 return new[]
@@ -142,7 +142,7 @@ new Claim(JwtClaimTypes.Role, user.Role)
 
 In der umgesetzten API wird eine `user\_id`, der `Name` sowie die `Role` übergeben. Alles wird ggf. von anderen Microservices benötigt, um eine entsprechende Autorisierung zu gewährleisten.\\
 
-Abbildung \ref{fig:client_credentials_flow} und \ref{fig:password_flow} zeigen wie mit dem Programm Postman über eine POST Abfrage die entsprechenden Token ausgestellt werden können.\\
+Abbildung \ref{fig:client_credentials_flow} und \ref{fig:password_flow} zeigen, wie mit dem Programm Postman über eine POST Abfrage die entsprechenden Token ausgestellt werden können.\\
 
 \begin{figure}[ht]
 	\centering
@@ -256,7 +256,7 @@ Um eingehende Request zu verarbeiten, verwendet Ocelot eine JSON, in der sogenan
 
 Diese dargestellte ReRoute zeigt bereits viele Vorteile von Ocelot. Durch (1) wird das `DownstreamPathTemplate` definiert. D.h. das Gateway präsentiert über das `UpstreamPathTemplate` (5) die öffentlichen Schnittstellen, welche man als Client anspricht. Dadurch lässt sich das Weiterleiten flexibel gestalten. Zusätzlich ist es nicht zwingend notwendig, dass wenn das `DownstreamPathTemplate` seine Route ändert, die Clienten davon betroffen sind, da das `UpstreamPathTemplate` gleichgeblieben ist. \\
 
-Das `DownstreamScheme` (2) ist http, da die Microservices zu denen weiterleitet wird, sich nur in einem lokalen Netz befinden. Das hat den Vorteil, dass die Microservices nur über das Gateway zu erreichen sind. So kann garantiert werden, dass kein Dritter Zugriff auf die Services hat, ohne über das Gateway zu gehen. \\
+Das `DownstreamScheme` (2) ist http. Https ist nicht nötig, da die Microservices sich nur in einem lokalen Netz befinden. Das hat den Vorteil, dass die Microservices nur über das Gateway zu erreichen sind. So wird garantiert, dass kein Dritter Zugriff auf die Services hat, ohne über das Gateway zu gehen. \\
 
 In (3) wird definiert, an welchen Microservice weitergeleitet werden soll. In diesem Beispiel der `customer\_service`.\\
 
@@ -286,7 +286,7 @@ Zusammenfassend lässt sich sagen, dass Ocelot sehr mächtig über die JSON konf
 
 \subsection{Aufsetzen einer RabbitMQ}
 
-Um wie geplant eine asynchrone Kommunikation zu erreichen, wird auf eine RabbitMQ zurückgegriffen. Diese läuft als eigenständiger Dienst auf dem Server. Um dies ohne viel Aufwand zu erreichen, wird die RabbitMQ als Container gestartet. Anschließend kann sich über eine Oberfläche mit der RabbitMQ verbunden werden. Die Oberfläche vereinfacht die Handhabung, ist allerdings nicht notwendig. Wie die Containerisierung im Detail verwendet wird, ist in dem Abschnitt 'Bauen und Hochladen der Microservices' nachzulesen.\\
+Um wie geplant eine asynchrone Kommunikation zu erreichen, wird auf eine RabbitMQ zurückgegriffen. Diese läuft als eigenständiger Dienst auf dem Server. Um dies ohne viel Aufwand zu erreichen, wird die RabbitMQ als Container gestartet. Die RabbitMQ stellt eine Oberfläche bereit. Dies vereinfacht die Handhabung, ist aus technischer Sicht allerdings nicht notwendig. Wie die Containerisierung im Detail verwendet wird, ist in dem Abschnitt 'Bauen und Hochladen der Microservices' nachzulesen.\\
 
 Wenn die RabbitMQ gestartet ist, können die Services sich mit dieser verbinden. Dafür benötigen sie folgende Bibliotheken:
 
@@ -296,7 +296,7 @@ Wenn die RabbitMQ gestartet ist, können die Services sich mit dieser verbinden.
 <PackageReference Include="MassTransit.RabbitMQ" Version="5.5.1" />
 \end{verbatim}
 
-Es muss ein sogenannter 'Contract' erzeugt werden, dies ist im Prinzip die Nachricht, die übertragen werden soll. In diesem Fall werden die Daten (`UserId` und `Name`) beim Erzeugen eines neuen Benutzers erstellt und durch die RabbitMQ übertragen.
+Es muss ein sogenannter 'Contract' erzeugt werden, dieser ist im Prinzip die Nachricht, die übertragen werden soll. In diesem Fall werden die Daten (`UserId` und `Name`) beim Erzeugen eines neuen Benutzers erstellt und durch die RabbitMQ übertragen.
 
 \begin{verbatim}
 public class UserCreated
@@ -327,7 +327,7 @@ private void ConfigureBus(ContainerBuilder builder)
 }
 \end{verbatim}
 
-Jeder Service, der mit der RabbitMQ verbunden sein möchte, benötigt diese Konfiguration. Über die URI wird dem Service mitgeteilt, über welche Adresse er sich mit der RabbitMQ verbinden kann. Anschließend werden Benutzernamen und Passwort benötigt (2). Anschließend muss die RabbitMQ gestartet werden, dies geschieht ebenfalls noch in der `Startup.cs`.
+Jeder Service, der mit der RabbitMQ verbunden sein möchte, benötigt diese Konfiguration. Über die URI wird dem Service mitgeteilt, über welche Adresse er sich mit der RabbitMQ verbinden kann. Anschließend werden Benutzernamen und Passwort benötigt (2). Daraufhin muss die RabbitMQ gestartet werden, dies geschieht ebenfalls noch in der `Startup.cs`.
 
 \begin{verbatim}
 busControl.Start();
@@ -393,7 +393,7 @@ RUN dotnet publish -c Release -o out
 ENTRYPOINT ["dotnet", "out/GatewayService.dll"]
 \end{verbatim}
 
-In (1) wird beschrieben, welches .NET notwendig ist, in (2) wird in das Image eine ausführbare `dll` generiert. Dieses Image muss in eine Docker Registry. Für Unternehmen bietet es sich an, eine eigene Registry zu betreiben, der einfachhalber wegen, wurde für Stirnraten ein öffentlicher Dienst namens Dockerhub verwendet. Das Build-Script sieht exemplarisch wie folgt aus: 
+In (1) wird beschrieben, welches .NET notwendig ist, in (2) wird in das Image eine ausführbare `dll` generiert. Dieses Image muss in eine Docker Registry. Für Unternehmen bietet es sich an, eine eigene Registry zu betreiben, der Einfachheit halber, wurde für Stirnraten ein öffentlicher Dienst namens Dockerhub verwendet. Das Build-Script sieht exemplarisch wie folgt aus: 
 
 \begin{verbatim}
 docker build --tag kuzdu/stirnraten:gateway_service_live ../GatewayService
@@ -417,17 +417,17 @@ docker run --restart unless-stopped --name stirnraten_gateway_service_live -p 12
 exit
 EOF #end of file
 \end{verbatim}
-Mittels `ssh` wird sich mit dem Server (hier mein-kochwerk.de heißend) verbunden (1). Es wird überprüft, ob bereits ein Microservice läuft, wenn ja, wird dieser gestoppt und anschließend entfernt (2). In (3) wird sich über `kuzdu/stirnraten:gateway\_service\_live` das entsprechende Image aus dem Dockerhub-Repository geladen und ausgeführt. Beim Ausführen vergeben wir einen Namen, lassen das Gateway auf dem Port 6200 laufen und teilen mit, dass die Anwendung sich neustarten soll, falls sie abstürzen sollte. Sehr wichtig ist auch der `network` Parameter. Dieser fasst die Microservices in einem Netzwerk zusammen. Dies bedeutet, dass die Services innerhalb dieses Netzwerk problemlos kommunzieren können. Falls auf dem Server noch andere Container laufen, die gar nicht zur Anwendung gehören, sehen diese Container sich nicht.\\
+Mittels `ssh` wird sich mit dem Server (hier mein-kochwerk.de heißend) verbunden (1). Es wird überprüft, ob bereits ein Microservice läuft, wenn ja, wird dieser gestoppt und anschließend entfernt (2). In (3) wird sich über `kuzdu/stirnraten:gateway\_service\_live` das entsprechende Image aus dem Dockerhub-Repository geladen und ausgeführt. Beim Ausführen vergeben wir einen Namen, lassen das Gateway auf dem Port 6200 laufen und teilen mit, dass die Anwendung sich neustarten soll, falls sie abstürzen sollte. Sehr wichtig ist auch der `network` Parameter. Dieser fasst die Microservices in einem Netzwerk zusammen. Dies bedeutet, dass die Services innerhalb dieses Netzwerks problemlos kommunzieren können. Falls auf dem Server noch andere Container laufen, die gar nicht zur Anwendung gehören, sehen diese Container sich nicht.\\
 
 Um eine bessere Übersicht zu behalten, wurde auf dem Server ein Dienst namens `Portainer` installiert. Dieser bietet zur Docker-Konsole eine grafische Oberfläche. In der Abbildung \ref{fig:portainer} sieht man alle Stirnraten-Container. 
 
-\begin{figure}[ht]
+\begin{figure}
 	\centering
 	\includegraphics[width=0.8\textwidth]{portainer}
 	\caption[Alle laufenden Microservices] {Alle laufenden Microservices}
 	\label{fig:portainer}
 \end{figure} 
-
+\pagebreak
 
 
 

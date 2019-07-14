@@ -10,11 +10,11 @@ Trotz der erfolgreichen Umsetzung, gilt darauf hinzuweisen, dass der Umfang der 
 \subsection{Ausblick}
 Diese Projektarbeit bietet noch zahlreiche, technische Erweiterungen an. Die Portvergabe und das Zusammenspiel der Microservices war aufwändig und teilweise sehr fehleranfällig, da es manuell und per Hand betrieben worden ist. Wenn die Serviceanzahl wächst, ist dies tendenziell eine große Fehlerquelle, da es ein hoher Arbeitsaufwand ist, nicht den Überblick zu verlieren. Dafür gibt es bereits mögliche Lösungen. Zum einen wäre Kubernetes als Orchestrierungsprogramm möglich. Zum anderen könnte ein sogenannter Service-Mesh erforscht werden, bei dem die Microservices sehr vereinfacht ausgedrückt, sich selbst ins System einpflegen. \\
 
-Zusätzlich sollte eine automatisierte Build- und Deploymentstruktur (CI/CD) erschaffen werden. Open Source Tools wie z.B. Jenkins oder kostenpflichtige Tools wie z.B. Bamboo bieten zahlreiche Automatisierungsoptionen. Automatisierte Build- und Deploymentscripts sparen viel Zeit und Aufwände. \\
+Zusätzlich sollte eine automatisierte Build- und Deploymentstruktur (CI/CD) erschaffen werden. Open Source Tools wie z.B. Jenkins oder kostenpflichtige Tools wie z.B. Bamboo bieten zahlreiche Automatisierungsoptionen. Automatisierte Build- und Deploymentscripts sparen viel Zeit und Aufwand. \\
 
 Wenn die Last wächst, sollten Microservices skalierbar sein. Das Verwenden von mehreren Servern und einem Loadbalancer, der die Last entsprechend verteilt, wären mögliche Lösungsansätze. Natürlich müssen dabei zusätzliche Aspekte beachtet werden, wie z.B. dass keine Inkonsistenzen in den Datenbanken entstehen. \\
 
-%auschreiben (ELK Stack)
-Der letzte und möglicherweise wichtigste Punkt ist die Microservices zu überwachen. Dies umfasst, entstandene Errors zu erkennen (Logging). Dafür gibt es bereits etablierte Tools wie z.B. den ELK Stack. Ebenfalls sollte man sich die Frage stellen, was passiert, wenn ein Service ausfällt oder ob er eine Route hat, wo man intern sehen kann, wie es ihm geht (Health Check). \\
+Der letzte und möglicherweise wichtigste Punkt ist, die Microservices zu überwachen. Dies umfasst, entstandene Errors zu erkennen (Logging). Dafür gibt es bereits etablierte Tools wie z.B. den ELK Stack (Elasticsearch, Logstash, Kibana). Ebenfalls sollten Strategien überlegt werden, was passiert, wenn ein Service ausfällt und wie man diesen Zustand bereits frühzeitig bemerkt (Health Check). \\
  
 Natürlich sind die genannten Ausblicke auch für eine monolithische Anwendung wichtig, allerdings bewerte ich die Umsetzung der genannten Punkte in einer Microservice Architektur als komplexer und umfangreicher. Umso größer die Anwendung wird, desto eher sollte man eine Microservice Architektur verwenden.
+\pagebreak

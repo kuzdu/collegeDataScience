@@ -242,10 +242,9 @@ Aus diesem Modell ergibt sich ein weiterer Vorteil: Die Microservices sind entko
 Zusätzlich sollte beachtet werden, dass Microservices so gestaltet werden, dass sie idempotent sind. In diesem Zusammenhang bedeutet dies, dass falls ein selbes Event zweimal übertragen wird, der Microservice die Aktion nicht zweimal ausführt. D.h. eine Mehrfachausführung führt zu demselben Ergebnis wie eine einzige Ausführung. Wenn z.B. eine Rechnung versendet werden soll, ist garantiert, dass diese nur ein einziges Mal versendet wird.\cite{wolff2018mic_praxis} \\
 
 \subsubsection{Abwägung asynchrone vs. synchrone Kommunikation}
-
 Aus den zwei vorherigen Abschnitten ergibt sich folgende Aufstellung (siehe Tabelle \ref{tab:sync_vs_async_table}).
 
-\begin{table}[H]
+\begin{table}
 	\begin{center}
 		\begin{tabular}{|p{1,5cm}|p{5cm}|p{5cm}|}
 			& synchrone Kommunikation & asynchrone Kommunikation \\ \hline
@@ -395,4 +394,4 @@ Bei genauerer Betrachtung der Abbildung \ref{fig:docker_architektur_edited} fäl
 \end{figure}
 
 Zusammenfassend lässt sich sagen, dass sich durch das Nutzen von Docker eine isolierte und ressourcenvertretbare Trennung von Microservices auf einem Host erreichen lässt. \\
-
+\pagebreak
