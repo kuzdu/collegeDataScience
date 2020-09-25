@@ -3,7 +3,7 @@
 Der folgende Abschnitt hilft, Fragen einheitlich für Finto zu formulieren. Dieser Artikel wird von Zeit zu Zeit aktualisiert. 
 
 
-### Aus der Fragestellung sollte ersichtlich sein, zu welcher Kategorie diese Frage gehört und nicht aus der Antwort. Das ist nicht immer möglich, aber man kann es ja versuchen. 
+#### Aus der Fragestellung sollte ersichtlich sein, zu welcher Kategorie diese Frage gehört und nicht aus der Antwort. Das ist nicht immer möglich, aber man kann es ja versuchen. 
 
 ❌ Don't: Was ist ein Hoppelpoppel? 
 
