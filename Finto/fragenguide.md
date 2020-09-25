@@ -25,6 +25,7 @@ Der folgende Abschnitt hilft, Fragen einheitlich für Finto zu formulieren. Dies
 ------
 #### Fragen sollten nicht zu lang sein. 
 Die längste Frage lautet, länger dürfen Fragen nicht sein.
+
 ✅ :  Was muss man im italienischen Mailand per Gesetz immer machen, außer man befindet sich auf Friedhöfen oder in Krankenhäusern? (*125 Zeichen*)
 
 ------
@@ -70,6 +71,7 @@ Was passiert, wenn man eine Ananas salzt?
 ------
 ####  Sonderzeichen in den Antworten vermeiden
 Wie heißt die Cola-Eigenmarke in der TV-Serie 'Unter uns'?
+
 ❌ Don't: Fresh Up!
 
 ✅ Do: Fresh Up
