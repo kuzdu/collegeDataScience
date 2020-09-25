@@ -6,6 +6,7 @@ Der folgende Abschnitt hilft, Fragen einheitlich für Finto zu formulieren. Dies
 ### Aus der Fragestellung sollte ersichtlich sein, zu welcher Kategorie diese Frage gehört und nicht aus der Antwort. Das ist nicht immer möglich, aber man kann es ja versuchen. 
 
 ❌ Don't: Was ist ein Hoppelpoppel? 
+
 ✅ Do: Welches Gericht verbirgt sich hinter der Bezeichnung Hoppelpoppel?
 
 ###  Am lustigsten sind Fragen, welche keine Zahlenantworten sind. Allerdings lässt sich das nicht immer vermeiden. Trotzdem sollten auf 100 Fragen nicht mehr als 10-20 Schätzfragen kommen. 
