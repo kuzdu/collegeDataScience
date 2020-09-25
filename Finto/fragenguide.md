@@ -9,7 +9,7 @@ Der folgende Abschnitt hilft, Fragen einheitlich für Finto zu formulieren. Dies
 
 ✅ Do: Welches Gericht verbirgt sich hinter der Bezeichnung Hoppelpoppel?
 
-
+------
 ####  Am lustigsten sind Fragen, welche keine Zahlenantworten sind. Allerdings lässt sich das nicht immer vermeiden. Trotzdem sollten auf 100 Fragen nicht mehr als 10-20 Schätzfragen kommen. 
 
 
